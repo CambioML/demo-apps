@@ -7,13 +7,13 @@ import FormModal from './FormModal';
 import Heading from '../Heading';
 import { toast } from 'react-hot-toast';
 import Select from '../inputs/Select';
-import useScenarioStore, { StockRowType } from '@/app/hooks/useScenarioStore';
+import useScenarioStore from '@/app/hooks/useScenarioStore';
 import { Stock } from '@/app/types/ScenarioTypes';
 
 const StockModal = () => {
   const StockModal = useStockModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { data, setData } = useScenarioStore();
+  const { data } = useScenarioStore();
 
   const options: Stock[] = [
     { id: 'AAPL', title: 'Apple' },

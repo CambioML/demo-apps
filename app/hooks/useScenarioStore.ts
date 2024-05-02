@@ -16,6 +16,7 @@ const initColumns = [
 export type StockRowType = {
   id: string;
   title: string;
+  // tslint:disable-next-line:no-any
   [key: string]: any;
 };
 
