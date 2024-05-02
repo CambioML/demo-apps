@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+:root {
+  /* colors */
+  --red: #ff5470;
+  --cambio-blue: #d2ecf9;
+}
+
+html,
+body,
+:root {
+  height: 100%;
+}
+
+.reference-link {
+  background-color: #f7fafc; /* Background color */
+  color: #1a202c; /* Text color */
+  border-radius: 0.25rem; /* Rounded corners */
+  padding: 0 0.5rem; /* Padding */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.reference-link:hover {
+  background-color: #edf2f7; /* Background color on hover */
+}
+
+.border-none {
+  border-collapse: collapse;
+  border: none;
+}
+
+.border-none td {
+  border: 1px solid #ddd;
+}
+
+.border-none thead {
+  background-color: #eee;
+}
+
+.border-none tr:second-child td {
+  border-top: none;
+}
+
+.border-none tr td:first-child {
+  border-left: none;
+}
+
+.border-none tr td:last-child {
+  border-right: none;
+}
+
+.markdown > * {
+  all: revert;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.markdown {
+  table {
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 6px 13px;
+    border: 1px solid black;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
