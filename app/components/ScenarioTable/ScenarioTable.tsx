@@ -6,7 +6,7 @@ import useStockModal from '@/app/hooks/useStockModal';
 import Button from '../Button';
 
 const ScenarioTable: React.FC = () => {
-  const { data, columns, setCellData } = useScenarioStore();
+  const { data, columns } = useScenarioStore();
   const eventModal = useEventModal();
   const stockModal = useStockModal();
 
@@ -48,26 +48,20 @@ const ScenarioTable: React.FC = () => {
             }
           </thead>
           <tbody className="bg-white text-md">
-            {
-              // tslint:disable-next-line:no-any
-              table.getRowModel().rows.map((row: any) => (
-                <tr key={row.id} className="group">
-                  {
-                    // tslint:disable-next-line:no-any
-                    row.getVisibleCells().map((cell: any, idx: number) => {
-                      return (
-                        <td
-                          key={cell.id}
-                          className={`whitespace-nowrap w-full ${idx === 0 && 'px-4 py-1 text-center sticky left-0 w-fit z-10 rounded-none bg-neutral-200 border-r-2'}`}
-                        >
-                          {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                        </td>
-                      );
-                    })
-                  }
-                </tr>
-              ))
-            }
+            {table.getRowModel().rows.map((row: any) => (
+              <tr key={row.id} className="group">
+                {row.getVisibleCells().map((cell: any, idx: number) => {
+                  return (
+                    <td
+                      key={cell.id}
+                      className={`whitespace-nowrap w-full ${idx === 0 && 'px-4 py-1 text-center sticky left-0 w-fit z-10 rounded-none bg-neutral-200 border-r-2'}`}
+                    >
+                      {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
           </tbody>
         </table>
       </div>
@@ -76,7 +70,6 @@ const ScenarioTable: React.FC = () => {
           label="Event"
           onClick={() => {
             eventModal.onOpen();
-            setCellData(0, 0, 0);
           }}
           icon={Plus}
           labelIcon={NewspaperClipping}

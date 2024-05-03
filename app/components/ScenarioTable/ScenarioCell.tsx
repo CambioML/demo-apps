@@ -2,17 +2,29 @@ import generateScenario from '@/app/actions/generateScenario';
 import processResponse from '@/app/actions/processResponse';
 import useScenarioStore, { ScenarioState } from '@/app/hooks/useScenarioStore';
 import { AxiosError, AxiosResponse } from 'axios';
+import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 
 interface ScenarioCellProps {
-  children: React.ReactNode;
   colId: string;
   colIdx: number;
   rowIdx: number;
 }
 
-const ScenarioCell = ({ children, colIdx, rowIdx }: ScenarioCellProps) => {
+const ScenarioCell = ({ colIdx, rowIdx }: ScenarioCellProps) => {
   const { scenarios, setShowDetail, setSelectedScenarioIdx, updateScenario } = useScenarioStore();
+  const [label, setLabel] = useState<string>('View Risk');
+
+  useEffect(() => {
+    const state = scenarios[rowIdx][colIdx].state;
+    if (state === ScenarioState.READY) {
+      setLabel('Generate Risk');
+    } else if (state === ScenarioState.UPDATING) {
+      setLabel('Updating...');
+    } else if (state === ScenarioState.UPDATED) {
+      setLabel('View Risk');
+    }
+  }, [scenarios, colIdx, rowIdx]);
 
   const handleSuccess = (response: AxiosResponse) => {
     const newScenario = scenarios[rowIdx][colIdx];
@@ -37,9 +49,7 @@ const ScenarioCell = ({ children, colIdx, rowIdx }: ScenarioCellProps) => {
   };
 
   const handleScenarioClick = async () => {
-    console.log('[handleScenarioClick: scenarios', scenarios, rowIdx, colIdx);
     const newScenario = scenarios[rowIdx][colIdx];
-    console.log('newScenario', newScenario, rowIdx, colIdx);
     setSelectedScenarioIdx({ rowIdx, colIdx });
     setShowDetail(true);
     if (newScenario.state === ScenarioState.READY) {
@@ -59,7 +69,7 @@ const ScenarioCell = ({ children, colIdx, rowIdx }: ScenarioCellProps) => {
       "
       onClick={handleScenarioClick}
     >
-      {children}
+      {label}
     </div>
   );
 };
