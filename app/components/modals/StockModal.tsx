@@ -24,18 +24,15 @@ const StockModal = () => {
   ];
 
   const addStock = (stockId: string, stockTitle: string) => {
-    console.log('Adding stock', stockId, stockTitle);
-    console.log('Current data:', data);
-    console.log('scenarios:', scenarios);
+    let events: Event[] = [];
 
-    const events = scenarios[0].flatMap((scenario) => scenario.event);
+    if (scenarios[0] !== undefined) {
+      events = scenarios[0].flatMap((scenario) => scenario.event);
+    }
     const rowIdx = scenarios.length;
-    console.log('Current events:', events);
 
-    //Add new scenarios
     if (events) {
       events.forEach((event: any, idx: number) => {
-        console.log('Adding scenario for column:', event, 'col index', idx, 'row index', rowIdx);
         const newStock: Stock = { id: stockId, title: stockTitle };
         addScenario({
           rowIdx: rowIdx,
@@ -54,19 +51,16 @@ const StockModal = () => {
     const newRowData: StockRowType = {
       id: stockId,
       title: stockTitle,
-      ...(events &&
+      ...(events.length > 0 &&
         events.reduce(
           (acc, event) => {
             acc[event.id] = event;
             return acc;
           },
           {} as { [eventId: string]: Event }
-        )), // Conditional spreading
+        )),
     };
 
-    console.log('New row data:', newRowData);
-
-    // Assuming setData is a function to update your data state
     setData([...data, newRowData]);
   };
 
