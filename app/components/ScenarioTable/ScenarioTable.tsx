@@ -1,19 +1,14 @@
 import { flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import useEventModal from '@/app/hooks/useEventModal';
 import useScenarioStore from '@/app/hooks/useScenarioStore';
-import { Plus } from '@phosphor-icons/react';
-// import useStockModal from '@/app/hooks/useStockModal';
+import { ChartLine, NewspaperClipping, Plus } from '@phosphor-icons/react';
+import useStockModal from '@/app/hooks/useStockModal';
+import Button from '../Button';
 
 const ScenarioTable: React.FC = () => {
-  const { data, columns } = useScenarioStore();
+  const { data, columns, setCellData } = useScenarioStore();
   const eventModal = useEventModal();
-  // const stockModal = useStockModal();
-
-  // const addRow = (row_name: string) => {
-  //   const newRow = { id: `stock_${data.length + 1}`, name: row_name };
-  //   // Update data state with new row
-  //   setData([...data, newRow]);
-  // };
+  const stockModal = useStockModal();
 
   const table = useReactTable({
     data,
@@ -22,7 +17,7 @@ const ScenarioTable: React.FC = () => {
   });
 
   return (
-    <div className="w-full h-full flex flex-row items-start justify-start gap-4">
+    <div className="w-full h-full flex flex-col items-start justify-start gap-4">
       <div className="h-full w-fit overflow-scroll">
         <table className="border-separate">
           <thead className="text-lg">
@@ -76,19 +71,18 @@ const ScenarioTable: React.FC = () => {
           </tbody>
         </table>
       </div>
-      <div className="flex flex-col gap-2">
-        <div
-          className=" px-4 py-3 text-lg border-2 flex items-center justify-center gap-2 hover:bg-neutral-200 rounded-lg cursor-pointer h-fit w-[200px]"
-          onClick={eventModal.onOpen}
-        >
-          <Plus className="shrink-0" size={16} /> Event
-        </div>
-        {/* <div
-          className=" px-4 py-3 text-lg border-2 flex items-center justify-center gap-2 hover:bg-neutral-200 rounded-lg cursor-pointer h-fit w-[200px]"
-          onClick={stockModal.onOpen}
-        >
-          <Plus className="shrink-0" size={16} /> Stock
-        </div> */}
+      <div className="flex flex-row gap-2 w-full">
+        <Button
+          label="Event"
+          onClick={() => {
+            eventModal.onOpen();
+            setCellData(0, 0, 0);
+          }}
+          icon={Plus}
+          labelIcon={NewspaperClipping}
+          small
+        />
+        <Button label="Stock" onClick={stockModal.onOpen} icon={Plus} labelIcon={ChartLine} small />
       </div>
     </div>
   );

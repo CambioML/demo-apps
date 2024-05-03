@@ -10,18 +10,25 @@ interface ReferenceLinkButtonProps {
 
 const generateReferenceContent = (reference: ScenarioReference) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       <div className="font-semibold text-lg">Title</div>
       <div>{reference.Title ? reference.Title : reference.Filename}</div>
       <div className="font-semibold font-semibold text-lg pt-4">Content</div>
 
       {reference.Metadata.DataSourceType === 'web' ? (
         <>
-          <div>{JSON.parse(reference.Content).content}</div>
+          <div className="text-wrap w-full">{JSON.parse(reference.Content).content}</div>
           <div className="font-semibold font-semibold text-lg pt-4">Source</div>
-          <a href={reference.Filename} className="text-blue-500 underline" target="_blank" rel="noreferrer">
-            {reference.Filename}
-          </a>
+          <div className="overflow-hidden whitespace-nowrap w-full pr-10">
+            <a
+              href={reference.Filename}
+              className="text-blue-500 underline text-wrap truncate"
+              target="_blank"
+              rel="noreferrer"
+            >
+              seekingaplha.com
+            </a>
+          </div>
         </>
       ) : (
         <div dangerouslySetInnerHTML={{ __html: reference?.Content || 'Cannot retrieve reference' }} />

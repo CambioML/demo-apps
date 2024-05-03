@@ -6,7 +6,7 @@ import useEventModal from '@/app/hooks/useEventModal';
 import FormModal from './FormModal';
 import Heading from '../Heading';
 import { toast } from 'react-hot-toast';
-import useScenarioStore, { columnHelper } from '@/app/hooks/useScenarioStore';
+import useScenarioStore, { ScenarioState, columnHelper } from '@/app/hooks/useScenarioStore';
 import ScenarioCell from '../ScenarioTable/ScenarioCell';
 import { Event, Stock } from '@/app/types/ScenarioTypes';
 import Input from '../inputs/Input';
@@ -44,16 +44,21 @@ const EventModal = () => {
       addScenario({
         rowIdx: idx,
         colIdx,
-        scenario: { event: newEvent, stock: newStock, state: 0, detail: { header: [], data: [] }, references: [] },
+        scenario: {
+          event: newEvent,
+          stock: newStock,
+          state: ScenarioState.READY,
+          detail: { header: [], data: [] },
+          references: [],
+        },
       });
     });
     const newColumn = columnHelper.accessor(colId, {
       header: () => col_name,
-      cell: ({ row }) => {
-        const rowIdx = data.findIndex((rowData) => rowData.id === row.original.id);
+      cell: ({ row, column }) => {
         return (
-          <ScenarioCell colId={colId} colIdx={colIdx} rowIdx={rowIdx}>
-            View Scenario
+          <ScenarioCell colId={colId} colIdx={column.getIndex() - 1} rowIdx={row.index}>
+            View Risk
           </ScenarioCell>
         );
       },
@@ -63,7 +68,7 @@ const EventModal = () => {
     setColumns([...columns, newColumn]);
 
     // Update data state to include default value for each row in the new column
-    setData(data.map((row) => ({ ...row, [colId]: row.name })));
+    setData(data.map((row) => ({ ...row, [colId]: newEvent })));
   };
 
   const {

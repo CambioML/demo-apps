@@ -14,16 +14,16 @@ const Workspace = ({ title }: WorkspaceProps) => {
   const { showDetail, setShowDetail } = useScenarioStore();
 
   return (
-    <div className="p-8 bg-neutral-100 overflow-scroll max-h-[100vh]">
+    <div className="p-8 bg-neutral-100 overflow-y-scroll max-h-[100vh] pb-10">
       <Heading title={title} />
-      <div className="h-fit max-h-[1000px] min-w-[800px] grid grid-cols-1 auto-rows-auto 2xl:grid-cols-2 gap-4">
+      <div className="h-fit max-h-[900px] min-w-[800px] grid grid-cols-1 auto-rows-auto 2xl:grid-cols-2 gap-4">
         <div className={`${!showDetail && 'col-span-2'}`}>
-          <ModuleContainer title={'Scenario Table'}>
+          <ModuleContainer title={'Event Table'}>
             <ScenarioTable />
           </ModuleContainer>
         </div>
-        <div className={`max-h-[1000px] min-h-[500px] overflow-hidden ${showDetail ? 'block' : 'hidden'}`}>
-          <ModuleContainer title="Scenario Detail" handleClose={() => setShowDetail(false)}>
+        <div className={`max-h-[900px] min-h-[500px] overflow-hidden ${showDetail ? 'block' : 'hidden'}`}>
+          <ModuleContainer title="Risk Factor" handleClose={() => setShowDetail(false)}>
             <ScenarioDetail />
           </ModuleContainer>
         </div>

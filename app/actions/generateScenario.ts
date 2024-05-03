@@ -14,7 +14,11 @@ type KnowledgeMap = {
 };
 
 const knowledgeBaseMap: KnowledgeMap = {
-  AAPL: '2c80b37b-2a82-4996-925b-984bb7b39c2f',
+  AAPL: 'caac1379-16f0-48f6-bad4-37f582b20d8e', //'2c80b37b-2a82-4996-925b-984bb7b39c2f',
+  META: '1b402064-fe37-4fe6-81d3-f3de235bcd3c',
+  MSFT: '425bf4e4-7e44-403e-97f7-3842e92a7ff7',
+  NVDA: 'e565fe78-8306-4518-83ef-882c8c776ca2',
+  TSLA: '4fd5d5bc-edb4-4b4c-9e11-98d498d05f3e',
 };
 
 const generateScenario = async ({ stock, event, handleSuccess, handleError }: IParams) => {

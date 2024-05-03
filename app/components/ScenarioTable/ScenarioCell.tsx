@@ -37,6 +37,7 @@ const ScenarioCell = ({ children, colIdx, rowIdx }: ScenarioCellProps) => {
   };
 
   const handleScenarioClick = async () => {
+    console.log('[handleScenarioClick: scenarios', scenarios, rowIdx, colIdx);
     const newScenario = scenarios[rowIdx][colIdx];
     console.log('newScenario', newScenario, rowIdx, colIdx);
     setSelectedScenarioIdx({ rowIdx, colIdx });
@@ -53,7 +54,9 @@ const ScenarioCell = ({ children, colIdx, rowIdx }: ScenarioCellProps) => {
 
   return (
     <div
-      className="w-full text-center cursor-pointer border border-2 py-1 rounded-lg hover:bg-neutral-100"
+      className="w-full text-center cursor-pointer border border-neutral-500 py-1 rounded-lg bg-neutral-100 hover:bg-neutral-500 hover:text-white
+      px-2
+      "
       onClick={handleScenarioClick}
     >
       {children}
