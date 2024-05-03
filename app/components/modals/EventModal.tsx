@@ -57,11 +57,7 @@ const EventModal = () => {
       header: () => col_name,
       cell: ({ row: { index }, column }) => {
         const colIdx = column.getIndex() - 1;
-        return (
-          <ScenarioCell colId={colId} colIdx={colIdx} rowIdx={index}>
-            View Risk
-          </ScenarioCell>
-        );
+        return <ScenarioCell colId={colId} colIdx={colIdx} rowIdx={index} />;
       },
     });
 
