@@ -13,7 +13,6 @@ interface IParams {
 
 const processResponse = ({ response, rowIdx, colIdx, scenario, updateScenario }: IParams) => {
   try {
-    console.log('success', response.data);
     const newDetail = JSON.parse(response.data.result.content.Answer);
     const newReferences = response.data.result.content.References;
     updateScenario({
@@ -21,8 +20,6 @@ const processResponse = ({ response, rowIdx, colIdx, scenario, updateScenario }:
       colIdx,
       newScenario: { ...scenario, state: ScenarioState.UPDATED, detail: newDetail, references: newReferences },
     });
-    console.log('newDetail', newDetail);
-    console.log('newReferences', newReferences);
   } catch (error) {
     console.error('error', error);
     toast.error('Error processing response. Please try again.');
