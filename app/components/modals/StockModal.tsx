@@ -7,16 +7,18 @@ import FormModal from './FormModal';
 import Heading from '../Heading';
 import { toast } from 'react-hot-toast';
 import Select from '../inputs/Select';
-import useScenarioStore from '@/app/hooks/useScenarioStore';
-import { Stock } from '@/app/types/ScenarioTypes';
+import useScenarioStore, { ScenarioState, StockRowType } from '@/app/hooks/useScenarioStore';
+import { Stock, Event } from '@/app/types/ScenarioTypes';
 
 const StockModal = () => {
   const StockModal = useStockModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { data } = useScenarioStore();
+  const { data, addScenario, scenarios, setData } = useScenarioStore();
 
   const options: Stock[] = [
     { id: 'AAPL', title: 'Apple' },
+    { id: 'META', title: 'Meta' },
+    { id: 'MSFT', title: 'Microsoft' },
     { id: 'NVDA', title: 'Nvidia' },
     { id: 'TSLA', title: 'Tesla' },
   ];
@@ -24,9 +26,48 @@ const StockModal = () => {
   const addStock = (stockId: string, stockTitle: string) => {
     console.log('Adding stock', stockId, stockTitle);
     console.log('Current data:', data);
-    // const newRow: StockRowType = { id: stockId, title: stockTitle };
-    // // Update data state with new row
-    // setData([...data, newRow]);
+    console.log('scenarios:', scenarios);
+
+    const events = scenarios[0].flatMap((scenario) => scenario.event);
+    const rowIdx = scenarios.length;
+    console.log('Current events:', events);
+
+    //Add new scenarios
+    if (events) {
+      events.forEach((event: any, idx: number) => {
+        console.log('Adding scenario for column:', event, 'col index', idx, 'row index', rowIdx);
+        const newStock: Stock = { id: stockId, title: stockTitle };
+        addScenario({
+          rowIdx: rowIdx,
+          colIdx: idx,
+          scenario: {
+            event: event,
+            stock: newStock,
+            state: ScenarioState.READY,
+            detail: { header: [], data: [] },
+            references: [],
+          },
+        });
+      });
+    }
+
+    const newRowData: StockRowType = {
+      id: stockId,
+      title: stockTitle,
+      ...(events &&
+        events.reduce(
+          (acc, event) => {
+            acc[event.id] = event;
+            return acc;
+          },
+          {} as { [eventId: string]: Event }
+        )), // Conditional spreading
+    };
+
+    console.log('New row data:', newRowData);
+
+    // Assuming setData is a function to update your data state
+    setData([...data, newRowData]);
   };
 
   const {
@@ -36,15 +77,14 @@ const StockModal = () => {
     setValue,
   } = useForm<FieldValues>({
     defaultValues: {
-      stock: { id: '', title: '' },
+      stock: options[0],
     },
   });
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
-    console.log('Submitting stock', data);
     try {
       setIsLoading(true);
-      addStock(data.event.id, data.event.title);
+      addStock(data.stock.id, data.stock.title);
       toast.success('Added Stock!');
       StockModal.onClose();
     } catch (error) {

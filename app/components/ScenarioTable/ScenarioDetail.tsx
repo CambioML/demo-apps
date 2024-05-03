@@ -86,7 +86,7 @@ const ScenarioDetail = () => {
             <X className="text-sky-500 shrink-0" size={20} />
             <Tag tag={selectedScenario?.event.title} />
           </div>
-          <div className="flex flex-col items-start w-full h-full overflow-auto relative border-solid border-2 border-neutral-100 rounded-lg min-h-[600px]">
+          <div className="flex flex-col items-start w-full h-full overflow-auto relative border-solid border-2 border-neutral-100 rounded-lg min-h-[500px]">
             <DetailTable detail={selectedScenario?.detail} />
           </div>
           <Button label="Regenerate" onClick={handleGenerateRetry} labelIcon={ArrowCounterClockwise} small />

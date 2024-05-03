@@ -22,12 +22,12 @@ const Button = ({ label, onClick, disabled, outline, small, icon: Icon, labelIco
         disabled:opacity-70
         disabled:cursor-not-allowed
         rounded-xl
-        hover:bg-neutral-600
+        hover:bg-neutral-500
         hover:text-white
         transition
         w-full
         ${outline ? 'bg-inherit' : 'bg-neutral-200'}
-        ${outline ? 'border-neutral-200' : 'border-neutral-800'}
+        ${outline ? 'border-neutral-200' : 'border-neutral-500'}
         ${outline ? 'text-black' : 'text-neutral-800'}
         ${small ? 'py-3' : 'py-4'}
         ${small ? 'text-lg' : 'text-3xl'}
