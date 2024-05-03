@@ -16,7 +16,7 @@ import Button from '../Button';
 const EventModal = () => {
   const EventModal = useEventModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { data, columns, setData, setColumns, addScenario, scenarios } = useScenarioStore();
+  const { data, columns, setData, setColumns, addScenario } = useScenarioStore();
 
   const exampleEvents = [
     {
@@ -59,7 +59,7 @@ const EventModal = () => {
         const colIdx = column.getIndex() - 1;
         return (
           <ScenarioCell colId={colId} colIdx={colIdx} rowIdx={index}>
-            View Risk {scenarios.length > 0 && scenarios[index][colIdx].event.title}
+            View Risk
           </ScenarioCell>
         );
       },
