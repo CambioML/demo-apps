@@ -165,15 +165,7 @@ const FormModal: React.FC<FormModalProps> = ({
                   {secondaryAction && secondaryActionLabel && (
                     <Button outline disabled={disabled} label={secondaryActionLabel} onClick={handleSecondaryAction} />
                   )}
-                  <Button
-                    disabled={disabled}
-                    label={actionLabel}
-                    onClick={() => {
-                      console.log('FormModalSubmit  ');
-                      handleSubmit();
-                    }}
-                    small
-                  />
+                  <Button disabled={disabled} label={actionLabel} onClick={handleSubmit} small />
                 </div>
                 {footer}
               </div>
