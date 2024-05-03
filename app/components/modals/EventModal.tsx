@@ -16,7 +16,7 @@ import Button from '../Button';
 const EventModal = () => {
   const EventModal = useEventModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { data, columns, setData, setColumns, addScenario } = useScenarioStore();
+  const { data, columns, setData, setColumns, addScenario, scenarios } = useScenarioStore();
 
   const exampleEvents = [
     {
@@ -40,7 +40,7 @@ const EventModal = () => {
     const colIdx = columns.length - 1;
     const newEvent: Event = { id: colId, title: col_name, description: col_desc };
     data.forEach((row, idx) => {
-      const newStock: Stock = { id: row.id, title: row.name };
+      const newStock: Stock = { id: row.id, title: row.title };
       addScenario({
         rowIdx: idx,
         colIdx,
@@ -55,19 +55,17 @@ const EventModal = () => {
     });
     const newColumn = columnHelper.accessor(colId, {
       header: () => col_name,
-      cell: ({ row, column }) => {
+      cell: ({ row: { index }, column }) => {
+        const colIdx = column.getIndex() - 1;
         return (
-          <ScenarioCell colId={colId} colIdx={column.getIndex() - 1} rowIdx={row.index}>
-            View Risk
+          <ScenarioCell colId={colId} colIdx={colIdx} rowIdx={index}>
+            View Risk {scenarios.length > 0 && scenarios[index][colIdx].event.title}
           </ScenarioCell>
         );
       },
     });
 
-    // Update state with new column
     setColumns([...columns, newColumn]);
-
-    // Update data state to include default value for each row in the new column
     setData(data.map((row) => ({ ...row, [colId]: newEvent })));
   };
 
