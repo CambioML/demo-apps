@@ -35,7 +35,6 @@ interface ScenarioStore {
   setData: (data: StockRowType[]) => void;
   setColumns: (columns: ColumnDef<StockRowType, string>[]) => void;
   setShowDetail: (showDetail: boolean) => void;
-  setCellData: (rowIndex: number, columnIndex: number, cellData: any) => void;
   addScenario: ({ rowIdx, colIdx, scenario }: AddScenarioArgs) => void;
   updateScenario: ({ rowIdx, colIdx, newScenario }: UpdateScenarioArgs) => void;
 }
@@ -62,13 +61,6 @@ const useScenarioStore = create<ScenarioStore>((set) => ({
   setData: (data) => set({ data }),
   setColumns: (columns) => set({ columns }),
   setShowDetail: (showDetail) => set({ showDetail }),
-  setCellData: (rowIndex, columnIndex, cellData) =>
-    set((state) => {
-      const newData = [...state.data];
-      console.log(newData);
-      newData[rowIndex][columnIndex] = cellData;
-      return { data: newData };
-    }),
   addScenario: ({ rowIdx, colIdx, scenario }: AddScenarioArgs) => {
     set((state) => {
       const newScenarios = [...state.scenarios];
