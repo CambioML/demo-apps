@@ -1,7 +1,7 @@
 import useScenarioStore, { ScenarioState } from '@/app/hooks/useScenarioStore';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from '../UI/LoadingSpinner';
-import { ArrowCounterClockwise, X } from '@phosphor-icons/react';
+import { ArrowCounterClockwise, Sparkle, X } from '@phosphor-icons/react';
 import Button from '../Button';
 import { AxiosError, AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';
@@ -11,7 +11,12 @@ import DetailTable from './DetailTable';
 import processResponse from '@/app/actions/processResponse';
 
 const Tag = ({ tag }: { tag: string | undefined }) => {
-  return tag ? <div className="bg-neutral-100 rounded-full px-4 py-2 text-lg">{tag}</div> : null;
+  return tag ? (
+    <div className="bg-neutral-100 rounded-full px-4 py-2 text-xl font-semibold text-neutral-800 w-full max-w-[400px] text-center border flex gap-2 items-center justify-center border-sky-300 border-2">
+      AI Rating (Coming Soon)
+      <Sparkle size={24} className="text-sky-500" />
+    </div>
+  ) : null;
 };
 
 const ScenarioDetail = () => {
@@ -82,9 +87,7 @@ const ScenarioDetail = () => {
       {selectedScenario?.state === ScenarioState.UPDATED && (
         <>
           <div className="p-4 flex w-full items-center justify-center shrink-0 text-xl gap-2">
-            <Tag tag={selectedScenario?.stock.id} />
-            <X className="text-sky-500 shrink-0" size={20} />
-            <Tag tag={selectedScenario?.event.title} />
+            <Tag tag="SEVERE" />
           </div>
           <div className="flex flex-col items-start w-full h-full overflow-auto relative border-solid border-2 border-neutral-100 rounded-lg min-h-[500px]">
             <DetailTable detail={selectedScenario?.detail} />

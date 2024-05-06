@@ -13,7 +13,7 @@ import { Stock, Event } from '@/app/types/ScenarioTypes';
 const StockModal = () => {
   const StockModal = useStockModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { data, addScenario, scenarios, setData } = useScenarioStore();
+  const { data, addScenario, scenarios, setData, updateScenario } = useScenarioStore();
 
   const options: Stock[] = [
     { id: 'AAPL', title: 'Apple' },
@@ -25,41 +25,61 @@ const StockModal = () => {
 
   const addStock = (stockId: string, stockTitle: string) => {
     let events: Event[] = [];
+    let newRowData: StockRowType;
 
-    if (scenarios[0] !== undefined) {
-      events = scenarios[0].flatMap((scenario) => scenario.event);
-    }
-    const rowIdx = scenarios.length;
+    if (data.length === 0) {
+      if (scenarios.length === 0) {
+        console.log('Adding first stock without any events');
+        newRowData = {
+          id: stockId,
+          title: stockTitle,
+        };
+      } else {
+        const initScenario = scenarios[0][0];
+        initScenario.stock = { id: stockId, title: stockTitle };
+        newRowData = {
+          id: stockId,
+          title: stockTitle,
+          [initScenario.event.id]: initScenario.event,
+        };
+        updateScenario({ rowIdx: 0, colIdx: 0, newScenario: initScenario });
+      }
+    } else {
+      if (scenarios[0] !== undefined) {
+        events = scenarios[0].flatMap((scenario) => scenario.event);
+      }
+      const rowIdx = scenarios.length;
 
-    if (events) {
-      events.forEach((event: any, idx: number) => {
-        const newStock: Stock = { id: stockId, title: stockTitle };
-        addScenario({
-          rowIdx: rowIdx,
-          colIdx: idx,
-          scenario: {
-            event: event,
-            stock: newStock,
-            state: ScenarioState.READY,
-            detail: { header: [], data: [] },
-            references: [],
-          },
+      if (events) {
+        events.forEach((event: any, idx: number) => {
+          const newStock: Stock = { id: stockId, title: stockTitle };
+          addScenario({
+            rowIdx: rowIdx,
+            colIdx: idx,
+            scenario: {
+              event: event,
+              stock: newStock,
+              state: ScenarioState.READY,
+              detail: { header: [], data: [] },
+              references: [],
+            },
+          });
         });
-      });
-    }
+      }
 
-    const newRowData: StockRowType = {
-      id: stockId,
-      title: stockTitle,
-      ...(events.length > 0 &&
-        events.reduce(
-          (acc, event) => {
-            acc[event.id] = event;
-            return acc;
-          },
-          {} as { [eventId: string]: Event }
-        )),
-    };
+      newRowData = {
+        id: stockId,
+        title: stockTitle,
+        ...(events.length > 0 &&
+          events.reduce(
+            (acc, event) => {
+              acc[event.id] = event;
+              return acc;
+            },
+            {} as { [eventId: string]: Event }
+          )),
+      };
+    }
 
     setData([...data, newRowData]);
   };

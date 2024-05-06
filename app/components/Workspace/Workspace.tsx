@@ -1,17 +1,24 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useScenarioStore from '@/app/hooks/useScenarioStore';
 import Heading from '../Heading';
 import ScenarioTable from '../ScenarioTable/ScenarioTable';
 import ModuleContainer from './ModuleContainer';
 import ScenarioDetail from '../ScenarioTable/ScenarioDetail';
+import { Scenario } from '@/app/types/ScenarioTypes';
 
 interface WorkspaceProps {
   title: string;
 }
 
 const Workspace = ({ title }: WorkspaceProps) => {
-  const { showDetail, setShowDetail } = useScenarioStore();
+  const { showDetail, setShowDetail, scenarios, selectedScenarioIdx } = useScenarioStore();
+  const [selectedScenario, setSelectedScenario] = useState<Scenario>();
+
+  useEffect(() => {
+    if (!selectedScenarioIdx || !scenarios[selectedScenarioIdx.rowIdx]) return;
+    setSelectedScenario(scenarios[selectedScenarioIdx.rowIdx][selectedScenarioIdx.colIdx]);
+  }, [scenarios, selectedScenarioIdx]);
 
   return (
     <div className="p-8 bg-neutral-100 overflow-y-scroll max-h-[100vh] pb-10">
@@ -22,8 +29,12 @@ const Workspace = ({ title }: WorkspaceProps) => {
             <ScenarioTable />
           </ModuleContainer>
         </div>
-        <div className={`max-h-[900px] min-h-[500px] overflow-hidden ${showDetail ? 'block' : 'hidden'}`}>
-          <ModuleContainer title="Risk Factor" handleClose={() => setShowDetail(false)}>
+        <div className={`h-fit max-h-[900px] min-h-[500px] overflow-hidden ${showDetail ? 'block' : 'hidden'}`}>
+          <ModuleContainer
+            title={`Risk Factor: ${selectedScenario && selectedScenario.stock.title + ' x ' + selectedScenario.event.title}`}
+            subtitle={``}
+            handleClose={() => setShowDetail(false)}
+          >
             <ScenarioDetail />
           </ModuleContainer>
         </div>

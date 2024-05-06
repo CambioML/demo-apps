@@ -2,7 +2,7 @@ import { createColumnHelper, ColumnDef } from '@tanstack/react-table';
 import { create } from 'zustand';
 import { Scenario } from '../types/ScenarioTypes';
 
-const defaultData: StockRowType[] = [{ id: 'AAPL', title: 'Apple' }];
+const defaultData: StockRowType[] = []; //[{ id: 'AAPL', title: 'Apple' }];
 
 export const columnHelper = createColumnHelper<StockRowType>();
 

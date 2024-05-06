@@ -22,11 +22,11 @@ const Button = ({ label, onClick, disabled, outline, small, icon: Icon, labelIco
         disabled:opacity-70
         disabled:cursor-not-allowed
         rounded-xl
-        hover:bg-neutral-500
+        hover:bg-sky-600
         hover:text-white
         transition
         w-full
-        ${outline ? 'bg-inherit' : 'bg-neutral-200'}
+        ${outline ? 'bg-inherit' : 'bg-sky-300'}
         ${outline ? 'border-neutral-200' : 'border-neutral-500'}
         ${outline ? 'text-black' : 'text-neutral-800'}
         ${small ? 'py-3' : 'py-4'}
@@ -47,13 +47,7 @@ const Button = ({ label, onClick, disabled, outline, small, icon: Icon, labelIco
       )}
       <div className="flex items-center justify-center gap-2">
         <span>{label} </span>
-        {LabelIcon && (
-          <LabelIcon
-            size={24}
-            className="
-          "
-          />
-        )}
+        {LabelIcon && <LabelIcon size={24} className="" />}
       </div>
     </button>
   );

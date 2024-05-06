@@ -39,20 +39,35 @@ const EventModal = () => {
   const addColumn = (colId: string, col_name: string, col_desc: string) => {
     const colIdx = columns.length - 1;
     const newEvent: Event = { id: colId, title: col_name, description: col_desc };
-    data.forEach((row, idx) => {
-      const newStock: Stock = { id: row.id, title: row.title };
+    if (data.length === 0) {
+      console.log('add first event scenario with blank stock');
       addScenario({
-        rowIdx: idx,
+        rowIdx: 0,
         colIdx,
         scenario: {
           event: newEvent,
-          stock: newStock,
+          stock: { id: '', title: '' },
           state: ScenarioState.READY,
           detail: { header: [], data: [] },
           references: [],
         },
       });
-    });
+    } else {
+      data.forEach((row, idx) => {
+        const newStock: Stock = { id: row.id, title: row.title };
+        addScenario({
+          rowIdx: idx,
+          colIdx,
+          scenario: {
+            event: newEvent,
+            stock: newStock,
+            state: ScenarioState.READY,
+            detail: { header: [], data: [] },
+            references: [],
+          },
+        });
+      });
+    }
     const newColumn = columnHelper.accessor(colId, {
       header: () => col_name,
       cell: ({ row: { index }, column }) => {
