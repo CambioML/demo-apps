@@ -11,7 +11,8 @@ interface ScenarioCellProps {
 }
 
 const ScenarioCell = ({ colIdx, rowIdx }: ScenarioCellProps) => {
-  const { scenarios, setShowDetail, setSelectedScenarioIdx, updateScenario, selectedScenarioIdx } = useScenarioStore();
+  const { scenarios, showDetail, setShowDetail, setSelectedScenarioIdx, updateScenario, selectedScenarioIdx } =
+    useScenarioStore();
 
   const handleSuccess = (response: AxiosResponse) => {
     const newScenario = scenarios[rowIdx][colIdx];
@@ -56,7 +57,7 @@ const ScenarioCell = ({ colIdx, rowIdx }: ScenarioCellProps) => {
 
   return (
     <div
-      className={`w-full text-center cursor-pointer ${selectedScenarioIdx?.rowIdx === rowIdx && selectedScenarioIdx.colIdx === colIdx ? 'border-2 border-neutral-800 font-semibold' : 'border border-neutral-500'} py-4 rounded-lg  px-2 min-w-[200px] hover:text-white
+      className={`w-full text-center cursor-pointer ${selectedScenarioIdx?.rowIdx === rowIdx && selectedScenarioIdx.colIdx === colIdx && showDetail ? 'border-2 border-neutral-800 font-semibold' : 'border border-neutral-500'} py-4 rounded-lg  px-2 min-w-[200px] hover:text-white
       ${scenarios[rowIdx][colIdx].state === ScenarioState.READY && 'bg-violet-300 hover:bg-violet-600 '}
       ${scenarios[rowIdx][colIdx].state === ScenarioState.UPDATING && 'bg-amber-200 hover:bg-amber-400'}
       ${scenarios[rowIdx][colIdx].state === ScenarioState.UPDATED && 'bg-sky-300 hover:bg-sky-600'}

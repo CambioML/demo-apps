@@ -10,7 +10,7 @@ interface ModuleContainerProps {
 
 const ModuleContainer = ({ title, subtitle, children, handleClose }: ModuleContainerProps) => {
   return (
-    <div className="h-full w-full max-w-screen-xl bg-white rounded-xl p-8 pb-16 relative">
+    <div className="min-h-fit w-full max-w-screen-xl bg-white rounded-xl p-8 relative">
       {handleClose && (
         <button
           onClick={handleClose}

@@ -18,10 +18,10 @@ const ScenarioTable: React.FC = () => {
 
   return (
     <div
-      className={`w-full h-full flex flex-col items-start ${scenarios.length === 0 && data.length === 0 ? 'justify-center' : 'justify-start'} gap-4`}
+      className={`w-full h-full min-h-fit flex flex-col items-start ${scenarios.length === 0 && data.length === 0 ? 'justify-center' : 'justify-between'} gap-4`}
     >
       {(scenarios.length > 0 || data.length > 0) && (
-        <div className="h-full w-fit overflow-scroll">
+        <div className="h-fit w-fit overflow-scroll">
           <table className="border-separate">
             <thead className="text-lg">
               {table.getHeaderGroups().map((headerGroup: any) => {
@@ -63,7 +63,7 @@ const ScenarioTable: React.FC = () => {
           </table>
         </div>
       )}
-      <div className="flex flex-row gap-2 w-full">
+      <div className="flex flex-row gap-2 w-full h-fit">
         <Button
           label="Event"
           onClick={() => {
