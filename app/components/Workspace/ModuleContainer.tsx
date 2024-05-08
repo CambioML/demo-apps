@@ -1,14 +1,16 @@
 import { X } from '@phosphor-icons/react';
+import Heading from '../Heading';
 
 interface ModuleContainerProps {
   title: string;
+  subtitle?: string;
   children: React.ReactNode;
   handleClose?: () => void;
 }
 
-const ModuleContainer = ({ title, children, handleClose }: ModuleContainerProps) => {
+const ModuleContainer = ({ title, subtitle, children, handleClose }: ModuleContainerProps) => {
   return (
-    <div className="h-full w-full max-w-screen-xl bg-white rounded-xl p-8 pb-16 relative">
+    <div className="min-h-fit w-full max-w-screen-xl bg-white rounded-xl p-8 relative">
       {handleClose && (
         <button
           onClick={handleClose}
@@ -26,7 +28,7 @@ const ModuleContainer = ({ title, children, handleClose }: ModuleContainerProps)
           <X size={24} />
         </button>
       )}
-      <div className="text-2xl font-semibold pb-4">{title}</div>
+      <Heading title={title} subtitle={subtitle} small />
       {children}
     </div>
   );
