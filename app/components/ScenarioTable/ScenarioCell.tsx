@@ -11,7 +11,7 @@ interface ScenarioCellProps {
 }
 
 const ScenarioCell = ({ colIdx, rowIdx }: ScenarioCellProps) => {
-  const { scenarios, showDetail, setShowDetail, setSelectedScenarioIdx, updateScenario, selectedScenarioIdx } =
+  const { scenarios, showDetail, setShowDetail, setSelectedScenarioIdx, updateScenario, selectedScenarioIdx, data } =
     useScenarioStore();
 
   const handleSuccess = (response: AxiosResponse) => {
@@ -42,6 +42,7 @@ const ScenarioCell = ({ colIdx, rowIdx }: ScenarioCellProps) => {
       toast.error('Failed to generate scenario. Please try again.');
       return;
     }
+    console.log('Current data', data);
     const newScenario = scenarios[rowIdx][colIdx];
     setSelectedScenarioIdx({ rowIdx, colIdx });
     setShowDetail(true);

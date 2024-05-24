@@ -1,7 +1,7 @@
 import { AxiosResponse } from 'axios';
-import { Scenario } from '../types/ScenarioTypes';
-import { ScenarioState, UpdateScenarioArgs } from '../hooks/useScenarioStore';
+import { ScenarioState, UpdateScenarioArgs } from '@/app/hooks/useScenarioStore';
 import toast from 'react-hot-toast';
+import { Scenario } from '@/app/types/ScenarioTypes';
 
 interface IParams {
   rowIdx: number;

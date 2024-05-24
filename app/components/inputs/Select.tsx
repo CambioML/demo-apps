@@ -14,7 +14,7 @@ interface SelectProps {
   disabled?: boolean;
 }
 
-const Select = ({ id, options, disabled = false, callback, optionLabel, register, required }: SelectProps) => {
+const Select = ({ id, options, disabled = false, callback, optionLabel, register, required, errors }: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedStock, setSelectedStock] = useState<Stock | null>(null);
   const selectRef = useRef<HTMLDivElement>(null);
@@ -39,7 +39,11 @@ const Select = ({ id, options, disabled = false, callback, optionLabel, register
 
   return (
     <div id={id} className={`relative ${disabled ? 'pointer-events-none opacity-50' : ''}`} ref={selectRef}>
-      <div className="bg-white border border-gray-300 rounded-md cursor-pointer w-full" onClick={toggleDropdown}>
+      <div
+        className={`bg-white border           ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
+          ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'} rounded-md cursor-pointer w-full`}
+        onClick={toggleDropdown}
+      >
         <div className="p-2 mr-8 overflow-hidden">
           {selectedStock ? selectedStock.title : optionLabel ? optionLabel : 'Select a stock.'}
         </div>
