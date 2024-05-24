@@ -9,11 +9,13 @@ import { toast } from 'react-hot-toast';
 import Select from '../inputs/Select';
 import useScenarioStore, { ScenarioState, StockRowType } from '@/app/hooks/useScenarioStore';
 import { Stock, Event } from '@/app/types/ScenarioTypes';
+import Dropzone from '../inputs/Dropzone';
+import { uploadFileToS3 } from '@/actions/s3Actions';
 
 const StockModal = () => {
   const StockModal = useStockModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { data, addScenario, scenarios, setData, updateScenario } = useScenarioStore();
+  const { data, addScenario, filesToUpload, scenarios, setData, updateScenario, setFilesToUpload } = useScenarioStore();
 
   const options: Stock[] = [
     { id: 'AAPL', title: 'Apple' },
@@ -23,7 +25,7 @@ const StockModal = () => {
     { id: 'TSLA', title: 'Tesla' },
   ];
 
-  const addStock = (stockId: string, stockTitle: string) => {
+  const addStock = async (stockId: string, stockTitle: string) => {
     let events: Event[] = [];
     let newRowData: StockRowType;
 
@@ -33,6 +35,7 @@ const StockModal = () => {
         newRowData = {
           id: stockId,
           title: stockTitle,
+          stockFiles: filesToUpload,
         };
       } else {
         const initScenario = scenarios[0][0];
@@ -40,6 +43,7 @@ const StockModal = () => {
         newRowData = {
           id: stockId,
           title: stockTitle,
+          stockFiles: filesToUpload,
           [initScenario.event.id]: initScenario.event,
         };
         updateScenario({ rowIdx: 0, colIdx: 0, newScenario: initScenario });
@@ -70,6 +74,7 @@ const StockModal = () => {
       newRowData = {
         id: stockId,
         title: stockTitle,
+        stockFiles: filesToUpload,
         ...(events.length > 0 &&
           events.reduce(
             (acc, event) => {
@@ -81,7 +86,19 @@ const StockModal = () => {
       };
     }
 
+    for (const file of filesToUpload) {
+      // Create a new FormData object for each file
+      const formData = new FormData();
+
+      // Append the file to the FormData object
+      formData.append('file', file);
+
+      // Upload the file to S3
+      await uploadFileToS3({ fileForm: formData });
+    }
+
     setData([...data, newRowData]);
+    setFilesToUpload([]);
   };
 
   const {
@@ -89,11 +106,7 @@ const StockModal = () => {
     handleSubmit,
     formState: { errors },
     setValue,
-  } = useForm<FieldValues>({
-    defaultValues: {
-      stock: options[0],
-    },
-  });
+  } = useForm<FieldValues>({});
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     try {
@@ -122,6 +135,18 @@ const StockModal = () => {
           setValue('stock', { id: option.id, title: option.title });
         }}
       />
+      <div className="text-xl font-semibold">Additional Resources</div>
+      <Dropzone />
+      {filesToUpload.length > 0 && (
+        <div className="flex flex-col gap-4">
+          <div className="text-xl font-semibold">Files to Upload</div>
+          <ul className="flex">
+            {filesToUpload.map((file, idx) => (
+              <li key={idx}>{file.name}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 

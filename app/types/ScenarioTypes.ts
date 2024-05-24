@@ -4,6 +4,7 @@ export type Event = {
   id: string;
   title: string;
   description: string;
+  files: File[];
 };
 
 export type Stock = {

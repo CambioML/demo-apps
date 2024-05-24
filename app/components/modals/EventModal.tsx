@@ -16,7 +16,7 @@ import Button from '../Button';
 const EventModal = () => {
   const EventModal = useEventModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { data, columns, setData, setColumns, addScenario } = useScenarioStore();
+  const { data, columns, setData, setColumns, addScenario, setFilesToUpload } = useScenarioStore();
 
   const exampleEvents = [
     {
@@ -38,7 +38,7 @@ const EventModal = () => {
 
   const addColumn = (colId: string, col_name: string, col_desc: string) => {
     const colIdx = columns.length - 1;
-    const newEvent: Event = { id: colId, title: col_name, description: col_desc };
+    const newEvent: Event = { id: colId, title: col_name, description: col_desc, files: [] };
     if (data.length === 0) {
       console.log('add first event scenario with blank stock');
       addScenario({
@@ -104,6 +104,7 @@ const EventModal = () => {
       const id = generateId(data.title);
       setIsLoading(true);
       addColumn(id, data.title, data.description);
+      setFilesToUpload([]);
       toast.success('Added Event!');
       EventModal.onClose();
       reset();

@@ -16,6 +16,7 @@ const initColumns = [
 export type StockRowType = {
   id: string;
   title: string;
+  stockFiles: File[];
   [key: string]: any;
 };
 
@@ -28,9 +29,11 @@ export enum ScenarioState {
 interface ScenarioStore {
   data: StockRowType[];
   columns: ColumnDef<StockRowType, string>[];
+  filesToUpload: File[];
   showDetail: boolean;
   scenarios: Scenario[][];
   selectedScenarioIdx: { rowIdx: number; colIdx: number } | null;
+  setFilesToUpload: (files: File[]) => void;
   setSelectedScenarioIdx: (scenarioIdx: { rowIdx: number; colIdx: number } | null) => void;
   setData: (data: StockRowType[]) => void;
   setColumns: (columns: ColumnDef<StockRowType, string>[]) => void;
@@ -54,9 +57,11 @@ export interface UpdateScenarioArgs {
 const useScenarioStore = create<ScenarioStore>((set) => ({
   data: [...defaultData],
   columns: initColumns,
+  filesToUpload: [],
   showDetail: false,
   scenarios: [],
   selectedScenarioIdx: null,
+  setFilesToUpload: (files) => set({ filesToUpload: files }),
   setSelectedScenarioIdx: (scenarioIdx) => set({ selectedScenarioIdx: scenarioIdx }),
   setData: (data) => set({ data }),
   setColumns: (columns) => set({ columns }),

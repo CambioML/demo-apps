@@ -1,6 +1,6 @@
 import axios, { AxiosError, AxiosResponse } from 'axios';
-import pollSearchResult from './pollSearchResult';
-import { Event, Stock } from '../types/ScenarioTypes';
+import pollSearchResult from '../actions/pollSearchResult';
+import { Event, Stock } from '../app/types/ScenarioTypes';
 
 interface IParams {
   handleSuccess: (response: AxiosResponse) => void;
