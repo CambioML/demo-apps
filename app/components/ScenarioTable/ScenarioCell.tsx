@@ -1,5 +1,5 @@
-import generateScenario from '@/actions/generateScenario';
-import processResponse from '@/actions/processResponse';
+import generateScenario from '@/app/actions/generateScenario';
+import processResponse from '@/app/actions/processResponse';
 import useScenarioStore, { ScenarioState } from '@/app/hooks/useScenarioStore';
 import { AxiosError, AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';

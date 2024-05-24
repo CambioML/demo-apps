@@ -42,8 +42,7 @@ export const uploadFileToS3 = async ({ fileForm }: uploadFileToS3Props) => {
   try {
     // Upload file to S3
     const command = new PutObjectCommand(params);
-    const response = await s3Client.send(command);
-    console.log('File uploaded successfully', response);
+    await s3Client.send(command);
   } catch (error) {
     console.error('Error uploading file', error);
   }

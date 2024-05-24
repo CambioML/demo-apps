@@ -10,7 +10,7 @@ import Select from '../inputs/Select';
 import useScenarioStore, { ScenarioState, StockRowType } from '@/app/hooks/useScenarioStore';
 import { Stock, Event } from '@/app/types/ScenarioTypes';
 import Dropzone from '../inputs/Dropzone';
-import { uploadFileToS3 } from '@/actions/s3Actions';
+import { uploadFileToS3 } from '@/app/actions/s3Actions';
 
 const StockModal = () => {
   const StockModal = useStockModal();

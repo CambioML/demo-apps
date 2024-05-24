@@ -5,10 +5,10 @@ import { ArrowCounterClockwise, Sparkle, X } from '@phosphor-icons/react';
 import Button from '../Button';
 import { AxiosError, AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';
-import generateScenario from '@/actions/generateScenario';
+import generateScenario from '@/app/actions/generateScenario';
 import { Scenario } from '@/app/types/ScenarioTypes';
 import DetailTable from './DetailTable';
-import processResponse from '@/actions/processResponse';
+import processResponse from '@/app/actions/processResponse';
 
 const Tag = ({ tag }: { tag: string | undefined }) => {
   return tag ? (
