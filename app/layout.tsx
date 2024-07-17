@@ -1,13 +1,15 @@
 import './globals.css';
-import { Lato } from 'next/font/google';
+import { Nunito } from 'next/font/google';
+import SideBar from './components/SideBar/SideBar';
+import Header from './components/Header';
 
 export const metadata = {
   title: 'Scenario Dash',
   description: 'Unlock real-time financial insights',
 };
 
-const font = Lato({
-  weight: ['400', '700'],
+const font = Nunito({
+  weight: ['400', '500', '600', '700'],
   style: 'normal',
   subsets: ['latin'],
 });
@@ -19,7 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={font.className}>{children}</body>
+      <body className={`${font.className} flex`}>
+        <SideBar />
+        <div className="flex-1">
+          <Header />
+          <main className="flex p-8 h-[calc(100vh-80px)]">{children}</main>
+        </div>
+      </body>
     </html>
   );
 }

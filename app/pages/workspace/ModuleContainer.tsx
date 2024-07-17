@@ -1,5 +1,5 @@
 import { X } from '@phosphor-icons/react';
-import Heading from '../Heading';
+import Heading from '../../components/Heading';
 
 interface ModuleContainerProps {
   title: string;

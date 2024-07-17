@@ -1,17 +1,21 @@
 'use client';
 import React, { useEffect, useState } from 'react';
 import useScenarioStore from '@/app/hooks/useScenarioStore';
-import Heading from '../Heading';
-import ScenarioTable from '../ScenarioTable/ScenarioTable';
+import Heading from '../../components/Heading';
+import ScenarioTable from '../../components/ScenarioTable/ScenarioTable';
 import ModuleContainer from './ModuleContainer';
-import ScenarioDetail from '../ScenarioTable/ScenarioDetail';
+import ScenarioDetail from '../../components/ScenarioTable/ScenarioDetail';
 import { Scenario } from '@/app/types/ScenarioTypes';
+import EventModal from '../../components/modals/EventModal';
+import GenerateModal from '../../components/modals/GenerateModal';
+import InfoModal from '../../components/modals/InfoModal';
+import StockModal from '../../components/modals/StockModal';
 
 interface WorkspaceProps {
   title: string;
 }
 
-const Workspace = ({ title }: WorkspaceProps) => {
+const Page = ({ title }: WorkspaceProps) => {
   const { showDetail, setShowDetail, scenarios, selectedScenarioIdx } = useScenarioStore();
   const [selectedScenario, setSelectedScenario] = useState<Scenario>();
 
@@ -21,7 +25,7 @@ const Workspace = ({ title }: WorkspaceProps) => {
   }, [scenarios, selectedScenarioIdx]);
 
   return (
-    <div className="p-8 bg-neutral-100 overflow-y-scroll max-h-[100vh] pb-10">
+    <div className="p-2 flex-1 bg-neutral-100 overflow-y-scroll">
       <Heading title={title} />
       <div className="h-fit max-h-[900px] min-w-[800px] grid grid-cols-1 auto-rows-auto 2xl:grid-cols-2 gap-4">
         <div className={`${!showDetail && 'col-span-2'}`}>
@@ -39,8 +43,12 @@ const Workspace = ({ title }: WorkspaceProps) => {
           </ModuleContainer>
         </div>
       </div>
+      <EventModal />
+      <StockModal />
+      <GenerateModal />
+      <InfoModal />
     </div>
   );
 };
 
-export default Workspace;
+export default Page;

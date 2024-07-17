@@ -20,6 +20,11 @@ body,
   height: 100%;
 }
 
+.content-h-screen {
+  max-height: calc(100vh - 80px);
+  min-height: calc(100vh - 80px);
+}
+
 .reference-link {
   background-color: #f7fafc; /* Background color */
   color: #1a202c; /* Text color */
