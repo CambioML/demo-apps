@@ -1,17 +1,7 @@
 'use client';
 
 import React from 'react';
-import {
-  Card,
-  Typography,
-  List,
-  Chip,
-  Accordion,
-  AccordionHeader,
-  AccordionBody,
-  Alert,
-  Input,
-} from '@material-tailwind/react';
+import { Card, Typography, List, Chip, Input } from '@material-tailwind/react';
 import {
   PresentationChartBarIcon,
   Cog6ToothIcon,
@@ -24,12 +14,12 @@ import {
   EnvelopeIcon,
   BriefcaseIcon,
 } from '@heroicons/react/24/solid';
-import { CubeTransparentIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import Logo from '../../assets/image/logo.svg';
 import SideBarItem from './SideBarItem';
 
 const Sidebar = () => {
-  const [openAlert, setOpenAlert] = React.useState(true);
+  // const [openAlert, setOpenAlert] = React.useState(true);
 
   const menuData = [
     {

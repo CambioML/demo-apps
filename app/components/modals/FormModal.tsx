@@ -2,7 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from 'react';
 import { X } from '@phosphor-icons/react';
-import Button from '../Button';
+import { Button } from '@material-tailwind/react';
 import { useOutsideClickModal } from '@/app/hooks/useOutsideClickModal';
 
 interface FormModalProps {
@@ -163,9 +163,13 @@ const FormModal: React.FC<FormModalProps> = ({
                 "
                 >
                   {secondaryAction && secondaryActionLabel && (
-                    <Button outline disabled={disabled} label={secondaryActionLabel} onClick={handleSecondaryAction} />
+                    <Button outline disabled={disabled} onClick={handleSecondaryAction} className="flex-1 text-base">
+                      {secondaryActionLabel}
+                    </Button>
                   )}
-                  <Button disabled={disabled} label={actionLabel} onClick={handleSubmit} small />
+                  <Button disabled={disabled} onClick={handleSubmit} className="flex-1 text-base">
+                    {actionLabel}
+                  </Button>
                 </div>
                 {footer}
               </div>

@@ -57,8 +57,6 @@ function Page() {
       action: 'Share',
     },
   ];
-  const [Company, setCompany] = useState('');
-  const onChange = ({ target }) => setCompany(target.value);
   return (
     <div className="w-full h-full flex flex-col">
       <Title label="CDP Sustainability Reports 2023 - Fortune 500" />
@@ -73,7 +71,7 @@ function Page() {
       </div>
 
       <div className="mt-8 gap-6 flex">
-        <Button>Add New Event</Button>
+        <Button>Add New Scope</Button>
         <Button>Add New Company</Button>
         <Button className="flex item-center">
           <ArrowUpTrayIcon className="w-4 mr-2" />

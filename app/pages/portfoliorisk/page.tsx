@@ -1,5 +1,4 @@
 'use client';
-import { useState } from 'react';
 import Title from '../../components/Title';
 import { Input, Button, Typography } from '@material-tailwind/react';
 import { ArrowUpTrayIcon } from '@heroicons/react/24/solid';
@@ -45,8 +44,6 @@ function Page() {
       event3: 'event3',
     },
   ];
-  const [Company, setCompany] = useState('');
-  const onChange = ({ target }) => setCompany(target.value);
   return (
     <div className="w-full h-full flex flex-col">
       <Title label="Portfolio Exposure - Fortune 500" />
@@ -61,7 +58,7 @@ function Page() {
       </div>
 
       <div className="mt-8 gap-6 flex">
-        <Button>Add New Event</Button>
+        <Button>Add New Scope</Button>
         <Button>Add New Company</Button>
         <Button className="flex item-center">
           <ArrowUpTrayIcon className="w-4 mr-2" />

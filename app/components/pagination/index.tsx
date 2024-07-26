@@ -5,7 +5,7 @@ import { ArrowRightIcon, ArrowLeftIcon } from '@heroicons/react/24/outline';
 export function DefaultPagination() {
   const [active, setActive] = React.useState(1);
 
-  const getItemProps = (index) =>
+  const getItemProps = (index: number) =>
     ({
       variant: active === index ? 'filled' : 'text',
       color: 'gray',

@@ -3,7 +3,7 @@ import useEventModal from '@/app/hooks/useEventModal';
 import useScenarioStore from '@/app/hooks/useScenarioStore';
 import { ChartLine, NewspaperClipping, Plus } from '@phosphor-icons/react';
 import useStockModal from '@/app/hooks/useStockModal';
-import Button from '../Button';
+import { Button } from '@material-tailwind/react';
 
 const ScenarioTable: React.FC = () => {
   const { data, columns, scenarios } = useScenarioStore();
@@ -65,15 +65,21 @@ const ScenarioTable: React.FC = () => {
       )}
       <div className="flex flex-row gap-2 w-full h-fit">
         <Button
-          label="Event"
           onClick={() => {
             eventModal.onOpen();
           }}
-          icon={Plus}
-          labelIcon={NewspaperClipping}
-          small
-        />
-        <Button label="Stock" onClick={stockModal.onOpen} icon={Plus} labelIcon={ChartLine} small />
+        >
+          <div className="flex items-center text-base">
+            <Plus size={18} className="mr-1" /> <NewspaperClipping size={18} className="mr-2" /> Event
+          </div>
+        </Button>
+        <Button onClick={stockModal.onOpen}>
+          <div className="flex items-center text-base">
+            <Plus className="mr-1" size={18} />
+            <ChartLine className="mr-2" size={18} />
+            Stock
+          </div>
+        </Button>
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ import ScenarioCell from '../ScenarioTable/ScenarioCell';
 import { Event, Stock } from '@/app/types/ScenarioTypes';
 import Input from '../inputs/Input';
 import TextArea from '../inputs/TextArea';
-import Button from '../Button';
+import { Button } from '@material-tailwind/react';
 
 const EventModal = () => {
   const EventModal = useEventModal();
@@ -134,12 +134,9 @@ const EventModal = () => {
       />
       <div className="w-full flex gap-4 border-b-2 p-2">
         {exampleEvents.map((event, idx) => (
-          <Button
-            key={idx}
-            onClick={() => handleExampleClick(event.title, event.description)}
-            small
-            label={event.title}
-          />
+          <Button key={idx} onClick={() => handleExampleClick(event.title, event.description)}>
+            {event.title}
+          </Button>
         ))}
       </div>
     </div>

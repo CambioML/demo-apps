@@ -1,5 +1,5 @@
 'use client';
-import { Avatar, Badge } from '@material-tailwind/react';
+import { Avatar } from '@material-tailwind/react';
 import { BellIcon } from '@heroicons/react/24/outline';
 
 function Header() {
