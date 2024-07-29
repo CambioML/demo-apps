@@ -63,15 +63,17 @@ const ScenarioCell = ({ colIdx, rowIdx }: ScenarioCellProps) => {
   };
 
   return (
-    <div
-      className={`w-full h-[50px] text-md flex items-center justify-center text-center cursor-pointer text-white ${selectedScenarioIdx?.rowIdx === rowIdx && selectedScenarioIdx.colIdx === colIdx && showDetail ? 'border-2 border-gray-800 font-bold' : 'font-semibold'} rounded-lg  px-2 min-w-[200px]
+    <div className="w-full h-[50px] py-1 px-2">
+      <div
+        className={`w-full h-full text-md flex items-center justify-center text-center cursor-pointer text-white ${selectedScenarioIdx?.rowIdx === rowIdx && selectedScenarioIdx.colIdx === colIdx && showDetail ? 'border-2 border-gray-800 font-bold' : 'font-semibold'} rounded-lg  px-2 min-w-[200px]
       ${getStateStyles()}
       `}
-      onClick={handleScenarioClick}
-    >
-      {scenarios[rowIdx][colIdx].state === ScenarioState.READY && <>GENERATE RISK</>}
-      {scenarios[rowIdx][colIdx].state === ScenarioState.UPDATING && <>GENERATING...</>}
-      {scenarios[rowIdx][colIdx].state === ScenarioState.UPDATED && <>VIEW</>}
+        onClick={handleScenarioClick}
+      >
+        {scenarios[rowIdx][colIdx].state === ScenarioState.READY && <>GENERATE RISK</>}
+        {scenarios[rowIdx][colIdx].state === ScenarioState.UPDATING && <>GENERATING...</>}
+        {scenarios[rowIdx][colIdx].state === ScenarioState.UPDATED && <>VIEW</>}
+      </div>
     </div>
   );
 };
