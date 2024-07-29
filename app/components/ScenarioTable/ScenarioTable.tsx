@@ -1,9 +1,9 @@
 import { flexRender, getCoreRowModel, useReactTable } from '@tanstack/react-table';
 import useEventModal from '@/app/hooks/useEventModal';
 import useScenarioStore from '@/app/hooks/useScenarioStore';
-import { ChartLine, NewspaperClipping, Plus } from '@phosphor-icons/react';
 import useStockModal from '@/app/hooks/useStockModal';
 import { Button } from '@material-tailwind/react';
+import { Plus } from '@phosphor-icons/react';
 
 const ScenarioTable: React.FC = () => {
   const { data, columns, scenarios } = useScenarioStore();
@@ -18,8 +18,26 @@ const ScenarioTable: React.FC = () => {
 
   return (
     <div
-      className={`w-full h-full min-h-fit flex flex-col items-start ${scenarios.length === 0 && data.length === 0 ? 'justify-center' : 'justify-between'} gap-4`}
+      className={`w-full h-full min-h-fit flex flex-col items-start ${scenarios.length === 0 && data.length === 0 ? 'justify-center' : 'justify-between'} gap-8`}
     >
+      <div className="mt-8 gap-6 flex">
+        <Button
+          onClick={() => {
+            eventModal.onOpen();
+          }}
+        >
+          <div className="flex items-center text-base">
+            <Plus className="w-4 mr-2" />
+            New Event
+          </div>
+        </Button>
+        <Button onClick={stockModal.onOpen}>
+          <div className="flex items-center text-base">
+            <Plus className="w-4 mr-2" />
+            new company
+          </div>
+        </Button>
+      </div>
       {(scenarios.length > 0 || data.length > 0) && (
         <div className="h-fit w-fit overflow-scroll">
           <table className="border-separate">
@@ -32,7 +50,7 @@ const ScenarioTable: React.FC = () => {
                         <th
                           scope="col"
                           key={header.id}
-                          className={`px-4 py-3 m-8 sticky z-20 top-0 bg-neutral-100 rounded-md w-[150px] ${idx === 0 && 'sticky left-0 z-30 bg-neutral-200 border-r-2'}`}
+                          className={`px-4 py-3 m-8 sticky z-20 top-0 bg-gray-100 w-[150px] ${idx === 0 && 'sticky left-0 z-30 bg-gray-300'}`}
                         >
                           {header.isPlaceholder ? null : (
                             <div>{flexRender(header.column.columnDef.header, header.getContext())}</div>
@@ -51,7 +69,7 @@ const ScenarioTable: React.FC = () => {
                     return (
                       <td
                         key={cell.id}
-                        className={`whitespace-nowrap w-full rounded-md ${idx === 0 && 'px-4 py-4 text-center sticky left-0 w-fit z-10 bg-neutral-200 border-r-2'}`}
+                        className={`whitespace-nowrap w-full rounded-md ${idx === 0 && 'px-4 py-4 rounded-none text-center sticky left-0 w-fit z-10 bg-gray-300 font-bold'}`}
                       >
                         {flexRender(cell.column.columnDef.cell, cell.getContext())}
                       </td>
@@ -63,24 +81,6 @@ const ScenarioTable: React.FC = () => {
           </table>
         </div>
       )}
-      <div className="flex flex-row gap-2 w-full h-fit">
-        <Button
-          onClick={() => {
-            eventModal.onOpen();
-          }}
-        >
-          <div className="flex items-center text-base">
-            <Plus size={18} className="mr-1" /> <NewspaperClipping size={18} className="mr-2" /> Event
-          </div>
-        </Button>
-        <Button onClick={stockModal.onOpen}>
-          <div className="flex items-center text-base">
-            <Plus className="mr-1" size={18} />
-            <ChartLine className="mr-2" size={18} />
-            Stock
-          </div>
-        </Button>
-      </div>
     </div>
   );
 };

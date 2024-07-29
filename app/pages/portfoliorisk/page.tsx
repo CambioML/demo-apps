@@ -3,49 +3,34 @@ import Title from '../../components/Title';
 import { Input, Button, Typography } from '@material-tailwind/react';
 import { ArrowUpTrayIcon } from '@heroicons/react/24/solid';
 import { DefaultPagination } from '../../components/pagination';
+import { useState } from 'react';
+import { Event, Stock } from '@/app/types/ScenarioTypes';
+
+type Row = {
+  stock: Stock;
+  events: Event[];
+};
+
+const EVENT_PLACEHOLDER = 'EVENT_PLACEHOLDER';
+const COMPANY_PLACEHOLDER = 'COMPANY_PLACEHOLDER';
+const defaultEvent: Event = {
+  id: '1',
+  title: EVENT_PLACEHOLDER,
+  description: 'Description 1',
+  files: [],
+};
 
 function Page() {
-  const TABLE_HEAD = [
-    'Company',
-    'Event 1: Tiktok Ban',
-    'Event 2: Federal debt limit breach',
-    'Event 3: House Price Correct',
-  ];
+  const [events, setEvents] = useState<Event[]>([defaultEvent, defaultEvent, defaultEvent]);
 
-  const TABLE_ROWS = [
+  const TABLE_ROWS: Row[] = [
     {
-      name: 'John Michael',
-      event1: 'event1',
-      event2: 'event2',
-      event3: 'event3',
-    },
-    {
-      name: 'Alexa Liras',
-      event1: 'event1',
-      event2: 'event2',
-      event3: 'event3',
-    },
-    {
-      name: 'Laurent Perrier',
-      event1: 'event1',
-      event2: 'event2',
-      event3: 'event3',
-    },
-    {
-      name: 'Michael Levi',
-      event1: 'event1',
-      event2: 'event2',
-      event3: 'event3',
-    },
-    {
-      name: 'Richard Gran',
-      event1: 'event1',
-      event2: 'event2',
-      event3: 'event3',
+      name: COMPANY_PLACEHOLDER,
+      events: events,
     },
   ];
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full h-full flex flex-col overflow-auto">
       <Title label="Portfolio Exposure - Fortune 500" />
 
       <div className="flex w-full gap-6 mt-8">
@@ -67,50 +52,51 @@ function Page() {
       </div>
 
       <div className="flex flex-col mt-8">
-        <table className="w-full min-w-max table-auto text-left mt-8">
-          <thead>
-            <tr>
-              {TABLE_HEAD.map((head) => (
-                <th key={head} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
+        <div className="h-[275px]">
+          <table className="w-full min-w-max table-auto text-left mt-8">
+            <thead>
+              <tr>
+                <th key={'company'} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
                   <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
-                    {head}
+                    Company
                   </Typography>
                 </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {TABLE_ROWS.map(({ name, event1, event2, event3 }, index) => {
-              const isLast = index === TABLE_ROWS.length - 1;
-              const classes = isLast ? 'p-4' : 'p-4 border-b border-blue-gray-50';
+                {events.map((event, i) => (
+                  <th key={i} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
+                    <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
+                      {event.title}
+                    </Typography>
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {TABLE_ROWS.map(({ name, events }, index) => {
+                const isLast = index === TABLE_ROWS.length - 1;
+                const classes = isLast ? 'p-4' : 'p-4 border-b border-blue-gray-50';
 
-              return (
-                <tr key={name}>
-                  <td className={classes}>
-                    <Typography variant="small" color="blue-gray" className="font-normal">
-                      {name}
-                    </Typography>
-                  </td>
-                  <td className={`${classes} bg-blue-gray-50/50`}>
-                    <Typography variant="small" color="blue-gray" className="font-normal">
-                      {event1}
-                    </Typography>
-                  </td>
-                  <td className={classes}>
-                    <Typography variant="small" color="blue-gray" className="font-normal">
-                      {event2}
-                    </Typography>
-                  </td>
-                  <td className={`${classes} bg-blue-gray-50/50`}>
-                    <Typography as="a" href="#" variant="small" color="blue-gray" className="font-medium">
-                      {event3}
-                    </Typography>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+                return (
+                  <tr key={name}>
+                    <td className={classes}>
+                      <Typography variant="small" color="blue-gray" className="font-normal">
+                        {name}
+                      </Typography>
+                    </td>
+                    {events.map((event, idx) => {
+                      return (
+                        <td key={idx} className={classes}>
+                          <Typography variant="small" color="blue-gray" className="font-normal">
+                            {event.title}
+                          </Typography>
+                        </td>
+                      );
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
         <div className="ml-auto mt-8">
           <DefaultPagination />
         </div>

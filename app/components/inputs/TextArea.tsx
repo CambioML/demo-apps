@@ -33,7 +33,7 @@ const TextArea = ({ id, label, disabled, register, required, errors }: TextAreaP
           disabled: opacity-70
           disabled: cursor-not-allowed
           h-[150px]
-          ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
+          ${errors[id] ? 'border-rose-500' : 'border-gray-300'}
           ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}
         `}
       />

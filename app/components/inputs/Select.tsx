@@ -40,7 +40,7 @@ const Select = ({ id, options, disabled = false, callback, optionLabel, register
   return (
     <div id={id} className={`relative ${disabled ? 'pointer-events-none opacity-50' : ''}`} ref={selectRef}>
       <div
-        className={`bg-white border           ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
+        className={`bg-white border           ${errors[id] ? 'border-rose-500' : 'border-gray-300'}
           ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'} rounded-md cursor-pointer w-full`}
         onClick={toggleDropdown}
       >

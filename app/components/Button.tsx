@@ -27,8 +27,8 @@ const Button = ({ label, onClick, disabled, outline, small, icon: Icon, labelIco
         transition
         w-full
         ${outline ? 'bg-inherit' : 'bg-sky-300'}
-        ${outline ? 'border-neutral-200' : 'border-neutral-500'}
-        ${outline ? 'text-black' : 'text-neutral-800'}
+        ${outline ? 'border-gray-200' : 'border-gray-500'}
+        ${outline ? 'text-black' : 'text-gray-800'}
         ${small ? 'py-3' : 'py-4'}
         ${small ? 'text-lg' : 'text-3xl'}
         ${small ? 'border-[1px]' : 'border-2'}

@@ -38,10 +38,10 @@ const Sidebar = () => {
       suffix: <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />,
     },
     {
-      label: 'Workspace',
+      label: 'Portfolio Risk Exposure V1',
       type: 'menu',
       icon: <BriefcaseIcon />,
-      link: '/pages/workspace',
+      link: '/pages/portfolioriskv1',
     },
     {
       label: 'Portfolio Risk Exposure',
@@ -64,11 +64,6 @@ const Sidebar = () => {
       label: 'Due Diligence 1-liners',
       type: 'menu',
       icon: <ShoppingBagIcon />,
-    },
-    {
-      label: 'Email Diffuse',
-      type: 'menu',
-      icon: <EnvelopeIcon />,
     },
     {
       type: 'divid',
@@ -100,6 +95,7 @@ const Sidebar = () => {
         {menuData.map((item: any, index) => {
           return (
             <SideBarItem
+              key={index}
               label={item.label}
               type={item.type}
               icon={item?.icon}
