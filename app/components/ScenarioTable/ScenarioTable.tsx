@@ -103,7 +103,7 @@ const ScenarioTable: React.FC = () => {
             </thead>
             <tbody className="bg-white text-lg">
               {table.getRowModel().rows.map((row: any) => (
-                <tr key={row.id} className="group">
+                <tr key={row.id} className="group border-b-[1px]">
                   {row.getVisibleCells().map((cell: any, idx: number) => {
                     return <RowHeader key={cell.id} cell={cell} idx={idx} />;
                   })}
@@ -114,7 +114,7 @@ const ScenarioTable: React.FC = () => {
               ))}
               {placeholderRows > 0 &&
                 Array.from({ length: placeholderRows }, (_, idx) => (
-                  <tr key={idx}>
+                  <tr key={idx} className="group border-b-[1px]">
                     <RowHeader key={idx} idx={0} cell={'DEFAULT'} />
                     {Array.from({ length: placeholderCells }, (_, idx) => (
                       <PlaceholderCell key={idx} />
