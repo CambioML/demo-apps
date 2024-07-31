@@ -1,0 +1,2413 @@
+Best Buy Co., Inc. - Climate Change 2023
+C0. Introduction
+C0.1
+(C0.1) Give a general description and introduction to your organization.
+At Best Buy, we are driven by our purpose to enrich lives through technology and our vision to personalize and humanize technology solutions for every stage of life. We accomplish this by leveraging our combination of technology and a human touch to meet our customers’ everyday needs, whether they come to us online, visit our stores or invite us into their homes. We have operations in the U.S. and Canada.
+
+Our reporting boundary includes all owned or leased Best Buy retail, distribution, data center, outlet, repair center and corporate locations in the U.S. and Best Buy Canada, as well as our Pacific Kitchen and Home locations in the U.S. All other subsidiaries as listed in Best Buy’s 10-k exhibit 21.1 are excluded.
+
+C0.2
+(C0.2) State the start and end date of the year for which you are reporting data and indicate whether you will be providing emissions data for past reporting years.
+Reporting year
+Start date
+January 1 2022
+End date
+December 31 2022
+Indicate if you are providing emissions data for past reporting years
+No
+Select the number of past reporting years you will be providing Scope 1 emissions data for
+<Not Applicable>
+Select the number of past reporting years you will be providing Scope 2 emissions data for
+<Not Applicable>
+Select the number of past reporting years you will be providing Scope 3 emissions data for
+<Not Applicable>
+C0.3
+(C0.3) Select the countries/areas in which you operate.
+Canada
+United States of America
+C0.4
+(C0.4) Select the currency used for all financial information disclosed throughout your response.
+USD
+C0.5
+(C0.5) Select the option that describes the reporting boundary for which climate-related impacts on your business are being reported. Note that this option should align with your chosen approach for consolidating your GHG inventory.
+Operational control
+C0.8
+(C0.8) Does your organization have an ISIN code or another unique identifier (e.g., Ticker, CUSIP, etc.)?
+Indicate whether you are able to provide a unique identifier for your organization	Provide your unique identifier
+Yes, a Ticker symbol
+BBY
+C1. Governance
+C1.1
+(C1.1) Is there board-level oversight of climate-related issues within your organization?
+Yes
+C1.1a
+(C1.1a) Identify the position(s) (do not include any names) of the individual(s) on the board with responsibility for climate-related issues.
+Position of individual or committee	Responsibilities for climate-related issues
+Board-level committee
+Our Board is active in helping to advance the strategy of the company, ensuring that the company’s talent and resources are aligned with the strategy, and overseeing our corporate social responsibility and sustainability. Within the Board of Directors, the Nominating, Corporate Governance and Public Policy Committee convenes at least quarterly, and members have responsibility and oversight for climate-related issues. This committee’s charter is to respond to management’s point of view regarding corporate social, political, environmental trends and public policy issues that affect or could affect the Company’s business activities, performance and public image, assist the Board in determining how the Company can anticipate and adjust to public policy trends in order to more effectively achieve its business goals and/or actively participate in the policy dialogue, and offer advice and counsel to management regarding the effectiveness of the Company’s social responsibility programs and corporate citizenship.
+
+The Nominating, Corporate Governance and Public Policy Committee Charter is available on our corporate website. http://s2.q4cdn.com/785564492/files/doc_downloads/Gov_docs/2020/09/NCGPP-Cmte-Charter_Sept-2020.pdf
+C1.1b
+(C1.1b) Provide further details on the board’s oversight of climate-related issues.
+Frequency with which climate-related issues are a scheduled agenda item	Governance mechanisms into which climate-related issues are integrated	Scope of board-level oversight	Please explain
+Scheduled – some meetings
+Reviewing and guiding annual budgets
+Overseeing major capital expenditures
+Overseeing acquisitions, mergers, and divestitures
+Overseeing and guiding employee incentives
+Reviewing and guiding strategy
+Monitoring the implementation of a transition plan
+Monitoring progress towards corporate targets
+Reviewing and guiding the risk management process
+<Not Applicable>
+Our Board is actively engaged in helping to advance the strategy of the company, ensuring that the company’s talent and resources are aligned with the strategy, and overseeing our corporate social responsibility and sustainability. Within the Board of Directors, the Nominating, Corporate Governance and Public Policy Committee convenes at least quarterly, and members have responsibility and oversight for climate-related issues. This committee’s charter is to respond to management’s point of view regarding corporate social, political and environmental trends and public policy issues that affect or could affect the Company’s business activities, performance and public image. They also assist the Board in determining how the Company can anticipate and adjust to public policy trends to more effectively achieve its business goals and/or actively participate in the policy dialogue and offer advice and counsel to management regarding the effectiveness of the Company’s social responsibility programs and corporate citizenship.
+C1.1d
+(C1.1d) Does your organization have at least one board member with competence on climate-related issues?
+Board member(s) have competence on climate-related issues	Criteria used to assess competence of board member(s) on climate-related issues	Primary reason for no board-level competence on climate-related issues	Explain why your organization does not have at least one board member with competence on climate-related issues and any plans to address board-level competence in the future
+Row 1	
+Yes
+The Board seeks a wide range of experience and expertise from a variety of industries and professional disciplines in its directors. It carefully assesses the director skill sets, qualifications and diverse perspectives required to support the Company’s long-term strategic goals, which could include Best Buy’s commitment to be carbon neutral by 2040. When the Board and its Nominating Committee determines that a director nomination or search is necessary, it undertakes a review of the current board skill sets and experience in light of the company’s strategy and current board composition. Any areas in which additional expertise, qualifications or diversity would be beneficial are identified as search criteria. If climate-related competence on the board was identified as an opportunity, the criteria used to screen for potential board members would include an assessment of the candidates’ climate-related background, skills and expertise.
+<Not Applicable>
+<Not Applicable>
+C1.2
+(C1.2) Provide the highest management-level position(s) or committee(s) with responsibility for climate-related issues.
+Position or committee
+Chief Risks Officer (CRO)
+Climate-related responsibilities of this position
+Managing annual budgets for climate mitigation activities
+Implementing a climate transition plan
+Integrating climate-related issues into the strategy
+Monitoring progress against climate-related corporate targets
+Assessing climate-related risks and opportunities
+Managing climate-related risks and opportunities
+Coverage of responsibilities
+<Not Applicable>
+Reporting line
+CEO reporting line
+Frequency of reporting to the board on climate-related issues via this reporting line
+Quarterly
+Please explain
+At Best Buy, the Chief Risk Officer, who serves as the head of Sustainability, reports directly to the CEO. As a part of this role, this leader oversees Best Buy’s environmental program and is the most senior individual below the CEO with direct oversight of climate-related activities. This oversight includes being responsible for assessing and managing Best Buy’s environmental risks and opportunities, including those which are climate related. Additionally, as the leader of our environmental strategy, this C-Suite role has the authority, influence and resources to act on climate-related risks and opportunities in alignment with our corporate strategy and goals.
+The process of monitoring climate-related issues by the Chief Risk Officer is primarily through quarterly review meetings with the Environmental Sustainability and Compliance team to address progress toward goals and any changes in our business context that may have implications for climate-related issues relevant to Best Buy.
+C1.3
+(C1.3) Do you provide incentives for the management of climate-related issues, including the attainment of targets?
+Provide incentives for the management of climate-related issues	Comment
+Row 1	
+Yes
+C1.3a
+(C1.3a) Provide further details on the incentives provided for the management of climate-related issues (do not include the names of individuals).
+Entitled to incentive
+Corporate executive team
+Type of incentive
+Monetary reward
+Incentive(s)
+Bonus - % of salary
+Performance indicator(s)
+Achievement of climate transition plan KPI
+Incentive plan(s) this incentive is linked to
+Short-Term Incentive Plan
+Further details of incentive(s)
+The Nominating, Corporate Governance and Public Policy Committee oversees Best Buy’s governance, ESG strategy and ESG reputational risks by way of quarterly discussions with management on our environmental goals and progress, social responsibility programs, and public policy positions and advocacy.
+
+In FY23, ESG KPIs were established for our executive team that provided the opportunity to be financially compensated for making progress against these KPIs. Specific to climate transition, the established goal was to "make material progress toward Best Buy’s goals to reduce carbon emissions by 75% by 2030, and achieve carbon neutrality by 2040, by investing in projects that deliver progress toward those goals but may not adhere to traditional Best Buy investment hurdles."
+Explain how this incentive contributes to the implementation of your organization’s climate commitments and/or climate transition plan
+Our forward-looking sustainability strategy and the associated climate transition goals and KPI’s aims to prepare our company to understand and manage a rapidly changing landscape that will create opportunities for growth, innovation and competitiveness. Foundationally, we will continue reducing our carbon footprint, provide our customers with products that help them live more sustainably, and take actions that minimize the environmental impact of our operations. An example from FY 23 of a project that met the criteria is an investment in an onsite solar system for our Dinuba CA distribution center. This project would not have been approved under ordinary investment hurdles, but when paired with progress toward our sustainability goals, it was ultimately funded.
+Entitled to incentive
+Corporate executive team
+Type of incentive
+Monetary reward
+Incentive(s)
+Bonus - % of salary
+Performance indicator(s)
+Other (please specify) (STI criteria includes operating income. This metric is influenced by effective energy management and equipment investments that lead to reductions in energy usage and costs, thereby contributing to the corporate executive team’s STI monetary reward.)
+Incentive plan(s) this incentive is linked to
+Short-Term Incentive Plan
+Further details of incentive(s)
+Management procedures regarding climate change risks and opportunities are integrated into multi-disciplinary company-wide management processes. Because of this integration, Best Buy does not have monetary rewards related solely to achieving emission or climate-related goals. That said, we recognize that a failure to adapt to climate change impacts such as rising temperatures would lead to incremental energy costs and that improvements to processes and equipment lead to reduced energy expense and carbon emissions reduction. Our corporate executive team is incentivized via the Corporate Short-Term Incentive (STI) program. In FY 23, the STI program criteria includes operating income. This metric is influenced by effective energy management and equipment investments that lead to reductions in energy usage and costs, thereby contributing to the corporate executive team’s STI monetary reward.
+Explain how this incentive contributes to the implementation of your organization’s climate commitments and/or climate transition plan
+In FY 23, the STI program criteria includes operating income. Incentives that drive sustainable reductions in energy use and costs (operating income) contribute to the implementation of our transition plan. Our transition plan includes reducing energy use for building lighting, heating and the transportation of goods and services while converting to low/no carbon emissions energy sources.
+C2. Risks and opportunities
+C2.1
+(C2.1) Does your organization have a process for identifying, assessing, and responding to climate-related risks and opportunities?
+Yes
+C2.1a
+(C2.1a) How does your organization define short-, medium- and long-term time horizons?
+From (years)	To (years)	Comment
+Short-term	
+0
+5
+Medium-term	
+5
+10
+Long-term	
+10
+20
+C2.1b
+(C2.1b) How does your organization define substantive financial or strategic impact on your business?
+Specific to climate-related risks and opportunities, a substantive financial or strategic impact is any activity or event that affects our profitability or financial position by more than $1,000,000. This threshold was designated by the Best Buy Sustainability Team and financial planners to assist in deciding whether executives should be notified of a climate-related impact. It is documented in our 14001 Environmental Management System as the threshold for providing visibility to the appropriate leaders for guidance and resolution.
+
+C2.2
+(C2.2) Describe your process(es) for identifying, assessing and responding to climate-related risks and opportunities.
+Value chain stage(s) covered
+Direct operations
+Upstream
+Downstream
+Risk management process
+Integrated into multi-disciplinary company-wide risk management process
+Frequency of assessment
+More than once a year
+Time horizon(s) covered
+Short-term
+Medium-term
+Long-term
+Description of process
+Description of Process: The General Counsel and Chief Risk Officer monitors and assesses short, medium and long-term risk to the enterprise, including climate-related risk, and prompts development of processes to address those risks. Cross-functional teams meet least twice per year to assess risks and opportunities, identify new environmental aspects in our direct operations, and upstream and downstream value chain, assess their relative significance, and create action plans to address risks and opportunities. The Corporate Sustainability and Compliance team periodically conducts a sustainability assessment utilizing internal and external surveys and interviews of key stakeholders to analyze which environmental and social issues are material for Best Buy. The potential size and scope of identified risks are assessed by the Environmental Sustainability and Compliance team which minimizes environmental impacts throughout Best Buy operations by prioritizing work, developing strategies and goals, engaging with external stakeholders and driving cross-functional work groups. Specific to climate-related risks and opportunities, a substantive financial impact is any activity that affects our profitability or financial position by more than $1,000,000.
+
+Climate-related work is managed by the Environmental Sustainability and Compliance team through our carbon reduction management program. Our carbon management system consists of commitments, goals, plans, SOPs, policies, measurement, data management, internal/external communication, management reviews, and market research. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS) processes. EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes. Our annual climate change assessments for stakeholder materiality and ISO 14001 significance consider climate-related risks and opportunities up five years in the future. When developing plans for mitigating risks and implementing opportunities we prioritize reducing business operating costs, reducing financial risks associated with energy needs, and capitalizing on opportunities to deliver customer value through energy-efficient products and services.
+C2.2a
+(C2.2a) Which risk types are considered in your organization's climate-related risk assessments?
+Relevance & inclusion	Please explain
+Current regulation	
+Relevant, always included
+Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to identify climate-related issues affecting Best Buy. When climate change risks and opportunities are identified, we systematically prioritize them and develop programs and processes to manage them. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS) processes. EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer. The General Counsel and Chief Risk Officer monitors and assesses short, medium and long-term risk to the enterprise, including climate-related risk, and prompts development of processes to address those risks.
+
+An example of current regulation risk that Best Buy would consider relevant is how we source energy throughout North America to support our operations. We consider current carbon tax regulation relevant because carbon tax mechanisms which seek to mitigate fossil-based electricity could lead to a potential indirect expense risk. No U.S. federal, U.S. state, or local provisions currently impose carbon taxation mechanisms that materially affect our net earnings or competitive position. In the United States, eleven states participate in the Regional Greenhouse Gas Initiative (RGGI), a cap-and-trade program established in 2009. In addition, California began operating a cap-and-trade program in 2013. In the eleven RGGI states and California, we operate 312 stores and nine distribution centers. Regionalized state provisions such as RGGI thus far have not materially affected, nor are expected to materially affect, our net earnings or competitive position.
+
+If an activity is likely to exceed our definition of a substantive financial impact for climate-related risks and opportunities (more than $1,000,000), the EMS administrator will inform Corporate Sustainability and Compliance team leaders. The activity will then be included in our risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer.
+Emerging regulation	
+Relevant, always included
+Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to identify climate-related issues affecting Best Buy. When climate change risks and opportunities are identified we systematically prioritize them and develop programs and processes to manage them. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS) processes. EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer. The General Counsel and Chief Risk Officer monitors and assesses short, medium and long-term risk to the enterprise, including climate-related risk, and prompts development of processes to address those risks.
+
+An example of emerging regulation risk Best Buy considers relevant is how we would comply with proposed SEC climate disclosure. We consider emerging regulation relevant because SEC climate disclosure rules could lead to increased program management expenses. While the proposed SEC rule is substantive, with certain guardrails, public disclosure of climate information helps foster consistency and transparency across companies, levels the playing field, and responsibly advances our collective environmental performance. We further contend that because we already thoroughly respond to the CDP Climate survey which aligns to the TCFD framework, like the SEC Proposed rule, we are already in a strong position to respond the future SEC climate reporting requirements. That said, while we support the aspirations underlying the proposals, we are monitoring their development because there are several aspects we feel would not improve overall reporting and/or would be inoperable or overly onerous. To date, SEC climate disclosure rules have not materially affected, nor are expected to materially affect, our net earnings or competitive position.
+
+If an activity is likely to exceed our definition of a substantive financial impact for climate-related risks and opportunities (more than $1,000,000), the EMS administrator will inform Corporate Sustainability and Compliance team leaders. The activity will then be included in our risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer.
+Technology	
+Relevant, always included
+Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to identify climate-related issues affecting Best Buy. When climate change risks and opportunities are identified we systematically prioritize them and develop programs and processes to manage them. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS) processes. EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer. The General Counsel and Chief Risk Officer monitors and assesses short, medium and long-term risk to the enterprise, including climate-related risk, and prompts development of processes to address those risks.
+
+For Best Buy to be able to meet our Science Based Targets and net zero carbon (carbon neutrality) commitments, we will require improvements in technology and increased scale. For example, to eliminate our scope 2 carbon emissions, we will require 100% clean and renewable electricity. This will require a sufficient supply of renewable electricity, including improvements to and expansion of 100% clean electricity distribution grids (greening of the grid) in the United States and Canada. This will also require sufficient supply of ethically sourced solar panels, batteries, and wind power generation equipment. Similarly, to eliminate our scope 1 emissions, we will require technologies that allow us to heat our buildings without the burning of fossil fuels and to operate our fleet with carbon-free fuels or 100% clean electricity. Currently, there is insufficient distribution capacity to allow 100% clean energy for 100% of our operations. Similarly, there is insufficient supply of carbon-free fleet vehicles of the type needed to serve our customers and meet our decarbonization commitments.
+
+If an activity is likely to exceed our definition of a substantive financial impact for climate-related risks and opportunities (more than $1,000,000), the EMS administrator will inform Corporate Sustainability and Compliance team leaders. The activity will then be included in our risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer.
+Legal	
+Not relevant, included
+Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to identify climate-related issues affecting Best Buy. When climate change risks and opportunities are identified we systematically prioritize them and develop programs and processes to manage them. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS) processes. EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer. The General Counsel and Chief Risk Officer monitors and assesses short, medium and long-term risk to the enterprise, including climate-related risk, and prompts development of processes to address those risks.
+
+Climate-related legal risk is not relevant to Best Buy because no risks associated with climate-related litigation claims have been identified that meet our climate-related definition of substantive financial impact.
+
+If an activity is likely to exceed our definition of a substantive financial impact for climate-related risks and opportunities (more than $1,000,000), the EMS administrator will inform Corporate Sustainability and Compliance team leaders. The activity will then be included in our risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer.
+Market	
+Relevant, always included
+Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to identify climate-related issues affecting Best Buy. When climate change risks and opportunities are identified we systematically prioritize them and develop programs and processes to manage them. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS) processes. EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer. The General Counsel and Chief Risk Officer monitors and assesses short, medium and long-term risk to the enterprise, including climate-related risk, and prompts development of processes to address those risks.
+
+Climate-related market risks are relevant to Best Buy because many of our products and services that rely on electricity (e.g. the ENERGYSTAR products included in our sustainable products goal) have some sensitivity to changes in macroeconomic conditions that impact consumer spending. Climate change creates several market risks as related to Best Buy’s operations, e.g., consumer markets, and energy markets. For example, changes in climate affect customers’ buying behaviors, e.g., by increasing demand for fans and air conditioners, programmable thermostats, solar chargers, energy efficient appliances, and other electronics and appliances that are affected by extreme temperatures or outages due to extreme weather conditions. Similarly, extreme weather events such as hurricanes, tornadoes, droughts, and wildfires affect local markets in unpredictable and material ways. For example, in 2022, hurricane Ian caused over 43 temporary store closures in Florida, Georgia, North Carolina and South Carolina at the same time that customers need Best Buy electronics, emergency equipment, and home appliances that ensure safety and comfort.
+
+If an activity is likely to exceed our definition of a substantive financial impact for climate-related risks and opportunities (more than $1,000,000), the EMS administrator will inform Corporate Sustainability and Compliance team leaders. The activity will then be included in our risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer.
+Reputation	
+Relevant, always included
+Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to identify climate-related issues affecting Best Buy. When climate change risks and opportunities are identified we systematically prioritize them and develop programs and processes to manage them. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS) processes. EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer. The General Counsel and Chief Risk Officer monitors and assesses short, medium and long-term risk to the enterprise, including climate-related risk, and prompts development of processes to address those risks.
+
+Our reputation as an environmentally responsible business is critical to our success. It is central to attracting customers, employees and shareholders. Our reputational risk is the failure to meet the climate-related expectations of customers, leading to a potential loss of revenue. For example, we are seeing increasing demand for ENERGY STAR certified products, programmable thermostats, energy efficient LED lights, and other efficient and sustainable products. The failure of Best Buy to provide best in class energy efficient products that are in demand could negatively affect Best Buy’s reputation and cause loyal customers to seek out sustainable and energy efficient products elsewhere. To counter this risk, Best Buy has launched a Sustainable Living page on our website to help customers find products that reduce their impact on the environment. These product lines include gardening and composting, green transportation, renewable energy, resource conservation, and outdoor recreation.
+
+If an activity is likely to exceed our definition of a substantive financial impact for climate-related risks and opportunities (more than $1,000,000), the EMS administrator will inform Corporate Sustainability and Compliance team leaders. The activity will then be included in our risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer.
+Acute physical	
+Relevant, always included
+Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to identify climate-related issues affecting Best Buy. When climate change risks and opportunities are identified we systematically prioritize them and develop programs and processes to manage them. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS). EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer. The General Counsel and Chief Risk Officer monitors and assesses risks to the enterprise, including climate-related risk, and prompts development of processes to address those risks.
+
+Acute physical risks are relevant to Best Buy because they may occur to segments of our supply chain due to increased severity and frequency of extreme weather. To mitigate this risk, we have an Enterprise Business Continuity (EBC) team tasked with developing business continuity and crisis management plans. The EBC team maintains the All-Hazard Plan Standard Operating Procedure (SOP), which is available on Best Buy’s internal network for Retail, Supply Chain, and Repair Depots. The SOP ensures employees can appropriately respond to emergency situations including severe weather. As an example, and to give context to the size of managed risk, in 2022, at least 790 incidents at 593 unique locations were impacted by weather-related events to some degree, ranging from a few hours to multiple days of disrupted operations. The All-Hazard SOPs were used by these locations to ensure the safety of customers and employees as well as restore business operations as safely and quickly as possible.
+
+If an activity is likely to exceed our definition of a substantive financial impact for climate-related risks and opportunities (more than $1,000,000), the EMS administrator will inform Corporate Sustainability and Compliance team leaders. The activity will then be included in our risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer.
+Chronic physical	
+Relevant, always included
+Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to identify climate-related issues affecting Best Buy. When climate change risks and opportunities are identified we systematically prioritize them and develop programs and processes to manage them. The relative significance of climate-related risks is determined through our ISO 14001 certified Environmental Management System (EMS) processes. EMS inputs and outputs are integrated into multi-disciplinary company-wide risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer. The General Counsel and Chief Risk Officer monitors and assesses short, medium and long-term risk to the enterprise, including climate-related risk, and prompts development of processes to address those risks.
+
+Using the World Resource institute's Aqueduct Tool, we identified 155 Best Buy locations in North America that are susceptible to coastal or riverine flooding, and 292 that are exposed to drought. Chronic physical risks, for example flooding due to extreme variability in weather patterns or rising sea levels, are relevant to Best Buy because they could affect the safety and well-being of our customers, employees and vendors as well as interrupt supply chain service which could lead to increases in the cost of transportation, the availability of product, or reduced transportation efficiency. It is important that we maintain optimal levels of inventory in each store and distribution center and respond rapidly to shifting customer demands. Disruption to, or inefficiency in, our supply chain network could potentially damage our revenue and profitability.
+
+If an activity is likely to exceed our definition of a substantive financial impact for climate-related risks and opportunities (more than $1,000,000), the EMS administrator will inform Corporate Sustainability and Compliance team leaders. The activity will then be included in our risk identification, assessment, and management processes led by our General Counsel and Chief Risk Officer.
+C2.3
+(C2.3) Have you identified any inherent climate-related risks with the potential to have a substantive financial or strategic impact on your business?
+Yes
+C2.3a
+(C2.3a) Provide details of risks identified with the potential to have a substantive financial or strategic impact on your business.
+Identifier
+Risk 1
+Where in the value chain does the risk driver occur?
+Direct operations
+Risk type & Primary climate-related risk driver
+Acute physical	Cyclone, hurricane, typhoon
+Primary potential financial impact
+Decreased revenues due to reduced production capacity
+Climate risk type mapped to traditional financial services industry risk classification
+<Not Applicable>
+Company-specific description
+For Best Buy, our competitiveness and financial results could be impacted by increased severity and frequency of extreme weather events such as cyclones and floods that result in our inability to keep stores open for business as scheduled or to deliver product to our stores for an extended period. Specific regions of the United States where there are Best Buy locations that may be exposed to increased risk of cyclones and storm surges are the south-eastern and east coast states and territories. Like other retailers, disruption may occur to segments of our retail and distribution network. Best Buy’s distribution network is a diverse and flexible replenishment operation that allows us to effectively respond to and manage the risks of extreme weather. For example, in 2022 at least 790 incidents at 593 unique locations were impacted by weather-related events resulting in temporary store closure. We define a temporary closure as any location closing for more than three hours. In 2022, hurricane Ian caused over 43 temporary store closures in Florida, Georgia, North Carolina and South Carolina.
+Time horizon
+Short-term
+Likelihood
+Very likely
+Magnitude of impact
+Medium-low
+Are you able to provide a potential financial impact figure?
+Yes, a single figure estimate
+Potential financial impact figure (currency)
+63800000
+Potential financial impact figure – minimum (currency)
+<Not Applicable>
+Potential financial impact figure – maximum (currency)
+<Not Applicable>
+Explanation of financial impact figure
+In 2022, 790 incidents weather-related events to some degree, ranging from a few hours to multiple days of disrupted operations. With U.S. domestic retail location revenue of approximately $28.6 billion (exclusive of dot com fulfilled orders), if there are 790 store closure days (hypothetical maximum) with average daily store revenue of approximately $80,782 then the potential revenue missed or delayed due to weather-related events would be approximately $63.8 million (790 store closure days * $80,782 daily store revenue = $63.8 million).
+Cost of response to risk
+0
+Description of response and explanation of cost calculation
+Given the exposure of Best Buy locations to increased severity and frequency of extreme weather events, our Enterprise Business Continuity (EBC) team was tasked with incorporating severe weather preparedness and response into business continuity and crisis management plans. Procedures could include managing the immediate safety of customers and employees, decisions on when and how to close and re-open the store, how to support employees and the local community post-emergency, and communications with Best Buy response teams.
+[Situation] For example, in 2022, there were 790 weather-related temporary store closures. We define a temporary closure as any location closing for more than three hours. In 2022, hurricane Ian caused over 43 temporary store closures in Florida, Georgia, North Carolina and South Carolina. [Task] Crisis management plans were used to ensure the safety of customers and employees as well as restore business operations as safely and quickly as possible. [Action] To mitigate lost revenue, store resources were reallocated to surrounding open stores to meet displaced customer demand. [Result] The cost to manage our Enterprise Business Continuity Program is viewed as a standard business expense. We use internal resources on our Global Threat Detection and Response team to manage business continuity programs and have no direct climate-related expenses associated with this risk. Hence, the incremental cost not associated with business-as-usual expense is zero.
+Comment
+Identifier
+Risk 2
+Where in the value chain does the risk driver occur?
+Direct operations
+Risk type & Primary climate-related risk driver
+Reputation	Increased stakeholder concern or negative stakeholder feedback
+Primary potential financial impact
+Decreased revenues due to reduced demand for products and services
+Climate risk type mapped to traditional financial services industry risk classification
+<Not Applicable>
+Company-specific description
+At Best Buy, our reputation as an environmentally responsible business is critical to our success. Our environmental reputation is central to attracting customers, employees and shareholders. As such, we measure, manage, and optimize our environmental reputation. In 2020, Best Buy partnered with Corporate Citizenship to conduct a sustainability materiality assessment. The result of our analysis concluded that addressing climate emissions, as well as assorting and promoting energy efficient products, is foundational to our reputational efforts with our customer. In CY 2022, Best Buy’s Enterprise Research Team surveyed 2,000+ people regarding consumer attitudes and understanding of core ESG elements relevant to Best Buy. It concluded that the potential risk to Best Buy is the failure to meet the expectations of our customers who are becoming increasingly environmentally conscious. One key finding in the survey was that 33% of shoppers indicated that they had boycotted certain stores/products which don’t contribute to, or cause problems related to, social issues. Failure to meet these expectations may negatively impact sales performance. To support our environmental reputation, we have established several public sustainability goals in our operations: reduce absolute carbon emissions by 75% by 2030 (from 2009 baseline) and achieve carbon neutrality by 2040. We aim to reinforce our corporate citizenship efforts and demonstrate leading environmental stewardship in the communities where we operate. We also use our ISO 14001 certified Environmental Management System to manage and continuously improve our environmental performance and reputation.
+Time horizon
+Long-term
+Likelihood
+Unlikely
+Magnitude of impact
+Medium-low
+Are you able to provide a potential financial impact figure?
+Yes, a single figure estimate
+Potential financial impact figure (currency)
+427900000
+Potential financial impact figure – minimum (currency)
+<Not Applicable>
+Potential financial impact figure – maximum (currency)
+<Not Applicable>
+Explanation of financial impact figure
+Our environmental reputation is central to attracting customers, employees and shareholders. We recognize that a failure to meet some customer expectations regarding our environmental reputation may impact sales performance. While challenging to quantify the direct financial impact of mismanagement of our environmental reputation, if total U.S. domestic FY23 revenue ($42.79B) was negatively impacted by 1%, the revenue loss would equate to $427.9 million ($42.7B * 1.0% = $427.9M).
+Cost of response to risk
+0
+Description of response and explanation of cost calculation
+[Situation] At Best Buy, our reputation as an environmentally responsible business is critical to our success. Our environmental reputation is central to attracting customers, employees and shareholders. As such, we measure, manage, and optimize our environmental reputation. In 2020 Best Buy partnered with Corporate Citizenship to conduct a sustainability materiality assessment. The result of our analysis concluded that addressing climate emissions, as well as assorting and promoting energy-efficient products, was foundational to our reputation and our ability to serve customers. [Task] As such, we measure, manage, and optimize our environmental reputation. [Action] In 2022 we continued to provide education and training so our store employees can effectively represent and communicate Best Buy's many environmental programs, such as our 75% by 2030 carbon reduction goal (from 2009 baseline) and energy-efficient ENERGY STAR product offerings. These programs build upon our environmental reputation and stewardship role in the advancement of a low carbon economy. [Result] Our reputation is enhanced by continued inclusion in the Dow Jones Sustainability Index, achievement of CDP Climate A list designation, top 5 rank on Barron’s list of the 100 Most Sustainable Companies, and our tenth consecutive ENERGY STAR Partner of The Year Awards. We also use email, BestBuy.com, social media vehicles (e.g., Twitter @BestBuyCSR, @BestBuy) and blog posts to enhance our sustainability communication with stakeholders.
+
+In 2022, components of Best Buy's carbon management program, including our Environmental Management System, REC purchases, in-store training, NGO engagement and other various topics are integrated into our standard business practices. Best Buy uses internal resources to manage our environmental reputation and expenses associated with program maintenance, hence we consider there to be no costs specific to the response to climate-related risks.
+Comment
+Identifier
+Risk 3
+Where in the value chain does the risk driver occur?
+Direct operations
+Risk type & Primary climate-related risk driver
+Emerging regulation	Carbon pricing mechanisms
+Primary potential financial impact
+Increased indirect (operating) costs
+Climate risk type mapped to traditional financial services industry risk classification
+<Not Applicable>
+Company-specific description
+We source energy throughout North America to support our operations. Carbon tax mechanisms which seek to mitigate fossil-based electricity could lead to be a potential indirect expense risk. While no U.S. federal, U.S. state, or local provisions currently impose carbon taxation mechanisms that materially affect our net earnings or competitive position, in the United States, eleven states participate in the Regional Greenhouse Gas Initiative (RGGI), a cap-and-trade program established in 2009. In addition, California began operating a cap-and-trade program in 2013. In the eleven RGGI states and California, we operate 312 stores and nine distribution centers. Regionalized state provisions such as RGGI thus far have not materially affected, nor are expected to materially affect, our net earnings or competitive position.
+Time horizon
+Short-term
+Likelihood
+Unlikely
+Magnitude of impact
+Low
+Are you able to provide a potential financial impact figure?
+Yes, a single figure estimate
+Potential financial impact figure (currency)
+1593894
+Potential financial impact figure – minimum (currency)
+<Not Applicable>
+Potential financial impact figure – maximum (currency)
+<Not Applicable>
+Explanation of financial impact figure
+Our review of commercially available carbon offset credits ranged between $3 to $20 per ton of CO2. For purposes of this exercise, we assumed an offset cost of $6.00 per metric ton. If all our 2022 location-based Scope 2 emissions were subject to a $6.00 per Metric Ton CO2e, Best Buy would indirectly be exposed to $1,593,894 in incremental costs. (265,649 MT CO2e * $6.00 = $1,593,894)
+Cost of response to risk
+0
+Description of response and explanation of cost calculation
+[Situation] Best Buy’s Environmental Sustainability and Compliance, Enterprise Risk and Compliance, and Public Affairs and Government Affairs teams use internal and external networks, trade associations and third-party consultants to help identify potential regulatory issues and risks. We do not believe legislative action would affect Best Buy uniquely from market competition; therefore, the potential impact is low since all businesses would be affected similarly. [Task] We believe renewable energy sourcing can reduce financial uncertainty in energy procurement. Best Buy seeks to identify renewable investments that meet internal financial ROI targets while providing carbon reductions and energy price certainty. [Action] For example, in deregulated states with a large energy footprint such as Texas, we are contemplating options that will deliver carbon reduction over the next two decades. Examples of these optional investments include, but may not be limited to, Power Purchase Agreements, Virtual Power Purchase Agreements, Tax Equity Investments and onsite renewable investments. We are also part of the Department of Energy’s National Clean Fleets Partnership. [Result] We do not foresee being directly impacted under any anticipated structures. Future costs of carbon taxation will likely be internalized into the price of energy and other goods and services. The costs to monitor carbon taxation is included as a core responsibility of sustainability staff, hence no additional costs are incurred to address the risk.
+Comment
+C2.4
+(C2.4) Have you identified any climate-related opportunities with the potential to have a substantive financial or strategic impact on your business?
+Yes
+C2.4a
+(C2.4a) Provide details of opportunities identified with the potential to have a substantive financial or strategic impact on your business.
+Identifier
+Opp1
+Where in the value chain does the opportunity occur?
+Direct operations
+Opportunity type
+Resilience
+Primary climate-related opportunity driver
+Other, please specify (Business continuity management)
+Primary potential financial impact
+Increased revenues resulting from increased demand for products and services
+Company-specific description
+Our business continuity plans present a physical opportunity for Best Buy. Effective business continuity management is a competitive advantage that enables us to quickly, effectively and safely resume operations following a severe weather event. The diversity and flexibility of our extensive supply network can systemically respond to displaced demand for products to surrounding stores. For example, last year 804 locations were impacted by weather-related events resulting in temporary store closure. We define a temporary closure as any location closing for more than three hours. In 2022, hurricane Ian caused over 43 temporary store closures in Florida, Georgia, North Carolina and South Carolina. To mitigate lost revenue, store resources were reallocated to surrounding open stores to meet displaced customer demand. The crisis management plans were used to ensure the safety of customers and employees as well as restore business operations as safely and quickly as possible. Best Buy does not publicly report store or state specific sales, but our internal planners review local trends before, during and after severe weather events to ensure sales are optimized.
+Time horizon
+Short-term
+Likelihood
+Very likely
+Magnitude of impact
+Medium-low
+Are you able to provide a potential financial impact figure?
+Yes, a single figure estimate
+Potential financial impact figure (currency)
+1211730
+Potential financial impact figure – minimum (currency)
+<Not Applicable>
+Potential financial impact figure – maximum (currency)
+<Not Applicable>
+Explanation of financial impact figure
+Best Buy does not publicly disclose store or state specific sales, but our business planning teams do review trends before, during and after severe weather events to ensure our ability to help affected customers and employees is optimized. However, our assessment of this risk as identified in 2.3a determined that each day a store location is closed could result in $80,782 in potential missed or delayed revenue. We estimate our business continuity management would increase the number of open store days by 15 or more, resulting in a financial impact of approximately $1,211,730 (15 days * $80,782 = $1,211,730). Hence, from a magnitude standpoint, the potential financial impact of our business continuity planning efforts exceeds our definition of positive substantive climate-related financial impact. Specific to climate-related risks and opportunities, a substantive financial impact is any activity that affects our profitability or financial position by more than $1,000,000.
+Cost to realize opportunity
+0
+Strategy to realize opportunity and explanation of cost calculation
+[Situation] Given the exposure of Best Buy locations to increased severity and frequency of extreme weather events, our Enterprise Business Continuity (EBC) team was tasked with incorporating severe weather preparedness and response into business continuity and crisis management plans. [Task] Procedures could include managing the immediate safety of customers and employees, deciding on when and how to close and re-open the store, how to support employees and the local community post-emergency, and communicating with Best Buy response teams.
+[Action] In 2022, hurricane Ian caused over 43 temporary store closures in Florida, Georgia, North Carolina and South Carolina. Crisis management plans were used to ensure the safety of customers and employees as well as restore business operations as safely and quickly as possible. To mitigate lost revenue, store resources were reallocated to surrounding open stores to meet displaced customer demand. [Result] The cost to manage our Enterprise Business Continuity Program is viewed as a standard business expense. We use internal resources on our Global Threat Detection and Response team to manage business continuity programs and have no direct climate-related expenses associated with this opportunity. Hence, the incremental cost not associated with business-as-usual expense is zero.
+Comment
+Identifier
+Opp2
+Where in the value chain does the opportunity occur?
+Downstream
+Opportunity type
+Products and services
+Primary climate-related opportunity driver
+Shift in consumer preferences
+Primary potential financial impact
+Increased revenues resulting from increased demand for products and services
+Company-specific description
+At Best Buy, our reputation as an environmentally responsible business is critical to our success. Our environmental reputation is central to attracting customers, employees, vendor partners and shareholders. The potential opportunity is for Best Buy to exceed customer expectations regarding our environmental reputation which may positively impact sales performance. To support our environmental reputation, we have established several public sustainability goals in our operations: reduce absolute emissions by 75% by 2030 (from 2009 baseline) and achieve carbon neutrality by 2040. In 2009, our emissions were 1,031,696 MT CO2e. Achieving our 75% target will result in reducing 773,772 MT of CO2e emissions in 2030. By providing sustainable solutions for our customers, we aim to reinforce our corporate citizenship efforts and demonstrate leading environmental stewardship in the communities we operate. We also use our ISO 14001 certified Environmental Management System to manage and continuously improve our environmental performance and reputation; in fact, we were the first U.S. large format retailer to achieve such certification.
+Time horizon
+Short-term
+Likelihood
+Virtually certain
+Magnitude of impact
+Medium-low
+Are you able to provide a potential financial impact figure?
+Yes, a single figure estimate
+Potential financial impact figure (currency)
+427930000
+Potential financial impact figure – minimum (currency)
+<Not Applicable>
+Potential financial impact figure – maximum (currency)
+<Not Applicable>
+Explanation of financial impact figure
+Our environmental reputation helps attract certain customer segments and employees. Meeting and exceeding customer expectations regarding our environmental reputation may impact sales performance. While challenging to quantify the direct financial impact of positively managing our environmental reputation, if total U.S. domestic 2022 revenue ($42.79B) was positively impacted by 1%, the revenue increase would equate to $427.9 million ($42.793B * 1.0% = $427.9M).
+Cost to realize opportunity
+0
+Strategy to realize opportunity and explanation of cost calculation
+[Situation] In 2021 Best Buy's Strategic Stakeholder Engagement team completed an internal ESG materiality assessment in order to update and refresh our 2020 sustainability materiality assessment conducted by Corporate Citizenship. Our analysis concluded, in part, that addressing climate emissions, including assorting and promoting energy-efficient products, was foundational to our reputational efforts and our ability to serve customers. [Task] A such, we measure, manage, and optimize our environmental reputation. [Action] We provide systematic education and training, so our store employees can effectively represent and communicate the many environmental programs, such as our 75% by 2030 carbon reduction goal and our energy-efficient ENERGY STAR product offerings. These programs build upon our environmental reputation and stewardship role in the advancement to a low carbon economy. [Result] Our reputation is enhanced by continued inclusion in the Dow Jones Sustainability Index, achievement of CDP Climate A list designation, our top 5 rank on Barron’s list of the 100 Most Sustainable Companies, and our ten consecutive ENERGY STAR Partner of The Year Awards. We also use email, BestBuy.com, social media vehicles (e.g., Twitter @BestBuyCSR, @BestBuy) and blog posts on to enhance our sustainability communication with stakeholders. In 2022, to support the findings of our materiality assessments and build programs that addressed the findings, we incurred climate-related expenses for components of carbon management including our Environmental Management System, REC purchases, in-store training, NGO engagement and other miscellaneous topics. The cost to manage our Sustainable Products program is viewed as a standard business expense. We use internal resources on our Environmental Sustainability and Compliance team to drive increased revenue from increased demand for sustainable products such as ENERGY STAR certified products. We have no direct climate-related expenses associated with this opportunity. Hence, the incremental cost not associated with business-as-usual expense is zero.
+Comment
+Identifier
+Opp3
+Where in the value chain does the opportunity occur?
+Downstream
+Opportunity type
+Products and services
+Primary climate-related opportunity driver
+Shift in consumer preferences
+Primary potential financial impact
+Increased revenues resulting from increased demand for products and services
+Company-specific description
+We believe that a substantive transitional opportunity for us is our ability to fulfill the demand for energy-efficient technologies. In 2022, our U.S. customers made the decision to buy an ENERGY STAR product more than 17 million times. Over the lifetime of the products, those customers will realize more than $799 million in utility savings and the products will provide 8.2 billion pounds of CO2 emissions avoidance. Increasing this figure is a potential financial opportunity for us and our customers. Sustainable products are among the top sustainability priorities for our company, and we are well positioned to promote ENERGY STAR products to ensure customer satisfaction and smart, eco-friendly purchases. We use internal resources to help manage environmental programs and partnerships that benefit our customers and shareholders. Additionally, we create and distribute materials to help sell products that have favorable environmental attributes. For example, Best Buy promotes ENERGY STAR educational videos in our stores, reaching millions of customers annually.
+Time horizon
+Short-term
+Likelihood
+Virtually certain
+Magnitude of impact
+Medium-low
+Are you able to provide a potential financial impact figure?
+Yes, a single figure estimate
+Potential financial impact figure (currency)
+1000000
+Potential financial impact figure – minimum (currency)
+<Not Applicable>
+Potential financial impact figure – maximum (currency)
+<Not Applicable>
+Explanation of financial impact figure
+Best Buy offers a large selection of ENERGY STAR certified products to help our customers save money, reduce energy use and protect the environment by meeting strict energy guidelines set by the U.S. Environmental Protection Agency (EPA) and the U.S. Department of Energy. In 2022, our U.S. customers made the decision to buy an ENERGY STAR product more than 17 million times.
+Over the lifetime of the products, those customers will realize more than $799 million in utility savings and the products will provide 8.2 billion pounds of CO2 emissions avoidance.
+We do not publicly share the financial performance of ENERGY STAR products as a segregated view. However, an analysis completed in 2022 indicated that the average selling price of an ENERGY STAR certified product is 16% higher than non-ENERGY STAR certified products. Thus, from a magnitude standpoint, the selling of ENERGY STAR products at Best Buy exceeds our definition of substantive climate-related financial impact. Specific to climate-related risks and opportunities, we define a substantive financial impact as any activity that affects our profitability or financial position by more than $1,000,000.
+Cost to realize opportunity
+0
+Strategy to realize opportunity and explanation of cost calculation
+[Situation] In 2020 Best Buy partnered with Corporate Citizenship to conduct a sustainability materiality assessment. Our analysis concluded that addressing climate emissions, as well as assorting and promoting energy-efficient products, was foundational to our reputation and our ability to serve customers. [Task] As such, we measure, manage, and optimize our environmental reputation. [Action] We continue to provide education and training, so our store employees can effectively represent and communicate the many environmental programs, such as our 75% by 2030 (from 2009 baseline) carbon reduction goal and energy-efficient ENERGY STAR product offerings. [Result] These programs build upon our environmental reputation and stewardship role in the advancement of a low carbon economy. Our reputation is enhanced by continued inclusion in the Dow Jones Sustainability Index, achievement of CDP Climate A list designation, top 5 rank on Barron’s list of the 100 Most Sustainable Companies, and our ten consecutive ENERGY STAR Partner of The Year Awards. We also use email, BestBuy.com, social media vehicles (e.g., Twitter @BestBuyCSR, @BestBuy) and blog posts to enhance our sustainability communication with stakeholders. Sustainable products are among the top sustainability priorities for our company, and we are well positioned to promote ENERGY STAR products to ensure customer satisfaction and smart, eco-friendly purchases. The cost to manage our Sustainable Products program is viewed as a standard business expense. We use internal resources on our Environmental Sustainability and Compliance team to drive increased revenue from increased demand for sustainable products such as ENERGY STAR certified products. We have no direct climate-related expenses associated with this opportunity. Hence, the incremental cost not associated with business-as-usual expense is zero.
+Comment
+C3. Business Strategy
+C3.1
+(C3.1) Does your organization’s strategy include a climate transition plan that aligns with a 1.5°C world?
+Row 1
+Climate transition plan
+Yes, we have a climate transition plan which aligns with a 1.5°C world
+Publicly available climate transition plan
+Yes
+Mechanism by which feedback is collected from shareholders on your climate transition plan
+We have a different feedback mechanism in place
+Description of feedback mechanism
+Best Buy frequently publishes information about our climate change strategy and progress towards our 2040 Net-Zero goal, including the CDP Climate disclosure and our annual ESG report. Shareholders are able to review this information and provide feedback through the Best Buy Investor Relations team, who subsequently meets with the Environmental Sustainability and Compliance team to share any feedback received.
+Frequency of feedback collection
+More frequently than annually
+Attach any relevant documents which detail your climate transition plan (optional)
+Explain why your organization does not have a climate transition plan that aligns with a 1.5°C world and any plans to develop one in the future
+<Not Applicable>
+Explain why climate-related risks and opportunities have not influenced your strategy
+<Not Applicable>
+C3.2
+(C3.2) Does your organization use climate-related scenario analysis to inform its strategy?
+Use of climate-related scenario analysis to inform strategy	Primary reason why your organization does not use climate-related scenario analysis to inform its strategy	Explain why your organization does not use climate-related scenario analysis to inform its strategy and any plans to use it in the future
+Row 1	
+Yes, qualitative, but we plan to add quantitative in the next two years
+<Not Applicable>
+<Not Applicable>
+C3.2a
+(C3.2a) Provide details of your organization’s use of climate-related scenario analysis.
+Climate-related scenario	Scenario analysis coverage	Temperature alignment of scenario	Parameters, assumptions, analytical choices
+Transition scenarios	IEA 450
+Company-wide
+<Not Applicable>
+We selected the IEA 450 scenario to identify potential transition risks because it represents an aggressive global response to climate change. We identified aspects of the scenario that illuminated transitional risks to business continuity and cost (e.g., we have the risk of significant fluctuations in energy prices and the rate of transportation technology innovation).
+We chose a time horizon of 20 years which aligns with our SBTi approved goal of carbon neutrality by 2040.
+We considered in our analysis impacts regarding treasury, tax, risk, procurement, compliance, properties, product distribution, fleet, retail, and finance.
+Our longer-term risks are the transition risks associated with energy price fluctuations, improvements in on-site and off-site solar technology, the cost of clean energy technology and energy storage.
+To meet our climate mitigation goals, we are evaluating the following strategies and concepts: a transition to clean/renewable energy sources, such as solar and wind; advocating for green energy policy, installing clean/renewable energy projects (e.g., solar); transitioning our fleet to electric powered vehicles; transitioning our building heating and hot water heating from fossil fuels to clean/renewable energy; and transitioning our air-conditioning and refrigeration systems towards low/no GHG emitting refrigerants.
+We identified Texas as a region where risks to electricity reliability, availability, and cost certainty were comparatively higher than other regions due to Texas’ increasing vulnerability to extreme weather (e.g., hurricanes, tornadoes, 100 and 500-year precipitation events, heat waves and droughts, and polar vortex freezes). Our analysis found that our susceptibility to financial impacts greater than $1 million required specific mitigation and adaptation measures. Best Buy has invested in a utility-scale solar project located in Andrews County, Texas. In addition, Best Buy signed a ten-year fixed-cost solar energy contract for 100% of our electricity load throughout the Texas/ERCOT transmission region. This solar project will help to green the grid for customers in the Texas/ERCOT electricity grid, as well as provide cost certainty and electricity stability. Additionally, the use of solar energy will lower Best Buy’s greenhouse gas emissions and contribute to the achievement of our Science Based Target.
+Physical climate scenarios	RCP 6.0
+Company-wide
+<Not Applicable>
+We chose RCP 6.0 as a reasonable “worst-case" physical risk scenario representing business as usual. This scenario provides a sufficient framework of physical risks for our analysis. Our analysis focused on the impact of extreme weather, flooding and wildfires on our operations. We did not consider sea level rise apart from its impact on increasing hurricane damage. To mitigate climate change impacts, Best Buy must reduce its own emissions of greenhouse gases and advocate for clean energy policy.
+Our biggest physical risks are business disruption due to extreme weather, wildfires and flooding. To meet our climate mitigation goals we are evaluating the following strategies: a transition to clean/renewable energy sources, such as solar and wind; advocating for green energy policy, installing clean/renewable energy projects, e.g., solar; transitioning our fleet to electric powered vehicles; transitioning our building heating and hot water heating from fossil fuels to clean/renewable energy; and transitioning our air-conditioning and refrigeration systems towards low/no GHG emitting refrigerants.
+We determined climate change and its impact on energy reliability, availability, cost, and emissions as material to our operations. We identified the state of Texas as a potential region where risks to electricity reliability, availability, and cost certainty were comparatively higher than other regions due to Texas’ increasing vulnerability to extreme weather (e.g., hurricanes, tornadoes, 100 and 500-year precipitation events, heat waves and droughts, and polar vortex freezes). Our analysis found that our susceptibility to financial impacts greater than $1 million required specific mitigation and adaptation measures. Best Buy has invested in a utility-scale solar project located in Andrews County, Texas. In addition, Best Buy signed a ten-year fixed-cost solar energy contract for 100% of our electricity load throughout the Texas/ERCOT transmission region. This investment in the solar project will help to green the grid for all customers in the Texas/ERCOT electricity grid, which will help to mitigate the effects of climate change, as well as provide cost certainty and electricity stability. Additionally, the use of solar energy will lower Best Buy’s greenhouse gas emissions and contribute to the achievement of our Science Based Target.
+C3.2b
+(C3.2b) Provide details of the focal questions your organization seeks to address by using climate-related scenario analysis, and summarize the results with respect to these questions.
+Row 1
+Focal questions
+How might climate-related scenarios impact the cost and availability of electricity to run our operations, including building lighting, heating, cooling and inventory platforms which enable product delivery and service fulfilment?
+Results of the climate-related scenario analysis with respect to the focal questions
+The results of the climate-related scenario analysis included determining that extreme weather causing disruption to the generation, transmission and distribution of electricity could have a significant negative impact on the cost and reliability of electricity available for Best Buy operations. Best Buy retail locations could be temporarily closed due to lack of electricity for lighting, heating and sales systems. Local deliveries and service calls could be temporarily discontinued due to non-functioning vehicle charging stations for an electrified fleet.
+For example, from a regional context, we identified Texas as a potential region where risks to electricity reliability, availability, and cost certainty were comparatively higher than other regions due to Texas’ increasing vulnerability to extreme weather (e.g., hurricanes, tornadoes, 100 and 500-year precipitation events, heat waves and droughts, and polar vortex freezes). Our analysis found that our susceptibility to financial impacts greater than $1 million required specific mitigation and adaptation measures extending to at least ten years in the future. As we considered the energy sourcing needs between now and 2040, an intermediate step was for Best Buy to sign a ten-year fixed-cost solar energy contract for 100% of our electricity load in Texas. The contract start date is January 1, 2022, and will provide up to 363,143 MWh of RECs annually. This solar power purchase agreement will help to green the grid for all customers in the Texas/ERCOT electricity grid, which will help to mitigate the effects of climate change, as well as provide cost certainty and electricity stability for Best Buy.
+C3.3
+(C3.3) Describe where and how climate-related risks and opportunities have influenced your strategy.
+Have climate-related risks and opportunities influenced your strategy in this area?	Description of influence
+Products and services	
+Yes
+Best Buy has a climate-related opportunity to address our customers’ desire to purchase energy efficient products. From a products and services perspective, Best Buy’s most substantial strategic decision to date was to assort and promote ENERGY STAR products. Energy saving functionality is frequently incorporated into feature-rich products which generally have a higher Average Selling Price, higher margin and higher revenue over entry level products. Additionally, ENERGY STAR products are sometimes eligible for mid-stream incentives from utilities which further enhance the profitability of these products. In aggregate, the sale of ENERGY STAR products results in improved financial performance. Best Buy offers a large selection of ENERGY STAR certified products to help our customers save money, reduce energy use and protect the environment by meeting strict energy guidelines set by the U.S. Environmental Protection Agency (EPA) and the U.S. Department of Energy. We expect our energy saving products strategy to remain in place through at least 2030 in conjunction with our Sustainable Products goal to reduce Scope 3 emissions 20% by 2030. In 2022, our U.S. customers made the decision to buy an ENERGY STAR product more than 17 million times. Over the lifetime of the products, those customers will realize more than $799 million in utility savings and the products will provide 8.2 billion pounds of CO2 emissions avoidance. In 2022, Best Buy was named ENERGY STAR partner of the year for the tenth consecutive year.
+
+We do not publicly share as a segregated view the financial performance of ENERGY STAR products. However, from a magnitude standpoint, the selling of ENERGY STAR products at Best Buy exceeds our definition of substantive climate-related financial impact. Specific to climate-related risks and opportunities, a substantive financial impact is any activity that affects our profitability or financial position by more than $1,000,000. As such, we would consider this to be a medium, significant opportunity.
+Supply chain and/or value chain	
+Yes
+At Best Buy over the next 20 years, our competitiveness and financial results could be influenced if severe weather, tornadoes, floods, rising sea levels, and other weather extremes resulted in our inability to conduct normal supply chain operations. Best Buy has created customer fulfilment centers closer to customers’ homes increasing the efficiency and flexibility of fulfilment options (should stores be closed to severe weather impacts) as well as reducing the environmental impact of emissions from product shipping.
+While extreme weather disruption may occur to segments of our supply chain, the diversity and flexibility of our network allows us to effectively respond to and manage the risks of extreme weather, sea level rise, tornadoes, and floods. Our ability to dynamically adapt to weather-impacted locations, greatly reduces the risk of supply chain disruption. From a magnitude standpoint, consideration of climate-related risks and opportunities specific to supply chain do not meet our definition of substantive climate-related financial impact. Specific to climate-related risks and opportunities, a substantive financial impact is any activity that affects our profitability or financial position by more than $1,000,000.
+Investment in R&D	
+No
+Investments in R and D are not substantially influenced by the identified climate-related risks and opportunities. From a magnitude standpoint, consideration of climate-related risks and opportunities specific to R and D do not meet our definition of substantive climate-related financial impact, which we define as any activity that affects our profitability or financial position by more than $1,000,000. Best Buy evaluates climate-related risks at least annually through our ISO 14001 certified EMS.
+Operations	
+Yes
+Over the next 20 years, our competitiveness and financial results may be impacted if severe weather, tornadoes, floods, and other weather extremes resulted in our inability to keep stores open as scheduled or deliver product to our stores for an extended period. Like other retailers, disruption may occur to segments of our distribution network. In 2022, Best Buy experienced 790 temporary store closure days due to weather-related events. However, the diversity and flexibility of Best Buy’s distribution network allows us to effectively respond to and manage the risks of extreme weather. From a magnitude standpoint, with U.S. domestic retail location revenue of approximately $28.6 billion, if there are 790 store closure days with average daily store revenue of approximately $80,782 then the potential store revenue missed or delayed due to weather-related events would be approximately $63.8 million (790 store closure days * $80,782 daily store revenue = $63.8 million).
+C3.4
+(C3.4) Describe where and how climate-related risks and opportunities have influenced your financial planning.
+Financial planning elements that have been influenced	Description of influence
+Row 1	
+Revenues
+Direct costs
+Capital expenditures
+Capital allocation
+Climate-related risks and opportunities have influenced our financial planning for direct costs and capital expenditures as we consider how best to achieve carbon reduction targets for 2030 and 2040.
+
+Case study:
+[Situation] We believe renewable energy sourcing can reduce financial uncertainty and reduce direct operating costs in energy procurement. [Task] Best Buy seeks to identify renewable investments that meet internal financial ROI targets while providing carbon emission reductions and energy price certainty. [Action] We are considering renewable sourcing options that will help us achieve our 2030 and 2040 carbon reduction goals. Optional investments include, but may not be limited to, Power Purchase Agreements, Virtual Power Purchase Agreements, Tax Equity Investments and onsite renewable investments. Increasing the proportion of the energy we consume coming from renewable sources will help us meet our carbon reduction goal of 75% reduction by 2030. [Result] In 2022, a tax equity investment in two Michigan-based solar facilities capable of producing up to 80,000 MWh annually, bringing our total to five solar facilities that are engineered to produce up to 1.5 million MWh of clean electricity per year.
+C3.5
+(C3.5) In your organization’s financial accounting, do you identify spending/revenue that is aligned with your organization’s climate transition?
+Identification of spending/revenue that is aligned with your organization’s climate transition	Indicate the level at which you identify the alignment of your spending/revenue with a sustainable finance taxonomy
+Row 1	
+No, but we plan to in the next two years
+<Not Applicable>
+C4. Targets and performance
+C4.1
+(C4.1) Did you have an emissions target that was active in the reporting year?
+Absolute target
+C4.1a
+(C4.1a) Provide details of your absolute emissions target(s) and progress made against those targets.
+Target reference number
+Abs 5
+Is this a science-based target?
+Yes, and this target has been approved by the Science Based Targets initiative
+Target ambition
+Well-below 2°C aligned
+Year target was set
+2018
+Target coverage
+Company-wide
+Scope(s)
+Scope 1
+Scope 2
+Scope 2 accounting method
+Market-based
+Scope 3 category(ies)
+<Not Applicable>
+Base year
+2017
+Base year Scope 1 emissions covered by target (metric tons CO2e)
+219636
+Base year Scope 2 emissions covered by target (metric tons CO2e)
+281716
+Base year Scope 3, Category 1: Purchased goods and services emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 2: Capital goods emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 4: Upstream transportation and distribution emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 5: Waste generated in operations emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 6: Business travel emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 7: Employee commuting emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 8: Upstream leased assets emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 9: Downstream transportation and distribution emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 10: Processing of sold products emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 11: Use of sold products emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 12: End-of-life treatment of sold products emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 13: Downstream leased assets emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 14: Franchises emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 15: Investments emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (upstream) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (downstream) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year total Scope 3 emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Total base year emissions covered by target in all selected Scopes (metric tons CO2e)
+501352
+Base year Scope 1 emissions covered by target as % of total base year emissions in Scope 1
+100
+Base year Scope 2 emissions covered by target as % of total base year emissions in Scope 2
+100
+Base year Scope 3, Category 1: Purchased goods and services emissions covered by target as % of total base year emissions in Scope 3, Category 1: Purchased goods and services (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 2: Capital goods emissions covered by target as % of total base year emissions in Scope 3, Category 2: Capital goods (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions covered by target as % of total base year emissions in Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 4: Upstream transportation and distribution covered by target as % of total base year emissions in Scope 3, Category 4: Upstream transportation and distribution (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 5: Waste generated in operations emissions covered by target as % of total base year emissions in Scope 3, Category 5: Waste generated in operations (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 6: Business travel emissions covered by target as % of total base year emissions in Scope 3, Category 6: Business travel (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 7: Employee commuting covered by target as % of total base year emissions in Scope 3, Category 7: Employee commuting (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 8: Upstream leased assets emissions covered by target as % of total base year emissions in Scope 3, Category 8: Upstream leased assets (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 9: Downstream transportation and distribution emissions covered by target as % of total base year emissions in Scope 3, Category 9: Downstream transportation and distribution (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 10: Processing of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 10: Processing of sold products (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 11: Use of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 11: Use of sold products (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 12: End-of-life treatment of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 12: End-of-life treatment of sold products (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 13: Downstream leased assets emissions covered by target as % of total base year emissions in Scope 3, Category 13: Downstream leased assets (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 14: Franchises emissions covered by target as % of total base year emissions in Scope 3, Category 14: Franchises (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 15: Investments emissions covered by target as % of total base year emissions in Scope 3, Category 15: Investments (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (upstream) emissions covered by target as % of total base year emissions in Scope 3, Other (upstream) (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (downstream) emissions covered by target as % of total base year emissions in Scope 3, Other (downstream) (metric tons CO2e)
+<Not Applicable>
+Base year total Scope 3 emissions covered by target as % of total base year emissions in Scope 3 (in all Scope 3 categories)
+<Not Applicable>
+Base year emissions covered by target in all selected Scopes as % of total base year emissions in all selected Scopes
+100
+Target year
+2030
+Targeted reduction from base year (%)
+50
+Total emissions in target year covered by target in all selected Scopes (metric tons CO2e) [auto-calculated]
+Scope 1 emissions in reporting year covered by target (metric tons CO2e)
+236269
+Scope 2 emissions in reporting year covered by target (metric tons CO2e)
+114658
+Scope 3, Category 1: Purchased goods and services emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 2: Capital goods emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 4: Upstream transportation and distribution emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 5: Waste generated in operations emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 6: Business travel emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 7: Employee commuting emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 8: Upstream leased assets emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 9: Downstream transportation and distribution emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 10: Processing of sold products emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 11: Use of sold products emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 12: End-of-life treatment of sold products emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 13: Downstream leased assets emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 14: Franchises emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 15: Investments emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Other (upstream) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Other (downstream) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Total Scope 3 emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Total emissions in reporting year covered by target in all selected scopes (metric tons CO2e)
+350927
+Does this target cover any land-related emissions?
+No, it does not cover any land-related emissions (e.g. non-FLAG SBT)
+% of target achieved relative to base year [auto-calculated]
+Target status in reporting year
+Underway
+Please explain target coverage and identify any exclusions
+The scope 1 and 2 absolute carbon reduction goal Abs5 applies to all operations in the countries identified in C0.3. We have described this goal publicly as a 75% reduction by 2030 over a 2009 baseline, which is functionally equivalent to the target described above.
+Plan for achieving target, and progress made to the end of the reporting year
+We aim to achieve our goals by minimizing our energy usage, advocating for a cleaner grid, electrifying our fleet and offsetting remaining emissions. We have reached 60.0% of our goal to achieve 50% emissions reduction from 2017 by 2030.
+List the emissions reduction initiatives which contributed most to achieving this target
+<Not Applicable>
+Target reference number
+Abs 6
+Is this a science-based target?
+Yes, we consider this a science-based target, and the target is currently being reviewed by the Science Based Targets initiative
+Target ambition
+Well-below 2°C aligned
+Year target was set
+2018
+Target coverage
+Company-wide
+Scope(s)
+Scope 1
+Scope 2
+Scope 2 accounting method
+Market-based
+Scope 3 category(ies)
+<Not Applicable>
+Base year
+2017
+Base year Scope 1 emissions covered by target (metric tons CO2e)
+219636
+Base year Scope 2 emissions covered by target (metric tons CO2e)
+281716
+Base year Scope 3, Category 1: Purchased goods and services emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 2: Capital goods emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 4: Upstream transportation and distribution emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 5: Waste generated in operations emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 6: Business travel emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 7: Employee commuting emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 8: Upstream leased assets emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 9: Downstream transportation and distribution emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 10: Processing of sold products emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 11: Use of sold products emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 12: End-of-life treatment of sold products emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 13: Downstream leased assets emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 14: Franchises emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 15: Investments emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (upstream) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (downstream) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year total Scope 3 emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Total base year emissions covered by target in all selected Scopes (metric tons CO2e)
+501352
+Base year Scope 1 emissions covered by target as % of total base year emissions in Scope 1
+100
+Base year Scope 2 emissions covered by target as % of total base year emissions in Scope 2
+100
+Base year Scope 3, Category 1: Purchased goods and services emissions covered by target as % of total base year emissions in Scope 3, Category 1: Purchased goods and services (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 2: Capital goods emissions covered by target as % of total base year emissions in Scope 3, Category 2: Capital goods (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions covered by target as % of total base year emissions in Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 4: Upstream transportation and distribution covered by target as % of total base year emissions in Scope 3, Category 4: Upstream transportation and distribution (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 5: Waste generated in operations emissions covered by target as % of total base year emissions in Scope 3, Category 5: Waste generated in operations (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 6: Business travel emissions covered by target as % of total base year emissions in Scope 3, Category 6: Business travel (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 7: Employee commuting covered by target as % of total base year emissions in Scope 3, Category 7: Employee commuting (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 8: Upstream leased assets emissions covered by target as % of total base year emissions in Scope 3, Category 8: Upstream leased assets (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 9: Downstream transportation and distribution emissions covered by target as % of total base year emissions in Scope 3, Category 9: Downstream transportation and distribution (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 10: Processing of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 10: Processing of sold products (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 11: Use of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 11: Use of sold products (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 12: End-of-life treatment of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 12: End-of-life treatment of sold products (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 13: Downstream leased assets emissions covered by target as % of total base year emissions in Scope 3, Category 13: Downstream leased assets (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 14: Franchises emissions covered by target as % of total base year emissions in Scope 3, Category 14: Franchises (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 15: Investments emissions covered by target as % of total base year emissions in Scope 3, Category 15: Investments (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (upstream) emissions covered by target as % of total base year emissions in Scope 3, Other (upstream) (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (downstream) emissions covered by target as % of total base year emissions in Scope 3, Other (downstream) (metric tons CO2e)
+<Not Applicable>
+Base year total Scope 3 emissions covered by target as % of total base year emissions in Scope 3 (in all Scope 3 categories)
+<Not Applicable>
+Base year emissions covered by target in all selected Scopes as % of total base year emissions in all selected Scopes
+100
+Target year
+2040
+Targeted reduction from base year (%)
+100
+Total emissions in target year covered by target in all selected Scopes (metric tons CO2e) [auto-calculated]
+Scope 1 emissions in reporting year covered by target (metric tons CO2e)
+236269
+Scope 2 emissions in reporting year covered by target (metric tons CO2e)
+114658
+Scope 3, Category 1: Purchased goods and services emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 2: Capital goods emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 4: Upstream transportation and distribution emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 5: Waste generated in operations emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 6: Business travel emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 7: Employee commuting emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 8: Upstream leased assets emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 9: Downstream transportation and distribution emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 10: Processing of sold products emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 11: Use of sold products emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 12: End-of-life treatment of sold products emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 13: Downstream leased assets emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 14: Franchises emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 15: Investments emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Other (upstream) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Other (downstream) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Total Scope 3 emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Total emissions in reporting year covered by target in all selected scopes (metric tons CO2e)
+350927
+Does this target cover any land-related emissions?
+No, it does not cover any land-related emissions (e.g. non-FLAG SBT)
+% of target achieved relative to base year [auto-calculated]
+Target status in reporting year
+Underway
+Please explain target coverage and identify any exclusions
+The scope 1 and 2 absolute carbon reduction goal Abs6 applies to all operations in the countries identified in C0.3. We have described this goal publicly as achieving carbon neutrality by 2040.
+Plan for achieving target, and progress made to the end of the reporting year
+We aim to achieve our goals by minimizing our energy usage, advocating for a cleaner grid, electrifying our fleet and offsetting remaining emissions. We have reached 30.0% of our goal to achieve 100% emissions reduction from 2017 by 2040.
+List the emissions reduction initiatives which contributed most to achieving this target
+<Not Applicable>
+Target reference number
+Abs 7
+Is this a science-based target?
+Yes, and this target has been approved by the Science Based Targets initiative
+Target ambition
+2°C aligned
+Year target was set
+2018
+Target coverage
+Company-wide
+Scope(s)
+Scope 3
+Scope 2 accounting method
+<Not Applicable>
+Scope 3 category(ies)
+Category 11: Use of sold products
+Base year
+2017
+Base year Scope 1 emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 2 emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 1: Purchased goods and services emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 2: Capital goods emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 4: Upstream transportation and distribution emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 5: Waste generated in operations emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 6: Business travel emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 7: Employee commuting emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 8: Upstream leased assets emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 9: Downstream transportation and distribution emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 10: Processing of sold products emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 11: Use of sold products emissions covered by target (metric tons CO2e)
+21813157
+Base year Scope 3, Category 12: End-of-life treatment of sold products emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 13: Downstream leased assets emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 14: Franchises emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 15: Investments emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (upstream) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (downstream) emissions covered by target (metric tons CO2e)
+<Not Applicable>
+Base year total Scope 3 emissions covered by target (metric tons CO2e)
+21813157
+Total base year emissions covered by target in all selected Scopes (metric tons CO2e)
+21813157
+Base year Scope 1 emissions covered by target as % of total base year emissions in Scope 1
+<Not Applicable>
+Base year Scope 2 emissions covered by target as % of total base year emissions in Scope 2
+<Not Applicable>
+Base year Scope 3, Category 1: Purchased goods and services emissions covered by target as % of total base year emissions in Scope 3, Category 1: Purchased goods and services (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 2: Capital goods emissions covered by target as % of total base year emissions in Scope 3, Category 2: Capital goods (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions covered by target as % of total base year emissions in Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 4: Upstream transportation and distribution covered by target as % of total base year emissions in Scope 3, Category 4: Upstream transportation and distribution (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 5: Waste generated in operations emissions covered by target as % of total base year emissions in Scope 3, Category 5: Waste generated in operations (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 6: Business travel emissions covered by target as % of total base year emissions in Scope 3, Category 6: Business travel (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 7: Employee commuting covered by target as % of total base year emissions in Scope 3, Category 7: Employee commuting (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 8: Upstream leased assets emissions covered by target as % of total base year emissions in Scope 3, Category 8: Upstream leased assets (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 9: Downstream transportation and distribution emissions covered by target as % of total base year emissions in Scope 3, Category 9: Downstream transportation and distribution (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 10: Processing of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 10: Processing of sold products (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 11: Use of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 11: Use of sold products (metric tons CO2e)
+100
+Base year Scope 3, Category 12: End-of-life treatment of sold products emissions covered by target as % of total base year emissions in Scope 3, Category 12: End-of-life treatment of sold products (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 13: Downstream leased assets emissions covered by target as % of total base year emissions in Scope 3, Category 13: Downstream leased assets (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 14: Franchises emissions covered by target as % of total base year emissions in Scope 3, Category 14: Franchises (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Category 15: Investments emissions covered by target as % of total base year emissions in Scope 3, Category 15: Investments (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (upstream) emissions covered by target as % of total base year emissions in Scope 3, Other (upstream) (metric tons CO2e)
+<Not Applicable>
+Base year Scope 3, Other (downstream) emissions covered by target as % of total base year emissions in Scope 3, Other (downstream) (metric tons CO2e)
+<Not Applicable>
+Base year total Scope 3 emissions covered by target as % of total base year emissions in Scope 3 (in all Scope 3 categories)
+99.58
+Base year emissions covered by target in all selected Scopes as % of total base year emissions in all selected Scopes
+99.58
+Target year
+2030
+Targeted reduction from base year (%)
+20
+Total emissions in target year covered by target in all selected Scopes (metric tons CO2e) [auto-calculated]
+Scope 1 emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 2 emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 1: Purchased goods and services emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 2: Capital goods emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 3: Fuel-and-energy-related activities (not included in Scopes 1 or 2) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 4: Upstream transportation and distribution emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 5: Waste generated in operations emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 6: Business travel emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 7: Employee commuting emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 8: Upstream leased assets emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 9: Downstream transportation and distribution emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 10: Processing of sold products emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 11: Use of sold products emissions in reporting year covered by target (metric tons CO2e)
+21444872
+Scope 3, Category 12: End-of-life treatment of sold products emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 13: Downstream leased assets emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 14: Franchises emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Category 15: Investments emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Other (upstream) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Scope 3, Other (downstream) emissions in reporting year covered by target (metric tons CO2e)
+<Not Applicable>
+Total Scope 3 emissions in reporting year covered by target (metric tons CO2e)
+21444872
+Total emissions in reporting year covered by target in all selected scopes (metric tons CO2e)
+21444872
+Does this target cover any land-related emissions?
+No, it does not cover any land-related emissions (e.g. non-FLAG SBT)
+% of target achieved relative to base year [auto-calculated]
+Target status in reporting year
+Underway
+Please explain target coverage and identify any exclusions
+Measurement of Use of Sold Products includes all ENERGY STAR certified categories sold by Best Buy. The categories are air purifiers, air conditioners, DVD and Blu Ray players, audio equipment, clothes dryers, clothes washers, dishwashers, compact refrigerators, dehumidifiers, desktop computers, set top boxes, freezers, home-theater-in-a-box, light bulbs, inkjet printers, laser printers, multi-function printers, notebook computers, televisions, computer monitors, scanners, refrigerators, cordless phones, tablets, smart thermostats, electric vehicle chargers and sound bars.
+Plan for achieving target, and progress made to the end of the reporting year
+Best Buy is also committed to reducing carbon emissions from the products we sell. We aim to help consumers reduce their carbon emissions from ENERGY STAR certified products by 20% and save $5 billion on utility costs by 2030. This customer goal is based on ENERGY STAR foundational metrics and our plan for achieving the target is to work with: category teams to assort and promote ENERGY STAR products; suppliers to include ENERGY STAR specs in product design; and utilities to reduce fossil fuels in their energy production, thus reducing the carbon impacts of the products we sell.
+Nearly half of our customers end up selecting an ENERGY STAR certified product when available, and more than 76 million ENERGY STAR certified products have been purchased at Best Buy since 2017. As a result of those purchases, our customers will collectively save more than $3 billion in energy costs over the lifetime of their products. That means we’re now over halfway to our goal of helping our customers save $5 billion on their energy bills by 2030.
+List the emissions reduction initiatives which contributed most to achieving this target
+<Not Applicable>
+C4.2
+(C4.2) Did you have any other climate-related targets that were active in the reporting year?
+Net-zero target(s)
+Other climate-related target(s)
+C4.2b
+(C4.2b) Provide details of any other climate-related targets, including methane reduction targets.
+Target reference number
+Oth 2
+Year target was set
+2019
+Target coverage
+Country/area/region
+Target type: absolute or intensity
+Intensity
+Target type: category & Metric (target numerator if reporting an intensity target)
+Waste management	Other, please specify (Percentage of waste generated diverted from landfill)
+Target denominator (intensity targets only)
+metric ton of waste
+Base year
+2018
+Figure or percentage in base year
+65
+Target year
+2025
+Figure or percentage in target year
+85
+Figure or percentage in reporting year
+70
+% of target achieved relative to base year [auto-calculated]
+Target status in reporting year
+New
+Is this target part of an emissions target?
+No
+Is this target part of an overarching initiative?
+No, it’s not part of an overarching initiative
+Please explain target coverage and identify any exclusions
+Our Company-wide waste diversion rate in 2019 was 65%. In 2022, our waste diversion rate was 70%, an 5-percentage point improvement. Our diversion goal is designed to reduce the amount of waste disposed in landfills and support beneficial re-use and recycling programs, leading to cost savings and resource conservation.
+Plan for achieving target, and progress made to the end of the reporting year
+Best Buy is continuing to install recycling material handling equipment in our stores and maximize the utilization of the equipment to increase the amount of cardboard that is recycled.
+List the actions which contributed most to achieving this target
+<Not Applicable>
+Target reference number
+Oth 1
+Year target was set
+2020
+Target coverage
+Company-wide
+Target type: absolute or intensity
+Absolute
+Target type: category & Metric (target numerator if reporting an intensity target)
+Other, please specify	Other, please specify (Reduce company-wide potable water consumption 15% by 2025 compared to CY 2019)
+Target denominator (intensity targets only)
+<Not Applicable>
+Base year
+2019
+Figure or percentage in base year
+1264
+Target year
+2025
+Figure or percentage in target year
+1074
+Figure or percentage in reporting year
+1098
+% of target achieved relative to base year [auto-calculated]
+Target status in reporting year
+Underway
+Is this target part of an emissions target?
+No.
+Is this target part of an overarching initiative?
+No, it’s not part of an overarching initiative
+Please explain target coverage and identify any exclusions
+Our Company-wide water use in 2019 was 1,264 megaliters. In 2022, we used 1,098 megaliters, a 13% reduction. Our reduction goal is designed to reduce consumption and reliance on potable water resources, leading to cost savings as well as improved water security for Best Buy and the communities in which we operate.
+Plan for achieving target, and progress made to the end of the reporting year
+Continued focus on water management issues.
+List the actions which contributed most to achieving this target
+<Not Applicable>
+C4.2c
+(C4.2c) Provide details of your net-zero target(s).
+Target reference number
+NZ1
+Target coverage
+Company-wide
+Absolute/intensity emission target(s) linked to this net-zero target
+Abs5
+Abs6
+Target year for achieving net zero
+2040
+Is this a science-based target?
+Yes, we consider this a science-based target, and we have committed to seek validation of this target by the Science Based Targets initiative in the next two years
+Please explain target coverage and identify any exclusions
+The scope 1 and 2 absolute carbon reduction goal NZ1 (and Abs6) applies to all operations in the countries identified in C0.3. We have described this goal publicly as achieving carbon neutrality by 2040.
+Do you intend to neutralize any unabated emissions with permanent carbon removals at the target year?
+Yes
+Planned milestones and/or near-term investments for neutralization at target year
+We are working towards achieving our 2030 Science-Based targets (Abs5), which are aligned with and along the same path of our public goal of achieving net-zero carbon (carbon neutrality) by 2040 (Abs6). We align our annual mitigation programs with achieving the emission reductions necessary to meet our 2030 and 2040 carbon emission reduction on an annual basis. Our planned milestones and near-term investments for achieving carbon neutrality by 2040 are driven by our commitment to achieve our 2030 Science-Based Targets, as well as our 1.5C aligned transition plan, which we aspire to meet or exceed on an annual basis every year between now and 2030, and between 2030 and achieving net-zero carbon (carbon neutrality) by 2040.
+Planned actions to mitigate emissions beyond your value chain (optional)
+It is anticipated that, as our climate mitigation programs become business-as-usual practices throughout the organization, that our emissions mitigation programs will impact carbon emission reductions outside of our value chain. As an example, we have developed a robust utility-scale solar investment program that is contributing towards our carbon reduction goals by, in some cases, delivering RECs (renewable energy credits) that are applied to Best Buy's electricity use. However, in all investments made to date, we are making these investments without receiving 100% of the project RECs or other environmental benefits. Thus, our investments in these solar plants are resulting in significant emission reductions outside of our value chain.
+C4.3
+(C4.3) Did you have emissions reduction initiatives that were active within the reporting year? Note that this can include those in the planning and/or implementation phases.
+Yes
+C4.3a
+(C4.3a) Identify the total number of initiatives at each stage of development, and for those in the implementation stages, the estimated CO2e savings.
+Number of initiatives	Total estimated annual CO2e savings in metric tonnes CO2e (only for rows marked *)
+Under investigation	
+0
+0
+To be implemented*	
+5
+5666
+Implementation commenced*	
+3
+1608
+Implemented*	
+3
+3292
+Not to be implemented	
+0
+0
+C4.3b
+(C4.3b) Provide details on the initiatives implemented in the reporting year in the table below.
+Initiative category & Initiative type
+Energy efficiency in buildings	Building Energy Management Systems (BEMS)
+Estimated annual CO2e savings (metric tonnes CO2e)
+2583
+Scope(s) or Scope 3 category(ies) where emissions savings occur
+Scope 2 (location-based)
+Voluntary/Mandatory
+Voluntary
+Annual monetary savings (unit currency – as specified in C0.4)
+425000
+Investment required (unit currency – as specified in C0.4)
+1000000
+Payback period
+1-3 years
+Estimated lifetime of the initiative
+6-10 years
+Comment
+Initiative category & Initiative type
+Energy efficiency in buildings	Lighting
+Estimated annual CO2e savings (metric tonnes CO2e)
+709
+Scope(s) or Scope 3 category(ies) where emissions savings occur
+Scope 2 (location-based)
+Voluntary/Mandatory
+Voluntary
+Annual monetary savings (unit currency – as specified in C0.4)
+140000
+Investment required (unit currency – as specified in C0.4)
+420000
+Payback period
+1-3 years
+Estimated lifetime of the initiative
+6-10 years
+Comment
+C4.3c
+(C4.3c) What methods do you use to drive investment in emissions reduction activities?
+Method	Comment
+Financial optimization calculations
+Dedicated budget for other emissions reduction activities
+C4.5
+(C4.5) Do you classify any of your existing goods and/or services as low-carbon products?
+Yes
+C4.5a
+(C4.5a) Provide details of your products and/or services that you classify as low-carbon products.
+Level of aggregation
+Group of products or services
+Taxonomy used to classify product(s) or service(s) as low-carbon
+Other, please specify (EPA ENERGY STAR calculations)
+Type of product(s) or service(s)
+Other	Other, please specify (Consumer electronics)
+Description of product(s) or service(s)
+ENERGY STAR certified products: Best Buy offers a large selection of ENERGY STAR certified products to help our customers save money, reduce energy use and protect the environment by meeting strict energy guidelines set by the U.S. Environmental Protection Agency (EPA) and the U.S. Department of Energy. In 2022, our U.S. customers made the decision to buy an ENERGY STAR product more than 17 million times. Over the lifetime of the products, those customers will realize more than $799 million in utility savings and the products will provide 8.2 billion pounds of CO2 emissions avoidance.
+Have you estimated the avoided emissions of this low-carbon product(s) or service(s)
+Yes
+Methodology used to calculate avoided emissions
+Other, please specify (EPA ENERGY STAR calculations)
+Life cycle stage(s) covered for the low-carbon product(s) or services(s)
+Use stage
+Functional unit used
+Estimated KWh used over the estimated life of the product beginning the year of sale.
+Reference product/service or baseline scenario used
+Comparing KWh consumed over the lifetime of ENERGYSTAR products sold to the KWh consumed over the lifetime of non-ENERGYSTAR products of the same type.
+Life cycle stage(s) covered for the reference product/service or baseline scenario
+Use stage
+Estimated avoided emissions (metric tons CO2e per functional unit) compared to reference product/service or baseline scenario
+3730634
+Explain your calculation of avoided emissions, including any assumptions
+Estimated KWh used over the estimated life of the sold ENERGY STAR product subtracted from the estimated KWh used over the estimated lifetime of a comparable non-ENERGY STAR product, multiplied by the number of comparable ENERGY STAR products sold. All resulting KWH values for ENERGYSTAR units sold are summed to calculate the total avoided KWh and then multiplied by CO2e emission factors to calculate the total CO2 emissions avoided.
+Revenue generated from low-carbon product(s) or service(s) as % of total revenue in the reporting year
+29
+C5. Emissions methodology
+C5.1
+(C5.1) Is this your first year of reporting emissions data to CDP?
+No
+C5.1a
+(C5.1a) Has your organization undergone any structural changes in the reporting year, or are any previous structural changes being accounted for in this disclosure of emissions data?
+Row 1
+Has there been a structural change?
+No
+Name of organization(s) acquired, divested from, or merged with
+<Not Applicable>
+Details of structural change(s), including completion dates
+<Not Applicable>
+C5.1b
+(C5.1b) Has your emissions accounting methodology, boundary, and/or reporting year definition changed in the reporting year?
+Change(s) in methodology, boundary, and/or reporting year definition?	Details of methodology, boundary, and/or reporting year definition change(s)
+Row 1	
+No
+<Not Applicable>
+C5.2
+(C5.2) Provide your base year and base year emissions.
+Scope 1
+Base year start
+January 1 2009
+Base year end
+December 31 2009
+Base year emissions (metric tons CO2e)
+240525
+Comment
+Scope 2 (location-based)
+Base year start
+January 1 2009
+Base year end
+December 31 2009
+Base year emissions (metric tons CO2e)
+791171
+Comment
+Scope 2 (market-based)
+Base year start
+January 1 2009
+Base year end
+December 31 2009
+Base year emissions (metric tons CO2e)
+791171
+Comment
+Scope 3 category 1: Purchased goods and services
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 2: Capital goods
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 3: Fuel-and-energy-related activities (not included in Scope 1 or 2)
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 4: Upstream transportation and distribution
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 5: Waste generated in operations
+Base year start
+January 1 2017
+Base year end
+December 31 2017
+Base year emissions (metric tons CO2e)
+30267
+Comment
+Scope 3 category 6: Business travel
+Base year start
+January 1 2017
+Base year end
+December 31 2017
+Base year emissions (metric tons CO2e)
+39642
+Comment
+Scope 3 category 7: Employee commuting
+Base year start
+January 1 2017
+Base year end
+December 31 2017
+Base year emissions (metric tons CO2e)
+21364
+Comment
+Scope 3 category 8: Upstream leased assets
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 9: Downstream transportation and distribution
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 10: Processing of sold products
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 11: Use of sold products
+Base year start
+January 1 2017
+Base year end
+December 31 2017
+Base year emissions (metric tons CO2e)
+21813157
+Comment
+Scope 3 category 12: End of life treatment of sold products
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 13: Downstream leased assets
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 14: Franchises
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3 category 15: Investments
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3: Other (upstream)
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+Scope 3: Other (downstream)
+Base year start
+Base year end
+Base year emissions (metric tons CO2e)
+Comment
+C5.3
+(C5.3) Select the name of the standard, protocol, or methodology you have used to collect activity data and calculate emissions.
+The Climate Registry: General Reporting Protocol
+The Greenhouse Gas Protocol: A Corporate Accounting and Reporting Standard (Revised Edition)
+US EPA Center for Corporate Climate Leadership: Direct Fugitive Emissions from Refrigeration, Air Conditioning, Fire Suppression, and Industrial Gases
+US EPA Center for Corporate Climate Leadership: Direct Emissions from Stationary Combustion Sources
+US EPA Center for Corporate Climate Leadership: Direct Emissions from Mobile Combustion Sources
+US EPA Emissions & Generation Resource Integrated Database (eGRID)
+C6. Emissions data
+C6.1
+(C6.1) What were your organization’s gross global Scope 1 emissions in metric tons CO2e?
+Reporting year
+Gross global Scope 1 emissions (metric tons CO2e)
+236269
+Start date
+<Not Applicable>
+End date
+<Not Applicable>
+Comment
+C6.2
+(C6.2) Describe your organization’s approach to reporting Scope 2 emissions.
+Row 1
+​Scope 2, location-based​
+We are reporting a Scope 2, location-based figure
+Scope 2, market-based
+We are reporting a Scope 2, market-based figure
+Comment
+C6.3
+(C6.3) What were your organization’s gross global Scope 2 emissions in metric tons CO2e?
+Reporting year
+Scope 2, location-based
+265649
+Scope 2, market-based (if applicable)
+114658
+Start date
+<Not Applicable>
+End date
+<Not Applicable>
+Comment
+C6.4
+(C6.4) Are there any sources (e.g. facilities, specific GHGs, activities, geographies, etc.) of Scope 1, Scope 2 or Scope 3 emissions that are within your selected reporting boundary which are not included in your disclosure?
+Yes
+C6.4a
+(C6.4a) Provide details of the sources of Scope 1, Scope 2, or Scope 3 emissions that are within your selected reporting boundary which are not included in your disclosure.
+Source of excluded emissions
+Scope 3 emissions associated with our operations in Canada
+Scope(s) or Scope 3 category(ies)
+Scope 3: Waste generated in operations
+Scope 3: Business travel
+Scope 3: Employee commuting
+Scope 3: Use of sold products
+Relevance of Scope 1 emissions from this source
+<Not Applicable>
+Relevance of location-based Scope 2 emissions from this source
+<Not Applicable>
+Relevance of market-based Scope 2 emissions from this source
+<Not Applicable>
+Relevance of Scope 3 emissions from this source
+Emissions are not relevant
+Date of completion of acquisition or merger
+<Not Applicable>
+Estimated percentage of total Scope 1+2 emissions this excluded source represents
+<Not Applicable>
+Estimated percentage of total Scope 3 emissions this excluded source represents
+4.6
+Explain why this source is excluded
+CO2e emissions from Canadian operations are excluded because the emissions are a nominal proportion (estimated at less than 5%) of enterprise Scope 3 emissions.
+Explain how you estimated the percentage of emissions this excluded source represents
+Scope 1 + 2 emissions from Canadian operations equals 4.6% of enterprise Scope 1 +2 emissions. Because our Canadian business is similar to our U.S. business, we expect Scope 3 emissions from our Canadian business to be proportionally similar at roughly 4.6% of U.S. Scope 3 emissions, and therefor nominal in relation to our total Scope 3 emissions.
+C6.5
+(C6.5) Account for your organization’s gross global Scope 3 emissions, disclosing and explaining any exclusions.
+Purchased goods and services
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+Purchased Goods and Services is estimated to be less than 5% of our total Scope 3 emissions. Our calculation methodology was based on a third party EEI-O tool used to estimate the supply chain GHG emissions through all tiers, up to and including, raw material extraction.
+Use of Sold Product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions.
+Our third-party limited assurance verification for scope 3 does not include Purchased Goods and Services.
+Capital goods
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+Capital Goods is estimated to be less than 0.1% of our total Scope 3 emissions. Our calculation methodology was based on a third party EEI-O tool used to estimate the supply chain GHG emissions through all tiers, up to and including, raw material extraction.
+Use of Sold Product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions.
+Our third-party limited assurance verification for Scope 3 does not include Capital Goods.
+Fuel-and-energy-related activities (not included in Scope 1 or 2)
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+Fuel-and-energy-related activities is estimated to be less than 3% of our total Scope 3 emissions. Our calculation methodology was based on a third party EEI-O tool used to estimate the supply chain GHG emissions through all tiers, up to and including, raw material extraction.
+Use of Sold Product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions.
+Our third-party limited assurance verification for scope 3 does not include Fuel-and-energy-related activities.
+Upstream transportation and distribution
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+Upstream Transportation and Distribution is estimated to be less than 0.5% of total Scope 3 emissions. Our calculation methodology was based on a third party EEI-O tool used to estimate the supply chain GHG emissions through all tiers, up to and including, raw material extraction.
+Use of Sold Product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions.
+Our third-party limited assurance verification for scope 3 does not include Upstream Transportation and Distribution.
+Waste generated in operations
+Evaluation status
+Not relevant, calculated
+Emissions in reporting year (metric tons CO2e)
+21177
+Emissions calculation methodology
+Other, please specify (EPA’s Waste Reduction Model (WARM))
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+100
+Please explain
+Waste stream components and diversion rate data is provided by numerous waste handling vendors. This includes the material type and amount composted, recycled and landfilled. Emissions from waste generated in operations are based on emission factor data and calculation methodologies contained in the EPA’s Waste Reduction Model (WARM). This model provides data to organizations to facilitate tracking and voluntarily reporting of greenhouse gas (GHG) emissions from several different waste management practices. This data provides the basis for calculation and totaling GHG emissions of baseline and alternative waste management practices—source reduction, recycling, combustion, composting, and landfilling, across a wide range of material types commonly found in municipal solid waste (MSW).
+This number does not include waste generated from Best Buy Canadian operations.
+Business travel
+Evaluation status
+Not relevant, calculated
+Emissions in reporting year (metric tons CO2e)
+15577
+Emissions calculation methodology
+Other, please specify (See "please explain" field for detail.)
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+100
+Please explain
+Data is tracked through an external travel service and internal accounting. Purchase receipts and travel expense reports track dollars spent on travel. Activity data for corporate travel includes two components: flight travel and ground travel. Flight travel is based on total airline miles travelled and total travel cost, segmented into three categories: short-, medium-, and long-haul flights. This facilitates the calculation of an estimated average “intensity metric” (kg CO2e/dollars spent). This factor is applied per calendar month travel expenses to extrapolate the CO2e over the total air travel reimbursement. Ground travel is based on travel expense reports, indicating amount spent on vehicle fuel. Fuel consumption is based on published EIA monthly average fuel costs. The resultant total fuel usage is multiplied by the appropriate emission factors for each of CO2, CH4, and N2O. The three results are then added to estimate the total GHG emissions for ground travel in metric tons CO2e. The data quality of reporting emissions is high within the reporting boundary and scope. The main assumption is the application of the estimated average “intensity metric” to monthly travel expenses not previously accounted for.
+Employee commuting
+Evaluation status
+Not relevant, calculated
+Emissions in reporting year (metric tons CO2e)
+2395
+Emissions calculation methodology
+Other, please specify (See "please explain" field)
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+0
+Please explain
+The scope for Employee Commuting is limited to our U.S. corporate workforce and the travel between employee’s homes and the U.S. corporate campus, located in Richfield, Minnesota. To estimate the emissions associated with employee commuting, we first identified the average distance between employees’ homes and our corporate campus. Next, we calculated the number of visits to the corporate parking garage based off security badge information—giving the number of vehicle trips. By multiplying the average distance travelled and the number of trips, we derived total vehicle miles driven. Using the U.S. DOT’s estimated national average for vehicle MPG (21.4) we calculated the total gallons of gasoline consumed. After completing calculations for total vehicle miles driven and estimated gallons of gasoline, we utilized WRI’s GHG Protocol tool for mobile combustion and applied standard emission factors and GWPs (GWP based on 2007 IPCC 4th Assessment Report). The emission factors used in this tool come from the UK Dept. for Environment, Food and Rural Affairs (DEFRA), the U.S. Environmental Protection Agency (EPA) and the Intergovernmental Panel on Climate Change’s (IPCC) 2006 Guidelines for National Greenhouse Gas Inventories. The tool was developed by Clear Standards Inc. in collaboration with WRI. World Resources Institute (2008). GHG Protocol tool for mobile combustion. The data quality of reporting emissions is high within the reporting boundary and scope. The main assumption is the average MPG and vehicle car type (“vehicle car- type unknown”).
+Upstream leased assets
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+An initial assessment based partially on the external review of other CDP reporting companies within the Consumer Staples and Consumer Discretionary sectors indicated that upstream leased assets would likely represent between 0 and 1% of our total Scope 3 inventory. No financial, regulatory, supply chain, or reputational risk was identified that would warrant measurement in this category, nor had we any stakeholder request to do so.
+Use of Sold Product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions. We will continue to review this category for relevance in our annual Carbon Management System planning process.
+Our third-party limited assurance verification for scope 3 does not include Upstream Leased Assets.
+Downstream transportation and distribution
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+An initial assessment based partially on the external review of other CDP reporting companies within the Consumer Staples and Consumer Discretionary sectors indicated that downstream transportation and distribution would likely represent between 0 and 1% of our total Scope 3 inventory. No financial, regulatory, supply chain, or reputational risk was identified that would warrant measurement in this category, nor had we any stakeholder request to do so.
+Use of Sold Product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions. We will continue to review this category for relevance in our annual Carbon Management System planning process.
+Our third-party limited assurance verification for scope 3 does not include Downstream Transportation and Distribution.
+Processing of sold products
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+An initial assessment based partially on the external review of other CDP reporting companies within the Consumer Staples and Consumer Discretionary sectors indicated that processing of sold products would likely represent between 0 and 1% of our total Scope 3 inventory. No financial, regulatory, supply chain, or reputational risk was identified that would warrant measurement in this category, nor had we any stakeholder request to do so.
+Use of sold product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions. We will continue to review this category for relevance in our annual Carbon Management System planning process.
+Our third-party limited assurance verification for scope 3 does not include Processing of Sold Products.
+Use of sold products
+Evaluation status
+Relevant, calculated
+Emissions in reporting year (metric tons CO2e)
+21444872
+Emissions calculation methodology
+Average data method
+Average product method
+Methodology for direct use phase emissions, please specify (EPA determined carbon factors. )
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+100
+Please explain
+Our scope for use of sold products is limited to ENERGY STAR certified product categories. When calculating the lifetime CO2e we used the following formula: Total emissions = unit sales * estimated annual electricity consumption * emissions factor * lifespan of product. Unit sales equal the gross sales of each model within the reporting period; in this instance, calendar year 2020.
+Use of sold products comprises at least 90% of total Scope 3 emissions. We consider it relevant to our business because we believe it is important to promote and sell products which minimize environmental impact. The measurement of this category is used to determine the success of those efforts and to help design the enhancements of future programs. Our third-party limited assurance verification includes use of sold products accounting for emissions over the lifetime of product categories.
+
+Our scope 3 emissions are based industry averages data including product kWh and product lifespan provided by the EPA's ENERGY STAR Program. The EPA also determines the appropriate carbon emission factor based on a national average. To calculate the emissions, we measure the emissions all ENERGY STAR eligible products by multiplying the EPA's category specific kWh *EPA carbon emission factor* EPA estimate of life of product*Best Buy unit sales.
+End of life treatment of sold products
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+An initial assessment based partially on the external review of other CDP reporting companies within the Consumer Staples and Consumer Discretionary sectors indicated that end of life treatment of sold products would likely represent less than 4% of our total Scope 3 inventory. No financial, regulatory, supply chain, or reputational risk was identified that would warrant measurement in this category, nor did we receive any stakeholder request to do so.
+Use of sold product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions. We will continue to review this category for relevance in our annual Carbon Management System planning process.
+Our third-party limited assurance verification for scope 3 does not include End of Life Treatment of Sold Products.
+Downstream leased assets
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+An initial assessment based partially on the external review of other CDP reporting companies within the Consumer Staples and Consumer Discretionary sectors indicated that downstream leased assets would likely represent between 0 and 1% of our total Scope 3 inventory. No financial, regulatory, supply chain, or reputational risk was identified that would warrant measurement in this category, nor did we receive any stakeholder request to do so.
+Use of Sold Product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions. We will continue to review this category for relevance in our annual Carbon Management System planning process.
+Our third-party limited assurance verification for scope 3 does not include Downstream Leased Assets.
+Franchises
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+We do not franchise any portion of our business. Our retail stores are owned and operated by Best Buy Stores L.P. and therefore this category is not relevant.
+Our third-party limited assurance verification for scope 3 does not include Franchises.
+Investments
+Evaluation status
+Not relevant, explanation provided
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+An initial assessment based partially on the external review of other CDP reporting companies within the Consumer Staples and Consumer Discretionary sectors indicated that investments would likely represent between 0 and 1% of our total Scope 3 inventory. No financial, regulatory, supply chain, or reputational risk was identified that would warrant measurement in this category, nor did we receive any stakeholder request to do so.
+Use of Sold Product accounts for at least 90% of our total Scope 3 carbon emissions. Because all other categories combined are less than 10% of the total, we consider them collectively to be a negligible proportion of our Scope 3 carbon emissions and thus not relevant. We define as "relevant" any individual Scope 3 category greater than 10% of our total Scope 3 emissions. We will continue to review this category for relevance in our annual Carbon Management System planning process.
+Our third-party limited assurance verification for scope 3 does not include Investments.
+Other (upstream)
+Evaluation status
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+Other (downstream)
+Evaluation status
+Emissions in reporting year (metric tons CO2e)
+<Not Applicable>
+Emissions calculation methodology
+<Not Applicable>
+Percentage of emissions calculated using data obtained from suppliers or value chain partners
+<Not Applicable>
+Please explain
+C6.7
+(C6.7) Are carbon dioxide emissions from biogenic carbon relevant to your organization?
+No
+C6.10
+(C6.10) Describe your gross global combined Scope 1 and 2 emissions for the reporting year in metric tons CO2e per unit currency total revenue and provide any additional intensity metrics that are appropriate to your business operations.
+Intensity figure
+0.00000757
+Metric numerator (Gross global combined Scope 1 and 2 emissions, metric tons CO2e)
+350927
+Metric denominator
+Other, please specify (Revenue in billions USD)
+Metric denominator: Unit total
+46.29
+Scope 2 figure used
+Market-based
+% change from previous year
+0.6
+Direction of change
+Increased
+Reason(s) for change
+Change in revenue
+Please explain
+Best Buy's carbon emissions are not directly correlated with revenue. However, market-based emissions reduced from the previous year, so too did our enterprise revenue.
+C7. Emissions breakdowns
+C7.1
+(C7.1) Does your organization break down its Scope 1 emissions by greenhouse gas type?
+Yes
+C7.1a
+(C7.1a) Break down your total gross global Scope 1 emissions by greenhouse gas type and provide the source of each used greenhouse warming potential (GWP).
+Greenhouse gas	Scope 1 emissions (metric tons of CO2e)	GWP Reference
+CO2
+221894
+IPCC Sixth Assessment Report (AR6 - 100 year)
+HFCs
+13024
+IPCC Sixth Assessment Report (AR6 - 100 year)
+N2O
+1182
+IPCC Sixth Assessment Report (AR6 - 100 year)
+CH4
+169
+IPCC Sixth Assessment Report (AR6 - 100 year)
+C7.2
+(C7.2) Break down your total gross global Scope 1 emissions by country/area/region.
+Country/area/region	Scope 1 emissions (metric tons CO2e)
+United States of America
+221055
+Canada
+15214
+C7.3
+(C7.3) Indicate which gross global Scope 1 emissions breakdowns you are able to provide.
+By business division
+By activity
+C7.3a
+(C7.3a) Break down your total gross global Scope 1 emissions by business division.
+Business division	Scope 1 emissions (metric ton CO2e)
+U.S. Operations
+221055
+Canada Operations
+15214
+C7.3c
+(C7.3c) Break down your total gross global Scope 1 emissions by business activity.
+Activity	Scope 1 emissions (metric tons CO2e)
+Stationary Combustion
+46252
+Mobile Combustion
+176993
+HVAC Refrigerant (HFCs)
+13024
+C7.5
+(C7.5) Break down your total gross global Scope 2 emissions by country/area/region.
+Country/area/region	Scope 2, location-based (metric tons CO2e)	Scope 2, market-based (metric tons CO2e)
+United States of America
+257967
+106976
+Canada
+7682
+7682
+C7.6
+(C7.6) Indicate which gross global Scope 2 emissions breakdowns you are able to provide.
+By business division
+C7.6a
+(C7.6a) Break down your total gross global Scope 2 emissions by business division.
+Business division	Scope 2, location-based (metric tons CO2e)	Scope 2, market-based (metric tons CO2e)
+U.S. Operations
+257967
+106976
+Canada Operations
+7682
+7682
+C7.7
+(C7.7) Is your organization able to break down your emissions data for any of the subsidiaries included in your CDP response?
+No
+C7.9
+(C7.9) How do your gross global emissions (Scope 1 and 2 combined) for the reporting year compare to those of the previous reporting year?
+Decreased
+C7.9a
+(C7.9a) Identify the reasons for any change in your gross global emissions (Scope 1 and 2 combined), and for each of them specify how your emissions compare to the previous year.
+Change in emissions (metric tons CO2e)	Direction of change in emissions	Emissions value (percentage)	Please explain calculation
+Change in renewable energy consumption	
+21502
+Decreased
+5.5
+Renewable energy consumption via RECs was 142,647 MT CO2e in 2022 and 121,145 MT CO2e in 2021. The difference in CO2e is 21,502 MT 21,502/389,985 = 5.5%.
+Other emissions reduction activities	
+3292
+Decreased
+0.8
+Emission reduction activities decreased emissions 3,292 CO2e MT from the previous year due to the installation of building management systems and LED lighting investments. Our emissions in 2021 were 389985, therefore 3,292/389985 = 0.8%.
+Divestment		
+<Not Applicable>
+Acquisitions		
+<Not Applicable>
+Mergers		
+<Not Applicable>
+Change in output		
+<Not Applicable>
+Change in methodology		
+<Not Applicable>
+Change in boundary		
+<Not Applicable>
+Change in physical operating conditions		
+<Not Applicable>
+Unidentified	
+14004
+Decreased
+3.6
+Total 2022 market-based emissions reduced 38,798 MT CO2e from the previous year. Collectively renewable energy consumption and emission reduction activities accounted for 24,794 MT of that reduction, leaving 14,004 MT CO2e as unidentified reductions. Our total market-based emissions in 2021 were 389,985 MT CO2e, therefore 14,004/389,985 = 3.6%.
+Other		
+<Not Applicable>
+C7.9b
+(C7.9b) Are your emissions performance calculations in C7.9 and C7.9a based on a location-based Scope 2 emissions figure or a market-based Scope 2 emissions figure?
+Market-based
+C8. Energy
+C8.1
+(C8.1) What percentage of your total operational spend in the reporting year was on energy?
+More than 0% but less than or equal to 5%
+C8.2
+(C8.2) Select which energy-related activities your organization has undertaken.
+Indicate whether your organization undertook this energy-related activity in the reporting year
+Consumption of fuel (excluding feedstocks)	
+Yes
+Consumption of purchased or acquired electricity	
+Yes
+Consumption of purchased or acquired heat	
+No
+Consumption of purchased or acquired steam	
+Yes
+Consumption of purchased or acquired cooling	
+Yes
+Generation of electricity, heat, steam, or cooling	
+No
+C8.2a
+(C8.2a) Report your organization’s energy consumption totals (excluding feedstocks) in MWh.
+Heating value	MWh from renewable sources	MWh from non-renewable sources	Total (renewable and non-renewable) MWh
+Consumption of fuel (excluding feedstock)	
+HHV (higher heating value)
+0
+984712
+984712
+Consumption of purchased or acquired electricity	
+<Not Applicable>
+444263
+307576
+751839
+Consumption of purchased or acquired heat	
+<Not Applicable>
+<Not Applicable>
+<Not Applicable>
+<Not Applicable>
+Consumption of purchased or acquired steam	
+<Not Applicable>
+0
+113
+113
+Consumption of purchased or acquired cooling	
+<Not Applicable>
+0
+342
+342
+Consumption of self-generated non-fuel renewable energy	
+<Not Applicable>
+<Not Applicable>
+<Not Applicable>
+<Not Applicable>
+Total energy consumption	
+<Not Applicable>
+444263
+1292743
+1737006
+C8.2b
+(C8.2b) Select the applications of your organization’s consumption of fuel.
+Indicate whether your organization undertakes this fuel application
+Consumption of fuel for the generation of electricity	
+No
+Consumption of fuel for the generation of heat	
+Yes
+Consumption of fuel for the generation of steam	
+No
+Consumption of fuel for the generation of cooling	
+No
+Consumption of fuel for co-generation or tri-generation	
+No
+C8.2c
+(C8.2c) State how much fuel in MWh your organization has consumed (excluding feedstocks) by fuel type.
+Sustainable biomass
+Heating value
+Please select
+Total fuel MWh consumed by the organization
+0
+MWh fuel consumed for self-generation of electricity
+<Not Applicable>
+MWh fuel consumed for self-generation of heat
+<Not Applicable>
+MWh fuel consumed for self-generation of steam
+<Not Applicable>
+MWh fuel consumed for self-generation of cooling
+<Not Applicable>
+MWh fuel consumed for self- cogeneration or self-trigeneration
+<Not Applicable>
+Comment
+Other biomass
+Heating value
+Please select
+Total fuel MWh consumed by the organization
+0
+MWh fuel consumed for self-generation of electricity
+<Not Applicable>
+MWh fuel consumed for self-generation of heat
+<Not Applicable>
+MWh fuel consumed for self-generation of steam
+<Not Applicable>
+MWh fuel consumed for self-generation of cooling
+<Not Applicable>
+MWh fuel consumed for self- cogeneration or self-trigeneration
+<Not Applicable>
+Comment
+Other renewable fuels (e.g. renewable hydrogen)
+Heating value
+Please select
+Total fuel MWh consumed by the organization
+0
+MWh fuel consumed for self-generation of electricity
+<Not Applicable>
+MWh fuel consumed for self-generation of heat
+<Not Applicable>
+MWh fuel consumed for self-generation of steam
+<Not Applicable>
+MWh fuel consumed for self-generation of cooling
+<Not Applicable>
+MWh fuel consumed for self- cogeneration or self-trigeneration
+<Not Applicable>
+Comment
+Coal
+Heating value
+Please select
+Total fuel MWh consumed by the organization
+0
+MWh fuel consumed for self-generation of electricity
+<Not Applicable>
+MWh fuel consumed for self-generation of heat
+<Not Applicable>
+MWh fuel consumed for self-generation of steam
+<Not Applicable>
+MWh fuel consumed for self-generation of cooling
+<Not Applicable>
+MWh fuel consumed for self- cogeneration or self-trigeneration
+<Not Applicable>
+Comment
+Oil
+Heating value
+Please select
+Total fuel MWh consumed by the organization
+0
+MWh fuel consumed for self-generation of electricity
+<Not Applicable>
+MWh fuel consumed for self-generation of heat
+<Not Applicable>
+MWh fuel consumed for self-generation of steam
+<Not Applicable>
+MWh fuel consumed for self-generation of cooling
+<Not Applicable>
+MWh fuel consumed for self- cogeneration or self-trigeneration
+<Not Applicable>
+Comment
+Gas
+Heating value
+HHV
+Total fuel MWh consumed by the organization
+728940
+MWh fuel consumed for self-generation of electricity
+<Not Applicable>
+MWh fuel consumed for self-generation of heat
+<Not Applicable>
+MWh fuel consumed for self-generation of steam
+<Not Applicable>
+MWh fuel consumed for self-generation of cooling
+<Not Applicable>
+MWh fuel consumed for self- cogeneration or self-trigeneration
+<Not Applicable>
+Comment
+Gasoline and diesel for transportation.
+Other non-renewable fuels (e.g. non-renewable hydrogen)
+Heating value
+HHV
+Total fuel MWh consumed by the organization
+255772
+MWh fuel consumed for self-generation of electricity
+<Not Applicable>
+MWh fuel consumed for self-generation of heat
+<Not Applicable>
+MWh fuel consumed for self-generation of steam
+<Not Applicable>
+MWh fuel consumed for self-generation of cooling
+<Not Applicable>
+MWh fuel consumed for self- cogeneration or self-trigeneration
+<Not Applicable>
+Comment
+Natural gas and propane for building heat.
+Total fuel
+Heating value
+HHV
+Total fuel MWh consumed by the organization
+984712
+MWh fuel consumed for self-generation of electricity
+<Not Applicable>
+MWh fuel consumed for self-generation of heat
+<Not Applicable>
+MWh fuel consumed for self-generation of steam
+<Not Applicable>
+MWh fuel consumed for self-generation of cooling
+<Not Applicable>
+MWh fuel consumed for self- cogeneration or self-trigeneration
+<Not Applicable>
+Comment
+Natural gas, propane, gasoline, and diesel
+C8.2e
+(C8.2e) Provide details on the electricity, heat, steam, and/or cooling amounts that were accounted for at a zero or near-zero emission factor in the market-based Scope 2 figure reported in C6.3.
+Country/area of low-carbon energy consumption
+United States of America
+Sourcing method
+Unbundled procurement of energy attribute certificates (EACs)
+Energy carrier
+Electricity
+Low-carbon technology type
+Wind
+Low-carbon energy consumed via selected sourcing method in the reporting year (MWh)
+117439
+Tracking instrument used
+US-REC
+Country/area of origin (generation) of the low-carbon energy or energy attribute
+United States of America
+Are you able to report the commissioning or re-powering year of the energy generation facility?
+Yes
+Commissioning year of the energy generation facility (e.g. date of first commercial operation or repowering)
+2017
+Comment
+Country/area of low-carbon energy consumption
+United States of America
+Sourcing method
+Unbundled procurement of energy attribute certificates (EACs)
+Energy carrier
+Electricity
+Low-carbon technology type
+Solar
+Low-carbon energy consumed via selected sourcing method in the reporting year (MWh)
+326824
+Tracking instrument used
+US-REC
+Country/area of origin (generation) of the low-carbon energy or energy attribute
+United States of America
+Are you able to report the commissioning or re-powering year of the energy generation facility?
+Yes
+Commissioning year of the energy generation facility (e.g. date of first commercial operation or repowering)
+2021
+Comment
+C8.2g
+(C8.2g) Provide a breakdown by country/area of your non-fuel energy consumption in the reporting year.
+Country/area
+United States of America
+Consumption of purchased electricity (MWh)
+679942
+Consumption of self-generated electricity (MWh)
+0
+Is this electricity consumption excluded from your RE100 commitment?
+<Not Applicable>
+Consumption of purchased heat, steam, and cooling (MWh)
+455
+Consumption of self-generated heat, steam, and cooling (MWh)
+0
+Total non-fuel energy consumption (MWh) [Auto-calculated]
+Country/area
+Canada
+Consumption of purchased electricity (MWh)
+71897
+Consumption of self-generated electricity (MWh)
+0
+Is this electricity consumption excluded from your RE100 commitment?
+<Not Applicable>
+Consumption of purchased heat, steam, and cooling (MWh)
+0
+Consumption of self-generated heat, steam, and cooling (MWh)
+0
+Total non-fuel energy consumption (MWh) [Auto-calculated]
+C9. Additional metrics
+C9.1
+(C9.1) Provide any additional climate-related metrics relevant to your business.
+C10. Verification
+C10.1
+(C10.1) Indicate the verification/assurance status that applies to your reported emissions.
+Verification/assurance status
+Scope 1	
+Third-party verification or assurance process in place
+Scope 2 (location-based or market-based)	
+Third-party verification or assurance process in place
+Scope 3	
+Third-party verification or assurance process in place
+C10.1a
+(C10.1a) Provide further details of the verification/assurance undertaken for your Scope 1 emissions, and attach the relevant statements.
+Verification or assurance cycle in place
+Annual process
+Status in the current reporting year
+Complete
+Type of verification or assurance
+Limited assurance
+Attach the statement
+GHGVerificationStatement BBY 2022_FINAL.pdf
+Page/ section reference
+2022 GHG Inventory Verification Statement, Best Buy Co., Inc.
+Scope 1 emissions, Page 2
+Relevant standard
+ISO14064-3
+Proportion of reported emissions verified (%)
+100
+C10.1b
+(C10.1b) Provide further details of the verification/assurance undertaken for your Scope 2 emissions and attach the relevant statements.
+Scope 2 approach
+Scope 2 location-based
+Verification or assurance cycle in place
+Annual process
+Status in the current reporting year
+Complete
+Type of verification or assurance
+Limited assurance
+Attach the statement
+GHGVerificationStatement BBY 2022_FINAL.pdf
+Page/ section reference
+2022 GHG Inventory Verification Statement, Best Buy Co., Inc.
+Scope 2 location-based emissions, Page 2
+Relevant standard
+ISO14064-3
+Proportion of reported emissions verified (%)
+100
+Scope 2 approach
+Scope 2 market-based
+Verification or assurance cycle in place
+Annual process
+Status in the current reporting year
+Complete
+Type of verification or assurance
+Limited assurance
+Attach the statement
+GHGVerificationStatement BBY 2022_FINAL.pdf
+Page/ section reference
+2022 GHG Inventory Verification Statement, Best Buy Co., Inc.
+Scope 2 market-based emissions, Page 2
+Relevant standard
+ISO14064-3
+Proportion of reported emissions verified (%)
+100
+C10.1c
+(C10.1c) Provide further details of the verification/assurance undertaken for your Scope 3 emissions and attach the relevant statements.
+Scope 3 category
+Scope 3: Waste generated in operations
+Scope 3: Business travel
+Scope 3: Employee commuting
+Scope 3: Use of sold products
+Verification or assurance cycle in place
+Annual process
+Status in the current reporting year
+Complete
+Type of verification or assurance
+Limited assurance
+Attach the statement
+GHGVerificationStatement BBY 2022_FINAL.pdf
+Page/section reference
+2022 GHG Inventory Verification Statement, Best Buy Co., Inc.
+Scope 3 emissions, Page 2
+Relevant standard
+ISO14064-3
+Proportion of reported emissions verified (%)
+100
+C10.2
+(C10.2) Do you verify any climate-related information reported in your CDP disclosure other than the emissions figures reported in C6.1, C6.3, and C6.5?
+Yes
+C10.2a
+(C10.2a) Which data points within your CDP disclosure have been verified, and which verification standards were used?
+Disclosure module verification relates to	Data verified	Verification standard	Please explain
+C4. Targets and performance
+Other, please specify (Water consumption)
+Global Reporting Initiative’s (GRI) G4 Sustainability Reporting Guidelines
+Best Buy has a water reduction goal (Oth 1 in C4.2b) that is designed to reduce consumption and reliance on potable water resources, leading to cost savings as well as improved water security for Best Buy and the communities in which we operate.
+GHGVerificationStatement BBY 2022_FINAL.pdf
+C11. Carbon pricing
+C11.1
+(C11.1) Are any of your operations or activities regulated by a carbon pricing system (i.e. ETS, Cap & Trade or Carbon Tax)?
+No, and we do not anticipate being regulated in the next three years
+C11.2
+(C11.2) Has your organization canceled any project-based carbon credits within the reporting year?
+No
+C11.3
+(C11.3) Does your organization use an internal price on carbon?
+Yes
+C11.3a
+(C11.3a) Provide details of how your organization uses an internal price on carbon.
+Type of internal carbon price
+Shadow price
+How the price is determined
+Price/cost of voluntary carbon offset credits
+Objective(s) for implementing this internal carbon price
+Drive low-carbon investment
+Scope(s) covered
+Scope 1
+Pricing approach used – spatial variance
+Uniform
+Pricing approach used – temporal variance
+Evolutionary
+Indicate how you expect the price to change over time
+We estimated that the cost of a carbon offset in 2023 to be $20.00 USD and that the price would escalate 5% annually through 2040.
+Actual price(s) used – minimum (currency as specified in C0.4 per metric ton CO2e)
+20
+Actual price(s) used – maximum (currency as specified in C0.4 per metric ton CO2e)
+46
+Business decision-making processes this internal carbon price is applied to
+Capital expenditure
+Mandatory enforcement of this internal carbon price within these business decision-making processes
+Yes, for some decision-making processes, please specify (As we work to transform our fleet, we believe that the implementation of IPC will help us better evaluate the Total Cost of Ownership against various investment options as it relates to the electrification of our fleet .)
+Explain how this internal carbon price has contributed to the implementation of your organization’s climate commitments and/or climate transition plan
+There are many upsides for Best Buy to establish an Internal Price on Carbon (IPC), but one of the key reasons is that it help us to understand the most cost-effective ways to achieve our company’s climate reduction goals, especially in relation to the electrification of our fleet.
+C12. Engagement
+C12.1
+(C12.1) Do you engage with your value chain on climate-related issues?
+Yes, our suppliers
+Yes, our customers/clients
+Yes, other partners in the value chain
+C12.1a
+(C12.1a) Provide details of your climate-related supplier engagement strategy.
+Type of engagement
+Innovation & collaboration (changing markets)
+Details of engagement
+Run a campaign to encourage innovation to reduce climate impacts on products and services
+% of suppliers by number
+4.2
+% total procurement spend (direct and indirect)
+0
+% of supplier-related Scope 3 emissions as reported in C6.5
+77
+Rationale for the coverage of your engagement
+Since 2021, we have created supplier specific Scope 3-Use of Sold Product reports. To maximize our impact, we chose to work with our largest suppliers because they supply the majority of products we sell. In doing so, the selected suppliers, while small in number, were collectively responsible for more than 75% of supplier-related Use of Sold product emissions.
+Impact of engagement, including measures of success
+In 2018, Best Buy implemented a Science-Based Target to reduce the Scope 3 emissions to innovate and collaborate on three major fronts: product design, lower carbon policy advancements and increased marketing of energy efficient products. For 2022, the measure of success was determined by the CDP Leadership criteria to engage with suppliers representing more than 25% of the supplier-related Scope 3 emissions as reported C6.5. By focusing on larger suppliers in 2022, we were able to engage with suppliers generating more than 75% of supplier-related Use of Sold Product scope 3, exceeding the original measure of success. As a result of these engagements, Best Buy was able to take steps to identify specific supplier performance opportunities that will decrease emissions. For example, by identifying the most carbon reducing products, merchants were better able to determine which SKUs to advertise during environmental promotions. Conversely, we were also able to identify opportunity SKUs, and able to influence some suppliers to certify their products to the ENERGY STAR standard.
+Comment
+Type of engagement
+Information collection (understanding supplier behavior)
+Details of engagement
+Collect GHG emissions data at least annually from suppliers 
+% of suppliers by number
+100
+% total procurement spend (direct and indirect)
+100
+% of supplier-related Scope 3 emissions as reported in C6.5
+0
+Rationale for the coverage of your engagement
+Best Buy's intention to foster the circular economy efforts and to help to scale GHG capabilities across our global supply chain was the reason that our coverage of engagement was all of our private label suppliers. We require 100% of private label suppliers to report their Scopes 1 and 2 carbon emissions, establish a carbon reduction goal, and look for carbon reduction opportunities through energy efficiency or the renewable energy sourcing.
+In 2022 we enhanced our carbon reduction supplier program based on our learnings from Best Buy’s supplier engagement efforts in 2021 as well as adopting guiding principles from the RBA into our Supplier Code of Conduct. To enable our suppliers to report on their carbon emissions, we offered trainings to our suppliers through RBA to build awareness and knowledge on climate change and carbon accounting. We also developed and implemented a carbon inventory calculator that is based on methodology from IPCC and the GHG Protocol. With this tool, our suppliers were then able to calculate their own Scope 1 and Scope 2 emissions to develop their own carbon inventory. With baseline data from last year, we will continue monitoring our suppliers’ carbon emissions, working toward setting carbon reduction goals with more suppliers in 2023.
+Impact of engagement, including measures of success
+To enable our private label suppliers to report on their carbon emissions, we offered trainings to our suppliers through RBA to build awareness and knowledge on climate change and carbon accounting. We also developed and implemented a carbon inventory calculator that is based on methodology from IPCC and the GHG Protocol. With this tool, our suppliers were then able to calculate their own Scope 1 and Scope 2 emissions to develop their own carbon inventory. As a result of these engagements, Best Buy was able to take steps to improve the reporting as well as identify specific supplier performance opportunities that will decrease emissions. With baseline data from last year, we will continue monitoring our suppliers’ carbon emissions, working toward setting carbon reduction goals with more suppliers in 2023. We set a goal to have 80% of our suppliers participating as our measure of success because it represents that vast majority of our supplier emissions. 90% of our private label suppliers responded to the survey, thereby exceeding our 2022 measure of success.
+
+We believe that one impact of this climate-related supplier engagement strategy will be that our suppliers and our own organization will be better prepared to measure, manage, and report future voluntary and mandated scope 3 emission reporting. For example, if the SEC were to require Best Buy to report the scope 3 emissions of our suppliers, we would be better prepared because we have established processes and benchmarking in place.
+Comment
+C12.1b
+(C12.1b) Give details of your climate-related engagement strategy with your customers.
+Type of engagement & Details of engagement
+Education/information sharing	Run an engagement campaign to educate customers about the climate change impacts of (using) your products, goods, and/or services
+% of customers by number
+100
+% of customer - related Scope 3 emissions as reported in C6.5
+99.5
+Please explain the rationale for selecting this group of customers and scope of engagement
+According to the EPA, 75% of U.S. households report the ENERGY STAR label as important in their purchasing decisions and 80% of purchasers would recommend ENERGY STAR products to a friend. Our sustainability materiality assessments confirm that sustainable products are among the top sustainability priorities for our stakeholders. We aim to engage all Best Buy customers that consider the ENERGY STAR label as important in their purchasing decisions through all our business channels (e.g., in-store and online). We are well positioned to promote ENERGY STAR products to ensure customer satisfaction and smart, eco-friendly purchases. We’ve selected this scope of engagement because “Use of Sold Products” represents at least 90% of our Scope 3 carbon emissions. The promotion of ENERGY STAR products is an effective way for Best Buy to reduce those emissions.
+Impact of engagement, including measures of success
+Impact of engagement: Best Buy has a long history of engaging with customers desiring energy-efficient products and has leveraged the EPA’s ENERGY STAR program to advance that effort. ENERGY STAR is the federal government-backed label for energy efficiency, providing simple, credible, and unbiased information that consumers and businesses rely on to make well-informed decisions. Best Buy provides a large selection of ENERGY STAR certified products that help our customers save money, reduce energy and water use and protect the environment. The Impact of our customer engagement is demonstrated by our U.S. customers purchasing an ENERGY STAR product more than 17 million times. Over the lifetime of the products, those customers will realize more than $799 million in utility savings and the products will provide 8.2 billion pounds of CO2 emissions avoidance.
+Measure of success and rationale: At Best Buy, the success of our strategy to engage customers desiring energy-efficient products is based in part on the quality and effectiveness of our ENERGY STAR program. Regarding this program, our measure of success is determined through an independent evaluation of our efforts by the EPA to be recognized as Partner of the Year. According to the EPA, "earning an ENERGY STAR Partner of the Year Award distinguishes corporate energy efficiency programs. It is the highest level of EPA recognition. Partners must perform at a superior level of energy management and meet the following criteria: demonstrate best practices across the organization; prove organization-wide energy savings; and participate actively and communicate the benefits of ENERGY STAR." Annually, the EPA evaluates the quality of Best Buy's ENERGY STAR program, and the award confirms a superior level of performance that lends credibility to our effort.
+The judging criteria used to assess leadership efforts include ENERGY STAR partnership and planning, product marketing and promotions, ENERGY STAR education efforts, ENERGY STAR training efforts, and participation in the ENERGY STAR Retail Products Platform. In 2022, we were awarded ENERGY STAR Partner of the Year in Retailing for the tenth year in row, and we've also received a special distinction for Sustained Excellence. Sustained Excellence is presented to a partner at EPA’s discretion. Annual achievements must continue to surpass those in previous years.
+C12.1d
+(C12.1d) Give details of your climate-related engagement strategy with other partners in the value chain.
+Best Buy considers electric utilities across the nation to be a part of its value chain and engages with them on climate-related issues to influence markets through innovation and collaboration. We currently partner with 11 utilities via EPA’s ENERGY STAR Retail Product Platform (ESRPP). The ESRPP offers financial incentives to motivate retailers to assort and promote energy efficient products. The intended result is reduced energy use and carbon emissions from the use of sold products. The sale of ENERGY STAR products is central to achieving our SBTi approved Scope 3 carbon reduction goal. 
+
+Best Buy does not disclose revenue information for specific products. However, we offer a large selection of ENERGY STAR certified products to help our customers save money, reduce energy use and protect the environment by meeting energy guidelines set by the U.S. Environmental Protection Agency (EPA) and the U.S. Department of Energy. Our U.S. customers purchased more than 17 million ENERGY STAR certified products in 2022. Many ENERGY STAR certified products qualify for ESRPP incentives from the utilities.
+
+C12.2
+(C12.2) Do your suppliers have to meet climate-related requirements as part of your organization’s purchasing process?
+Yes, suppliers have to meet climate-related requirements, but they are not included in our supplier contracts
+C12.2a
+(C12.2a) Provide details of the climate-related requirements that suppliers have to meet as part of your organization’s purchasing process and the compliance mechanisms in place.
+Climate-related requirement
+Climate-related disclosure through a non-public platform
+Description of this climate related requirement
+To enhance our circular economy efforts and help to scale GHG capabilities across our global supply chain, we require our private label suppliers to report their Scopes 1 and 2 carbon emissions, establish a carbon reduction goal, and look for carbon reduction opportunities through energy efficiency or the renewable energy sourcing.
+In 2022 we enhanced our carbon reduction supplier program based on our learnings from Best Buy’s supplier engagement efforts in 2021 as well as adopting guiding principles from the RBA into our Supplier Code of Conduct. To enable our suppliers to report on their carbon emissions, we offered trainings to our suppliers through RBA to build awareness and knowledge on climate change and carbon accounting. We also developed and implemented a carbon inventory calculator that is based on methodology from IPCC and the GHG Protocol. With this tool, our suppliers were then able to calculate their own Scope 1 and Scope 2 emissions to develop their own carbon inventory. With baseline data from last year, we will continue monitoring our suppliers’ carbon emissions, working toward setting carbon reduction goals with more suppliers in 2023.
+% suppliers by procurement spend that have to comply with this climate-related requirement
+100
+% suppliers by procurement spend in compliance with this climate-related requirement
+90
+Mechanisms for monitoring compliance with this climate-related requirement
+Supplier self-assessment
+Response to supplier non-compliance with this climate-related requirement
+Retain and engage
+C12.3
+(C12.3) Does your organization engage in activities that could either directly or indirectly influence policy, law, or regulation that may impact the climate?
+Row 1
+External engagement activities that could directly or indirectly influence policy, law, or regulation that may impact the climate
+Yes, we engage directly with policy makers
+Yes, our membership of/engagement with trade associations could influence policy, law, or regulation that may impact the climate
+Does your organization have a public commitment or position statement to conduct your engagement activities in line with the goals of the Paris Agreement?
+Yes
+Attach commitment or position statement(s)
+Business-RoundtableAddressingClimateChangeReport.September2020.pdf
+Describe the process(es) your organization has in place to ensure that your external engagement activities are consistent with your climate commitments and/or climate transition plan
+We use an ISO 14001 certified Environmental Management System (EMS) in our U.S. operations across all business divisions to systematically identify, prioritize, manage and review climate change risks and opportunities. The framework follows a “Plan, Do, Check, Act” strategy to achieve continual improvement within the identified boundaries of the EMS. The ongoing work consists of quarterly and annual reviews, as well as daily program management. Within these reviews, cross-functional teams meet to review past assessments, identify new environmental aspects and assess their significance, and create action plans to address risks and opportunities. As a part of this established process, members of the Environmental Sustainability and Compliance team annually review direct and indirect activities that influence policy to establish whether the activities are consistent with our overall position on climate change. Best Buy conducted extensive market research and consulted with BSR, CDP, Ceres and WRI in the development of its carbon reduction strategy. Best Buy also accessed and used public data attained through CDP Investor surveys to benchmark its carbon reduction program. Additionally, the Corporate Sustainability and Compliance team continues to focus on e-waste, climate change, responsible sourcing, and sustainable products that are among the top sustainability priorities for our company.
+Primary reason for not engaging in activities that could directly or indirectly influence policy, law, or regulation that may impact the climate
+<Not Applicable>
+Explain why your organization does not engage in activities that could directly or indirectly influence policy, law, or regulation that may impact the climate
+<Not Applicable>
+C12.3a
+(C12.3a) On what policy, law, or regulation that may impact the climate has your organization been engaging directly with policy makers in the reporting year?
+Specify the policy, law, or regulation on which your organization is engaging with policy makers
+The Home Energy Rebate Program (Department of Energy) as authorized through the Inflation Reduction Act Section 50122: High Efficiency, Electric Home Rebate Program. The law provides $8.8 billion in rebates for home energy efficiency and electrification projects.
+Category of policy, law, or regulation that may impact the climate  
+Carbon pricing, taxes, and subsidies
+Focus area of policy, law, or regulation that may impact the climate
+Subsidies on products or services
+Policy, law, or regulation geographic coverage
+National
+Country/area/region the policy, law, or regulation applies to
+United States of America
+Your organization’s position on the policy, law, or regulation
+Neutral
+Description of engagement with policy makers
+Best Buy met with DOE representatives in 2022 to share how Best Buy expects the proposed implementation of the program to influence consumer behavior from a retail perspective.
+Details of exceptions (if applicable) and your organization’s proposed alternative approach to the policy, law or regulation
+<Not Applicable>
+Have you evaluated whether your organization’s engagement on this policy, law, or regulation is aligned with the goals of the Paris Agreement?
+Yes, we have evaluated, and it is aligned
+Please explain whether this policy, law or regulation is central to the achievement of your climate transition plan and, if so, how?
+If the Home Energy Rebate Program is successful in motivating consumers to purchase energy-efficient products that help electrify their homes, we expect it will significantly and positively impact our Scope 3 SBTi goal. Our Scope 3 SBTi goal is to reduce product lifetime energy consumption and carbon emissions from the Use of Sold Products 20% by 2030 as well as save customers money over the life of those products.
+C12.3b
+(C12.3b) Provide details of the trade associations your organization is a member of, or engages with, which are likely to take a position on any policy, law or regulation that may impact the climate.
+Trade association
+Business Roundtable
+Is your organization’s position on climate change policy consistent with theirs?
+Consistent
+Has your organization attempted to influence their position in the reporting year?
+Yes, and they have changed their position 
+Describe how your organization’s position is consistent with or differs from the trade association’s position, and any actions taken to influence their position
+Through their Business Roundtable's primary climate change statement, Addressing Climate Change: Principles (September 2020), they state that they "believe that to avoid the worst impacts of climate change, the world must work together to limit global temperature rise this century to well below 2 degrees Celsius above preindustrial levels, consistent with the Paris Agreement."
+
+This is consistent with Best Buy's current SBTi goal.
+
+That said, we sought to influence the BRT to align the most recent science that indicted that global temperature rise should be limited to 1.5 degrees Celsius. The BRT target was ultimately not adjusted, but it was noted in the statement that the "Intergovernmental Panel on Climate Change (IPCC) reported that limiting warming to no more than 1.5 degrees Celsius compared to preindustrial levels will be necessary to avoid some of the most severe risks associated with climate change. According to the IPCC, meeting this goal would require a 45% reduction in global carbon dioxide emissions by 2030 as compared to 2010 levels and net-zero emissions by 2050, which would require significant innovation and global cooperation coupled with changes in behavior across society."
+Funding figure your organization provided to this trade association in the reporting year (currency as selected in C0.4)
+0
+Describe the aim of your organization’s funding
+<Not Applicable>
+Have you evaluated whether your organization’s engagement with this trade association is aligned with the goals of the Paris Agreement?
+Yes, we have evaluated, and it is aligned
+C12.4
+(C12.4) Have you published information about your organization’s response to climate change and GHG emissions performance for this reporting year in places other than in your CDP response? If so, please attach the publication(s).
+Publication
+In voluntary sustainability report
+Status
+Complete
+Attach the document
+Best Buy FY22-ESG-Report.pdf
+Page/Section reference
+Best Buy fiscal 2022 ESG report. Environmental topics beginning on page 11.
+Content elements
+Governance
+Risks & opportunities
+Emissions figures
+Emission targets
+Comment
+The Best Buy fiscal 2023 environmental report is expected to be published by July 31, 2023.
+Publication
+In mainstream reports
+Status
+Complete
+Attach the document
+Best Buy 2023 10-K.pdf
+Page/Section reference
+Best Buy fiscal 2023 10-k, page 6
+Content elements
+Governance
+Risks & opportunities
+Emission targets
+Comment
+C12.5
+(C12.5) Indicate the collaborative frameworks, initiatives and/or commitments related to environmental issues for which you are a signatory/member.
+Environmental collaborative framework, initiative and/or commitment	Describe your organization’s role within each framework, initiative and/or commitment
+Row 1	
+Race to Zero Campaign
+The Climate Pledge
+Best Buy is a purposeful, values-driven business. We demonstrate this through our commitment to communities, people and the environment. Since 2009, Best Buy has been working to reduce our carbon emissions and have lessened the impact by nearly sixty percent since that time.
+As the urgency of climate change has grown, so, too, have our commitments. In 2019, through the Science-Based Target Initiative, we set a goal to reduce our emissions by 75% by 2030. In 2021, we pledged to increase our commitment to sustainability by joining Amazon and other signatories of The Climate Pledge in a commitment to achieving carbon neutrality by 2040.
+As a signatory of The Climate Pledge, we committed to:
+• Measure and report greenhouse gas emissions on a regular basis.
+• Implement decarbonization strategies in line with the Paris Agreement through real business change and innovations, including efficiency improvements, renewable energy, materials reductions, and other carbon emission elimination strategies.
+• Take actions to neutralize any remaining operational emissions with additional, quantifiable, real, permanent, and socially beneficial offsets that achieve net zero annual carbon emissions by 2040.
+• Advance our scope 3 commitment to reduce emissions 20% by 2030 by working collaboratively with suppliers, utilities, NGOs and policy makers to align to future SBTi Net Zero Scope 3 guidance, putting us on a pathway to address all supply chain emissions.
+
+In 2022, we joined and signed on to the Race to Zero Breakthroughs: Retail Campaign to help shape the campaign strategy and position Best Buy as a leader in sustainability in the retail space. The Race to Zero Retail Campaign provides a credible platform through the UNFCC Race to Zero to showcase Best Buy’s leadership in reducing carbon emissions and serving as an inspiration to other retailers and retail trade associations globally. Our CEO, Corie Barry was featured in a video that was shared globally in support of the Race to Zero Breakthroughs: Retail Campaign.
+C15. Biodiversity
+C15.1
+(C15.1) Is there board-level oversight and/or executive management-level responsibility for biodiversity-related issues within your organization?
+Board-level oversight and/or executive management-level responsibility for biodiversity-related issues	Description of oversight and objectives relating to biodiversity	Scope of board-level oversight
+Row 1	
+Please select
+<Not Applicable>
+<Not Applicable>
+C15.2
+(C15.2) Has your organization made a public commitment and/or endorsed any initiatives related to biodiversity?
+Indicate whether your organization made a public commitment or endorsed any initiatives related to biodiversity	Biodiversity-related public commitments	Initiatives endorsed
+Row 1	
+Please select
+<Not Applicable>
+<Not Applicable>
+C15.3
+(C15.3) Does your organization assess the impacts and dependencies of its value chain on biodiversity?
+Impacts on biodiversity
+Indicate whether your organization undertakes this type of assessment
+Value chain stage(s) covered
+<Not Applicable>
+Portfolio activity
+<Not Applicable>
+Tools and methods to assess impacts and/or dependencies on biodiversity
+<Not Applicable>
+Please explain how the tools and methods are implemented and provide an indication of the associated outcome(s)
+<Not Applicable>
+Dependencies on biodiversity
+Indicate whether your organization undertakes this type of assessment
+Value chain stage(s) covered
+<Not Applicable>
+Portfolio activity
+<Not Applicable>
+Tools and methods to assess impacts and/or dependencies on biodiversity
+<Not Applicable>
+Please explain how the tools and methods are implemented and provide an indication of the associated outcome(s)
+<Not Applicable>
+C15.4
+(C15.4) Does your organization have activities located in or near to biodiversity- sensitive areas in the reporting year?
+C15.5
+(C15.5) What actions has your organization taken in the reporting year to progress your biodiversity-related commitments?
+Have you taken any actions in the reporting period to progress your biodiversity-related commitments?	Type of action taken to progress biodiversity- related commitments
+Row 1	
+Please select
+<Not Applicable>
+C15.6
+(C15.6) Does your organization use biodiversity indicators to monitor performance across its activities?
+Does your organization use indicators to monitor biodiversity performance?	Indicators used to monitor biodiversity performance
+Row 1	
+Please select
+Please select
+C15.7
+(C15.7) Have you published information about your organization’s response to biodiversity-related issues for this reporting year in places other than in your CDP response? If so, please attach the publication(s).
+Report type	Content elements	Attach the document and indicate where in the document the relevant biodiversity information is located
+C16. Signoff
+C-FI
+(C-FI) Use this field to provide any additional information or context that you feel is relevant to your organization's response. Please note that this field is optional and is not scored.
+C16.1
+(C16.1) Provide details for the person that has signed off (approved) your CDP climate change response.
+Job title	Corresponding job category
+Row 1	
+Chief Executive Officer
+Chief Executive Officer (CEO)

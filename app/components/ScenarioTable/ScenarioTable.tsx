@@ -69,7 +69,7 @@ const ScenarioTable: React.FC = () => {
         <Button onClick={stockModal.onOpen}>
           <div className="flex items-center text-base">
             <Plus className="w-4 mr-2" />
-            new company
+            new stock
           </div>
         </Button>
         <Button

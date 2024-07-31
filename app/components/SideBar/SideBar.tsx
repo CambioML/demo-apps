@@ -11,7 +11,6 @@ import {
   Squares2X2Icon,
   CircleStackIcon,
   ShoppingBagIcon,
-  EnvelopeIcon,
   BriefcaseIcon,
 } from '@heroicons/react/24/solid';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';

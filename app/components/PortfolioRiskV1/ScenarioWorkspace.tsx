@@ -3,9 +3,9 @@ import React, { useEffect, useState } from 'react';
 import useScenarioStore from '@/app/hooks/useScenarioStore';
 import Heading from '../Heading';
 import ScenarioTable from '../ScenarioTable/ScenarioTable';
-import ModuleContainer from './ModuleContainer';
 import ScenarioDetail from '../ScenarioTable/ScenarioDetail';
 import { Scenario } from '@/app/types/ScenarioTypes';
+import ModuleContainer from '@/app/pages/portfolioriskv1/ModuleContainer';
 
 interface WorkspaceProps {
   title: string;

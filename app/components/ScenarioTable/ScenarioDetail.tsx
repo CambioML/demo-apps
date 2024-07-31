@@ -1,7 +1,7 @@
 import useScenarioStore, { ScenarioState } from '@/app/hooks/useScenarioStore';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from '../UI/LoadingSpinner';
-import { ArrowCounterClockwise, Sparkle, X } from '@phosphor-icons/react';
+import { Sparkle, X } from '@phosphor-icons/react';
 import { AxiosError, AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';
 import generateScenario from '@/app/actions/generateScenario';

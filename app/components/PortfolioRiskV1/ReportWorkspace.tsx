@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Heading from '../Heading';
-import ModuleContainer from './ModuleContainer';
+import ModuleContainer from '@/app/pages/portfolioriskv1/ModuleContainer';
 
 const ReportWorkspace = () => {
   return (

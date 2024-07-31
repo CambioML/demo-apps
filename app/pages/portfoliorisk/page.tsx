@@ -4,10 +4,10 @@ import { Input, Button, Typography } from '@material-tailwind/react';
 import { ArrowUpTrayIcon } from '@heroicons/react/24/solid';
 import { DefaultPagination } from '../../components/pagination';
 import { useState } from 'react';
-import { Event, Stock } from '@/app/types/ScenarioTypes';
+import { Event } from '@/app/types/ScenarioTypes';
 
 type Row = {
-  stock: Stock;
+  name: string;
   events: Event[];
 };
 
@@ -21,7 +21,7 @@ const defaultEvent: Event = {
 };
 
 function Page() {
-  const [events, setEvents] = useState<Event[]>([defaultEvent, defaultEvent, defaultEvent]);
+  const [events] = useState<Event[]>([defaultEvent, defaultEvent, defaultEvent]);
 
   const TABLE_ROWS: Row[] = [
     {
