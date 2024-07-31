@@ -11,7 +11,7 @@ function Header() {
         {/* </Badge> */}
         <div className="cursor-pointer p-2 rounded-lg hover:bg-gray-200">
           <Avatar src="https://docs.material-tailwind.com/img/face-2.jpg" alt="avatar" size="sm" />
-          <span className="ml-2 font-semibold text-gray-700 text-lg">Mobius Yao</span>
+          <span className="ml-2 font-semibold text-gray-700 text-lg">Cambio ML</span>
         </div>
       </div>
     </div>
