@@ -75,7 +75,7 @@ const FormModal: React.FC<FormModalProps> = ({
         z-50
         outline-none
         focus:outline-none
-        bg-neutral-800/70
+        bg-gray-800/70
       "
       >
         <div
@@ -141,7 +141,7 @@ const FormModal: React.FC<FormModalProps> = ({
                   transition
                   absolute
                   right-7
-                  hover:bg-neutral-200
+                  hover:bg-gray-200
                   rounded-full
                 "
                 >
@@ -163,7 +163,7 @@ const FormModal: React.FC<FormModalProps> = ({
                 "
                 >
                   {secondaryAction && secondaryActionLabel && (
-                    <Button outline disabled={disabled} onClick={handleSecondaryAction} className="flex-1 text-base">
+                    <Button disabled={disabled} onClick={handleSecondaryAction} className="flex-1 text-base">
                       {secondaryActionLabel}
                     </Button>
                   )}

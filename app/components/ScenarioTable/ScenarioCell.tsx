@@ -56,18 +56,24 @@ const ScenarioCell = ({ colIdx, rowIdx }: ScenarioCellProps) => {
     }
   };
 
+  const getStateStyles = () => {
+    if (scenarios[rowIdx][colIdx].state === ScenarioState.READY) return 'bg-gray-500 hover:shadow-md ';
+    if (scenarios[rowIdx][colIdx].state === ScenarioState.UPDATING) return 'bg-gray-900 animate-pulse';
+    return 'bg-gray-900';
+  };
+
   return (
-    <div
-      className={`w-full text-center cursor-pointer ${selectedScenarioIdx?.rowIdx === rowIdx && selectedScenarioIdx.colIdx === colIdx && showDetail ? 'border-2 border-neutral-800 font-semibold' : 'border border-neutral-500'} py-4 rounded-lg  px-2 min-w-[200px] hover:text-white
-      ${scenarios[rowIdx][colIdx].state === ScenarioState.READY && 'bg-violet-300 hover:bg-violet-600 '}
-      ${scenarios[rowIdx][colIdx].state === ScenarioState.UPDATING && 'bg-amber-200 hover:bg-amber-400'}
-      ${scenarios[rowIdx][colIdx].state === ScenarioState.UPDATED && 'bg-sky-300 hover:bg-sky-600'}
+    <div className="w-full h-[50px] py-1 px-2">
+      <div
+        className={`w-full h-full text-md flex items-center justify-center text-center cursor-pointer text-white ${selectedScenarioIdx?.rowIdx === rowIdx && selectedScenarioIdx.colIdx === colIdx && showDetail ? 'border-2 border-gray-800 font-bold' : 'font-semibold'} rounded-lg  px-2 min-w-[200px]
+      ${getStateStyles()}
       `}
-      onClick={handleScenarioClick}
-    >
-      {scenarios[rowIdx][colIdx].state === ScenarioState.READY && <>Generate Risk</>}
-      {scenarios[rowIdx][colIdx].state === ScenarioState.UPDATING && <>Generating...</>}
-      {scenarios[rowIdx][colIdx].state === ScenarioState.UPDATED && <>View Risk</>}
+        onClick={handleScenarioClick}
+      >
+        {scenarios[rowIdx][colIdx].state === ScenarioState.READY && <>GENERATE RISK</>}
+        {scenarios[rowIdx][colIdx].state === ScenarioState.UPDATING && <>GENERATING...</>}
+        {scenarios[rowIdx][colIdx].state === ScenarioState.UPDATED && <>VIEW</>}
+      </div>
     </div>
   );
 };

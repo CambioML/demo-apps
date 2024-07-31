@@ -6,11 +6,14 @@ interface ModuleContainerProps {
   subtitle?: string;
   children: React.ReactNode;
   handleClose?: () => void;
+  outline?: boolean;
 }
 
-const ModuleContainer = ({ title, subtitle, children, handleClose }: ModuleContainerProps) => {
+const ModuleContainer = ({ title, subtitle, children, handleClose, outline }: ModuleContainerProps) => {
   return (
-    <div className="min-h-fit w-full max-w-screen-xl bg-white rounded-xl p-8 relative">
+    <div
+      className={`min-h-fit w-full max-w-screen-xl bg-white rounded-xl p-8 relative ${outline && 'border-2 border-gray-100'}`}
+    >
       {handleClose && (
         <button
           onClick={handleClose}
@@ -21,7 +24,7 @@ const ModuleContainer = ({ title, subtitle, children, handleClose }: ModuleConta
                        transition
                        absolute
                        right-7
-                       hover:bg-neutral-200
+                       hover:bg-gray-200
                        rounded-full
                      "
         >

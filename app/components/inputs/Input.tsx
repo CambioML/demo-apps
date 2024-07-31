@@ -33,7 +33,7 @@ const Input = ({ id, label, disabled, register, required, errors }: InputProps) 
           transition
           disabled: opacity-70
           disabled: cursor-not-allowed
-          ${errors[id] ? 'border-rose-500' : 'border-neutral-300'}
+          ${errors[id] ? 'border-rose-500' : 'border-gray-300'}
           ${errors[id] ? 'focus:border-rose-500' : 'focus:border-black'}
         `}
       />

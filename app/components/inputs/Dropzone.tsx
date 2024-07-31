@@ -33,7 +33,7 @@ const Dropzone = () => {
 
   return (
     <div
-      className="border-2 bg-gray-100 border-dashed border-gray-300 h-[25vh] rounded-md text-center cursor-pointer transition duration-300 ease-in-out flex flex-col items-center justify-center hover:border-neutral-500 w-full"
+      className="border-2 bg-gray-100 border-dashed border-gray-300 h-[25vh] rounded-md text-center cursor-pointer transition duration-300 ease-in-out flex flex-col items-center justify-center hover:border-gray-500 w-full"
       {...getRootProps()}
     >
       <div className={iconContainerClasses}>{<CloudArrowUp size={32} />}</div>

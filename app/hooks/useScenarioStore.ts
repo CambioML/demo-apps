@@ -28,7 +28,7 @@ export enum ScenarioState {
 
 interface ScenarioStore {
   data: StockRowType[];
-  columns: ColumnDef<StockRowType, string>[];
+  columns: ColumnDef<StockRowType, any>[];
   filesToUpload: File[];
   showDetail: boolean;
   scenarios: Scenario[][];

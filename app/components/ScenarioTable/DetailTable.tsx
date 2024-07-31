@@ -48,7 +48,7 @@ const DetailTable = ({ detail }: DetailTableProps) => {
         <thead>
           <tr>
             {detail.header.map((header, index) => (
-              <th key={index} className={`${cellStyle} sticky z-20 top-0 bg-neutral-100`}>
+              <th key={index} className={`${cellStyle} sticky z-20 top-0 bg-gray-100`}>
                 {header}
               </th>
             ))}

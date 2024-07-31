@@ -11,11 +11,7 @@ import GenerateModal from '../../components/modals/GenerateModal';
 import InfoModal from '../../components/modals/InfoModal';
 import StockModal from '../../components/modals/StockModal';
 
-interface WorkspaceProps {
-  title: string;
-}
-
-const Page = ({ title }: WorkspaceProps) => {
+const Page = () => {
   const { showDetail, setShowDetail, scenarios, selectedScenarioIdx } = useScenarioStore();
   const [selectedScenario, setSelectedScenario] = useState<Scenario>();
 
@@ -25,9 +21,12 @@ const Page = ({ title }: WorkspaceProps) => {
   }, [scenarios, selectedScenarioIdx]);
 
   return (
-    <div className="p-2 flex-1 bg-neutral-100 overflow-y-scroll">
-      <Heading title={title} />
-      <div className="h-fit max-h-[900px] min-w-[800px] grid grid-cols-1 auto-rows-auto 2xl:grid-cols-2 gap-4">
+    <div className="flex-1">
+      <Heading title="Portfolio Risk Exposure" />
+      <div
+        className="overflow-y-scroll h-fit min-w-[800px] grid grid-cols-1 auto-rows-auto 3xl:grid-cols-2 gap-4"
+        style={{ maxHeight: 'calc(100vh - 200px)' }}
+      >
         <div className={`${!showDetail && 'col-span-2'}`}>
           <ModuleContainer title={'Event Table'}>
             <ScenarioTable />
@@ -38,6 +37,7 @@ const Page = ({ title }: WorkspaceProps) => {
             title={`Risk Factor: ${selectedScenario && selectedScenario.stock.title + ' x ' + selectedScenario.event.title}`}
             subtitle={``}
             handleClose={() => setShowDetail(false)}
+            outline={true}
           >
             <ScenarioDetail />
           </ModuleContainer>

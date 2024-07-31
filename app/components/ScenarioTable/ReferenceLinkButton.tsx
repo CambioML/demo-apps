@@ -64,7 +64,7 @@ const ReferenceLinkButton = ({ uuid }: ReferenceLinkButtonProps) => {
   };
 
   return (
-    <button className="bg-neutral-100 hover:bg-neutral-200 px-1 rounded-sm" key={uuid} onClick={handleReferenceClick}>
+    <button className="bg-gray-100 hover:bg-gray-200 px-1 rounded-sm" key={uuid} onClick={handleReferenceClick}>
       {label}
     </button>
   );

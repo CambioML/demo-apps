@@ -46,7 +46,7 @@ const Modal = ({ isOpen, onClose, title, body, footer }: ModalProps) => {
         z-50
         outline-none
         focus:outline-none
-        bg-neutral-800/70
+        bg-gray-800/70
       "
     >
       <div
@@ -108,7 +108,7 @@ const Modal = ({ isOpen, onClose, title, body, footer }: ModalProps) => {
                   transition
                   absolute
                   right-7
-                  hover:bg-neutral-200
+                  hover:bg-gray-200
                   rounded-full
                 "
               >

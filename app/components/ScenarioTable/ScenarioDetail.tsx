@@ -1,18 +1,18 @@
 import useScenarioStore, { ScenarioState } from '@/app/hooks/useScenarioStore';
 import { useEffect, useState } from 'react';
 import LoadingSpinner from '../UI/LoadingSpinner';
-import { ArrowCounterClockwise, Sparkle, X } from '@phosphor-icons/react';
-import Button from '../Button';
+import { Sparkle, X } from '@phosphor-icons/react';
 import { AxiosError, AxiosResponse } from 'axios';
 import toast from 'react-hot-toast';
 import generateScenario from '@/app/actions/generateScenario';
 import { Scenario } from '@/app/types/ScenarioTypes';
 import DetailTable from './DetailTable';
 import processResponse from '@/app/actions/processResponse';
+import { Button } from '@material-tailwind/react';
 
 const Tag = ({ tag }: { tag: string | undefined }) => {
   return tag ? (
-    <div className="bg-neutral-100 rounded-full px-4 py-2 text-xl font-semibold text-neutral-800 w-full max-w-[400px] text-center border flex gap-2 items-center justify-center border-sky-300 border-2">
+    <div className="bg-gray-100 rounded-full px-4 py-2 text-xl font-semibold text-gray-800 w-full max-w-[400px] text-center border flex gap-2 items-center justify-center border-sky-300 border-2">
       AI Rating (Coming Soon)
       <Sparkle size={24} className="text-sky-500" />
     </div>
@@ -70,9 +70,9 @@ const ScenarioDetail = () => {
   return (
     <div className="w-full h-full flex flex-col items-start justify-center gap-4">
       {selectedScenario?.state === ScenarioState.READY && (
-        <div className="w-full h-full flex items-center justify-center">
-          <Button label="Generate" onClick={handleGenerateRetry} labelIcon={ArrowCounterClockwise} small />
-        </div>
+        <Button onClick={handleGenerateRetry} fullWidth>
+          Generate
+        </Button>
       )}
       {selectedScenario?.state === ScenarioState.UPDATING && (
         <div className="w-full h-full flex flex-col items-center justify-center gap-4">
@@ -89,10 +89,12 @@ const ScenarioDetail = () => {
           <div className="p-4 flex w-full items-center justify-center shrink-0 text-xl gap-2">
             <Tag tag="SEVERE" />
           </div>
-          <div className="flex flex-col items-start w-full h-full overflow-auto relative border-solid border-2 border-neutral-100 rounded-lg min-h-[500px]">
+          <div className="flex flex-col items-start w-full h-full overflow-auto relative border-solid border-2 border-gray-100 rounded-lg min-h-[500px]">
             <DetailTable detail={selectedScenario?.detail} />
           </div>
-          <Button label="Regenerate" onClick={handleGenerateRetry} labelIcon={ArrowCounterClockwise} small />
+          <Button onClick={handleGenerateRetry} fullWidth>
+            Regenerate
+          </Button>
         </>
       )}
     </div>
