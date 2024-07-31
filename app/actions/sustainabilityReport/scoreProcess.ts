@@ -128,15 +128,11 @@ const scoreProcess = async ({ qaPairs, metrics }: IParams): Promise<ScoreProcess
   console.log('scoring process...', qaPairs);
   const metricEvaluations: { [key: string]: MetricFeedback } = {};
 
-  for (const qaPair of qaPairs) {
+  const tasks = qaPairs.map(async (qaPair) => {
     const [questionName, answer] = Object.entries(qaPair)[0];
     const metric = metrics.find((metric) => metric.name === questionName);
     if (!metric) {
-      return {
-        status: 400,
-        error: `Metric not found for question: ${questionName}`,
-        result: null,
-      };
+      throw new Error(`Metric not found for question: ${questionName}`);
     }
 
     console.log(`Question: ${metric.question}, Answer: ${answer}, Metric: ${metric.name}`);
@@ -243,14 +239,31 @@ const scoreProcess = async ({ qaPairs, metrics }: IParams): Promise<ScoreProcess
       'IFRS S2 Response Recommendation': feedback['IFRS S2 Revision Suggestions'].Suggestion,
     };
     metricEvaluations[questionName] = currOutput;
-  }
+  });
 
-  const response: ScoreProcessResult = {
-    status: 200,
-    error: null,
-    result: metricEvaluations,
-  };
-  return response;
+  try {
+    await Promise.all(tasks);
+    const response: ScoreProcessResult = {
+      status: 200,
+      error: null,
+      result: metricEvaluations,
+    };
+    return response;
+  } catch (error) {
+    if (error instanceof Error) {
+      return {
+        status: 500,
+        error: error.message,
+        result: null,
+      };
+    } else {
+      return {
+        status: 500,
+        error: 'Error generating score.',
+        result: null,
+      };
+    }
+  }
 };
 
 export default scoreProcess;
