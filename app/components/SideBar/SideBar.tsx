@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { Card, Typography, List, Chip, Input } from '@material-tailwind/react';
+import React, { useState } from 'react';
+import { Typography, List, Chip, Input } from '@material-tailwind/react';
 import {
   PresentationChartBarIcon,
   Cog6ToothIcon,
@@ -12,19 +12,20 @@ import {
   CircleStackIcon,
   ShoppingBagIcon,
   BriefcaseIcon,
+  MagnifyingGlassIcon,
 } from '@heroicons/react/24/solid';
-import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import Logo from '../../assets/image/logo.svg';
 import SideBarItem from './SideBarItem';
+import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 const Sidebar = () => {
-  // const [openAlert, setOpenAlert] = React.useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const menuData = [
     {
       label: 'DashBoard',
       type: 'menu',
-      icon: <PresentationChartBarIcon />,
+      icon: PresentationChartBarIcon,
       link: '/pages/dashboard',
     },
     {
@@ -33,36 +34,36 @@ const Sidebar = () => {
     {
       label: 'Inbox',
       type: 'menu',
-      icon: <InboxIcon />,
+      icon: InboxIcon,
       suffix: <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />,
     },
     {
       label: 'Portfolio Risk Exposure V1',
       type: 'menu',
-      icon: <BriefcaseIcon />,
+      icon: BriefcaseIcon,
       link: '/pages/portfolioriskv1',
     },
     {
       label: 'Portfolio Risk Exposure',
       type: 'menu',
-      icon: <WalletIcon />,
+      icon: WalletIcon,
       link: '/pages/portfoliorisk',
     },
     {
       label: 'Sustainability Reports Comparison',
       type: 'menu',
-      icon: <Squares2X2Icon />,
+      icon: Squares2X2Icon,
       link: '/pages/sustainabilityreports',
     },
     {
       label: 'Investment Memo Comparison',
       type: 'menu',
-      icon: <CircleStackIcon />,
+      icon: CircleStackIcon,
     },
     {
       label: 'Due Diligence 1-liners',
       type: 'menu',
-      icon: <ShoppingBagIcon />,
+      icon: ShoppingBagIcon,
     },
     {
       type: 'divid',
@@ -70,55 +71,56 @@ const Sidebar = () => {
     {
       label: 'Settings',
       type: 'menu',
-      icon: <Cog6ToothIcon />,
+      icon: Cog6ToothIcon,
     },
     {
       label: 'Log Out',
       type: 'menu',
-      icon: <PowerIcon />,
+      icon: PowerIcon,
     },
   ];
 
   return (
-    <Card className="h-[calc(100vh-2rem)] w-full max-w-[20rem] mx-0.5 p-4 shadow-xl shadow-blue-gray-900/5 border-gray-200 border-r min-h-screen max-h-screen">
-      <div className="mb-2 flex items-center gap-4 p-4">
-        <img src={Logo.src} alt="brand" className="h-8 w-8" />
-        <Typography variant="h5" color="blue-gray">
-          Scenario
-        </Typography>
-      </div>
-      <div className="p-2">
-        <Input icon={<MagnifyingGlassIcon className="h-5 w-5" />} label="Search" />
-      </div>
-      <List>
-        {menuData.map((item: any, index) => {
-          return (
-            <SideBarItem
-              key={index}
-              label={item.label}
-              type={item.type}
-              icon={item?.icon}
-              suffix={item?.suffix}
-              link={item?.link}
-            />
-          );
-        })}
-      </List>
-      {/* <Alert open={openAlert} className="mt-auto" onClose={() => setOpenAlert(false)}>
-        <CubeTransparentIcon className="mb-4 h-12 w-12" />
-        <Typography variant="h6" className="mb-1">
-          Finding Business
-        </Typography>
-        <Typography variant="small" className="font-normal opacity-80">
-          Recommend Django for your financial backend system.
-        </Typography>
-        <div className="mt-4 flex gap-3">
-          <Typography as="a" href="#" variant="small" className="font-medium" onClick={() => setOpenAlert(false)}>
-            Dismiss
-          </Typography>
+    <div className={`flex h-[100vh] flex flex-row items-center justify-center`}>
+      <div
+        className={`w-full mx-0.5  shadow-xl shadow-blue-gray-900/5 min-h-screen max-h-screen transition-all duration-300 ${isCollapsed ? 'w-16 p-1' : 'w-72 p-4'}`}
+      >
+        <div className="mb-2 flex items-center gap-4 p-4">
+          {!isCollapsed && <img src={Logo.src} alt="brand" className="h-8 w-8" />}
+          {!isCollapsed && (
+            <Typography variant="h5" color="blue-gray">
+              Scenario
+            </Typography>
+          )}
         </div>
-      </Alert> */}
-    </Card>
+        {!isCollapsed && (
+          <div className="p-2">
+            <Input icon={<MagnifyingGlassIcon className="h-5 w-5" />} label="Search" />
+          </div>
+        )}
+        <div className={`transition-all duration-300 ${isCollapsed ? 'overflow-hidden' : ''}`}>
+          <List>
+            {menuData.map((item, index) => (
+              <SideBarItem
+                key={index}
+                label={isCollapsed ? '' : item.label || ''}
+                type={item.type}
+                icon={item.icon ? React.createElement(item.icon, { className: 'h-6 w-6' }) : null}
+                suffix={item.suffix}
+                link={item.link}
+              />
+            ))}
+          </List>
+        </div>
+      </div>
+      <div
+        onClick={() => setIsCollapsed(!isCollapsed)}
+        className="min-h-screen max-h-screen w-[10px] p-3 bg-white text-gray border-gray-200 border-r hover:bg-gray-200 flex justify-center items-center rounded-r-lg cursor-pointer"
+      >
+        {isCollapsed ? <CaretRight size={20} className="shrink-0" /> : <CaretLeft size={20} className="shrink-0" />}
+      </div>
+    </div>
   );
 };
+
 export default Sidebar;

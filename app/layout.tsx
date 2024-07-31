@@ -21,11 +21,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} flex`}>
+      <body className={`${font.className} flex p-0`}>
         <SideBar />
-        <div className="flex-1  w-[calc(100vh-350px)] min-w-screen-lg">
-          <Header />
-          <main className="flex p-8 h-[calc(100vh-80px)] w-full">{children}</main>
+        <div className="flex-1 w-full overflow-scroll">
+          <div className="min-w-[768px]">
+            <Header />
+            <main className="flex p-8 h-[calc(100vh-80px)] w-full">{children}</main>
+          </div>
         </div>
       </body>
     </html>

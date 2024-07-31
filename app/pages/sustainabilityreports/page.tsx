@@ -57,11 +57,13 @@ function Page() {
       <MetricDetailModal />
       <Title label="CDP Sustainability Reports 2023 - Fortune 500" />
 
-      <div className="grid w-full grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-2 mt-8">
+      <div className="grid w-full grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-2 mt-8">
         <Input label="Company Name" className="cols-span-1" />
         <Input label="Start Date" />
         <Input label="End Date" />
-        <Button>Search</Button>
+        <Button fullWidth className="col-span-3 xl:col-span-1">
+          Search
+        </Button>
       </div>
 
       <div className="mt-8 gap-6 flex"></div>
