@@ -5,7 +5,7 @@ import Heading from '../Heading';
 import Modal from './Modal';
 
 const MetricDetailModal = () => {
-  const { isOpen, onOpen, onClose, metricName, metricFeedback, metricColor, metricLevel } = useMetricDetailModal();
+  const { isOpen, onClose, metricName, metricFeedback, metricColor, metricLevel } = useMetricDetailModal();
   const bodyContent = (
     <div className="h-full w-full flex flex-col gap-4">
       <div className="flex flex-col w-full items-center justify-center">
