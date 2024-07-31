@@ -60,7 +60,7 @@ const MetricComponent = ({ metricFeedback, metricName }: MetricComponentProps) =
   const MetricDetailModal = useMetricDetailModal();
 
   const handleMetricClick = () => {
-    MetricDetailModal.onOpen(metricFeedback, metricName);
+    MetricDetailModal.onOpen(metricFeedback, metricName, level, getBGColor(score));
   };
 
   return (
