@@ -5,7 +5,7 @@ import { DefaultPagination } from '../../components/pagination';
 import SustainabilityCompanyModal from '@/app/components/modals/SustainabilityCompanyModal';
 import useSustainabilityCompanyModal from '@/app/hooks/sustainabilityReport/useSustainabilityCompanyModal';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/useSustainabilityStore';
-import { ArrowsCounterClockwise, Sparkle } from '@phosphor-icons/react';
+import { ArrowsCounterClockwise, Plus, Sparkle } from '@phosphor-icons/react';
 import {
   ExtractQAResult,
   GenerationStatus,
@@ -64,43 +64,41 @@ function Page() {
         <Button>Search</Button>
       </div>
 
-      <div className="mt-8 gap-6 flex">
-        <Button
-          onClick={sustainabilityCompanyModal.onOpen}
-          disabled={isLoading || companies.length === sustainabilityCompanies.length}
-        >
-          Add New Company
-        </Button>
-        <Button
-          onClick={sustainabilityMetricModal.onOpen}
-          disabled={isLoading || metrics.length === sustainabilityMetrics.length}
-        >
-          Add New Metric
-        </Button>
-      </div>
+      <div className="mt-8 gap-6 flex"></div>
 
       <div className="flex flex-col h-full justify-between">
-        <div className="w-full overflow-auto">
+        <div className="w-full overflow-x-auto">
           <table className="w-full min-w-max table-auto text-left mt-8">
             <thead>
-              <tr>
+              <tr className="border-b border-blue-gray-100 bg-blue-gray-50">
                 {TABLE_HEAD.map((head, index) => (
-                  <th
-                    key={head}
-                    className={`border-b border-blue-gray-100 bg-blue-gray-50 p-4 ${index === 0 || index === 1 ? 'w-[150px]' : 'w-auto'}`}
-                  >
-                    <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
+                  <th key={head} className={` p-4 w-[175px] ${index === 0 && 'sticky left-0 z-10 bg-blue-gray-50'}`}>
+                    <Typography
+                      variant="small"
+                      color="blue-gray"
+                      className="font-normal leading-none opacity-70 w-auto"
+                    >
                       {head}
                     </Typography>
                   </th>
                 ))}
                 {metrics.map((metric: SustainabilityMetric, i) => (
-                  <th key={metric.name + i} className="border-b border-blue-gray-100 bg-blue-gray-50 p-4">
+                  <th key={metric.name + i} className="p-4">
                     <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
                       {metric.name}
                     </Typography>
                   </th>
                 ))}
+                <th className="p-2 w-auto sticky right-0 z-10 flex flex-col items-end bg-blue-gray-50">
+                  <Button
+                    onClick={sustainabilityMetricModal.onOpen}
+                    disabled={isLoading || metrics.length === sustainabilityMetrics.length}
+                    className="flex gap-2"
+                    color="blue-gray"
+                  >
+                    <Plus size={16} className="shrink-0" /> New Metric
+                  </Button>
+                </th>
               </tr>
             </thead>
             <tbody>
@@ -109,8 +107,8 @@ function Page() {
                 const classes = isLast ? 'p-4' : 'p-4 border-b border-blue-gray-50';
 
                 return (
-                  <tr key={index}>
-                    <td className={`${classes}`}>
+                  <tr key={index} className="border-b border-blue-gray-100">
+                    <td className={`${classes} sticky left-0 z-10 bg-white`}>
                       <Typography variant="paragraph" color="blue-gray" className="font-normal">
                         {companyName}
                       </Typography>
@@ -155,9 +153,22 @@ function Page() {
                         )}
                       </td>
                     ))}
+                    {/* <td className="sticky right-0 z-10 bg-white"></td> */}
                   </tr>
                 );
               })}
+              <tr className="w-full h-[50px] border-b border-blue-gray-100">
+                <td className="sticky left-0 z-10 bg-white" colSpan={4}>
+                  <Button
+                    onClick={sustainabilityCompanyModal.onOpen}
+                    disabled={companies.length === sustainabilityCompanies.length}
+                    className="flex gap-2"
+                    color="blue-gray"
+                  >
+                    <Plus size={16} /> New company
+                  </Button>
+                </td>
+              </tr>
             </tbody>
           </table>
         </div>

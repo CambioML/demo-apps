@@ -23,9 +23,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${font.className} flex`}>
         <SideBar />
-        <div className="flex-1">
+        <div className="flex-1  w-[calc(100vh-350px)] min-w-screen-lg">
           <Header />
-          <main className="flex p-8 h-[calc(100vh-80px)]">{children}</main>
+          <main className="flex p-8 h-[calc(100vh-80px)] w-full">{children}</main>
         </div>
       </body>
     </html>
