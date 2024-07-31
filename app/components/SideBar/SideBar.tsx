@@ -98,15 +98,15 @@ const Sidebar = () => {
             <Input icon={<MagnifyingGlassIcon className="h-5 w-5" />} label="Search" />
           </div>
         )}
-        <div className={`transition-all duration-300 ${isCollapsed ? 'overflow-hidden' : ''}`}>
-          <List>
+        <div className={`transition-all duration-300 ${isCollapsed ? 'overflow-hidden w-16' : ''}`}>
+          <List className="min-w-16">
             {menuData.map((item, index) => (
               <SideBarItem
                 key={index}
                 label={isCollapsed ? '' : item.label || ''}
                 type={item.type}
                 icon={item.icon ? React.createElement(item.icon, { className: 'h-6 w-6' }) : null}
-                suffix={item.suffix}
+                suffix={!isCollapsed && item.suffix}
                 link={item.link}
               />
             ))}
