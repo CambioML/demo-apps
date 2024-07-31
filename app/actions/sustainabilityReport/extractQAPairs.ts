@@ -9,7 +9,9 @@ const extractQAPairs = async ({ company, metrics }: IParams): Promise<ExtractQAR
   console.log('Extracting QA for company:', company.companyName);
   console.log('Metrics:', metrics);
   const qaPairs: Record<string, string>[] = [];
-  const fileResponse = await fetch(`/demo-apps/sustainability-reports/${company.sustainabilityReport}`);
+  const fileResponse = await fetch(
+    `${process.env.NEXT_PUBLIC_BASE_PATH}sustainability-reports/${company.sustainabilityReport}`
+  );
   const fileContent = await fileResponse.text();
   for (const metric of metrics) {
     let answerStartIndex = fileContent.indexOf(metric.question);

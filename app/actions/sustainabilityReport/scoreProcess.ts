@@ -23,7 +23,7 @@ const SCORE_DICT: { [key: number]: string } = {
 
 // Function to remove specific characters from a string
 function removeCharacters(inputString: string): string {
-  const charactersToRemove = ['"', '{', '}', '\\', "'", '#', '*'];
+  const charactersToRemove = ['"', '{', '}', '\\', "'", '#', '*', '-'];
   charactersToRemove.forEach((char) => {
     inputString = inputString.split(char).join('');
   });
@@ -40,13 +40,17 @@ function extractScore(feedback: string): number | null {
 // Function to extract QA sections from feedback
 function extractQA(feedback: string): FeedbackResult {
   feedback = removeCharacters(feedback);
-  console.log(feedback);
+  console.log(JSON.stringify(feedback));
 
   function extractSectionByKeywords(startKeyword: string, endKeyword: string, text: string): string | null {
     try {
       const startIndex = text.indexOf(startKeyword) + startKeyword.length;
       const endIndex = text.indexOf(endKeyword, startIndex);
-      return text.substring(startIndex, endIndex).trim();
+      let section = text.substring(startIndex, endIndex).trim();
+      if (section.startsWith(':')) {
+        section = section.substring(1).trim();
+      }
+      return section;
     } catch (error) {
       return null;
     }
@@ -54,8 +58,8 @@ function extractQA(feedback: string): FeedbackResult {
 
   function extractScoreRationale(section: string | null): [string | null, string | null] {
     if (!section) return [null, null];
-    const scoreMatch = section.match(/Score:\s*(\d+\/\d+)/);
-    const rationaleMatch = section.match(/Rationale\s*:\s*(.*?)(?:$|[\r\n])/);
+    const scoreMatch = section.match(/\s*Score:\s*(\d+\/\d+)/);
+    const rationaleMatch = section.match(/\s*Rationale\s*:\s*(.*?)(?:$|[\r\n])/);
     const score = scoreMatch ? scoreMatch[1] : null;
     const rationale = rationaleMatch ? rationaleMatch[1].replace('\n', ' ').trim() : null;
     return [score, rationale];
@@ -68,21 +72,21 @@ function extractQA(feedback: string): FeedbackResult {
     return suggestion;
   }
 
-  const tcfdScoringCriteria = extractSectionByKeywords('TCFD Scoring Criteria:', 'TCFD Evaluation:', feedback);
-  const tcfdEvaluationSection = extractSectionByKeywords('TCFD Evaluation:', 'TCFD Revision Suggestions:', feedback);
+  const tcfdScoringCriteria = extractSectionByKeywords('TCFD Scoring Criteria', 'TCFD Evaluation', feedback);
+  const tcfdEvaluationSection = extractSectionByKeywords('TCFD Evaluation', 'TCFD Revision Suggestions', feedback);
   const tcfdRevisionSuggestionsSection = extractSectionByKeywords(
-    'TCFD Revision Suggestions:',
-    'IFRS S2 Scoring Criteria:',
+    'TCFD Revision Suggestions',
+    'IFRS S2 Scoring Criteria',
     feedback
   );
-  const ifrsScoringCriteria = extractSectionByKeywords('IFRS S2 Scoring Criteria:', 'IFRS S2 Evaluation:', feedback);
+  const ifrsScoringCriteria = extractSectionByKeywords('IFRS S2 Scoring Criteria', 'IFRS S2 Evaluation', feedback);
   const ifrsEvaluationSection = extractSectionByKeywords(
-    'IFRS S2 Evaluation:',
-    'IFRS S2 Revision Suggestions:',
+    'IFRS S2 Evaluation',
+    'IFRS S2 Revision Suggestions',
     feedback
   );
   const ifrsRevisionSuggestionsSection = extractSectionByKeywords(
-    'IFRS S2 Revision Suggestions:',
+    'IFRS S2 Revision Suggestions',
     'Finish Response.',
     feedback
   );
