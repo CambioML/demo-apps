@@ -2,8 +2,8 @@
 import Title from '../../components/Title';
 import { Input, Button, Typography } from '@material-tailwind/react';
 import { DefaultPagination } from '../../components/pagination';
-import SustainabilityCompanyModal from '@/app/components/modals/SustainabilityCompanyModal';
-import useSustainabilityCompanyModal from '@/app/hooks/sustainabilityReport/useSustainabilityCompanyModal';
+import SustainabilityReportModal from '@/app/components/modals/SustainabilityReportModal';
+import useSustainabilityReportModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportModal';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/useSustainabilityStore';
 import { ArrowsCounterClockwise, Plus, Sparkle } from '@phosphor-icons/react';
 import {
@@ -14,45 +14,45 @@ import {
 } from '@/app/types/SustainabilityTypes';
 import SustainabilityMetricModal from '@/app/components/modals/SustainabilityMetricModal';
 import useSustainabilityMetricModal from '@/app/hooks/sustainabilityReport/useSustainabilityMetricModal';
-import { sustainabilityCompanies, sustainabilityMetrics } from '@/app/data/sustainabilityReport';
+import { sustainabilityMetrics } from '@/app/data/sustainabilityReport';
 import extractQAPairs from '@/app/actions/sustainabilityReport/extractQAPairs';
 import scoreProcess from '@/app/actions/sustainabilityReport/scoreProcess';
 import MetricComponent from '@/app/components/SustainabilityReport/MetricComponent';
 import MetricDetailModal from '@/app/components/modals/MetricDetailModal';
 
 function Page() {
-  const { companies, metrics, isLoading, setIsLoading, updateStatus, updateResults } = useSustainabilityStore();
+  const { reports, metrics, isLoading, setIsLoading, updateStatus, updateResults } = useSustainabilityStore();
 
-  const TABLE_HEAD = ['Company', 'Generate Metrics'];
+  const TABLE_HEAD = ['Report', 'Generate Metrics'];
 
-  const sustainabilityCompanyModal = useSustainabilityCompanyModal();
+  const sustainabilityCompanyModal = useSustainabilityReportModal();
   const sustainabilityMetricModal = useSustainabilityMetricModal();
 
-  const handleGenerate = async (companyIndex: number) => {
+  const handleGenerate = async (reportIndex: number) => {
     setIsLoading(true);
-    const company = companies[companyIndex];
-    updateStatus(companyIndex, GenerationStatus.GENERATING);
-    const qaResult: ExtractQAResult = await extractQAPairs({ company, metrics });
+    const report = reports[reportIndex];
+    updateStatus(reportIndex, GenerationStatus.GENERATING);
+    const qaResult: ExtractQAResult = await extractQAPairs({ report, metrics });
     const scoreResult: ScoreProcessResult = await scoreProcess({ qaPairs: qaResult.result.qaPairs, metrics });
     if (scoreResult.status !== 200 || scoreResult.result === null) {
       console.error('Error generating score:', scoreResult.error);
       setIsLoading(false);
       return;
     }
-    console.log('Score generated for:', company.companyName, scoreResult.result);
-    updateStatus(companyIndex, GenerationStatus.GENERATED);
-    updateResults(companyIndex, scoreResult.result);
+    console.log('Score generated for:', report.sustainabilityReport, scoreResult.result);
+    updateStatus(reportIndex, GenerationStatus.GENERATED);
+    updateResults(reportIndex, scoreResult.result);
     setIsLoading(false);
   };
 
-  const handleRegenerate = async (companyIndex: number) => {
-    updateResults(companyIndex, {});
-    handleGenerate(companyIndex);
+  const handleRegenerate = async (reportIndex: number) => {
+    updateResults(reportIndex, {});
+    handleGenerate(reportIndex);
   };
 
   return (
     <div className="w-full h-full flex flex-col">
-      <SustainabilityCompanyModal />
+      <SustainabilityReportModal />
       <SustainabilityMetricModal />
       <MetricDetailModal />
       <Title label="CDP Sustainability Reports 2023 - Fortune 500" />
@@ -85,13 +85,13 @@ function Page() {
                   </th>
                 ))}
                 {metrics.map((metric: SustainabilityMetric, i) => (
-                  <th key={metric.name + i} className="p-4">
+                  <th key={metric.name + i} className="p-4 w-[150px] xl:w-[225px]">
                     <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
                       {metric.name}
                     </Typography>
                   </th>
                 ))}
-                <th className="p-2 w-auto sticky right-0 z-10 flex flex-col items-end bg-blue-gray-50">
+                <th className="p-2 w-auto sticky right-0 z-10 flex flex-col items-end justify-center bg-blue-gray-50">
                   <Button
                     onClick={sustainabilityMetricModal.onOpen}
                     disabled={isLoading || metrics.length === sustainabilityMetrics.length}
@@ -104,15 +104,15 @@ function Page() {
               </tr>
             </thead>
             <tbody>
-              {companies.map(({ companyName, reportResults, status }, index) => {
-                const isLast = index === companies.length - 1;
+              {reports.map(({ reportResults, status, sustainabilityReport }, index) => {
+                const isLast = index === reports.length - 1;
                 const classes = isLast ? 'p-4' : 'p-4 border-b border-blue-gray-50';
 
                 return (
                   <tr key={index} className="border-b border-blue-gray-100">
                     <td className={`${classes} sticky left-0 z-10 bg-white`}>
                       <Typography variant="paragraph" color="blue-gray" className="font-normal">
-                        {companyName}
+                        {sustainabilityReport.name}
                       </Typography>
                     </td>
                     <td className={`${classes}`}>
@@ -145,7 +145,7 @@ function Page() {
                       )}
                     </td>
                     {metrics.map((metric, index) => (
-                      <td className={classes} key={index + companyName}>
+                      <td className={classes} key={index + sustainabilityReport.name}>
                         {reportResults[metric.name] ? (
                           <MetricComponent metricFeedback={reportResults[metric.name]} metricName={metric.name} />
                         ) : (
@@ -155,19 +155,14 @@ function Page() {
                         )}
                       </td>
                     ))}
-                    {/* <td className="sticky right-0 z-10 bg-white"></td> */}
                   </tr>
                 );
               })}
+              {reports.length === 0 && <tr className="w-full h-[50px] border-b border-blue-gray-100"></tr>}
               <tr className="w-full h-[50px] border-b border-blue-gray-100">
                 <td className="sticky left-0 z-10 bg-white" colSpan={4}>
-                  <Button
-                    onClick={sustainabilityCompanyModal.onOpen}
-                    disabled={companies.length === sustainabilityCompanies.length}
-                    className="flex gap-2"
-                    color="blue-gray"
-                  >
-                    <Plus size={16} /> New company
+                  <Button onClick={sustainabilityCompanyModal.onOpen} className="flex gap-2" color="blue-gray">
+                    <Plus size={16} /> New Report
                   </Button>
                 </td>
               </tr>
