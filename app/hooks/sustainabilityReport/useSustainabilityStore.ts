@@ -1,31 +1,37 @@
-import { Company, GenerationStatus, MetricFeedback, SustainabilityMetric } from '@/app/types/SustainabilityTypes';
+import { Report, GenerationStatus, MetricFeedback, SustainabilityMetric } from '@/app/types/SustainabilityTypes';
 import { create } from 'zustand';
 
 interface SustainabilityStoreState {
-  companies: Company[];
+  reports: Report[];
+  reportsToAdd: Report[];
   metrics: SustainabilityMetric[];
-  addCompany: (company: Company) => void;
+  addReports: (newReports: Report[]) => void;
+  addReportsToAdd: (newReports: Report[]) => void;
+  setReportsToAdd: (newReports: Report[]) => void;
   addMetric: (metric: SustainabilityMetric) => void;
-  updateStatus: (companyIndex: number, status: GenerationStatus) => void;
-  updateResults: (companyIndex: number, results: { [key: string]: MetricFeedback }) => void;
+  updateStatus: (reportIndex: number, status: GenerationStatus) => void;
+  updateResults: (reportIndex: number, results: { [key: string]: MetricFeedback }) => void;
   isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
 }
 
 const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
-  companies: [],
+  reports: [],
   metrics: [],
-  addCompany: (company) => set((state) => ({ companies: [...state.companies, company] })),
+  reportsToAdd: [],
+  addReports: (reports) => set((state) => ({ reports: [...state.reports, ...reports] })),
   isLoading: false,
+  addReportsToAdd: (newReports) => set((state) => ({ reportsToAdd: [...state.reportsToAdd, ...newReports] })),
+  setReportsToAdd: (newReports) => set({ reportsToAdd: newReports }),
   addMetric: (metric) => set((state) => ({ metrics: [...state.metrics, metric] })),
-  updateStatus: (companyIndex, status) =>
+  updateStatus: (reportIndex, status) =>
     set((state) => ({
-      companies: state.companies.map((company, index) => (index === companyIndex ? { ...company, status } : company)),
+      reports: state.reports.map((report, index) => (index === reportIndex ? { ...report, status } : report)),
     })),
-  updateResults: (companyIndex, results) =>
+  updateResults: (reportIndex, results) =>
     set((state) => ({
-      companies: state.companies.map((company, index) =>
-        index === companyIndex ? { ...company, reportResults: results } : company
+      reports: state.reports.map((report, index) =>
+        index === reportIndex ? { ...report, reportResults: results } : report
       ),
     })),
   setIsLoading: (isLoading) => set({ isLoading }),
