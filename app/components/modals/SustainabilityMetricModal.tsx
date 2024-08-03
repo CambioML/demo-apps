@@ -97,7 +97,6 @@ const SustainabilityMetricModal = () => {
         IFRSS2DisclosureRequirements: data['metric-ISFRS2'],
       };
       addMetric(newMetric);
-      toast.success('Added Company!');
       SustainabilityMetricModal.onClose();
     } catch (error) {
       toast.error('Add metric failed. Please try again.');
