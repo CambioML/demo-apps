@@ -163,11 +163,15 @@ const FormModal: React.FC<FormModalProps> = ({
                 "
                 >
                   {secondaryAction && secondaryActionLabel && (
-                    <Button disabled={disabled} onClick={handleSecondaryAction} className="flex-1 text-base">
+                    <Button
+                      disabled={disabled}
+                      onClick={handleSecondaryAction}
+                      className="flex-1 text-base bg-blue-900"
+                    >
                       {secondaryActionLabel}
                     </Button>
                   )}
-                  <Button disabled={disabled} onClick={handleSubmit} className="flex-1 text-base">
+                  <Button disabled={disabled} onClick={handleSubmit} className="flex-1 text-base bg-blue-900">
                     {actionLabel}
                   </Button>
                 </div>

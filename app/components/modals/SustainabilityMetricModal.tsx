@@ -118,7 +118,11 @@ const SustainabilityMetricModal = () => {
     <>
       <div className="flex flex-col gap-4">
         <Heading title="Add Metric" subtitle="" center />
-        <Button fullWidth className="col-span-3 xl:col-span-1" onClick={() => setPage(PAGES.ADD_CUSTOM_METRIC)}>
+        <Button
+          fullWidth
+          className="col-span-3 xl:col-span-1 bg-blue-900"
+          onClick={() => setPage(PAGES.ADD_CUSTOM_METRIC)}
+        >
           Add Custom Metric
         </Button>
         <div className="w-full flex items-center gap-4">
