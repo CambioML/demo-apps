@@ -14,7 +14,6 @@ import {
 } from '@/app/types/SustainabilityTypes';
 import SustainabilityMetricModal from '@/app/components/modals/SustainabilityMetricModal';
 import useSustainabilityMetricModal from '@/app/hooks/sustainabilityReport/useSustainabilityMetricModal';
-import { sustainabilityMetrics } from '@/app/data/sustainabilityReport';
 import extractQAPairs from '@/app/actions/sustainabilityReport/extractQAPairs';
 import scoreProcess from '@/app/actions/sustainabilityReport/scoreProcess';
 import MetricComponent from '@/app/components/SustainabilityReport/MetricComponent';
@@ -23,7 +22,7 @@ import MetricDetailModal from '@/app/components/modals/MetricDetailModal';
 function Page() {
   const { reports, metrics, isLoading, setIsLoading, updateStatus, updateResults } = useSustainabilityStore();
 
-  const TABLE_HEAD = ['Report', 'Generate Metrics'];
+  const TABLE_HEAD = ['Report'];
 
   const sustainabilityCompanyModal = useSustainabilityReportModal();
   const sustainabilityMetricModal = useSustainabilityMetricModal();
@@ -45,6 +44,31 @@ function Page() {
     setIsLoading(false);
   };
 
+  const handleGenerateAll = async () => {
+    setIsLoading(true);
+    try {
+      const promises = reports.map(async (report, i) => {
+        updateStatus(i, GenerationStatus.GENERATING);
+        updateResults(i, {});
+        const qaResult: ExtractQAResult = await extractQAPairs({ report, metrics });
+        const scoreResult: ScoreProcessResult = await scoreProcess({ qaPairs: qaResult.result.qaPairs, metrics });
+        if (scoreResult.status !== 200 || scoreResult.result === null) {
+          console.error('Error generating score:', scoreResult.error);
+          setIsLoading(false);
+          return;
+        }
+        updateStatus(i, GenerationStatus.GENERATED);
+        updateResults(i, scoreResult.result);
+      });
+
+      await Promise.all(promises);
+    } catch (error) {
+      console.error('Error generating all reports:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   const handleRegenerate = async (reportIndex: number) => {
     updateResults(reportIndex, {});
     handleGenerate(reportIndex);
@@ -61,7 +85,7 @@ function Page() {
         <Input label="Company Name" className="cols-span-1" />
         <Input label="Start Date" />
         <Input label="End Date" />
-        <Button fullWidth className="col-span-3 xl:col-span-1">
+        <Button fullWidth className="col-span-3 xl:col-span-1 bg-blue-900">
           Search
         </Button>
       </div>
@@ -75,11 +99,7 @@ function Page() {
               <tr className="border-b border-blue-gray-100 bg-blue-gray-50">
                 {TABLE_HEAD.map((head, index) => (
                   <th key={head} className={` p-4 w-[175px] ${index === 0 && 'sticky left-0 z-10 bg-blue-gray-50'}`}>
-                    <Typography
-                      variant="small"
-                      color="blue-gray"
-                      className="font-normal leading-none opacity-70 w-auto"
-                    >
+                    <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70 ">
                       {head}
                     </Typography>
                   </th>
@@ -91,14 +111,21 @@ function Page() {
                     </Typography>
                   </th>
                 ))}
-                <th className="p-2 w-auto sticky right-0 z-10 flex flex-col items-end justify-center bg-blue-gray-50">
+                <th className="p-2 w-auto sticky right-0 z-10 flex flex-row items-start justify-between bg-blue-gray-50">
                   <Button
                     onClick={sustainabilityMetricModal.onOpen}
-                    disabled={isLoading || metrics.length === sustainabilityMetrics.length}
-                    className="flex gap-2"
-                    color="blue-gray"
+                    disabled={isLoading}
+                    className="flex gap-2 text-gray-700 rounded-none border-l-[1px] border-gray-300"
+                    variant="text"
                   >
                     <Plus size={16} className="shrink-0" /> New Metric
+                  </Button>
+                  <Button
+                    onClick={handleGenerateAll}
+                    disabled={isLoading || metrics.length === 0 || reports.length === 0}
+                    className="flex gap-2 bg-blue-900"
+                  >
+                    <Sparkle size={16} className="shrink-0" /> Generate All
                   </Button>
                 </th>
               </tr>
@@ -111,38 +138,13 @@ function Page() {
                 return (
                   <tr key={index} className="border-b border-blue-gray-100">
                     <td className={`${classes} sticky left-0 z-10 bg-white`}>
-                      <Typography variant="paragraph" color="blue-gray" className="font-normal">
+                      <Typography
+                        variant="paragraph"
+                        color="blue-gray"
+                        className="font-normal  w-full overflow-auto text-nowrap"
+                      >
                         {sustainabilityReport.name}
                       </Typography>
-                    </td>
-                    <td className={`${classes}`}>
-                      {metrics.length === 0 && status === GenerationStatus.READY ? (
-                        <Button size="sm" onClick={sustainabilityMetricModal.onOpen} disabled={isLoading}>
-                          Add Metric
-                        </Button>
-                      ) : (
-                        <>
-                          {status === GenerationStatus.READY && (
-                            <Button size="sm" disabled={isLoading} onClick={() => handleGenerate(index)}>
-                              <span className="flex">
-                                Generate <Sparkle size={16} className="ml-2" />
-                              </span>{' '}
-                            </Button>
-                          )}
-                          {status === GenerationStatus.GENERATING && (
-                            <Button size="sm" color="blue-gray" className="animate-pulse">
-                              <span className="flex">Generating...</span>
-                            </Button>
-                          )}
-                          {status === GenerationStatus.GENERATED && (
-                            <Button size="sm" disabled={isLoading} onClick={() => handleRegenerate(index)}>
-                              <span className="flex">
-                                Regenerate <ArrowsCounterClockwise size={16} className="ml-2" />
-                              </span>
-                            </Button>
-                          )}
-                        </>
-                      )}
                     </td>
                     {metrics.map((metric, index) => (
                       <td className={classes} key={index + sustainabilityReport.name}>
@@ -155,13 +157,52 @@ function Page() {
                         )}
                       </td>
                     ))}
+                    <td className={'p-2 h-full w-auto sticky right-0 z-10 flex flex-row items-center justify-end'}>
+                      {metrics.length > 0 && reports.length > 0 && (
+                        <>
+                          {status === GenerationStatus.READY && (
+                            <Button
+                              size="sm"
+                              className="bg-blue-900"
+                              disabled={isLoading}
+                              onClick={() => handleGenerate(index)}
+                            >
+                              <span className="flex">
+                                Generate <Sparkle size={16} className="ml-2" />
+                              </span>
+                            </Button>
+                          )}
+                          {status === GenerationStatus.GENERATING && (
+                            <Button className="bg-blue-900" size="sm" color="blue-gray" loading>
+                              <span className="flex">Generating...</span>
+                            </Button>
+                          )}
+                          {status === GenerationStatus.GENERATED && (
+                            <Button
+                              className="bg-blue-900"
+                              size="sm"
+                              disabled={isLoading}
+                              onClick={() => handleRegenerate(index)}
+                            >
+                              <span className="flex">
+                                Regenerate <ArrowsCounterClockwise size={16} className="ml-2" />
+                              </span>
+                            </Button>
+                          )}
+                        </>
+                      )}
+                    </td>
                   </tr>
                 );
               })}
               {reports.length === 0 && <tr className="w-full h-[50px] border-b border-blue-gray-100"></tr>}
               <tr className="w-full h-[50px] border-b border-blue-gray-100">
                 <td className="sticky left-0 z-10 bg-white" colSpan={4}>
-                  <Button onClick={sustainabilityCompanyModal.onOpen} className="flex gap-2" color="blue-gray">
+                  <Button
+                    onClick={sustainabilityCompanyModal.onOpen}
+                    className="flex gap-2 text-gray-700 rounded-none"
+                    variant="text"
+                  >
                     <Plus size={16} /> New Report
                   </Button>
                 </td>

@@ -14,7 +14,7 @@ import {
   BriefcaseIcon,
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/solid';
-import Logo from '../../assets/image/logo.svg';
+import Logo from '../../assets/image/cambioml-logo.png';
 import SideBarItem from './SideBarItem';
 import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
@@ -86,7 +86,7 @@ const Sidebar = () => {
         className={`w-full mx-0.5  shadow-xl shadow-blue-gray-900/5 min-h-screen max-h-screen transition-all duration-300 ${isCollapsed ? 'w-16 p-1' : 'w-72 p-4'}`}
       >
         <div className="mb-2 flex items-center gap-4 p-4">
-          {!isCollapsed && <img src={Logo.src} alt="brand" className="h-8 w-8" />}
+          {!isCollapsed && <img src={Logo.src} alt="brand" className="h-8 w-8 border-[1px] rounded-md" />}
           {!isCollapsed && (
             <Typography variant="h5" color="blue-gray">
               Scenario
