@@ -1,6 +1,6 @@
 'use client';
 import Title from '../../components/Title';
-import { Input, Button, Typography } from '@material-tailwind/react';
+import { Button, Typography } from '@material-tailwind/react';
 import { DefaultPagination } from '../../components/pagination';
 import SustainabilityReportModal from '@/app/components/modals/SustainabilityReportModal';
 import useSustainabilityReportModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportModal';
