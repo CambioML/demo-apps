@@ -34,7 +34,7 @@ const extractQAPairs = async ({ report, metrics }: IParams): Promise<ExtractQARe
     // Split the answer content into segments based on the pattern
     const segments: string[] = answerContent.split(pattern);
     const answer = segments[0].trim();
-    console.log(`Answer found for ${metric.question}:`, answer);
+    console.log(`Answer found for ${metric.question}`);
     qaPairs.push({ [metric.name]: answer });
   }
 
