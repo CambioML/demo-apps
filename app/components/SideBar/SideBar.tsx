@@ -89,7 +89,7 @@ const Sidebar = () => {
           {!isCollapsed && <img src={Logo.src} alt="brand" className="h-8 w-8 border-[1px] rounded-md" />}
           {!isCollapsed && (
             <Typography variant="h5" color="blue-gray">
-              Scenario
+              Cambio Insights
             </Typography>
           )}
         </div>

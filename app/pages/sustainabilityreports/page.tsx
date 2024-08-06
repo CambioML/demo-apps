@@ -80,17 +80,15 @@ function Page() {
       <SustainabilityMetricModal />
       <MetricDetailModal />
       <Title label="CDP Sustainability Reports 2023 - Fortune 500" />
-
-      <div className="grid w-full grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-2 mt-8">
-        <Input label="Company Name" className="cols-span-1" />
-        <Input label="Start Date" />
-        <Input label="End Date" />
-        <Button fullWidth className="col-span-3 xl:col-span-1 bg-blue-900">
-          Search
+      <div className="mt-8 gap-6 flex">
+        <Button
+          onClick={sustainabilityCompanyModal.onOpen}
+          className={`flex gap-2 bg-blue-900 rounded-lg text-white hover:bg-blue-800`}
+          variant="text"
+        >
+          <Plus size={16} /> New Report
         </Button>
       </div>
-
-      <div className="mt-8 gap-6 flex"></div>
 
       <div className="flex flex-col h-full justify-between">
         <div className="w-full overflow-x-auto">
@@ -115,7 +113,7 @@ function Page() {
                   <Button
                     onClick={sustainabilityMetricModal.onOpen}
                     disabled={isLoading}
-                    className="flex gap-2 text-gray-700 rounded-none border-l-[1px] border-gray-300"
+                    className={`flex gap-2 text-gray-700 rounded-none border-l-[1px] border-gray-300 ${reports.length > 0 && metrics.length === 0 && 'border-2 border-blue-900 rounded-lg hover:text-gray-700'}`}
                     variant="text"
                   >
                     <Plus size={16} className="shrink-0" /> New Metric
@@ -195,18 +193,14 @@ function Page() {
                   </tr>
                 );
               })}
-              {reports.length === 0 && <tr className="w-full h-[50px] border-b border-blue-gray-100"></tr>}
-              <tr className="w-full h-[50px] border-b border-blue-gray-100">
-                <td className="sticky left-0 z-10 bg-white" colSpan={4}>
-                  <Button
-                    onClick={sustainabilityCompanyModal.onOpen}
-                    className="flex gap-2 text-gray-700 rounded-none"
-                    variant="text"
-                  >
-                    <Plus size={16} /> New Report
-                  </Button>
-                </td>
-              </tr>
+              {reports.length === 0 && (
+                <>
+                  <tr className="w-full h-[50px] border-b border-blue-gray-100"></tr>
+                  <tr className="w-full h-[50px] border-b border-blue-gray-100">
+                    <td className="sticky left-0 z-10 bg-white" colSpan={4}></td>
+                  </tr>
+                </>
+              )}
             </tbody>
           </table>
         </div>
