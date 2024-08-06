@@ -40,8 +40,6 @@ function extractScore(feedback: string): number | null {
 // Function to extract QA sections from feedback
 function extractQA(feedback: string): FeedbackResult {
   feedback = removeCharacters(feedback);
-  console.log(JSON.stringify(feedback));
-
   function extractSectionByKeywords(startKeyword: string, endKeyword: string, text: string): string | null {
     try {
       const startIndex = text.indexOf(startKeyword) + startKeyword.length;
@@ -125,7 +123,7 @@ interface IParams {
 }
 
 const scoreProcess = async ({ qaPairs, metrics }: IParams): Promise<ScoreProcessResult> => {
-  console.log('scoring process...', qaPairs);
+  console.log('scoring process...');
   const metricEvaluations: { [key: string]: MetricFeedback } = {};
 
   const tasks = qaPairs.map(async (qaPair) => {
@@ -134,9 +132,6 @@ const scoreProcess = async ({ qaPairs, metrics }: IParams): Promise<ScoreProcess
     if (!metric) {
       throw new Error(`Metric not found for question: ${questionName}`);
     }
-
-    console.log(`Question: ${metric.question}, Answer: ${answer}, Metric: ${metric.name}`);
-
     const prompt = `Input Content:
             Question Description: ${metric.question}
             Baseline Response: ${metric.baselineResponse}

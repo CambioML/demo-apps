@@ -15,7 +15,7 @@ interface SustainabilityStoreState {
   setIsLoading: (isLoading: boolean) => void;
 }
 
-const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
+const useCDPSustainabilityStore = create<SustainabilityStoreState>((set) => ({
   reports: [],
   metrics: [],
   reportsToAdd: [],
@@ -37,4 +37,4 @@ const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
   setIsLoading: (isLoading) => set({ isLoading }),
 }));
 
-export default useSustainabilityStore;
+export default useCDPSustainabilityStore;

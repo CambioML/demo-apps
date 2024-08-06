@@ -1,17 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import useSustainabilityReportModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportModal';
+import useSustainabilityReportModal from '@/app/hooks/useUploadModal';
 import FormModal from './FormModal';
 import Heading from '../Heading';
 import { toast } from 'react-hot-toast';
 import Dropzone from '../SustainabilityReport/Dropzone';
-import useSustainabilityStore from '@/app/hooks/sustainabilityReport/useSustainabilityStore';
+import useCDPSustainabilityStore from '@/app/hooks/CDPsustainabilityReport/useCDPSustainabilityStore';
 
 const SustainabilityReportModal = () => {
   const SustainabilityReportModal = useSustainabilityReportModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { addReports, reportsToAdd, setReportsToAdd } = useSustainabilityStore();
+  const { addReports, reportsToAdd, setReportsToAdd } = useCDPSustainabilityStore();
 
   const onSubmit = async () => {
     try {

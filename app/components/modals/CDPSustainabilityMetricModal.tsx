@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
-import useSustainabilityMetricModal from '@/app/hooks/sustainabilityReport/useSustainabilityMetricModal';
+import useCDPSustainabilityMetricModal from '@/app/hooks/CDPsustainabilityReport/useCDPSustainabilityMetricModal';
 import FormModal from './FormModal';
 import Heading from '../Heading';
 import { toast } from 'react-hot-toast';
@@ -13,22 +13,22 @@ import {
 } from '@/app/types/SustainabilityTypes';
 import { Select, Option, Button, Input, Typography, Textarea } from '@material-tailwind/react';
 import { getMetricFromName, sustainabilityMetrics } from '@/app/data/sustainabilityReport';
-import useSustainabilityStore from '@/app/hooks/sustainabilityReport/useSustainabilityStore';
+import useCDPSustainabilityStore from '@/app/hooks/CDPsustainabilityReport/useCDPSustainabilityStore';
 
 enum PAGES {
   ADD_METRIC,
   ADD_CUSTOM_METRIC,
 }
 
-const SustainabilityMetricModal = () => {
-  const SustainabilityMetricModal = useSustainabilityMetricModal();
+const CDPSustainabilityMetricModal = () => {
+  const CDPSustainabilityMetricModal = useCDPSustainabilityMetricModal();
   const [isLoading, setIsLoading] = useState(false);
   const [selectedFile, setSelectedFile] = useState<string>('');
   const [selectedClassification, setSelectedClassification] = useState<string>();
   const [selectedCategory, setSelectedCategory] = useState<string>();
 
   const [optionMetrics, setOptionsMetrics] = useState<SustainabilityMetric[]>(sustainabilityMetrics);
-  const { metrics, addMetric } = useSustainabilityStore();
+  const { metrics, addMetric } = useCDPSustainabilityStore();
   const [page, setPage] = useState(PAGES.ADD_METRIC);
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const SustainabilityMetricModal = () => {
         throw new Error('Company not found');
       }
       addMetric(metric);
-      SustainabilityMetricModal.onClose();
+      CDPSustainabilityMetricModal.onClose();
     } catch (error) {
       toast.error('Add metric failed. Please try again.');
     } finally {
@@ -97,7 +97,7 @@ const SustainabilityMetricModal = () => {
         IFRSS2DisclosureRequirements: data['metric-ISFRS2'],
       };
       addMetric(newMetric);
-      SustainabilityMetricModal.onClose();
+      CDPSustainabilityMetricModal.onClose();
     } catch (error) {
       toast.error('Add metric failed. Please try again.');
     } finally {
@@ -110,7 +110,7 @@ const SustainabilityMetricModal = () => {
   const handleClose = () => {
     setIsLoading(false);
     reset();
-    SustainabilityMetricModal.onClose();
+    CDPSustainabilityMetricModal.onClose();
     setPage(PAGES.ADD_METRIC);
   };
 
@@ -225,7 +225,7 @@ const SustainabilityMetricModal = () => {
     return (
       <FormModal
         disabled={isLoading}
-        isOpen={SustainabilityMetricModal.isOpen}
+        isOpen={CDPSustainabilityMetricModal.isOpen}
         title=""
         actionLabel="Add Metric"
         onClose={handleClose}
@@ -239,7 +239,7 @@ const SustainabilityMetricModal = () => {
     return (
       <FormModal
         disabled={isLoading}
-        isOpen={SustainabilityMetricModal.isOpen}
+        isOpen={CDPSustainabilityMetricModal.isOpen}
         title=""
         actionLabel="Add Custom Metric"
         onClose={handleClose}
@@ -252,4 +252,4 @@ const SustainabilityMetricModal = () => {
   }
 };
 
-export default SustainabilityMetricModal;
+export default CDPSustainabilityMetricModal;

@@ -50,6 +50,12 @@ const Sidebar = () => {
       link: '/pages/portfoliorisk',
     },
     {
+      label: 'CDP Sustainability Reports Comparison',
+      type: 'menu',
+      icon: Squares2X2Icon,
+      link: '/pages/cdp-sustainabilityreports',
+    },
+    {
       label: 'Sustainability Reports Comparison',
       type: 'menu',
       icon: Squares2X2Icon,

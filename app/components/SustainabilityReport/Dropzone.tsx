@@ -1,13 +1,13 @@
 import { useDropzone } from 'react-dropzone';
 import { CloudArrowUp } from '@phosphor-icons/react';
 import { useCallback, useState } from 'react';
-import useSustainabilityStore from '@/app/hooks/sustainabilityReport/useSustainabilityStore';
+import useCDPSustainabilityStore from '@/app/hooks/CDPsustainabilityReport/useCDPSustainabilityStore';
 import { GenerationStatus, Report } from '@/app/types/SustainabilityTypes';
 const iconContainerClasses = 'flex items-center justify-center text-3xl mb-4';
 const allowedTypes = ['text/plain'];
 
 const Dropzone = () => {
-  const { addReports, addReportsToAdd } = useSustainabilityStore();
+  const { addReports, addReportsToAdd } = useCDPSustainabilityStore();
   const [error, setError] = useState<string>('');
 
   const onDrop = useCallback(

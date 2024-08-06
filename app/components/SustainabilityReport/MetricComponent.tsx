@@ -1,4 +1,4 @@
-import useMetricDetailModal from '@/app/hooks/sustainabilityReport/useMetricDetailModal';
+import useMetricDetailModal from '@/app/hooks/CDPsustainabilityReport/useMetricDetailModal';
 import { MetricFeedback } from '@/app/types/SustainabilityTypes';
 import { Button } from '@material-tailwind/react';
 

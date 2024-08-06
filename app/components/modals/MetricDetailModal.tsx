@@ -1,6 +1,6 @@
 'use client';
 
-import useMetricDetailModal from '@/app/hooks/sustainabilityReport/useMetricDetailModal';
+import useMetricDetailModal from '@/app/hooks/CDPsustainabilityReport/useMetricDetailModal';
 import Heading from '../Heading';
 import Modal from './Modal';
 
