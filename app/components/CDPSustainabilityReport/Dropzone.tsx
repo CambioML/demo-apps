@@ -1,12 +1,13 @@
 import { useDropzone } from 'react-dropzone';
 import { CloudArrowUp } from '@phosphor-icons/react';
 import { useCallback, useState } from 'react';
-import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
+import useCDPSustainabilityStore from '@/app/hooks/CDPsustainabilityReport/useCDPSustainabilityStore';
+import { GenerationStatus, CDPReport } from '@/app/types/CDPSustainabilityTypes';
 const iconContainerClasses = 'flex items-center justify-center text-3xl mb-4';
-const allowedTypes = ['application/pdf', 'text/plain'];
+const allowedTypes = ['text/plain'];
 
 const Dropzone = () => {
-  const { addReports, addReportsToAdd } = useSustainabilityStore();
+  const { addReports, addReportsToAdd } = useCDPSustainabilityStore();
   const [error, setError] = useState<string>('');
 
   const onDrop = useCallback(
@@ -23,7 +24,17 @@ const Dropzone = () => {
           }
         }
       }
-      addReportsToAdd(acceptedFiles);
+
+      const newReports: CDPReport[] = [];
+      acceptedFiles.forEach((file) => {
+        const newReport: CDPReport = {
+          sustainabilityReport: file,
+          reportResults: {},
+          status: GenerationStatus.READY,
+        };
+        newReports.push(newReport);
+      });
+      addReportsToAdd(newReports);
     },
     [addReports]
   );
@@ -41,7 +52,7 @@ const Dropzone = () => {
         <p className="mt-2">
           {isDragActive ? 'Drop files here' : 'Drag and drop files here, or click to select files'}
         </p>
-        <p className="text-sm text-gray-500">PDF and TXT files only</p>
+        <p className="text-sm text-gray-500">TXT files of CDP Reports only</p>
         <p className="text-sm text-gray-500">Please do not upload any sensitive information.</p>
         <p className="text-sm text-gray-500">Max 10 MB</p>
       </div>

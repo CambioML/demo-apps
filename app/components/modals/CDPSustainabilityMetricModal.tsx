@@ -10,9 +10,9 @@ import {
   SustainabilityMetric,
   SustainabilityMetricCategory,
   SustainabilityMetricClassification,
-} from '@/app/types/SustainabilityTypes';
+} from '@/app/types/CDPSustainabilityTypes';
 import { Select, Option, Button, Input, Typography, Textarea } from '@material-tailwind/react';
-import { getMetricFromName, sustainabilityMetrics } from '@/app/data/sustainabilityReport';
+import { getMetricFromName, sustainabilityMetrics } from '@/app/data/CDPSustainabilityReport';
 import useCDPSustainabilityStore from '@/app/hooks/CDPsustainabilityReport/useCDPSustainabilityStore';
 
 enum PAGES {

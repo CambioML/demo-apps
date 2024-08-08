@@ -2,7 +2,7 @@ import {
   SustainabilityMetric,
   SustainabilityMetricCategory,
   SustainabilityMetricClassification,
-} from '../types/SustainabilityTypes';
+} from '../types/CDPSustainabilityTypes';
 
 export const sustainabilityMetrics: SustainabilityMetric[] = [
   {

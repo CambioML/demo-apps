@@ -1,4 +1,4 @@
-import { MetricFeedback } from '@/app/types/SustainabilityTypes';
+import { MetricFeedback } from '@/app/types/CDPSustainabilityTypes';
 import { create } from 'zustand';
 
 interface MetricDetailModalStore {

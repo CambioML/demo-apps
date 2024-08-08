@@ -11,12 +11,12 @@ import {
   GenerationStatus,
   ScoreProcessResult,
   SustainabilityMetric,
-} from '@/app/types/SustainabilityTypes';
+} from '@/app/types/CDPSustainabilityTypes';
 import CDPSustainabilityMetricModal from '@/app/components/modals/CDPSustainabilityMetricModal';
 import useCDPSustainabilityMetricModal from '@/app/hooks/CDPsustainabilityReport/useCDPSustainabilityMetricModal';
 import extractQAPairs from '@/app/actions/CDPsustainabilityReport/extractQAPairs';
 import scoreProcess from '@/app/actions/CDPsustainabilityReport/scoreProcess';
-import MetricComponent from '@/app/components/SustainabilityReport/MetricComponent';
+import MetricComponent from '@/app/components/CDPSustainabilityReport/MetricComponent';
 import MetricDetailModal from '@/app/components/modals/MetricDetailModal';
 
 function Page() {
