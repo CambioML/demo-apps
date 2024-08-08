@@ -10,11 +10,13 @@ import { Input } from '@material-tailwind/react';
 import useSustainabilityReportAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportAttributeModal';
 import { addAttribute } from '@/app/actions/sustainabilityReport/addAttribute';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
+import useFetchAttributes from '@/app/hooks/sustainabilityReport/useFetchAttributes';
 
 const SustainabilityReportAttributeModal = () => {
   const SustainabilityReportAttributeModal = useSustainabilityReportAttributeModal();
   const [isLoading, setIsLoading] = useState(false);
   const { userId } = useSustainabilityStore();
+  const { fetchAttributes } = useFetchAttributes();
 
   const {
     register,
@@ -28,7 +30,8 @@ const SustainabilityReportAttributeModal = () => {
       setIsLoading(true);
       const { 'attribute-name': attributeName, 'attribute-description': attributeDescription } = data;
       console.log(attributeName, attributeDescription);
-      addAttribute({ userId, attributeName, attributeDescription });
+      await addAttribute({ userId, attributeName, attributeDescription });
+      fetchAttributes();
       SustainabilityReportAttributeModal.onClose();
     } catch (error) {
       toast.error('Add attribute failed. Please try again.');

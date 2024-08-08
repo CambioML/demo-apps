@@ -10,6 +10,7 @@ import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabil
 import useFetchAndAddReports from '@/app/hooks/sustainabilityReport/useFetchAndAddReports';
 import SustainabilityReportAttributeModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportAttributeModal';
 import useSustainabilityReportAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportAttributeModal';
+import useFetchAttributes from '@/app/hooks/sustainabilityReport/useFetchAttributes';
 
 function Page() {
   const { reports, attributes, isLoading, setIsLoading } = useSustainabilityStore();
@@ -17,6 +18,7 @@ function Page() {
   const sustainabilityReportAttributeModal = useSustainabilityReportAttributeModal();
 
   useFetchAndAddReports();
+  useFetchAttributes();
 
   const TABLE_HEAD = ['Report'];
 
@@ -116,13 +118,13 @@ function Page() {
                     </Typography>
                   </th>
                 ))}
-                {/* {attributes.map((metric: SustainabilityMetric, i) => (
-                  <th key={metric.name + i} className="p-4 w-[150px] xl:w-[225px]">
+                {attributes.map((attribute: Attribute, i) => (
+                  <th key={attribute.name + i} className="p-4 w-[150px] xl:w-[225px]">
                     <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
-                      {metric.name}
+                      {attribute.name}
                     </Typography>
                   </th>
-                ))} */}
+                ))}
                 <th className="p-2 w-auto sticky right-0 z-10 flex flex-row items-start justify-between bg-blue-gray-50">
                   <Button
                     onClick={sustainabilityReportAttributeModal.onOpen}
@@ -153,7 +155,7 @@ function Page() {
                     </td>
                     {attributes.map((attribute: Attribute, index: number) => (
                       <td className={classes} key={index + name}>
-                        {reportResults[attribute.attributeName as keyof typeof reportResults] ? (
+                        {reportResults[attribute.name as keyof typeof reportResults] ? (
                           <div>results</div>
                         ) : (
                           <div

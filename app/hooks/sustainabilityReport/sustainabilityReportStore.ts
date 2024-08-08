@@ -8,6 +8,7 @@ interface SustainabilityStoreState {
   attributes: Attribute[];
   setUserId: (userId: string) => void;
   addReports: (newReports: Report[]) => void;
+  addAttributes: (newAttributes: Attribute[]) => void;
   addReportsToAdd: (newReports: File[]) => void;
   setReportsToAdd: (newReports: File[]) => void;
   updateStatus: (reportId: string, status: GenerationStatus) => void;
@@ -21,6 +22,12 @@ const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
   reportsToAdd: [],
   attributes: [],
   setUserId: (userId) => set({ userId }),
+  addAttributes: (newAttributes) =>
+    set((state) => {
+      const existingAttributeIds = new Set(state.attributes.map((attribute) => attribute.id));
+      const filteredAttributes = newAttributes.filter((attribute) => !existingAttributeIds.has(attribute.id));
+      return { attributes: [...state.attributes, ...filteredAttributes] };
+    }),
   addReports: (newReports) =>
     set((state) => {
       const existingReportIds = new Set(state.reports.map((report) => report.id));

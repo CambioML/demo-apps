@@ -13,8 +13,8 @@ export type Report = {
 
 export type Attribute = {
   id: string;
-  attributeName: string;
-  attributeDescription: string;
+  name: string;
+  description: string;
 };
 
 export type RawReport = {
