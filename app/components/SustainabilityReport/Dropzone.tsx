@@ -3,7 +3,7 @@ import { CloudArrowUp } from '@phosphor-icons/react';
 import { useCallback, useState } from 'react';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
 const iconContainerClasses = 'flex items-center justify-center text-3xl mb-4';
-const allowedTypes = ['application/pdf', 'text/plain'];
+const allowedTypes = ['application/pdf'];
 
 const Dropzone = () => {
   const { addReports, addReportsToAdd } = useSustainabilityStore();
@@ -41,7 +41,7 @@ const Dropzone = () => {
         <p className="mt-2">
           {isDragActive ? 'Drop files here' : 'Drag and drop files here, or click to select files'}
         </p>
-        <p className="text-sm text-gray-500">PDF and TXT files only</p>
+        <p className="text-sm text-gray-500">PDF files only</p>
         <p className="text-sm text-gray-500">Please do not upload any sensitive information.</p>
         <p className="text-sm text-gray-500">Max 10 MB</p>
       </div>
