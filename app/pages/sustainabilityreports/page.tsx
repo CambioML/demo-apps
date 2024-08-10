@@ -63,7 +63,6 @@ function Page() {
     } catch (error) {
       console.error('Error regenerating report:', error);
     } finally {
-      setIsLoading(false);
       updateStatus(reportId, GenerationStatus.GENERATED);
     }
   };
@@ -73,10 +72,6 @@ function Page() {
     await runGenerate(reportIndex, false);
     setIsLoading(false);
   };
-
-  // const runGenerate = async (reportIndex: number) => {
-  //   console.log('Generating new report:', reportIndex);
-  // };
 
   const handleGenerateNewAll = async () => {
     setIsLoading(true);
