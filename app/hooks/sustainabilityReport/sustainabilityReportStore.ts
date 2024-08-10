@@ -18,7 +18,7 @@ interface SustainabilityStoreState {
 }
 
 const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
-  userId: 'test_user_id1',
+  userId: '',
   reports: [],
   reportsToAdd: [],
   attributes: [],

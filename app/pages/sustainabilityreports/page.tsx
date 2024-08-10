@@ -12,9 +12,11 @@ import useSustainabilityReportAttributeModal from '@/app/hooks/sustainabilityRep
 import { generateAttributes } from '@/app/actions/sustainabilityReport/generateAttributes';
 import { useEffect } from 'react';
 import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
+import { postUser } from '@/app/actions/sustainabilityReport/postUser';
+import { AxiosResponse } from 'axios';
 
 function Page() {
-  const { reports, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId } =
+  const { reports, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
     useSustainabilityStore();
   const sustainabilityReportUploadModal = useSustainabilityReportUploadModal();
   const sustainabilityReportAttributeModal = useSustainabilityReportAttributeModal();
@@ -25,6 +27,19 @@ function Page() {
       fetchAttributesThenReports();
     }
   }, [userId]);
+
+  const addUser = async () => {
+    console.log('Adding user...');
+    const response: AxiosResponse = await postUser({ userId: 'test_user_id1' });
+    if (response.status === 200 || response.status === 201) {
+      console.log('User added/created!');
+      setUserId(response.data.userId);
+    }
+  };
+
+  useEffect(() => {
+    addUser();
+  }, []);
 
   const TABLE_HEAD = ['Report'];
 
