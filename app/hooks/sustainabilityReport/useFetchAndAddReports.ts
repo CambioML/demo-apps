@@ -4,7 +4,7 @@ import { getReports } from '@/app/actions/sustainabilityReport/getReports';
 import { GenerationStatus, RawReport, Report } from '@/app/types/SustainabilityReportTypes';
 
 const useFetchAndAddReports = () => {
-  const { addReports, reports, userId } = useSustainabilityStore();
+  const { addReports, reports, userId, attributes } = useSustainabilityStore();
 
   const fetchAndAddReports = useCallback(async () => {
     try {
@@ -22,6 +22,21 @@ const useFetchAndAddReports = () => {
           status: GenerationStatus.READY,
           reportResults: rawReport.results,
         }));
+
+      console.log('Adding new reports:', newReports, existingReportIds);
+
+      // only keep the reportResults that have a key that is in attributes
+      if (attributes.length > 0) {
+        newReports.forEach((report) => {
+          Object.keys(report.reportResults).forEach((key) => {
+            console.log('Checking key:', key, attributes);
+            const isKeyInAttributes = attributes.some((attribute) => attribute.name === key);
+            if (!isKeyInAttributes) {
+              delete report.reportResults[key];
+            }
+          });
+        });
+      }
 
       if (newReports.length > 0) {
         addReports(newReports);

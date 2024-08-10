@@ -7,40 +7,67 @@ import { Attribute, GenerationStatus } from '@/app/types/SustainabilityReportTyp
 import SustainabilityReportUploadModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportUploadModal';
 import useSustainabilityReportUploadModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportUploadModal';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
-import useFetchAndAddReports from '@/app/hooks/sustainabilityReport/useFetchAndAddReports';
 import SustainabilityReportAttributeModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportAttributeModal';
 import useSustainabilityReportAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportAttributeModal';
-import useFetchAttributes from '@/app/hooks/sustainabilityReport/useFetchAttributes';
+import { generateAttributes } from '@/app/actions/sustainabilityReport/generateAttributes';
+import { useEffect } from 'react';
+import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 
 function Page() {
-  const { reports, attributes, isLoading, setIsLoading } = useSustainabilityStore();
+  const { reports, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId } =
+    useSustainabilityStore();
   const sustainabilityReportUploadModal = useSustainabilityReportUploadModal();
   const sustainabilityReportAttributeModal = useSustainabilityReportAttributeModal();
+  const { fetchAttributesThenReports } = useFetchSustainabilityData();
 
-  useFetchAndAddReports();
-  useFetchAttributes();
+  useEffect(() => {
+    if (userId) {
+      fetchAttributesThenReports();
+    }
+  }, [userId]);
 
   const TABLE_HEAD = ['Report'];
 
-  const runRegenerate = async (reportIndex: number) => {
-    console.log('Regenerating report:', reportIndex);
+  const runGenerate = async (reportIndex: number, rerunAll: boolean) => {
+    const reportId = reports[reportIndex].id;
+    try {
+      updateStatus(reportId, GenerationStatus.GENERATING);
+      console.log('Regenerating report:', reportId, rerunAll);
+      if (rerunAll) updateResults(reportId, {});
+      const response = await generateAttributes({ userId: 'test_user_id1', reportIds: [reportId], rerunAll });
+      const results = response.attributesGenerated;
+      //filter out key named 'other'
+      const filteredResults = Object.keys(results).reduce((acc: { [key: string]: any }, key) => {
+        if (attributes.some((attribute) => attribute.name === key)) {
+          acc[key] = results[key];
+        }
+        return acc;
+      }, {});
+      updateResults(reportId, filteredResults);
+      console.log('Regenerate response:', response);
+    } catch (error) {
+      console.error('Error regenerating report:', error);
+    } finally {
+      setIsLoading(false);
+      updateStatus(reportId, GenerationStatus.GENERATED);
+    }
   };
 
   const handleGenerateNew = async (reportIndex: number) => {
     setIsLoading(true);
-    await runGenerateNew(reportIndex);
+    await runGenerate(reportIndex, false);
     setIsLoading(false);
   };
 
-  const runGenerateNew = async (reportIndex: number) => {
-    console.log('Generating new report:', reportIndex);
-  };
+  // const runGenerate = async (reportIndex: number) => {
+  //   console.log('Generating new report:', reportIndex);
+  // };
 
   const handleGenerateNewAll = async () => {
     setIsLoading(true);
     try {
       const promises = reports.map(async (_, i) => {
-        await runGenerateNew(i);
+        await runGenerate(i, false);
       });
 
       await Promise.all(promises);
@@ -56,7 +83,7 @@ function Page() {
     try {
       const promises = reports.map(async (_, i) => {
         // updateResults(i, {});
-        await runRegenerate(i);
+        await runGenerate(i, true);
       });
       await Promise.all(promises);
     } catch (error) {
@@ -68,15 +95,23 @@ function Page() {
 
   const handleRegenerate = async (reportIndex: number) => {
     setIsLoading(true);
-    // updateResults(reportIndex, {});
-    await runRegenerate(reportIndex);
+    await runGenerate(reportIndex, true);
     setIsLoading(false);
   };
 
+  function isNotEmpty(value: any): boolean {
+    if (Array.isArray(value)) {
+      return value.length > 0;
+    } else if (typeof value === 'string') {
+      return value.trim().length > 0;
+    }
+    return false;
+  }
+
   return (
     <div className="w-full h-full flex flex-col">
-      <SustainabilityReportUploadModal />
       <SustainabilityReportAttributeModal />
+      <SustainabilityReportUploadModal />
       <Title label="Sustainability Reports" />
       <div className="mt-8 flex w-full justify-between">
         <Button
@@ -106,10 +141,10 @@ function Page() {
         </div>
       </div>
 
-      <div className="flex flex-col h-full justify-between">
+      <div className="flex flex-col h-full justify-between pt-8">
         <div className="w-full overflow-x-auto">
-          <table className="w-full min-w-max table-auto text-left mt-8">
-            <thead>
+          <table className="w-full min-w-max table-auto text-left">
+            <thead className="sticky top-0 z-20">
               <tr className="border-b border-blue-gray-100 bg-blue-gray-50">
                 {TABLE_HEAD.map((head, index) => (
                   <th key={head} className={` p-4 w-[175px] ${index === 0 && 'sticky left-0 z-10 bg-blue-gray-50'}`}>
@@ -155,22 +190,20 @@ function Page() {
                     </td>
                     {attributes.map((attribute: Attribute, index: number) => (
                       <td className={classes} key={index + name}>
-                        {reportResults[attribute.name as keyof typeof reportResults] ? (
-                          <div>results</div>
+                        {attribute.name in reportResults && isNotEmpty(reportResults[attribute.name]) ? (
+                          <div>{reportResults[attribute.name]}</div>
                         ) : (
                           <div
-                            className={`w-full h-[32px] rounded-lg bg-gray-300 ${status === GenerationStatus.GENERATING && ' bg-gray-400 animate-pulse'}`}
-                          />
+                            className={`w-full h-[32px] rounded-lg bg-gray-300 flex justify-center items-center text-gray-600 ${status === GenerationStatus.GENERATING && ' bg-gray-400 animate-pulse'}`}
+                          >
+                            {attribute.name in reportResults && 'None'}
+                          </div>
                         )}
                       </td>
                     ))}
-                    <td
-                      className={
-                        'p-4 h-auto w-auto sticky right-0 z-10 flex flex-row items-center justify-end bg-white'
-                      }
-                    >
+                    <td className={'p-4 w-auto sticky right-0 z-10 bg-white'}>
                       {attributes.length > 0 && reports.length > 0 && (
-                        <div className="flex gap-2">
+                        <div className="h-full flex gap-2">
                           <Button
                             className="bg-blue-900"
                             size="sm"

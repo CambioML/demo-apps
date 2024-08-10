@@ -7,7 +7,7 @@ export enum GenerationStatus {
 export type Report = {
   id: string;
   name: string;
-  reportResults: { attributeName: string; attributeResult: string }[];
+  reportResults: { [key: string]: string };
   status: GenerationStatus;
 };
 
@@ -22,7 +22,7 @@ export type RawReport = {
   lastUpdatedTimestamp: string;
   originalFileName: string;
   reportId: string;
-  results: { attributeName: string; attributeResult: string }[];
+  results: { [key: string]: string };
   s3Bucket: string;
   s3Prefix: string;
   uploadedTimestamp: string;

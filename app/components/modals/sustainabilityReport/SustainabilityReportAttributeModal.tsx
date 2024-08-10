@@ -10,13 +10,13 @@ import { Input } from '@material-tailwind/react';
 import useSustainabilityReportAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportAttributeModal';
 import { addAttribute } from '@/app/actions/sustainabilityReport/addAttribute';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
-import useFetchAttributes from '@/app/hooks/sustainabilityReport/useFetchAttributes';
+import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 
 const SustainabilityReportAttributeModal = () => {
   const SustainabilityReportAttributeModal = useSustainabilityReportAttributeModal();
   const [isLoading, setIsLoading] = useState(false);
   const { userId } = useSustainabilityStore();
-  const { fetchAttributes } = useFetchAttributes();
+  const { fetchAttributes } = useFetchSustainabilityData();
 
   const {
     register,

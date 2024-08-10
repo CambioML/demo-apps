@@ -12,13 +12,13 @@ import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabil
 import { CloudArrowUp } from '@phosphor-icons/react';
 import { uploadFile } from '@/app/actions/sustainabilityReport/uploadFile';
 import { AxiosError } from 'axios';
-import useFetchAndAddReports from '@/app/hooks/sustainabilityReport/useFetchAndAddReports';
+import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 
 const SustainabilityReportUploadModal = () => {
   const SustainabilityReportUploadModal = useSustainabilityReportUploadModal();
   const [isLoading, setIsLoading] = useState(false);
   const { reportsToAdd, setReportsToAdd, userId } = useSustainabilityStore();
-  const { fetchAndAddReports } = useFetchAndAddReports();
+  const { fetchReports } = useFetchSustainabilityData();
 
   const onSubmit = async () => {
     try {
@@ -38,7 +38,7 @@ const SustainabilityReportUploadModal = () => {
       );
 
       console.log('Uploads complete', uploadResponses);
-      fetchAndAddReports();
+      fetchReports();
     } catch (error) {
       if (error instanceof AxiosError) {
         // Log the AxiosError details

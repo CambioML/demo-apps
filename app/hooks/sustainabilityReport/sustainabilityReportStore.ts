@@ -12,6 +12,7 @@ interface SustainabilityStoreState {
   addReportsToAdd: (newReports: File[]) => void;
   setReportsToAdd: (newReports: File[]) => void;
   updateStatus: (reportId: string, status: GenerationStatus) => void;
+  updateResults: (reportId: string, results: { [key: string]: string }) => void;
   isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
 }
@@ -37,6 +38,10 @@ const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
   isLoading: false,
   addReportsToAdd: (newReports) => set((state) => ({ reportsToAdd: [...state.reportsToAdd, ...newReports] })),
   setReportsToAdd: (newReports) => set({ reportsToAdd: newReports }),
+  updateResults: (reportId, results) =>
+    set((state) => ({
+      reports: state.reports.map((report) => (report.id === reportId ? { ...report, reportResults: results } : report)),
+    })),
   updateStatus: (reportId, status) =>
     set((state) => ({
       reports: state.reports.map((report) => (report.id === reportId ? { ...report, status } : report)),
