@@ -1,7 +1,7 @@
-import { Report, ExtractQAResult, SustainabilityMetric } from '@/app/types/SustainabilityTypes';
+import { CDPReport, ExtractQAResult, SustainabilityMetric } from '@/app/types/CDPSustainabilityTypes';
 
 interface IParams {
-  report: Report;
+  report: CDPReport;
   metrics: SustainabilityMetric[];
 }
 

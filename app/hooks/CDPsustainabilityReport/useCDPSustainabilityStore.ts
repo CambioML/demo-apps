@@ -1,13 +1,13 @@
-import { Report, GenerationStatus, MetricFeedback, SustainabilityMetric } from '@/app/types/SustainabilityTypes';
+import { CDPReport, GenerationStatus, MetricFeedback, SustainabilityMetric } from '@/app/types/CDPSustainabilityTypes';
 import { create } from 'zustand';
 
 interface SustainabilityStoreState {
-  reports: Report[];
-  reportsToAdd: Report[];
+  reports: CDPReport[];
+  reportsToAdd: CDPReport[];
   metrics: SustainabilityMetric[];
-  addReports: (newReports: Report[]) => void;
-  addReportsToAdd: (newReports: Report[]) => void;
-  setReportsToAdd: (newReports: Report[]) => void;
+  addReports: (newReports: CDPReport[]) => void;
+  addReportsToAdd: (newReports: CDPReport[]) => void;
+  setReportsToAdd: (newReports: CDPReport[]) => void;
   addMetric: (metric: SustainabilityMetric) => void;
   updateStatus: (reportIndex: number, status: GenerationStatus) => void;
   updateResults: (reportIndex: number, results: { [key: string]: MetricFeedback }) => void;

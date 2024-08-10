@@ -4,7 +4,7 @@ export enum GenerationStatus {
   GENERATED = 'GENERATED',
 }
 
-export type Report = {
+export type CDPReport = {
   sustainabilityReport: File;
   reportResults: { [key: string]: MetricFeedback };
   status: GenerationStatus;

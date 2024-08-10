@@ -3,7 +3,7 @@ import {
   MetricFeedback,
   ScoreProcessResult,
   SustainabilityMetric,
-} from '@/app/types/SustainabilityTypes';
+} from '@/app/types/CDPSustainabilityTypes';
 import OpenAI from 'openai';
 
 const openai = new OpenAI({

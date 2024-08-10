@@ -5,7 +5,7 @@ import useCDPSustainabilityReportModal from '@/app/hooks/CDPsustainabilityReport
 import FormModal from './FormModal';
 import Heading from '../Heading';
 import { toast } from 'react-hot-toast';
-import Dropzone from '../SustainabilityReport/Dropzone';
+import Dropzone from '../CDPSustainabilityReport/Dropzone';
 import useCDPSustainabilityStore from '@/app/hooks/CDPsustainabilityReport/useCDPSustainabilityStore';
 
 const CDPSustainabilityReportModal = () => {

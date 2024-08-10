@@ -1,5 +1,5 @@
 import useMetricDetailModal from '@/app/hooks/CDPsustainabilityReport/useMetricDetailModal';
-import { MetricFeedback } from '@/app/types/SustainabilityTypes';
+import { MetricFeedback } from '@/app/types/CDPSustainabilityTypes';
 import { Button } from '@material-tailwind/react';
 
 interface MetricComponentProps {
