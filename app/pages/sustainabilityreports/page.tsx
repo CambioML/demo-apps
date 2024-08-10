@@ -63,7 +63,6 @@ function Page() {
     } catch (error) {
       console.error('Error regenerating report:', error);
     } finally {
-      setIsLoading(false);
       updateStatus(reportId, GenerationStatus.GENERATED);
     }
   };
@@ -73,10 +72,6 @@ function Page() {
     await runGenerate(reportIndex, false);
     setIsLoading(false);
   };
-
-  // const runGenerate = async (reportIndex: number) => {
-  //   console.log('Generating new report:', reportIndex);
-  // };
 
   const handleGenerateNewAll = async () => {
     setIsLoading(true);
@@ -218,31 +213,33 @@ function Page() {
                     ))}
                     <td className={'p-4 w-auto sticky right-0 z-10 bg-white'}>
                       {attributes.length > 0 && reports.length > 0 && (
-                        <div className="h-full flex gap-2">
-                          <Button
-                            className="bg-blue-900"
-                            size="sm"
-                            disabled={
-                              isLoading || attributes.length === Object.keys(reports[index].reportResults).length
-                            }
-                            onClick={() => handleGenerateNew(index)}
-                            loading={status === GenerationStatus.GENERATING}
-                          >
-                            <span className="flex gap-2">
-                              {status !== GenerationStatus.GENERATING && 'New'} <Sparkle size={16} />
-                            </span>
-                          </Button>
-                          <Button
-                            className="bg-blue-900"
-                            size="sm"
-                            disabled={isLoading}
-                            onClick={() => handleRegenerate(index)}
-                            loading={status === GenerationStatus.GENERATING}
-                          >
-                            <span className="flex gap-2">
-                              {status !== GenerationStatus.GENERATING && 'All'} <ArrowsCounterClockwise size={16} />
-                            </span>
-                          </Button>
+                        <div className="h-full flex flex-row items-center justify-end">
+                          <div className="h-full flex gap-2">
+                            <Button
+                              className="bg-blue-900"
+                              size="sm"
+                              disabled={
+                                isLoading || attributes.length === Object.keys(reports[index].reportResults).length
+                              }
+                              onClick={() => handleGenerateNew(index)}
+                              loading={status === GenerationStatus.GENERATING}
+                            >
+                              <span className="flex gap-2">
+                                {status !== GenerationStatus.GENERATING && 'New'} <Sparkle size={16} />
+                              </span>
+                            </Button>
+                            <Button
+                              className="bg-blue-900"
+                              size="sm"
+                              disabled={isLoading}
+                              onClick={() => handleRegenerate(index)}
+                              loading={status === GenerationStatus.GENERATING}
+                            >
+                              <span className="flex gap-2">
+                                {status !== GenerationStatus.GENERATING && 'All'} <ArrowsCounterClockwise size={16} />
+                              </span>
+                            </Button>
+                          </div>
                         </div>
                       )}
                     </td>
