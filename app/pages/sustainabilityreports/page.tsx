@@ -14,7 +14,6 @@ import { useEffect } from 'react';
 import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 import { postUser } from '@/app/actions/sustainabilityReport/postUser';
 import { AxiosResponse } from 'axios';
-import { getUserId } from '@/app/actions/getUserId';
 import { getSustainabilityUserId } from '@/app/utils/getCookie';
 
 function Page() {
