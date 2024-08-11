@@ -15,6 +15,7 @@ import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetc
 import { postUser } from '@/app/actions/sustainabilityReport/postUser';
 import { AxiosResponse } from 'axios';
 import { getUserId } from '@/app/actions/getUserId';
+import { getSustainabilityUserId } from '@/app/utils/getCookie';
 
 function Page() {
   const { reports, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
@@ -30,10 +31,10 @@ function Page() {
   }, [userId]);
 
   const addUser = async () => {
-    const userId = await getUserId();
+    const userId = await getSustainabilityUserId();
     const response: AxiosResponse = await postUser({ userId });
     if (response.status === 200 || response.status === 201) {
-      console.log('User added/created!');
+      console.log('User added/created!', response);
       setUserId(response.data.userId);
     }
   };
