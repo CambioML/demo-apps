@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 import { postUser } from '@/app/actions/sustainabilityReport/postUser';
 import { AxiosResponse } from 'axios';
+import { getSustainabilityUserId } from '@/app/utils/getCookie';
 
 function Page() {
   const { reports, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
@@ -29,10 +30,10 @@ function Page() {
   }, [userId]);
 
   const addUser = async () => {
-    console.log('Adding user...');
-    const response: AxiosResponse = await postUser({ userId: 'test_user_id1' });
+    const userId = await getSustainabilityUserId();
+    const response: AxiosResponse = await postUser({ userId });
     if (response.status === 200 || response.status === 201) {
-      console.log('User added/created!');
+      console.log('User added/created!', response);
       setUserId(response.data.userId);
     }
   };
@@ -49,9 +50,11 @@ function Page() {
       updateStatus(reportId, GenerationStatus.GENERATING);
       console.log('Regenerating report:', reportId, rerunAll);
       if (rerunAll) updateResults(reportId, {});
-      const response = await generateAttributes({ userId: 'test_user_id1', reportIds: [reportId], rerunAll });
+      const response = await generateAttributes({ userId, reportIds: [reportId], rerunAll });
+      console.log;
       const results = response.attributesGenerated;
       //filter out key named 'other'
+      console.log('Results:', results);
       const filteredResults = Object.keys(results).reduce((acc: { [key: string]: any }, key) => {
         if (attributes.some((attribute) => attribute.name === key)) {
           acc[key] = results[key];
