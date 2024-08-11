@@ -129,7 +129,6 @@ function Page() {
     for (const report of reports) {
       if (checkNewAttributesForReport(report)) return true;
     }
-    console.log('no new attributes');
     return false;
   };
 
