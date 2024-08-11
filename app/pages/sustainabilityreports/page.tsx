@@ -3,7 +3,7 @@ import Title from '../../components/Title';
 import { Button, Typography } from '@material-tailwind/react';
 import { DefaultPagination } from '../../components/pagination';
 import { ArrowsCounterClockwise, Plus, Sparkle } from '@phosphor-icons/react';
-import { Attribute, GenerationStatus } from '@/app/types/SustainabilityReportTypes';
+import { Attribute, GenerationStatus, Report } from '@/app/types/SustainabilityReportTypes';
 import SustainabilityReportUploadModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportUploadModal';
 import useSustainabilityReportUploadModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportUploadModal';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
@@ -121,6 +121,18 @@ function Page() {
     return false;
   }
 
+  const checkNewAttributesForReport = (report: Report): boolean => {
+    return attributes.length > Object.keys(report.reportResults).length;
+  };
+
+  const checkNewAttributes = () => {
+    for (const report of reports) {
+      if (checkNewAttributesForReport(report)) return true;
+    }
+    console.log('no new attributes');
+    return false;
+  };
+
   return (
     <div className="w-full h-full flex flex-col">
       <SustainabilityReportAttributeModal />
@@ -137,7 +149,7 @@ function Page() {
         <div className="flex gap-2">
           <Button
             onClick={handleGenerateNewAll}
-            disabled={isLoading || attributes.length === 0 || reports.length === 0}
+            disabled={isLoading || attributes.length === 0 || reports.length === 0 || !checkNewAttributes()}
             className="flex gap-2 bg-blue-900"
           >
             Generate New Scores
@@ -221,9 +233,7 @@ function Page() {
                             <Button
                               className="bg-blue-900"
                               size="sm"
-                              disabled={
-                                isLoading || attributes.length === Object.keys(reports[index].reportResults).length
-                              }
+                              disabled={isLoading || !checkNewAttributesForReport(reports[index])}
                               onClick={() => handleGenerateNew(index)}
                               loading={status === GenerationStatus.GENERATING}
                             >
