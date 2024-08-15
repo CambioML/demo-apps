@@ -53,20 +53,49 @@ function Page() {
       const response = await generateAttributes({ userId, reportIds: [reportId], rerunAll });
       console.log;
       const results = response.attributesGenerated;
-      //filter out key named 'other'
-      console.log('Results:', results);
-      const filteredResults = Object.keys(results).reduce((acc: { [key: string]: any }, key) => {
+      const filteredResults = Object.keys(results[reportId]).reduce((acc: { [key: string]: any }, key) => {
         if (attributes.some((attribute) => attribute.name === key)) {
-          acc[key] = results[key];
+          acc[key] = results[reportId][key];
         }
         return acc;
       }, {});
       updateResults(reportId, filteredResults);
-      console.log('Regenerate response:', response);
     } catch (error) {
       console.error('Error regenerating report:', error);
     } finally {
       updateStatus(reportId, GenerationStatus.GENERATED);
+    }
+  };
+
+  const runGenerateAll = async (rerunAll: boolean) => {
+    const reportIds = reports.map((report) => report.id);
+    try {
+      for (const reportId of reportIds) {
+        updateStatus(reportId, GenerationStatus.GENERATING);
+        if (rerunAll) {
+          updateResults(reportId, {});
+        }
+      }
+      const response = await generateAttributes({ userId, reportIds: reportIds, rerunAll });
+      console.log;
+      const results = response.attributesGenerated;
+
+      for (const reportId in results) {
+        const filteredResults = Object.keys(results[reportId]).reduce((acc: { [key: string]: any }, key) => {
+          if (attributes.some((attribute) => attribute.name === key)) {
+            acc[key] = results[reportId][key];
+          }
+          return acc;
+        }, {});
+        updateResults(reportId, filteredResults);
+      }
+      console.log('Regenerate response:', response);
+    } catch (error) {
+      console.error('Error regenerating report:', error);
+    } finally {
+      for (const reportId of reportIds) {
+        updateStatus(reportId, GenerationStatus.GENERATED);
+      }
     }
   };
 
@@ -79,11 +108,7 @@ function Page() {
   const handleGenerateNewAll = async () => {
     setIsLoading(true);
     try {
-      const promises = reports.map(async (_, i) => {
-        await runGenerate(i, false);
-      });
-
-      await Promise.all(promises);
+      await runGenerateAll(false);
     } catch (error) {
       console.error('Error generating all reports:', error);
     } finally {
@@ -94,11 +119,7 @@ function Page() {
   const handleRegenerateAll = async () => {
     setIsLoading(true);
     try {
-      const promises = reports.map(async (_, i) => {
-        // updateResults(i, {});
-        await runGenerate(i, true);
-      });
-      await Promise.all(promises);
+      await runGenerateAll(true);
     } catch (error) {
       console.error('Error generating all reports:', error);
     } finally {
