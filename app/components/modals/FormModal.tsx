@@ -166,7 +166,8 @@ const FormModal: React.FC<FormModalProps> = ({
                     <Button
                       disabled={disabled}
                       onClick={handleSecondaryAction}
-                      className="flex-1 text-base bg-blue-900"
+                      className="flex-1 text-base"
+                      variant="outlined"
                     >
                       {secondaryActionLabel}
                     </Button>

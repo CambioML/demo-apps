@@ -2,7 +2,7 @@
 import Title from '../../components/Title';
 import { Button, Typography } from '@material-tailwind/react';
 import { DefaultPagination } from '../../components/pagination';
-import { ArrowsCounterClockwise, Plus, Sparkle } from '@phosphor-icons/react';
+import { ArrowsCounterClockwise, PencilSimple, Plus, Sparkle, X } from '@phosphor-icons/react';
 import { Attribute, GenerationStatus, Report } from '@/app/types/SustainabilityReportTypes';
 import SustainabilityReportUploadModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportUploadModal';
 import useSustainabilityReportUploadModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportUploadModal';
@@ -15,12 +15,18 @@ import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetc
 import { postUser } from '@/app/actions/sustainabilityReport/postUser';
 import { AxiosResponse } from 'axios';
 import { getSustainabilityUserId } from '@/app/utils/getCookie';
+import SustainabilityUpdateAttributeModal from '@/app/components/modals/sustainabilityReport/SustainabilityUpdateAttributeModal';
+import useSustainabilityUpdateAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityUpdateAttributeModal';
+import SustainabilityReportDeleteModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportDeleteModal';
+import useSustainabilityReportDeleteModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportDeleteModal';
 
 function Page() {
   const { reports, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
     useSustainabilityStore();
   const sustainabilityReportUploadModal = useSustainabilityReportUploadModal();
   const sustainabilityReportAttributeModal = useSustainabilityReportAttributeModal();
+  const sustainabilityUpdateAttributeModal = useSustainabilityUpdateAttributeModal();
+  const sustainabilityReportDeleteModal = useSustainabilityReportDeleteModal();
   const { fetchAttributesThenReports } = useFetchSustainabilityData();
 
   useEffect(() => {
@@ -51,10 +57,14 @@ function Page() {
       console.log('Regenerating report:', reportId, rerunAll);
       if (rerunAll) updateResults(reportId, {});
       const response = await generateAttributes({ userId, reportIds: [reportId], rerunAll });
-      console.log;
       const results = response.attributesGenerated;
+      console.log('Regenerate response:', response);
+      if (!results[reportId]) {
+        console.error('Error regenerating report:', response);
+        throw new Error("Couldn't regenerate report");
+      }
       const filteredResults = Object.keys(results[reportId]).reduce((acc: { [key: string]: any }, key) => {
-        if (attributes.some((attribute) => attribute.name === key)) {
+        if (attributes.some((attribute) => attribute.id === key)) {
           acc[key] = results[reportId][key];
         }
         return acc;
@@ -82,7 +92,7 @@ function Page() {
 
       for (const reportId in results) {
         const filteredResults = Object.keys(results[reportId]).reduce((acc: { [key: string]: any }, key) => {
-          if (attributes.some((attribute) => attribute.name === key)) {
+          if (attributes.some((attribute) => attribute.id === key)) {
             acc[key] = results[reportId][key];
           }
           return acc;
@@ -153,10 +163,23 @@ function Page() {
     return false;
   };
 
+  const handleEditAttribute = (attribute: Attribute) => {
+    sustainabilityUpdateAttributeModal.setAttribute(attribute);
+    sustainabilityUpdateAttributeModal.onOpen();
+  };
+
+  const handleDeleteAttribute = (attribute: Attribute) => {
+    console.log('Deleting attribute:', attribute);
+    sustainabilityReportDeleteModal.setAttribute(attribute);
+    sustainabilityReportDeleteModal.onOpen();
+  };
+
   return (
     <div className="w-full h-full flex flex-col">
       <SustainabilityReportAttributeModal />
       <SustainabilityReportUploadModal />
+      <SustainabilityUpdateAttributeModal />
+      <SustainabilityReportDeleteModal />
       <Title label="Sustainability Reports" />
       <div className="mt-8 flex w-full justify-between">
         <Button
@@ -200,9 +223,29 @@ function Page() {
                 ))}
                 {attributes.map((attribute: Attribute, i) => (
                   <th key={attribute.name + i} className="p-4 w-[150px] xl:w-[225px]">
-                    <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
-                      {attribute.name}
-                    </Typography>
+                    <div className="h-full flex items-center justify-between">
+                      <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
+                        {attribute.name}
+                      </Typography>
+                      <div className="flex gap-1">
+                        <Button
+                          onClick={() => handleEditAttribute(attribute)}
+                          disabled={isLoading}
+                          className={`text-gray-700 rounded-xl p-2 ${reports.length > 0 && attributes.length === 0 && 'rounded-lg hover:text-gray-700'}`}
+                          variant="text"
+                        >
+                          <PencilSimple size={16} className="shrink-0" />
+                        </Button>
+                        <Button
+                          onClick={() => handleDeleteAttribute(attribute)}
+                          disabled={isLoading}
+                          className={`text-gray-700 rounded-xl p-2 ${reports.length > 0 && attributes.length === 0 && 'rounded-lg hover:text-gray-700'}`}
+                          variant="text"
+                        >
+                          <X size={16} className="shrink-0" />
+                        </Button>
+                      </div>
+                    </div>
                   </th>
                 ))}
                 <th className="p-2 w-auto sticky right-0 z-10 flex flex-row items-start justify-between bg-blue-gray-50">
@@ -235,8 +278,8 @@ function Page() {
                     </td>
                     {attributes.map((attribute: Attribute, index: number) => (
                       <td className={classes} key={index + name}>
-                        {attribute.name in reportResults && isNotEmpty(reportResults[attribute.name]) ? (
-                          <div>{reportResults[attribute.name]}</div>
+                        {attribute.id in reportResults && isNotEmpty(reportResults[attribute.id]) ? (
+                          <div>{reportResults[attribute.id]}</div>
                         ) : (
                           <div
                             className={`w-full h-[32px] rounded-lg bg-gray-300 flex justify-center items-center text-gray-600 ${status === GenerationStatus.GENERATING && ' bg-gray-400 animate-pulse'}`}

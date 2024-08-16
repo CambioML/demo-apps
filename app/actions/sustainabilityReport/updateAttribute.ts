@@ -2,14 +2,16 @@ import axios from 'axios';
 
 interface IParams {
   userId: string;
+  attributeId: string;
   attributeName: string;
   attributeDescription: string;
 }
 
-export const addAttribute = async ({ userId, attributeName, attributeDescription }: IParams) => {
+export const updateAttribute = async ({ userId, attributeId, attributeName, attributeDescription }: IParams) => {
   return await axios
-    .post(process.env.NEXT_PUBLIC_PORTFOLIO_INSIGHT_API_URL + '/add-attribute', {
+    .patch(process.env.NEXT_PUBLIC_PORTFOLIO_INSIGHT_API_URL + '/update-attribute', {
       userId: userId,
+      attributeId: attributeId,
       attributeName: attributeName,
       attributeDescription: attributeDescription,
     })
@@ -17,7 +19,7 @@ export const addAttribute = async ({ userId, attributeName, attributeDescription
       return response.data;
     })
     .catch((error) => {
-      console.error('Error adding attribute. Please try again.');
+      console.error('Error updating attribute. Please try again.');
       throw error;
     });
 };
