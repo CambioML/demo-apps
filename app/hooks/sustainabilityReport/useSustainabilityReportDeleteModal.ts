@@ -1,20 +1,20 @@
-import { Attribute } from '@/app/types/SustainabilityReportTypes';
+import { Attribute, Report } from '@/app/types/SustainabilityReportTypes';
 import { create } from 'zustand';
 
 interface SustainabilityReportDeleteModalStore {
   isOpen: boolean;
-  attribute: Attribute | null;
+  deleteItem: Attribute | Report | null;
   onOpen: () => void;
   onClose: () => void;
-  setAttribute: (attribute: Attribute) => void;
+  setDeleteItem: (deleteItem: Attribute | Report) => void;
 }
 
 const useSustainabilityReportDeleteModal = create<SustainabilityReportDeleteModalStore>((set) => ({
   isOpen: false,
-  attribute: null,
+  deleteItem: null,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
-  setAttribute: (attribute: Attribute) => set({ attribute }),
+  setDeleteItem: (deleteItem: Attribute | Report) => set({ deleteItem }),
 }));
 
 export default useSustainabilityReportDeleteModal;

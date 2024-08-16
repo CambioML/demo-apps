@@ -6,7 +6,7 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import FormModal from '../FormModal';
 import Heading from '../../Heading';
 import { toast } from 'react-hot-toast';
-import { Input } from '@material-tailwind/react';
+import { Input, Textarea } from '@material-tailwind/react';
 import useSustainabilityUpdateAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityUpdateAttributeModal';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
 import { updateAttribute } from '@/app/actions/sustainabilityReport/updateAttribute';
@@ -66,7 +66,7 @@ const SustainabilityUpdateAttributeModal = () => {
           error={errors['attribute-name'] !== undefined}
           {...register('attribute-name', { required: true })}
         />
-        <Input
+        <Textarea
           id="attribute-description"
           label="Attribute Description"
           defaultValue={SustainabilityUpdateAttributeModal.attribute?.description || ''}

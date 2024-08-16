@@ -170,7 +170,7 @@ function Page() {
 
   const handleDeleteAttribute = (attribute: Attribute) => {
     console.log('Deleting attribute:', attribute);
-    sustainabilityReportDeleteModal.setAttribute(attribute);
+    sustainabilityReportDeleteModal.setDeleteItem(attribute);
     sustainabilityReportDeleteModal.onOpen();
   };
 
@@ -215,7 +215,7 @@ function Page() {
             <thead className="sticky top-0 z-20">
               <tr className="border-b border-blue-gray-100 bg-blue-gray-50">
                 {TABLE_HEAD.map((head, index) => (
-                  <th key={head} className={` p-4 w-[175px] ${index === 0 && 'sticky left-0 z-10 bg-blue-gray-50'}`}>
+                  <th key={head} className={` p-4 w-[175px] ${index === 0 && 'sticky left-0 z-30 bg-blue-gray-50'}`}>
                     <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70 ">
                       {head}
                     </Typography>
@@ -224,10 +224,14 @@ function Page() {
                 {attributes.map((attribute: Attribute, i) => (
                   <th key={attribute.name + i} className="relative group p-4 w-[150px] xl:w-[225px]">
                     <div className="h-full flex items-center justify-between">
-                      <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
+                      <Typography
+                        variant="small"
+                        color="blue-gray"
+                        className="font-normal leading-none opacity-70 z-10"
+                      >
                         {attribute.name}
                       </Typography>
-                      <div className="flex gap-1 absolute right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="flex gap-1 absolute right-0 z-20 bg-blue-gray-50 group-hover:bg-opacity-90 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <Button
                           onClick={() => handleEditAttribute(attribute)}
                           disabled={isLoading}

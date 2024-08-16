@@ -6,7 +6,7 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import FormModal from '../FormModal';
 import Heading from '../../Heading';
 import { toast } from 'react-hot-toast';
-import { Input, Select, Option } from '@material-tailwind/react';
+import { Input, Select, Option, Textarea } from '@material-tailwind/react';
 import useSustainabilityReportAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportAttributeModal';
 import { addAttribute } from '@/app/actions/sustainabilityReport/addAttribute';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
@@ -84,11 +84,12 @@ const SustainabilityReportAttributeModal = () => {
           error={errors['attribute-name'] !== undefined}
           {...register('attribute-name', { required: modalState === AttributeModalState.NEW })}
         />
-        <Input
+        <Textarea
           id="attribute-description"
           label="Attribute Description"
           error={errors['attribute-description'] !== undefined}
           {...register('attribute-description', { required: modalState === AttributeModalState.NEW })}
+          size="md"
         />
       </div>
     </>

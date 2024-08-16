@@ -21,15 +21,15 @@ const SustainabilityReportDeleteModal = () => {
   const onSubmit: SubmitHandler<FieldValues> = async () => {
     try {
       setIsLoading(true);
-      const attributeId = SustainabilityReportDeleteModal.attribute?.id;
-      if (!attributeId) {
-        throw new Error('Attribute ID is missing');
+      const deleteItemId = SustainabilityReportDeleteModal.deleteItem?.id;
+      if (!deleteItemId) {
+        throw new Error('Delete ID is missing');
       }
-      await deleteAttribute({ userId, attributeId });
-      deleteStoreAttribute(attributeId);
+      await deleteAttribute({ userId, attributeId: deleteItemId });
+      deleteStoreAttribute(deleteItemId);
       SustainabilityReportDeleteModal.onClose();
     } catch (error) {
-      toast.error('Add attribute failed. Please try again.');
+      toast.error('Delete deleteItem failed. Please try again.');
     } finally {
       setIsLoading(false);
       reset();
@@ -45,9 +45,9 @@ const SustainabilityReportDeleteModal = () => {
   const bodyContent = (
     <>
       <div className="flex flex-col gap-4 items-center">
-        <Heading title={`Delete ${SustainabilityReportDeleteModal.attribute?.name}`} subtitle="" center />
+        <Heading title={`Delete ${SustainabilityReportDeleteModal.deleteItem?.name}`} subtitle="" center />
         <Typography color="gray" variant="h5">
-          Are you sure you want to delete this attribute?
+          Are you sure you want to delete this deleteItem?
         </Typography>
       </div>
     </>
