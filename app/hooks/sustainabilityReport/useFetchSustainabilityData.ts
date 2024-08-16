@@ -55,7 +55,7 @@ const useFetchSustainabilityData = () => {
       if (attributes.length > 0) {
         newReports.forEach((report) => {
           Object.keys(report.reportResults).forEach((key) => {
-            const isKeyInAttributes = attributes.some((attribute) => attribute.name === key);
+            const isKeyInAttributes = attributes.some((attribute) => attribute.id === key);
             if (!isKeyInAttributes) {
               console.log('Deleting key:', key);
               delete report.reportResults[key];
@@ -65,6 +65,7 @@ const useFetchSustainabilityData = () => {
       }
 
       if (newReports.length > 0) {
+        console.log('Adding new reports:', newReports);
         addReports(newReports);
       }
     } catch (error) {
