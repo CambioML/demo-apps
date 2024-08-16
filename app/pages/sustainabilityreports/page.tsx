@@ -222,12 +222,12 @@ function Page() {
                   </th>
                 ))}
                 {attributes.map((attribute: Attribute, i) => (
-                  <th key={attribute.name + i} className="p-4 w-[150px] xl:w-[225px]">
+                  <th key={attribute.name + i} className="relative group p-4 w-[150px] xl:w-[225px]">
                     <div className="h-full flex items-center justify-between">
                       <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70">
                         {attribute.name}
                       </Typography>
-                      <div className="flex gap-1">
+                      <div className="flex gap-1 absolute right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <Button
                           onClick={() => handleEditAttribute(attribute)}
                           disabled={isLoading}
