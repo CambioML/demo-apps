@@ -64,6 +64,7 @@ const SustainabilityReportDeleteModal = () => {
       onClose={handleClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}
+      redAction={true}
     />
   );
 };
