@@ -216,7 +216,7 @@ function Page() {
           <table className="w-full min-w-max table-auto text-left">
             <thead className="sticky top-0 z-20">
               <tr className="border-b border-blue-gray-100 bg-blue-gray-50">
-                <th className="p-4 max-w-[175px] sticky left-0 z-30 bg-blue-gray-50">
+                <th className="p-4 min-w-[125px] max-w-[175px] sticky left-0 z-30 bg-blue-gray-50">
                   <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70 ">
                     Company
                   </Typography>

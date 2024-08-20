@@ -18,7 +18,7 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 const SustainabilityReportAddFileModal = () => {
   const SustainabilityReportAddFileModal = useSustainabilityReportAddFileModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { reportsToAdd, setReportsToAdd, userId } = useSustainabilityStore();
+  const { reportsToAdd, setReportsToAdd, userId, projects } = useSustainabilityStore();
   const { fetchAttributesThenProjects } = useFetchSustainabilityData();
 
   const { handleSubmit, reset } = useForm<FieldValues>({});
@@ -75,7 +75,11 @@ const SustainabilityReportAddFileModal = () => {
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <Heading title="Add Files" subtitle="" center />
+      <Heading
+        title={`Add Files to ${projects.filter((project) => project.id === SustainabilityReportAddFileModal.projectId)[0].name}`}
+        subtitle=""
+        center
+      />
       {SustainabilityReportAddFileModal.addFileModalState === AddFileModalState.ADD_FILES && (
         <>
           <Dropzone />
