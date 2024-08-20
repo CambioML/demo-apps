@@ -4,6 +4,7 @@ import { PresignedResponse, UploadParams } from './apiInterface';
 
 interface IParams {
   file: File | undefined;
+  projectId: string;
   userId: string;
 }
 
@@ -11,7 +12,7 @@ interface Config {
   params: UploadParams;
 }
 
-export const uploadFile = async ({ file, userId }: IParams) => {
+export const uploadFile = async ({ file, projectId, userId }: IParams) => {
   if (!file) {
     toast.error('No file selected');
     return;
@@ -19,6 +20,7 @@ export const uploadFile = async ({ file, userId }: IParams) => {
   const file_name = file.name;
   const getConfig: Config = {
     params: {
+      projectId: projectId,
       userId: userId,
       fileName: file_name,
     },

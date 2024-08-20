@@ -1,6 +1,7 @@
 export interface UploadParams {
-  userId: string;
+  projectId: string;
   fileName: string;
+  userId: string;
 }
 
 export interface PresignedResponse {

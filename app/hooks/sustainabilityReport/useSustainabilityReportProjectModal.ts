@@ -1,7 +1,8 @@
 import { create } from 'zustand';
 
-export enum UploadModalState {
+export enum ProjectModalState {
   ADD_FILES,
+  CREATING_PROJECT,
   UPLOADING,
   SUCCESS,
 }
@@ -9,21 +10,21 @@ export enum UploadModalState {
 interface SustainabilityReportUploadModalStore {
   isOpen: boolean;
   content: React.ReactElement | null;
-  uploadModalState: UploadModalState;
+  projectModalState: ProjectModalState;
   onOpen: () => void;
   onClose: () => void;
   setContent: (content: React.ReactElement) => void;
-  setUploadModalState: (uploadModalState: UploadModalState) => void;
+  setProjectModalState: (projectModalState: ProjectModalState) => void;
 }
 
 const useSustainabilityReportUploadModal = create<SustainabilityReportUploadModalStore>((set) => ({
   isOpen: false,
   content: null,
-  uploadModalState: UploadModalState.ADD_FILES,
+  projectModalState: ProjectModalState.ADD_FILES,
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
   setContent: (content) => set({ content }),
-  setUploadModalState: (uploadModalState) => set({ uploadModalState }),
+  setProjectModalState: (projectModalState) => set({ projectModalState }),
 }));
 
 export default useSustainabilityReportUploadModal;

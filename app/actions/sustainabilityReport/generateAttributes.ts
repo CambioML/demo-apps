@@ -2,15 +2,15 @@ import axios from 'axios';
 
 interface IParams {
   userId: string;
-  reportIds: string[];
+  projectIds: string[];
   rerunAll: boolean;
 }
 
-export const generateAttributes = async ({ userId, reportIds, rerunAll }: IParams) => {
+export const generateAttributes = async ({ userId, projectIds, rerunAll }: IParams) => {
   return await axios
     .post(process.env.NEXT_PUBLIC_PORTFOLIO_INSIGHT_API_URL + '/generate-attributes', {
       userId: userId,
-      reportIds: reportIds,
+      projectIds: projectIds,
       rerunAll: rerunAll,
     })
     .then((response) => {

@@ -3,9 +3,9 @@ import Title from '../../components/Title';
 import { Button, Typography } from '@material-tailwind/react';
 import { DefaultPagination } from '../../components/pagination';
 import { ArrowsCounterClockwise, PencilSimple, Plus, Sparkle, X } from '@phosphor-icons/react';
-import { Attribute, GenerationStatus, Report } from '@/app/types/SustainabilityReportTypes';
-import SustainabilityReportUploadModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportUploadModal';
-import useSustainabilityReportUploadModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportUploadModal';
+import { Attribute, GenerationStatus, Project } from '@/app/types/SustainabilityReportTypes';
+import SustainabilityReportProjectModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportProjectModal';
+import useSustainabilityReportProjectModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportProjectModal';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
 import SustainabilityReportAttributeModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportAttributeModal';
 import useSustainabilityReportAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportAttributeModal';
@@ -21,19 +21,13 @@ import SustainabilityReportDeleteModal from '@/app/components/modals/sustainabil
 import useSustainabilityReportDeleteModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportDeleteModal';
 
 function Page() {
-  const { reports, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
+  const { projects, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
     useSustainabilityStore();
-  const sustainabilityReportUploadModal = useSustainabilityReportUploadModal();
+  const sustainabilityReportUploadModal = useSustainabilityReportProjectModal();
   const sustainabilityReportAttributeModal = useSustainabilityReportAttributeModal();
   const sustainabilityUpdateAttributeModal = useSustainabilityUpdateAttributeModal();
   const sustainabilityReportDeleteModal = useSustainabilityReportDeleteModal();
-  const { fetchAttributesThenReports } = useFetchSustainabilityData();
-
-  useEffect(() => {
-    if (userId) {
-      fetchAttributesThenReports();
-    }
-  }, [userId]);
+  const { fetchAttributesThenProjects } = useFetchSustainabilityData();
 
   const addUser = async () => {
     const userId = await getSustainabilityUserId();
@@ -48,70 +42,73 @@ function Page() {
     addUser();
   }, []);
 
-  const TABLE_HEAD = ['Report'];
+  useEffect(() => {
+    if (userId) {
+      fetchAttributesThenProjects();
+    }
+  }, [userId]);
 
-  const runGenerate = async (reportIndex: number, rerunAll: boolean) => {
-    const reportId = reports[reportIndex].id;
+  const runGenerate = async (projectId: string, rerunAll: boolean) => {
     try {
-      updateStatus(reportId, GenerationStatus.GENERATING);
-      console.log('Regenerating report:', reportId, rerunAll);
-      if (rerunAll) updateResults(reportId, {});
-      const response = await generateAttributes({ userId, reportIds: [reportId], rerunAll });
+      updateStatus(projectId, GenerationStatus.GENERATING);
+      console.log('Regenerating report:', projectId, rerunAll);
+      if (rerunAll) updateResults(projectId, {});
+      const response = await generateAttributes({ userId, projectIds: [projectId], rerunAll });
       const results = response.attributesGenerated;
       console.log('Regenerate response:', response);
-      if (!results[reportId]) {
+      if (!results[projectId]) {
         console.error('Error regenerating report:', response);
         throw new Error("Couldn't regenerate report");
       }
-      const filteredResults = Object.keys(results[reportId]).reduce((acc: { [key: string]: any }, key) => {
+      const filteredResults = Object.keys(results[projectId]).reduce((acc: { [key: string]: any }, key) => {
         if (attributes.some((attribute) => attribute.id === key)) {
-          acc[key] = results[reportId][key];
+          acc[key] = results[projectId][key];
         }
         return acc;
       }, {});
-      updateResults(reportId, filteredResults);
+      updateResults(projectId, filteredResults);
     } catch (error) {
       console.error('Error regenerating report:', error);
     } finally {
-      updateStatus(reportId, GenerationStatus.GENERATED);
+      updateStatus(projectId, GenerationStatus.GENERATED);
     }
   };
 
   const runGenerateAll = async (rerunAll: boolean) => {
-    const reportIds = reports.map((report) => report.id);
+    const projectIds = projects.map((project) => project.id);
     try {
-      for (const reportId of reportIds) {
-        updateStatus(reportId, GenerationStatus.GENERATING);
+      for (const projectId of projectIds) {
+        updateStatus(projectId, GenerationStatus.GENERATING);
         if (rerunAll) {
-          updateResults(reportId, {});
+          updateResults(projectId, {});
         }
       }
-      const response = await generateAttributes({ userId, reportIds: reportIds, rerunAll });
+      const response = await generateAttributes({ userId, projectIds: projectIds, rerunAll });
       console.log;
       const results = response.attributesGenerated;
 
-      for (const reportId in results) {
-        const filteredResults = Object.keys(results[reportId]).reduce((acc: { [key: string]: any }, key) => {
+      for (const projectId in results) {
+        const filteredResults = Object.keys(results[projectId]).reduce((acc: { [key: string]: any }, key) => {
           if (attributes.some((attribute) => attribute.id === key)) {
-            acc[key] = results[reportId][key];
+            acc[key] = results[projectId][key];
           }
           return acc;
         }, {});
-        updateResults(reportId, filteredResults);
+        updateResults(projectId, filteredResults);
       }
       console.log('Regenerate response:', response);
     } catch (error) {
       console.error('Error regenerating report:', error);
     } finally {
-      for (const reportId of reportIds) {
+      for (const reportId of projectIds) {
         updateStatus(reportId, GenerationStatus.GENERATED);
       }
     }
   };
 
-  const handleGenerateNew = async (reportIndex: number) => {
+  const handleGenerateNew = async (projectId: string) => {
     setIsLoading(true);
-    await runGenerate(reportIndex, false);
+    await runGenerate(projectId, false);
     setIsLoading(false);
   };
 
@@ -137,9 +134,9 @@ function Page() {
     }
   };
 
-  const handleRegenerate = async (reportIndex: number) => {
+  const handleRegenerate = async (projectId: string) => {
     setIsLoading(true);
-    await runGenerate(reportIndex, true);
+    await runGenerate(projectId, true);
     setIsLoading(false);
   };
 
@@ -152,13 +149,13 @@ function Page() {
     return false;
   }
 
-  const checkNewAttributesForReport = (report: Report): boolean => {
-    return attributes.length > Object.keys(report.reportResults).length;
+  const checkNewAttributesForReport = (project: Project): boolean => {
+    return attributes.length > Object.keys(project.projectResults).length;
   };
 
   const checkNewAttributes = () => {
-    for (const report of reports) {
-      if (checkNewAttributesForReport(report)) return true;
+    for (const project of projects) {
+      if (checkNewAttributesForReport(project)) return true;
     }
     return false;
   };
@@ -177,7 +174,7 @@ function Page() {
   return (
     <div className="w-full h-full flex flex-col">
       <SustainabilityReportAttributeModal />
-      <SustainabilityReportUploadModal />
+      <SustainabilityReportProjectModal />
       <SustainabilityUpdateAttributeModal />
       <SustainabilityReportDeleteModal />
       <Title label="Sustainability Reports" />
@@ -187,23 +184,23 @@ function Page() {
           className={`flex gap-2 bg-blue-900 rounded-lg text-white hover:bg-blue-800`}
           variant="text"
         >
-          <Plus size={16} /> New Report
+          <Plus size={16} /> New Company
         </Button>
         <div className="flex gap-2">
           <Button
             onClick={handleGenerateNewAll}
-            disabled={isLoading || attributes.length === 0 || reports.length === 0 || !checkNewAttributes()}
+            disabled={isLoading || attributes.length === 0 || projects.length === 0 || !checkNewAttributes()}
             className="flex gap-2 bg-blue-900"
           >
-            Generate New Scores
+            Generate New
             <Sparkle size={16} className="shrink-0" />
           </Button>
           <Button
             onClick={handleRegenerateAll}
-            disabled={isLoading || attributes.length === 0 || reports.length === 0}
+            disabled={isLoading || attributes.length === 0 || projects.length === 0}
             className="flex gap-2 bg-blue-900"
           >
-            Regenerate All Scores
+            Regenerate All
             <ArrowsCounterClockwise size={16} className="shrink-0" />
           </Button>
         </div>
@@ -214,13 +211,16 @@ function Page() {
           <table className="w-full min-w-max table-auto text-left">
             <thead className="sticky top-0 z-20">
               <tr className="border-b border-blue-gray-100 bg-blue-gray-50">
-                {TABLE_HEAD.map((head, index) => (
-                  <th key={head} className={` p-4 w-[175px] ${index === 0 && 'sticky left-0 z-30 bg-blue-gray-50'}`}>
-                    <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70 ">
-                      {head}
-                    </Typography>
-                  </th>
-                ))}
+                <th className="p-4 max-w-[175px] sticky left-0 z-30 bg-blue-gray-50">
+                  <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70 ">
+                    Company
+                  </Typography>
+                </th>
+                <th className="p-4 w-fit">
+                  <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70 ">
+                    Files
+                  </Typography>
+                </th>
                 {attributes.map((attribute: Attribute, i) => (
                   <th key={attribute.name + i} className="relative group p-4 w-[150px] xl:w-[225px]">
                     <div className="h-full flex items-center justify-between">
@@ -235,7 +235,7 @@ function Page() {
                         <Button
                           onClick={() => handleEditAttribute(attribute)}
                           disabled={isLoading}
-                          className={`text-gray-700 rounded-xl p-2 ${reports.length > 0 && attributes.length === 0 && 'rounded-lg hover:text-gray-700'}`}
+                          className={`text-gray-700 rounded-xl p-2 ${projects.length > 0 && attributes.length === 0 && 'rounded-lg hover:text-gray-700'}`}
                           variant="text"
                         >
                           <PencilSimple size={16} className="shrink-0" />
@@ -243,7 +243,7 @@ function Page() {
                         <Button
                           onClick={() => handleDeleteAttribute(attribute)}
                           disabled={isLoading}
-                          className={`text-gray-700 rounded-xl p-2 ${reports.length > 0 && attributes.length === 0 && 'rounded-lg hover:text-gray-700'}`}
+                          className={`text-gray-700 rounded-xl p-2 ${projects.length > 0 && attributes.length === 0 && 'rounded-lg hover:text-gray-700'}`}
                           variant="text"
                         >
                           <X size={16} className="shrink-0" />
@@ -256,7 +256,7 @@ function Page() {
                   <Button
                     onClick={sustainabilityReportAttributeModal.onOpen}
                     disabled={isLoading}
-                    className={`flex gap-2 text-gray-700 rounded-none border-l-[1px] border-gray-300 ${reports.length > 0 && attributes.length === 0 && 'border-2 border-blue-900 rounded-lg hover:text-gray-700'}`}
+                    className={`flex gap-2 text-gray-700 rounded-none border-l-[1px] border-gray-300 ${projects.length > 0 && attributes.length === 0 && 'border-2 border-blue-900 rounded-lg hover:text-gray-700'}`}
                     variant="text"
                   >
                     <Plus size={16} className="shrink-0" /> New Attribute
@@ -265,8 +265,8 @@ function Page() {
               </tr>
             </thead>
             <tbody>
-              {reports.map(({ reportResults, status, name }, index) => {
-                const isLast = index === reports.length - 1;
+              {projects.map(({ projectResults, status, name, reports }, index) => {
+                const isLast = index === projects.length - 1;
                 const classes = isLast ? 'p-4' : 'p-4 border-b border-blue-gray-50';
 
                 return (
@@ -280,28 +280,40 @@ function Page() {
                         {name}
                       </Typography>
                     </td>
+                    <td className={`${classes} w-[250px]`}>
+                      <div className="flex flex-wrap gap-2 max-w-[250px] max-h-[200px] overflow-y-auto">
+                        {reports.map((report, i) => (
+                          <div key={i} className="bg-blue-gray-50 px-2 py-1 rounded-full w-fit">
+                            <Typography variant="paragraph" color="blue-gray" className="font-normal whitespace-nowrap">
+                              {report.name}
+                            </Typography>
+                          </div>
+                        ))}
+                      </div>
+                    </td>
+
                     {attributes.map((attribute: Attribute, index: number) => (
                       <td className={classes} key={index + name}>
-                        {attribute.id in reportResults && isNotEmpty(reportResults[attribute.id]) ? (
-                          <div>{reportResults[attribute.id]}</div>
+                        {attribute.id in projectResults && isNotEmpty(projectResults[attribute.id]) ? (
+                          <div>{projectResults[attribute.id]}</div>
                         ) : (
                           <div
                             className={`w-full h-[32px] rounded-lg bg-gray-300 flex justify-center items-center text-gray-600 ${status === GenerationStatus.GENERATING && ' bg-gray-400 animate-pulse'}`}
                           >
-                            {attribute.name in reportResults && 'None'}
+                            {attribute.name in projectResults && 'None'}
                           </div>
                         )}
                       </td>
                     ))}
                     <td className={'p-4 w-auto sticky right-0 z-10 bg-white'}>
-                      {attributes.length > 0 && reports.length > 0 && (
+                      {attributes.length > 0 && projects.length > 0 && (
                         <div className="h-full flex flex-row items-center justify-end">
                           <div className="h-full flex gap-2">
                             <Button
                               className="bg-blue-900"
                               size="sm"
-                              disabled={isLoading || !checkNewAttributesForReport(reports[index])}
-                              onClick={() => handleGenerateNew(index)}
+                              disabled={isLoading || !checkNewAttributesForReport(projects[index])}
+                              onClick={() => handleGenerateNew(projects[index].id)}
                               loading={status === GenerationStatus.GENERATING}
                             >
                               <span className="flex gap-2">
@@ -312,7 +324,7 @@ function Page() {
                               className="bg-blue-900"
                               size="sm"
                               disabled={isLoading}
-                              onClick={() => handleRegenerate(index)}
+                              onClick={() => handleRegenerate(projects[index].id)}
                               loading={status === GenerationStatus.GENERATING}
                             >
                               <span className="flex gap-2">
@@ -326,7 +338,7 @@ function Page() {
                   </tr>
                 );
               })}
-              {reports.length === 0 && (
+              {projects.length === 0 && (
                 <>
                   <tr className="w-full h-[50px] border-b border-blue-gray-100"></tr>
                   <tr className="w-full h-[50px] border-b border-blue-gray-100">

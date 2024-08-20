@@ -1,11 +1,11 @@
 import { useState, useCallback, useEffect } from 'react';
 import useSustainabilityStore from './sustainabilityReportStore';
-import { getReports } from '@/app/actions/sustainabilityReport/getReports';
 import { getAttributes } from '@/app/actions/sustainabilityReport/getAttributes';
-import { GenerationStatus, RawReport, Report, Attribute } from '@/app/types/SustainabilityReportTypes';
+import { GenerationStatus, Attribute, Project } from '@/app/types/SustainabilityReportTypes';
+import { getProjects } from '@/app/actions/sustainabilityReport/getProjects';
 
 const useFetchSustainabilityData = () => {
-  const { addReports, reports, userId, attributes, addAttributes } = useSustainabilityStore();
+  const { addReports, reports, userId, attributes, addAttributes, projects, addProjects } = useSustainabilityStore();
   const [attributesFetched, setAttributesFetched] = useState(false);
 
   const fetchAttributes = useCallback(async () => {
@@ -32,60 +32,63 @@ const useFetchSustainabilityData = () => {
     }
   }, [userId, addAttributes, attributes]);
 
-  const fetchReports = useCallback(async () => {
+  const fetchProjects = useCallback(async () => {
     // Ensure attributes are fetched before fetching reports
     if (!attributesFetched) {
       await fetchAttributes(); // Fetch attributes if they haven't been fetched yet
     }
 
     try {
-      const getReportsResponse = await getReports({ userId });
-      const { reports: rawReports }: { reports: RawReport[] } = getReportsResponse;
+      const getProjectsResponse = await getProjects({ userId });
+      const { projects: rawProjects }: { projects: Project[] } = getProjectsResponse;
 
-      const existingReportIds = new Set(reports.map((report) => report.id));
-      const newReports: Report[] = rawReports
-        .filter((rawReport) => !existingReportIds.has(rawReport.reportId))
-        .map((rawReport) => ({
-          id: rawReport.reportId,
-          name: rawReport.originalFileName,
-          status: GenerationStatus.READY,
-          reportResults: rawReport.results,
+      const existingProjectIds = new Set(projects.map((project) => project.id));
+      const newProjects: Project[] = rawProjects
+        .filter((rawProject) => !existingProjectIds.has(rawProject.id))
+        .map((rawProject) => ({
+          ...rawProject,
+          reports: [
+            ...rawProject.reports.map((report) => ({
+              ...report,
+              status: GenerationStatus.READY,
+            })),
+          ],
         }));
 
-      if (attributes.length > 0) {
-        newReports.forEach((report) => {
-          Object.keys(report.reportResults).forEach((key) => {
-            const isKeyInAttributes = attributes.some((attribute) => attribute.id === key);
-            if (!isKeyInAttributes) {
-              console.log('Deleting key:', key);
-              delete report.reportResults[key];
-            }
-          });
-        });
-      }
+      // if (attributes.length > 0) {
+      //   newProjects.forEach((report) => {
+      //     Object.keys(report.reportResults).forEach((key) => {
+      //       const isKeyInAttributes = attributes.some((attribute) => attribute.name === key);
+      //       if (!isKeyInAttributes) {
+      //         console.log('Deleting key:', key);
+      //         delete report.reportResults[key];
+      //       }
+      //     });
+      //   });
+      // }
 
-      if (newReports.length > 0) {
-        console.log('Adding new reports:', newReports);
-        addReports(newReports);
+      if (newProjects.length > 0) {
+        console.log('Adding projects:', newProjects);
+        addProjects(newProjects);
       }
     } catch (error) {
       console.error('Error fetching or adding reports:', error);
     }
   }, [userId, addReports, reports, attributes, fetchAttributes, attributesFetched]);
 
-  const fetchAttributesThenReports = useCallback(async () => {
+  const fetchAttributesThenProjects = useCallback(async () => {
     await fetchAttributes();
-    await fetchReports();
-  }, [fetchAttributes, fetchReports]);
+    await fetchProjects();
+  }, [fetchAttributes, fetchProjects]);
 
   useEffect(() => {
     // Fetch reports whenever attributes have been successfully fetched
     if (attributesFetched) {
-      fetchReports();
+      fetchProjects();
     }
-  }, [attributesFetched, fetchReports]);
+  }, [attributesFetched, fetchProjects]);
 
-  return { fetchAttributes, fetchReports, fetchAttributesThenReports };
+  return { fetchAttributes, fetchProjects, fetchAttributesThenProjects };
 };
 
 export default useFetchSustainabilityData;
