@@ -19,6 +19,8 @@ import SustainabilityUpdateAttributeModal from '@/app/components/modals/sustaina
 import useSustainabilityUpdateAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityUpdateAttributeModal';
 import SustainabilityReportDeleteModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportDeleteModal';
 import useSustainabilityReportDeleteModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportDeleteModal';
+import SustainabilityReportAddFileModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportAddFileModal';
+import FilesContainer from '@/app/components/SustainabilityReport/FilesContainer';
 
 function Page() {
   const { projects, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
@@ -84,7 +86,6 @@ function Page() {
         }
       }
       const response = await generateAttributes({ userId, projectIds: projectIds, rerunAll });
-      console.log;
       const results = response.attributesGenerated;
 
       for (const projectId in results) {
@@ -149,13 +150,16 @@ function Page() {
     return false;
   }
 
-  const checkNewAttributesForReport = (project: Project): boolean => {
-    return attributes.length > Object.keys(project.projectResults).length;
+  const checkNewAttributesForProject = (project: Project): boolean => {
+    return (
+      attributes.length >
+      Object.keys(project.projectResults).filter((key) => project.projectResults[key] !== null).length
+    );
   };
 
   const checkNewAttributes = () => {
     for (const project of projects) {
-      if (checkNewAttributesForReport(project)) return true;
+      if (checkNewAttributesForProject(project)) return true;
     }
     return false;
   };
@@ -177,6 +181,7 @@ function Page() {
       <SustainabilityReportProjectModal />
       <SustainabilityUpdateAttributeModal />
       <SustainabilityReportDeleteModal />
+      <SustainabilityReportAddFileModal />
       <Title label="Sustainability Reports" />
       <div className="mt-8 flex w-full justify-between">
         <Button
@@ -265,7 +270,7 @@ function Page() {
               </tr>
             </thead>
             <tbody>
-              {projects.map(({ projectResults, status, name, reports }, index) => {
+              {projects.map(({ projectResults, status, name, reports, id }, index) => {
                 const isLast = index === projects.length - 1;
                 const classes = isLast ? 'p-4' : 'p-4 border-b border-blue-gray-50';
 
@@ -280,16 +285,8 @@ function Page() {
                         {name}
                       </Typography>
                     </td>
-                    <td className={`${classes} w-[250px]`}>
-                      <div className="flex flex-wrap gap-2 max-w-[250px] max-h-[200px] overflow-y-auto">
-                        {reports.map((report, i) => (
-                          <div key={i} className="bg-blue-gray-50 px-2 py-1 rounded-full w-fit">
-                            <Typography variant="paragraph" color="blue-gray" className="font-normal whitespace-nowrap">
-                              {report.name}
-                            </Typography>
-                          </div>
-                        ))}
-                      </div>
+                    <td className={`${classes} w-[250px] h-auto`}>
+                      <FilesContainer reports={reports} projectId={id} />
                     </td>
 
                     {attributes.map((attribute: Attribute, index: number) => (
@@ -300,7 +297,7 @@ function Page() {
                           <div
                             className={`w-full h-[32px] rounded-lg bg-gray-300 flex justify-center items-center text-gray-600 ${status === GenerationStatus.GENERATING && ' bg-gray-400 animate-pulse'}`}
                           >
-                            {attribute.name in projectResults && 'None'}
+                            {status !== GenerationStatus.GENERATING && 'None'}
                           </div>
                         )}
                       </td>
@@ -312,7 +309,7 @@ function Page() {
                             <Button
                               className="bg-blue-900"
                               size="sm"
-                              disabled={isLoading || !checkNewAttributesForReport(projects[index])}
+                              disabled={isLoading || !checkNewAttributesForProject(projects[index])}
                               onClick={() => handleGenerateNew(projects[index].id)}
                               loading={status === GenerationStatus.GENERATING}
                             >
