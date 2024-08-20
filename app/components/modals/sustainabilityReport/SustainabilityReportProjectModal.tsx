@@ -96,18 +96,18 @@ const SustainabilityReportProjectModal = () => {
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
-      <Heading title="New Project" subtitle="" center />
+      <Heading title="New Company" subtitle="" center />
       {SustainabilityReportProjectModal.projectModalState === ProjectModalState.ADD_FILES && (
         <>
           <Input
             id="project-name"
-            label="Project Name"
+            label="Company Name"
             error={errors['project-name'] !== undefined}
             {...register('project-name', { required: true })}
           />
           <Textarea
             id="project-description"
-            label="Project Description"
+            label="Company Description"
             error={errors['project-description'] !== undefined}
             {...register('project-description', { required: true })}
             size="md"
@@ -144,7 +144,7 @@ const SustainabilityReportProjectModal = () => {
       disabled={isLoading}
       isOpen={SustainabilityReportProjectModal.isOpen}
       title=""
-      actionLabel={`Add Project`}
+      actionLabel={`Add Company`}
       onClose={handleClose}
       onSubmit={handleSubmit(onSubmit)}
       body={bodyContent}
