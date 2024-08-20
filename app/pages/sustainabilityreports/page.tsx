@@ -216,7 +216,7 @@ function Page() {
           <table className="w-full min-w-max table-auto text-left">
             <thead className="sticky top-0 z-20">
               <tr className="border-b border-blue-gray-100 bg-blue-gray-50">
-                <th className="p-4 max-w-[175px] sticky left-0 z-30 bg-blue-gray-50">
+                <th className="p-4 min-w-[125px] max-w-[175px] sticky left-0 z-30 bg-blue-gray-50">
                   <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70 ">
                     Company
                   </Typography>
@@ -227,7 +227,7 @@ function Page() {
                   </Typography>
                 </th>
                 {attributes.map((attribute: Attribute, i) => (
-                  <th key={attribute.name + i} className="relative group p-4 w-[150px] xl:w-[225px]">
+                  <th key={attribute.name + i} className="relative group p-4 w-[200px] xl:w-[300px]">
                     <div className="h-full flex items-center justify-between">
                       <Typography
                         variant="small"
@@ -275,34 +275,36 @@ function Page() {
                 const classes = isLast ? 'p-4' : 'p-4 border-b border-blue-gray-50';
 
                 return (
-                  <tr key={index} className="border-b border-blue-gray-100">
+                  <tr key={index} className="border-b border-blue-gray-100 max-h-[300px]">
                     <td className={`${classes} sticky left-0 z-10 bg-white`}>
                       <Typography
                         variant="paragraph"
                         color="blue-gray"
-                        className="font-normal  w-full overflow-auto text-nowrap"
+                        className="font-normal w-full overflow-auto text-nowrap"
                       >
                         {name}
                       </Typography>
                     </td>
-                    <td className={`${classes} w-[250px] h-auto`}>
+                    <td className={`${classes} w-[250px] h-auto max-h-[300px] overflow-y-auto`}>
                       <FilesContainer reports={reports} projectId={id} />
                     </td>
 
                     {attributes.map((attribute: Attribute, index: number) => (
-                      <td className={classes} key={index + name}>
+                      <td className={`${classes} max-h-[300px] overflow-y-auto`} key={index + name}>
                         {attribute.id in projectResults && isNotEmpty(projectResults[attribute.id]) ? (
-                          <div>{projectResults[attribute.id]}</div>
+                          <div className="max-h-[300px] overflow-y-auto">{projectResults[attribute.id]}</div>
                         ) : (
                           <div
-                            className={`w-full h-[32px] rounded-lg bg-gray-300 flex justify-center items-center text-gray-600 ${status === GenerationStatus.GENERATING && ' bg-gray-400 animate-pulse'}`}
+                            className={`w-full h-[32px] rounded-lg bg-gray-300 flex justify-center items-center text-gray-600 ${
+                              status === GenerationStatus.GENERATING && 'bg-gray-400 animate-pulse'
+                            }`}
                           >
                             {status !== GenerationStatus.GENERATING && 'None'}
                           </div>
                         )}
                       </td>
                     ))}
-                    <td className={'p-4 w-auto sticky right-0 z-10 bg-white'}>
+                    <td className={'p-4 w-auto sticky right-0 z-10 bg-white max-h-[300px] overflow-y-auto'}>
                       {attributes.length > 0 && projects.length > 0 && (
                         <div className="h-full flex flex-row items-center justify-end">
                           <div className="h-full flex gap-2">
