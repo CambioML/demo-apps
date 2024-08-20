@@ -17,6 +17,8 @@ interface FormModalProps {
   secondaryAction?: () => void;
   secondaryActionLabel?: string;
   redAction?: boolean;
+  actionDisabled?: boolean;
+  secondaryActionDisabled?: boolean;
 }
 
 const FormModal: React.FC<FormModalProps> = ({
@@ -31,6 +33,8 @@ const FormModal: React.FC<FormModalProps> = ({
   secondaryAction,
   secondaryActionLabel,
   redAction = false,
+  actionDisabled = false,
+  secondaryActionDisabled = false,
 }) => {
   const [showModal, setShowModal] = useState(isOpen);
   const thisRef = useOutsideClickModal(() => {
@@ -166,7 +170,7 @@ const FormModal: React.FC<FormModalProps> = ({
                 >
                   {secondaryAction && secondaryActionLabel && (
                     <Button
-                      disabled={disabled}
+                      disabled={disabled || secondaryActionDisabled}
                       onClick={handleSecondaryAction}
                       className="flex-1 text-base"
                       variant="outlined"
@@ -175,7 +179,7 @@ const FormModal: React.FC<FormModalProps> = ({
                     </Button>
                   )}
                   <Button
-                    disabled={disabled}
+                    disabled={disabled || actionDisabled}
                     onClick={handleSubmit}
                     className={`flex-1 text-base ${redAction ? 'bg-red-900' : 'bg-blue-900'}`}
                   >

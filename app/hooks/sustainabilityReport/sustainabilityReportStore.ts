@@ -1,30 +1,39 @@
 import { create } from 'zustand';
-import { Report, GenerationStatus, Attribute } from '@/app/types/SustainabilityReportTypes';
+import { Report, GenerationStatus, Attribute, Project } from '@/app/types/SustainabilityReportTypes';
 
 interface SustainabilityStoreState {
   userId: string;
   reports: Report[];
+  projects: Project[];
   reportsToAdd: File[];
   attributes: Attribute[];
   setUserId: (userId: string) => void;
   addReports: (newReports: Report[]) => void;
+  addProjects: (newProjects: Project[]) => void;
   addAttributes: (newAttributes: Attribute[]) => void;
   updateStoreAttribute: (attributeId: string, newAttribute: Attribute) => void;
   deleteStoreAttribute: (attributeId: string) => void;
   addReportsToAdd: (newReports: File[]) => void;
   setReportsToAdd: (newReports: File[]) => void;
-  updateStatus: (reportId: string, status: GenerationStatus) => void;
-  updateResults: (reportId: string, results: { [key: string]: string }) => void;
+  updateStatus: (projectId: string, status: GenerationStatus) => void;
+  updateResults: (projectId: string, results: { [key: string]: string }) => void;
   isLoading: boolean;
   setIsLoading: (isLoading: boolean) => void;
 }
 
 const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
   userId: '',
+  projects: [],
   reports: [],
   reportsToAdd: [],
   attributes: [],
   setUserId: (userId) => set({ userId }),
+  addProjects: (newProjects) =>
+    set((state) => {
+      const existingProjectIds = new Set(state.projects.map((project) => project.id));
+      const filteredProjects = newProjects.filter((project) => !existingProjectIds.has(project.id));
+      return { projects: [...state.projects, ...filteredProjects] };
+    }),
   addAttributes: (newAttributes) =>
     set((state) => {
       const existingAttributeIds = new Set(state.attributes.map((attribute) => attribute.id));
@@ -48,13 +57,15 @@ const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
   isLoading: false,
   addReportsToAdd: (newReports) => set((state) => ({ reportsToAdd: [...state.reportsToAdd, ...newReports] })),
   setReportsToAdd: (newReports) => set({ reportsToAdd: newReports }),
-  updateResults: (reportId, results) =>
+  updateResults: (projectId, results) =>
     set((state) => ({
-      reports: state.reports.map((report) => (report.id === reportId ? { ...report, reportResults: results } : report)),
+      projects: state.projects.map((project) =>
+        project.id === projectId ? { ...project, projectResults: results } : project
+      ),
     })),
-  updateStatus: (reportId, status) =>
+  updateStatus: (projectId, status) =>
     set((state) => ({
-      reports: state.reports.map((report) => (report.id === reportId ? { ...report, status } : report)),
+      projects: state.projects.map((project) => (project.id === projectId ? { ...project, status } : project)),
     })),
   setIsLoading: (isLoading) => set({ isLoading }),
 }));

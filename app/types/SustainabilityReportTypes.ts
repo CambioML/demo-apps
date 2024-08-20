@@ -7,8 +7,24 @@ export enum GenerationStatus {
 export type Report = {
   id: string;
   name: string;
-  reportResults: { [key: string]: string };
+};
+
+export type Project = {
+  id: string;
+  name: string;
+  description: string;
+  projectResults: { [key: string]: string };
+  reports: Report[];
   status: GenerationStatus;
+};
+
+export type RawProject = {
+  id: string;
+  name: string;
+  description: string;
+  lastUpdateAt: string;
+  createdAt: string;
+  userId: string;
 };
 
 export type Attribute = {
