@@ -1,6 +1,8 @@
 import React from 'react';
 import { Typography } from '@material-tailwind/react';
 import { Report } from '@/app/types/SustainabilityReportTypes';
+import useSustainabilityReportDeleteModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportDeleteModal';
+import { X } from '@phosphor-icons/react';
 
 function truncateMiddle(text: string, maxLength = 25) {
   if (text.length <= maxLength) return text;
@@ -11,14 +13,29 @@ function truncateMiddle(text: string, maxLength = 25) {
 
 interface FileTagProps {
   report: Report;
+  projectId: string;
 }
 
-const FileTag = ({ report }: FileTagProps) => {
+const FileTag = ({ report, projectId }: FileTagProps) => {
+  const sustainabilityReportDeleteModal = useSustainabilityReportDeleteModal();
+
+  const handleDeleteReport = () => {
+    console.log('Deleting report:', report);
+    sustainabilityReportDeleteModal.setProjectId(projectId);
+    sustainabilityReportDeleteModal.setDeleteItem(report);
+    sustainabilityReportDeleteModal.onOpen();
+  };
   return (
-    <div className="bg-blue-gray-50 px-2 py-1 rounded-full w-full overflow-hidden flex items-center justify-center">
+    <div className="relative bg-blue-gray-50 px-2 py-1 rounded-full w-full overflow-hidden flex items-center justify-center group">
       <Typography variant="paragraph" color="blue-gray" className="font-normal whitespace-nowrap overflow-hidden">
         {truncateMiddle(report.name, 25)}
       </Typography>
+      <div
+        onClick={handleDeleteReport}
+        className="absolute right-2 bg-blue-gray-50 p-2 rounded-md cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+      >
+        <X size={16} />
+      </div>
     </div>
   );
 };

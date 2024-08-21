@@ -44,3 +44,24 @@ export type RawReport = {
   uploadedTimestamp: string;
   userId: string;
 };
+
+export function isReport(obj: any): obj is Report {
+  return obj && typeof obj.id === 'string' && typeof obj.name === 'string';
+}
+
+export function isProject(obj: any): obj is Project {
+  return (
+    obj &&
+    typeof obj.id === 'string' &&
+    typeof obj.name === 'string' &&
+    typeof obj.description === 'string' &&
+    typeof obj.projectResults === 'object' &&
+    Array.isArray(obj.reports) &&
+    obj.reports.every(isReport) &&
+    Object.values(GenerationStatus).includes(obj.status)
+  );
+}
+
+export function isAttribute(obj: any): obj is Attribute {
+  return obj && typeof obj.id === 'string' && typeof obj.name === 'string' && typeof obj.description === 'string';
+}
