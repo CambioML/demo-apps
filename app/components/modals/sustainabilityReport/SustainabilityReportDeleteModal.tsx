@@ -37,7 +37,6 @@ const SustainabilityReportDeleteModal = () => {
           projectId: SustainabilityReportDeleteModal.projectId,
           reportIds: [deleteItemId],
         });
-        console.log('deleting report', JSON.stringify(SustainabilityReportDeleteModal.deleteItem));
       }
       SustainabilityReportDeleteModal.onClose();
       fetch;
