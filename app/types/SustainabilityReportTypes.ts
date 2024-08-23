@@ -46,7 +46,16 @@ export type RawReport = {
 };
 
 export function isReport(obj: any): obj is Report {
-  return obj && typeof obj.id === 'string' && typeof obj.name === 'string';
+  // Ensure obj has the Report-specific fields
+  return (
+    obj &&
+    typeof obj.id === 'string' &&
+    typeof obj.name === 'string' &&
+    !('projectResults' in obj) && // Ensure it doesn't have Project-specific fields
+    !('reports' in obj) &&
+    !('type' in obj) && // Ensure it doesn't have Attribute-specific fields
+    !('description' in obj)
+  );
 }
 
 export function isProject(obj: any): obj is Project {
@@ -55,13 +64,18 @@ export function isProject(obj: any): obj is Project {
     typeof obj.id === 'string' &&
     typeof obj.name === 'string' &&
     typeof obj.description === 'string' &&
-    typeof obj.projectResults === 'object' &&
-    Array.isArray(obj.reports) &&
-    obj.reports.every(isReport) &&
-    Object.values(GenerationStatus).includes(obj.status)
+    typeof obj.projectResults === 'object'
   );
 }
 
 export function isAttribute(obj: any): obj is Attribute {
-  return obj && typeof obj.id === 'string' && typeof obj.name === 'string' && typeof obj.description === 'string';
+  return (
+    obj &&
+    typeof obj.id === 'string' &&
+    typeof obj.name === 'string' &&
+    typeof obj.description === 'string' &&
+    !('projectResults' in obj) && // Ensure it doesn't have Project-specific fields
+    !('reports' in obj) && // Ensure it doesn't have Project-specific fields
+    !('status' in obj)
+  ); // Ensure it doesn't have Project-specific fields
 }
