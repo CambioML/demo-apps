@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
-import { isAttribute, isReport } from '@/app/types/SustainabilityReportTypes';
+import { isAttribute, isReport, isProject } from '@/app/types/SustainabilityReportTypes';
 
 import FormModal from '../FormModal';
 import Heading from '../../Heading';
@@ -13,11 +13,12 @@ import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabil
 import { deleteAttribute } from '@/app/actions/sustainabilityReport/deleteAttribute';
 import { deleteReports } from '@/app/actions/sustainabilityReport/deleteReports';
 import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
+import { deleteProjects } from '@/app/actions/sustainabilityReport/deleteProjects';
 
 const SustainabilityReportDeleteModal = () => {
   const SustainabilityReportDeleteModal = useSustainabilityReportDeleteModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { userId, deleteStoreAttribute } = useSustainabilityStore();
+  const { userId, deleteStoreAttribute, deleteStoreProject, deleteStoreReport } = useSustainabilityStore();
   const { fetchAttributesThenProjects } = useFetchSustainabilityData();
   const { handleSubmit, reset } = useForm<FieldValues>({});
 
@@ -25,18 +26,30 @@ const SustainabilityReportDeleteModal = () => {
     try {
       setIsLoading(true);
       const deleteItemId = SustainabilityReportDeleteModal.deleteItem?.id;
+      console.log('DELETING', deleteItemId);
       if (!deleteItemId) {
         throw new Error('Delete ID is missing');
       }
-      if (isAttribute(SustainabilityReportDeleteModal.deleteItem)) {
-        await deleteAttribute({ userId, attributeId: deleteItemId });
-        deleteStoreAttribute(deleteItemId);
+      if (isProject(SustainabilityReportDeleteModal.deleteItem)) {
+        console.log('Deleting project', deleteItemId, userId);
+        await deleteProjects({
+          userId,
+          projectIds: [deleteItemId],
+        });
+        deleteStoreProject(deleteItemId);
       } else if (isReport(SustainabilityReportDeleteModal.deleteItem)) {
+        console.log('deleting report');
+
         await deleteReports({
           userId,
           projectId: SustainabilityReportDeleteModal.projectId,
           reportIds: [deleteItemId],
         });
+        deleteStoreReport(deleteItemId);
+      } else if (isAttribute(SustainabilityReportDeleteModal.deleteItem)) {
+        console.log('deleting attribute');
+        await deleteAttribute({ userId, attributeId: deleteItemId });
+        deleteStoreAttribute(deleteItemId);
       }
       SustainabilityReportDeleteModal.onClose();
       fetch;

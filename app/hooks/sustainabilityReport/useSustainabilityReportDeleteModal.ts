@@ -1,13 +1,13 @@
-import { Attribute, Report } from '@/app/types/SustainabilityReportTypes';
+import { Attribute, Project, Report } from '@/app/types/SustainabilityReportTypes';
 import { create } from 'zustand';
 
 interface SustainabilityReportDeleteModalStore {
   isOpen: boolean;
-  deleteItem: Attribute | Report | null;
+  deleteItem: Attribute | Report | Project | null;
   projectId: string;
   onOpen: () => void;
   onClose: () => void;
-  setDeleteItem: (deleteItem: Attribute | Report) => void;
+  setDeleteItem: (deleteItem: Attribute | Report | Project) => void;
   setProjectId: (projectId: string) => void;
 }
 
@@ -17,7 +17,7 @@ const useSustainabilityReportDeleteModal = create<SustainabilityReportDeleteModa
   projectId: '',
   onOpen: () => set({ isOpen: true }),
   onClose: () => set({ isOpen: false }),
-  setDeleteItem: (deleteItem: Attribute | Report) => set({ deleteItem }),
+  setDeleteItem: (deleteItem: Attribute | Report | Project) => set({ deleteItem }),
   setProjectId: (projectId: string) => set({ projectId }),
 }));
 

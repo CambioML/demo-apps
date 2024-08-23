@@ -21,6 +21,7 @@ import SustainabilityReportDeleteModal from '@/app/components/modals/sustainabil
 import useSustainabilityReportDeleteModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportDeleteModal';
 import SustainabilityReportAddFileModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportAddFileModal';
 import FilesContainer from '@/app/components/SustainabilityReport/FilesContainer';
+import ProjectContainer from '@/app/components/SustainabilityReport/ProjectContainer';
 
 function Page() {
   const { projects, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
@@ -157,6 +158,17 @@ function Page() {
     );
   };
 
+  const checkFilesForProject = (project: Project): boolean => {
+    return project.reports.length > 0;
+  };
+
+  const checkFilesForAllProjects = () => {
+    for (const project of projects) {
+      if (checkFilesForProject(project)) return true;
+    }
+    return false;
+  };
+
   const checkNewAttributes = () => {
     for (const project of projects) {
       if (checkNewAttributesForProject(project)) return true;
@@ -194,7 +206,13 @@ function Page() {
         <div className="flex gap-2">
           <Button
             onClick={handleGenerateNewAll}
-            disabled={isLoading || attributes.length === 0 || projects.length === 0 || !checkNewAttributes()}
+            disabled={
+              isLoading ||
+              attributes.length === 0 ||
+              projects.length === 0 ||
+              !checkNewAttributes() ||
+              !checkFilesForAllProjects()
+            }
             className="flex gap-2 bg-blue-900"
           >
             Generate New
@@ -202,7 +220,7 @@ function Page() {
           </Button>
           <Button
             onClick={handleRegenerateAll}
-            disabled={isLoading || attributes.length === 0 || projects.length === 0}
+            disabled={isLoading || attributes.length === 0 || projects.length === 0 || !checkFilesForAllProjects()}
             className="flex gap-2 bg-blue-900"
           >
             Regenerate All
@@ -270,36 +288,30 @@ function Page() {
               </tr>
             </thead>
             <tbody>
-              {projects.map(({ projectResults, status, name, reports, id }, index) => {
+              {projects.map((project, index) => {
                 const isLast = index === projects.length - 1;
                 const classes = isLast ? 'p-4' : 'p-4 border-b border-blue-gray-50';
 
                 return (
                   <tr key={index} className="border-b border-blue-gray-100 max-h-[300px]">
                     <td className={`${classes} sticky left-0 z-10 bg-white`}>
-                      <Typography
-                        variant="paragraph"
-                        color="blue-gray"
-                        className="font-normal w-full overflow-auto text-nowrap"
-                      >
-                        {name}
-                      </Typography>
+                      <ProjectContainer project={project} />
                     </td>
                     <td className={`${classes} w-[250px] h-auto max-h-[300px] overflow-y-auto`}>
-                      <FilesContainer reports={reports} projectId={id} />
+                      <FilesContainer reports={project.reports} projectId={project.id} />
                     </td>
 
                     {attributes.map((attribute: Attribute, index: number) => (
-                      <td className={`${classes} max-h-[300px] overflow-y-auto`} key={index + name}>
-                        {attribute.id in projectResults && isNotEmpty(projectResults[attribute.id]) ? (
-                          <div className="max-h-[300px] overflow-y-auto">{projectResults[attribute.id]}</div>
+                      <td className={`${classes} max-h-[300px] overflow-y-auto`} key={index + project.name}>
+                        {attribute.id in project.projectResults && isNotEmpty(project.projectResults[attribute.id]) ? (
+                          <div className="max-h-[300px] overflow-y-auto">{project.projectResults[attribute.id]}</div>
                         ) : (
                           <div
                             className={`w-full h-[32px] rounded-lg bg-gray-300 flex justify-center items-center text-gray-600 ${
-                              status === GenerationStatus.GENERATING && 'bg-gray-400 animate-pulse'
+                              project.status === GenerationStatus.GENERATING && 'bg-gray-400 animate-pulse'
                             }`}
                           >
-                            {status !== GenerationStatus.GENERATING && 'None'}
+                            {project.status !== GenerationStatus.GENERATING && 'None'}
                           </div>
                         )}
                       </td>
@@ -311,23 +323,28 @@ function Page() {
                             <Button
                               className="bg-blue-900"
                               size="sm"
-                              disabled={isLoading || !checkNewAttributesForProject(projects[index])}
+                              disabled={
+                                isLoading ||
+                                !checkNewAttributesForProject(projects[index]) ||
+                                !checkFilesForProject(projects[index])
+                              }
                               onClick={() => handleGenerateNew(projects[index].id)}
-                              loading={status === GenerationStatus.GENERATING}
+                              loading={project.status === GenerationStatus.GENERATING}
                             >
                               <span className="flex gap-2">
-                                {status !== GenerationStatus.GENERATING && 'New'} <Sparkle size={16} />
+                                {project.status !== GenerationStatus.GENERATING && 'New'} <Sparkle size={16} />
                               </span>
                             </Button>
                             <Button
                               className="bg-blue-900"
                               size="sm"
-                              disabled={isLoading}
+                              disabled={isLoading || !checkFilesForProject(projects[index])}
                               onClick={() => handleRegenerate(projects[index].id)}
-                              loading={status === GenerationStatus.GENERATING}
+                              loading={project.status === GenerationStatus.GENERATING}
                             >
                               <span className="flex gap-2">
-                                {status !== GenerationStatus.GENERATING && 'All'} <ArrowsCounterClockwise size={16} />
+                                {project.status !== GenerationStatus.GENERATING && 'All'}{' '}
+                                <ArrowsCounterClockwise size={16} />
                               </span>
                             </Button>
                           </div>
