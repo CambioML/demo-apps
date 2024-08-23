@@ -9,13 +9,14 @@ import Heading from '../../Heading';
 import { toast } from 'react-hot-toast';
 import Dropzone from '../../SustainabilityReport/Dropzone';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
-import { Blueprint, CloudArrowUp } from '@phosphor-icons/react';
+import { Blueprint, CloudArrowUp, FileMagnifyingGlass } from '@phosphor-icons/react';
 import { uploadFile } from '@/app/actions/sustainabilityReport/uploadFile';
 import { AxiosError } from 'axios';
 import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 import { addProject } from '@/app/actions/sustainabilityReport/addProject';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import { Input, Textarea } from '@material-tailwind/react';
+import { extractReportContent } from '@/app/actions/sustainabilityReport/extractReportContent';
 
 const SustainabilityReportProjectModal = () => {
   const SustainabilityReportProjectModal = useSustainabilityReportProjectModal();
@@ -59,6 +60,17 @@ const SustainabilityReportProjectModal = () => {
       );
 
       console.log('Uploads complete', uploadResponses);
+      SustainabilityReportProjectModal.setProjectModalState(ProjectModalState.EXTRACTING_CONTENT);
+      console.log('Extracting content:', reportsToAdd);
+
+      // Capture responses from uploadFile
+      const extractionResponse = await extractReportContent({
+        projectId: projectResponse.projectId,
+        userId: userId,
+        reportIds: uploadResponses.map((response) => response.reportId),
+      });
+
+      console.log('Extraction complete complete', extractionResponse);
       fetchAttributesThenProjects();
     } catch (error) {
       if (error instanceof AxiosError) {
@@ -134,6 +146,12 @@ const SustainabilityReportProjectModal = () => {
         <div className="flex flex-col justify-center items-center gap-4 text-xl">
           Uploading Files
           <CloudArrowUp size={40} className="animate-pulse" />
+        </div>
+      )}
+      {SustainabilityReportProjectModal.projectModalState === ProjectModalState.EXTRACTING_CONTENT && (
+        <div className="flex flex-col justify-center items-center gap-4 text-xl">
+          Extracting Content
+          <FileMagnifyingGlass size={40} className="animate-pulse" />
         </div>
       )}
     </div>

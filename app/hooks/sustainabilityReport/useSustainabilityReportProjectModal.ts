@@ -4,6 +4,7 @@ export enum ProjectModalState {
   ADD_FILES,
   CREATING_PROJECT,
   UPLOADING,
+  EXTRACTING_CONTENT,
   SUCCESS,
 }
 

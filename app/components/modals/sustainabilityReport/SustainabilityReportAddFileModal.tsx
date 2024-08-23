@@ -9,11 +9,12 @@ import Heading from '../../Heading';
 import { toast } from 'react-hot-toast';
 import Dropzone from '../../SustainabilityReport/Dropzone';
 import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
-import { CloudArrowUp } from '@phosphor-icons/react';
+import { CloudArrowUp, FileMagnifyingGlass } from '@phosphor-icons/react';
 import { uploadFile } from '@/app/actions/sustainabilityReport/uploadFile';
 import { AxiosError } from 'axios';
 import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
+import { extractReportContent } from '@/app/actions/sustainabilityReport/extractReportContent';
 
 const SustainabilityReportAddFileModal = () => {
   const SustainabilityReportAddFileModal = useSustainabilityReportAddFileModal();
@@ -40,6 +41,18 @@ const SustainabilityReportAddFileModal = () => {
       );
 
       console.log('Uploads complete', uploadResponses);
+      SustainabilityReportAddFileModal.setAddFileModalState(AddFileModalState.EXTRACTING_CONTENT);
+      console.log('Extracting content:', reportsToAdd);
+
+      // Capture responses from uploadFile
+      const extractionResponse = await extractReportContent({
+        projectId: SustainabilityReportAddFileModal.projectId,
+        userId: userId,
+        reportIds: uploadResponses.map((response) => response.reportId),
+      });
+
+      console.log('Extraction complete complete', extractionResponse);
+      fetchAttributesThenProjects();
       await fetchAttributesThenProjects();
     } catch (error) {
       if (error instanceof AxiosError) {
@@ -100,6 +113,12 @@ const SustainabilityReportAddFileModal = () => {
         <div className="flex flex-col justify-center items-center gap-4 text-xl">
           Uploading Files
           <CloudArrowUp size={40} className="animate-pulse" />
+        </div>
+      )}
+      {SustainabilityReportAddFileModal.addFileModalState === AddFileModalState.EXTRACTING_CONTENT && (
+        <div className="flex flex-col justify-center items-center gap-4 text-xl">
+          Extracting Content
+          <FileMagnifyingGlass size={40} className="animate-pulse" />
         </div>
       )}
     </div>
