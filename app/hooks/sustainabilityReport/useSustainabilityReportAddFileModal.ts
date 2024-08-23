@@ -3,6 +3,7 @@ import { create } from 'zustand';
 export enum AddFileModalState {
   ADD_FILES,
   UPLOADING,
+  EXTRACTING_CONTENT,
   SUCCESS,
 }
 
