@@ -22,6 +22,7 @@ import useSustainabilityReportDeleteModal from '@/app/hooks/sustainabilityReport
 import SustainabilityReportAddFileModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportAddFileModal';
 import FilesContainer from '@/app/components/SustainabilityReport/FilesContainer';
 import ProjectContainer from '@/app/components/SustainabilityReport/ProjectContainer';
+import ResultContainer from '@/app/components/SustainabilityReport/ResultContainer';
 
 function Page() {
   const { projects, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
@@ -304,7 +305,11 @@ function Page() {
                     {attributes.map((attribute: Attribute, index: number) => (
                       <td className={`${classes} max-h-[300px] overflow-y-auto`} key={index + project.name}>
                         {attribute.id in project.projectResults && isNotEmpty(project.projectResults[attribute.id]) ? (
-                          <div className="max-h-[300px] overflow-y-auto">{project.projectResults[attribute.id]}</div>
+                          <ResultContainer
+                            result={project.projectResults[attribute.id]}
+                            projectId={project.id}
+                            attributeId={attribute.id}
+                          />
                         ) : (
                           <div
                             className={`w-full h-[32px] rounded-lg bg-gray-300 flex justify-center items-center text-gray-600 ${

@@ -42,41 +42,52 @@ const useFetchSustainabilityData = () => {
       const getProjectsResponse = await getProjects({ userId });
       const { projects: rawProjects }: { projects: Project[] } = getProjectsResponse;
 
-      const existingProjectIds = new Set(projects.map((project) => project.id));
-      const newProjects: Project[] = rawProjects
-        .filter((rawProject) => !existingProjectIds.has(rawProject.id))
-        .map((rawProject) => ({
-          ...rawProject,
-          reports: [
-            ...rawProject.reports.map((report) => ({
+      // Create a Map for easier lookup of existing projects by ID
+      const existingProjectsMap = new Map(projects.map((project) => [project.id, project]));
+
+      // Prepare updated projects by iterating through rawProjects
+      const updatedProjects: Project[] = rawProjects.map((rawProject) => {
+        const existingProject = existingProjectsMap.get(rawProject.id);
+
+        if (existingProject) {
+          // If the project already exists, merge the content (e.g., update reports)
+          return {
+            ...existingProject,
+            ...rawProject,
+            reports: rawProject.reports.map((report) => ({
               ...report,
               status: GenerationStatus.READY,
             })),
-          ],
-        }));
+          };
+        } else {
+          // If the project is new, add it as a new project
+          return {
+            ...rawProject,
+            reports: rawProject.reports.map((report) => ({
+              ...report,
+              status: GenerationStatus.READY,
+            })),
+          };
+        }
+      });
 
-      // if (attributes.length > 0) {
-      //   newProjects.forEach((report) => {
-      //     Object.keys(report.reportResults).forEach((key) => {
-      //       const isKeyInAttributes = attributes.some((attribute) => attribute.name === key);
-      //       if (!isKeyInAttributes) {
-      //         console.log('Deleting key:', key);
-      //         delete report.reportResults[key];
-      //       }
-      //     });
-      //   });
-      // }
+      // Filter out projects that haven't changed (optional, if needed)
+      const changedProjects = updatedProjects.filter((updatedProject) => {
+        const existingProject = existingProjectsMap.get(updatedProject.id);
+        return !existingProject || JSON.stringify(existingProject) !== JSON.stringify(updatedProject);
+      });
 
-      if (newProjects.length > 0) {
-        console.log('Adding projects:', newProjects);
-        addProjects(newProjects);
+      if (changedProjects.length > 0) {
+        console.log('Updating projects:', changedProjects);
+        addProjects(changedProjects);
       }
     } catch (error) {
-      console.error('Error fetching or adding reports:', error);
+      console.error('Error fetching or updating reports:', error);
     }
   }, [userId, addReports, reports, attributes, fetchAttributes, attributesFetched]);
 
   const fetchAttributesThenProjects = useCallback(async () => {
+    console.log('Fetching attributes then projects');
     await fetchAttributes();
     await fetchProjects();
   }, [fetchAttributes, fetchProjects]);

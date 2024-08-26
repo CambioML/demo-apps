@@ -14,18 +14,21 @@ import { deleteAttribute } from '@/app/actions/sustainabilityReport/deleteAttrib
 import { deleteReports } from '@/app/actions/sustainabilityReport/deleteReports';
 import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 import { deleteProjects } from '@/app/actions/sustainabilityReport/deleteProjects';
+import { deleteResult } from '@/app/actions/sustainabilityReport/deleteResult';
 
 const SustainabilityReportDeleteModal = () => {
   const SustainabilityReportDeleteModal = useSustainabilityReportDeleteModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { userId, deleteStoreAttribute, deleteStoreProject, deleteStoreReport } = useSustainabilityStore();
+  const { userId, deleteStoreAttribute, deleteStoreProject, deleteStoreReport, deleteAttributeForProject } =
+    useSustainabilityStore();
   const { fetchAttributesThenProjects } = useFetchSustainabilityData();
   const { handleSubmit, reset } = useForm<FieldValues>({});
 
   const onSubmit: SubmitHandler<FieldValues> = async () => {
     try {
       setIsLoading(true);
-      const deleteItemId = SustainabilityReportDeleteModal.deleteItem?.id;
+      const deleteItemId =
+        SustainabilityReportDeleteModal.deleteItem?.id || SustainabilityReportDeleteModal.attributeId;
       console.log('DELETING', deleteItemId);
       if (!deleteItemId) {
         throw new Error('Delete ID is missing');
@@ -50,9 +53,13 @@ const SustainabilityReportDeleteModal = () => {
         console.log('deleting attribute');
         await deleteAttribute({ userId, attributeId: deleteItemId });
         deleteStoreAttribute(deleteItemId);
+      } else {
+        console.log('deleting result');
+        const attributeId = SustainabilityReportDeleteModal.attributeId;
+        await deleteResult({ userId, projectId: SustainabilityReportDeleteModal.projectId, attributeId });
+        deleteAttributeForProject(attributeId);
       }
       SustainabilityReportDeleteModal.onClose();
-      fetch;
     } catch (error) {
       toast.error('Delete deleteItem failed. Please try again.');
     } finally {
@@ -68,12 +75,18 @@ const SustainabilityReportDeleteModal = () => {
     SustainabilityReportDeleteModal.onClose();
   };
 
+  const getName = () => {
+    return (
+      SustainabilityReportDeleteModal.deleteItem?.name || SustainabilityReportDeleteModal.attributeId.split('_')[0]
+    );
+  };
+
   const bodyContent = (
     <>
       <div className="flex flex-col gap-4 items-center">
-        <Heading title={`Delete ${SustainabilityReportDeleteModal.deleteItem?.name}`} subtitle="" center />
+        <Heading title={`Delete ${getName()}`} subtitle="" center />
         <Typography color="gray" variant="h5">
-          {`Are you sure you want to delete ${SustainabilityReportDeleteModal.deleteItem?.name}?`}
+          {`Are you sure you want to delete ${getName()}?`}
         </Typography>
       </div>
     </>
