@@ -15,6 +15,7 @@ interface SustainabilityStoreState {
   deleteStoreAttribute: (attributeId: string) => void;
   deleteStoreReport: (reportId: string) => void;
   deleteStoreProject: (projectId: string) => void;
+  deleteAttributeForProject: (attributeId: string) => void;
   addReportsToAdd: (newReports: File[]) => void;
   setReportsToAdd: (newReports: File[]) => void;
   updateStatus: (projectId: string, status: GenerationStatus) => void;
@@ -67,6 +68,16 @@ const useSustainabilityStore = create<SustainabilityStoreState>((set) => ({
     set((state) => ({
       reports: state.reports.filter((report) => report.id !== reportId),
     })),
+  deleteAttributeForProject: (attributeId: string) => {
+    set((state: { projects: Project[] }) => ({
+      projects: state.projects.map((project) => ({
+        ...project,
+        projectResults: Object.fromEntries(
+          Object.entries(project.projectResults).filter(([key]) => key !== attributeId)
+        ),
+      })),
+    }));
+  },
   updateResults: (projectId, results) =>
     set((state) => ({
       projects: state.projects.map((project) =>
