@@ -1,32 +1,30 @@
 'use client';
 
 import { useState } from 'react';
-import useSustainabilityReportProjectModal, {
-  ProjectModalState,
-} from '@/app/hooks/sustainabilityReport/useSustainabilityReportProjectModal';
+import useDashboardProjectModal, { ProjectModalState } from '@/app/hooks/InsightDashboard/useDashboardProjectModal';
 import FormModal from '../FormModal';
 import Heading from '../../Heading';
 import { toast } from 'react-hot-toast';
 import Dropzone from './Dropzone';
-import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
 import { Blueprint, CloudArrowUp, FileMagnifyingGlass } from '@phosphor-icons/react';
 import { uploadFile } from '@/app/actions/sustainabilityReport/uploadFile';
 import { AxiosError } from 'axios';
-import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 import { addProject } from '@/app/actions/sustainabilityReport/addProject';
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 import { Input, Textarea } from '@material-tailwind/react';
 import { extractReportContent } from '@/app/actions/sustainabilityReport/extractReportContent';
+import useFetchData from '@/app/hooks/InsightDashboard/useFetchData';
+import useDashboardStore from '@/app/hooks/InsightDashboard/dashboardStore';
 
-interface SustainabilityReportProjectModalProps {
+interface DashboardProjectModalProps {
   projectLabel: string;
 }
 
-const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: SustainabilityReportProjectModalProps) => {
-  const SustainabilityReportProjectModal = useSustainabilityReportProjectModal();
+const DashboardProjectModal = ({ projectLabel = 'Project' }: DashboardProjectModalProps) => {
+  const DashboardProjectModal = useDashboardProjectModal();
   const [isLoading, setIsLoading] = useState(false);
-  const { reportsToAdd, setReportsToAdd, userId } = useSustainabilityStore();
-  const { fetchAttributesThenProjects } = useFetchSustainabilityData();
+  const { reportsToAdd, setReportsToAdd, userId } = useDashboardStore();
+  const { fetchAllData } = useFetchData();
 
   const {
     register,
@@ -39,8 +37,8 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
     try {
       setIsLoading(true);
       const { 'project-name': projectName, 'project-description': projectDescription } = data;
-      console.log('Creating Project', projectName, projectDescription);
-      SustainabilityReportProjectModal.setProjectModalState(ProjectModalState.CREATING_PROJECT);
+      console.log('Creating Project', projectName, projectDescription, userId);
+      DashboardProjectModal.setProjectModalState(ProjectModalState.CREATING_PROJECT);
 
       const projectResponse = await addProject({
         userId: userId,
@@ -49,7 +47,7 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
       });
 
       console.log('Project created:', projectResponse.projectId);
-      SustainabilityReportProjectModal.setProjectModalState(ProjectModalState.UPLOADING);
+      DashboardProjectModal.setProjectModalState(ProjectModalState.UPLOADING);
       console.log('Uploading reports:', reportsToAdd);
 
       // Capture responses from uploadFile
@@ -64,7 +62,7 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
       );
 
       console.log('Uploads complete', uploadResponses);
-      SustainabilityReportProjectModal.setProjectModalState(ProjectModalState.EXTRACTING_CONTENT);
+      DashboardProjectModal.setProjectModalState(ProjectModalState.EXTRACTING_CONTENT);
       console.log('Extracting content:', reportsToAdd);
 
       // Capture responses from uploadFile
@@ -75,7 +73,7 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
       });
 
       console.log('Extraction complete complete', extractionResponse);
-      fetchAttributesThenProjects();
+      fetchAllData();
     } catch (error) {
       if (error instanceof AxiosError) {
         // Log the AxiosError details
@@ -97,8 +95,8 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
         toast.error('Add company failed. Please try again.');
       }
     } finally {
-      SustainabilityReportProjectModal.setProjectModalState(ProjectModalState.ADD_FILES);
-      SustainabilityReportProjectModal.onClose();
+      DashboardProjectModal.setProjectModalState(ProjectModalState.ADD_FILES);
+      DashboardProjectModal.onClose();
       setReportsToAdd([]);
       setIsLoading(false);
       reset();
@@ -107,13 +105,13 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
 
   const handleClose = () => {
     setReportsToAdd([]);
-    SustainabilityReportProjectModal.onClose();
+    DashboardProjectModal.onClose();
   };
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
       <Heading title={`New ${projectLabel}`} subtitle="" center />
-      {SustainabilityReportProjectModal.projectModalState === ProjectModalState.ADD_FILES && (
+      {DashboardProjectModal.projectModalState === ProjectModalState.ADD_FILES && (
         <>
           <Input
             id="project-name"
@@ -140,19 +138,19 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
           )}
         </>
       )}
-      {SustainabilityReportProjectModal.projectModalState === ProjectModalState.CREATING_PROJECT && (
+      {DashboardProjectModal.projectModalState === ProjectModalState.CREATING_PROJECT && (
         <div className="flex flex-col justify-center items-center gap-4 text-xl">
           Creating {projectLabel}
           <Blueprint size={40} className="animate-pulse" />
         </div>
       )}
-      {SustainabilityReportProjectModal.projectModalState === ProjectModalState.UPLOADING && (
+      {DashboardProjectModal.projectModalState === ProjectModalState.UPLOADING && (
         <div className="flex flex-col justify-center items-center gap-4 text-xl">
           Uploading Files
           <CloudArrowUp size={40} className="animate-pulse" />
         </div>
       )}
-      {SustainabilityReportProjectModal.projectModalState === ProjectModalState.EXTRACTING_CONTENT && (
+      {DashboardProjectModal.projectModalState === ProjectModalState.EXTRACTING_CONTENT && (
         <div className="flex flex-col justify-center items-center gap-4 text-xl">
           Extracting Content
           <FileMagnifyingGlass size={40} className="animate-pulse" />
@@ -164,7 +162,7 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
   return (
     <FormModal
       disabled={isLoading}
-      isOpen={SustainabilityReportProjectModal.isOpen}
+      isOpen={DashboardProjectModal.isOpen}
       title=""
       actionLabel={`Add ${projectLabel}`}
       onClose={handleClose}
@@ -175,4 +173,4 @@ const SustainabilityReportProjectModal = ({ projectLabel = 'Project' }: Sustaina
   );
 };
 
-export default SustainabilityReportProjectModal;
+export default DashboardProjectModal;
