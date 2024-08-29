@@ -1,40 +1,45 @@
 'use client';
-import Title from '../../components/Title';
+import Title from '../Title';
 import { Button, Typography } from '@material-tailwind/react';
-import { DefaultPagination } from '../../components/pagination';
+import { DefaultPagination } from '../pagination';
 import { ArrowsCounterClockwise, PencilSimple, Plus, Sparkle, X } from '@phosphor-icons/react';
 import { Attribute, GenerationStatus, Project } from '@/app/types/SustainabilityReportTypes';
-import SustainabilityReportProjectModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportProjectModal';
-import useSustainabilityReportProjectModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportProjectModal';
-import useSustainabilityStore from '@/app/hooks/sustainabilityReport/sustainabilityReportStore';
-import SustainabilityReportAttributeModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportAttributeModal';
-import useSustainabilityReportAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportAttributeModal';
+import useDashboardStore from '@/app/hooks/InsightDashboard/dashboardStore';
 import { generateAttributes } from '@/app/actions/sustainabilityReport/generateAttributes';
 import { useEffect } from 'react';
-import useFetchSustainabilityData from '@/app/hooks/sustainabilityReport/useFetchSustainabilityData';
 import { postUser } from '@/app/actions/sustainabilityReport/postUser';
 import { AxiosResponse } from 'axios';
-import { getSustainabilityUserId } from '@/app/utils/getCookie';
-import SustainabilityUpdateAttributeModal from '@/app/components/modals/sustainabilityReport/SustainabilityUpdateAttributeModal';
-import useSustainabilityUpdateAttributeModal from '@/app/hooks/sustainabilityReport/useSustainabilityUpdateAttributeModal';
-import SustainabilityReportDeleteModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportDeleteModal';
-import useSustainabilityReportDeleteModal from '@/app/hooks/sustainabilityReport/useSustainabilityReportDeleteModal';
-import SustainabilityReportAddFileModal from '@/app/components/modals/sustainabilityReport/SustainabilityReportAddFileModal';
-import FilesContainer from '@/app/components/SustainabilityReport/FilesContainer';
-import ProjectContainer from '@/app/components/SustainabilityReport/ProjectContainer';
-import ResultContainer from '@/app/components/SustainabilityReport/ResultContainer';
+import { getInsightDashboardUserId } from '@/app/utils/getCookie';
+import FilesContainer from '@/app/components/Dashboard/FilesContainer';
+import ProjectContainer from '@/app/components/Dashboard/ProjectContainer';
+import ResultContainer from '@/app/components/Dashboard/ResultContainer';
+import useDashboardProjectModal from '@/app/hooks/InsightDashboard/useDashboardProjectModal';
+import DashboardProjectModal from '../modals/dashboard/DashboardProjectModal';
+import useDashboardDeleteModal from '@/app/hooks/InsightDashboard/useDashboardDeleteModal';
+import DashboardDeleteModal from '../modals/dashboard/DashboardDeleteModal';
+import DashboardAttributeModal from '../modals/dashboard/DashboardAttributeModal';
+import useDashboardAttributeModal from '@/app/hooks/InsightDashboard/useDashboardAttributeModal';
+import DashboardUpdateAttributeModal from '../modals/dashboard/DashboardUpdateAttributeModal';
+import useDashboardUpdateAttributeModal from '@/app/hooks/InsightDashboard/useDashboardUpdateAttributeModal';
+import DashboardAddFileModal from '../modals/dashboard/DashboardAddFileModal';
 
-function Page() {
+interface DashboardProps {
+  dashboardName: string;
+  projectLabel: string;
+  useFetchData: () => { fetchAllData: () => void };
+}
+
+const Dashboard = ({ dashboardName, projectLabel, useFetchData }: DashboardProps) => {
   const { projects, attributes, isLoading, setIsLoading, updateResults, updateStatus, userId, setUserId } =
-    useSustainabilityStore();
-  const sustainabilityReportUploadModal = useSustainabilityReportProjectModal();
-  const sustainabilityReportAttributeModal = useSustainabilityReportAttributeModal();
-  const sustainabilityUpdateAttributeModal = useSustainabilityUpdateAttributeModal();
-  const sustainabilityReportDeleteModal = useSustainabilityReportDeleteModal();
-  const { fetchAttributesThenProjects } = useFetchSustainabilityData();
+    useDashboardStore();
+  const dashboardProjectModal = useDashboardProjectModal();
+  const dashboardAttributeModal = useDashboardAttributeModal();
+  const dashboardUpdateAttributeModal = useDashboardUpdateAttributeModal();
+  const dashboardDeleteModal = useDashboardDeleteModal();
+  const { fetchAllData } = useFetchData();
 
   const addUser = async () => {
-    const userId = await getSustainabilityUserId();
+    const userId = await getInsightDashboardUserId();
     const response: AxiosResponse = await postUser({ userId });
     if (response.status === 200 || response.status === 201) {
       console.log('User added/created!', response);
@@ -48,7 +53,7 @@ function Page() {
 
   useEffect(() => {
     if (userId) {
-      fetchAttributesThenProjects();
+      fetchAllData();
     }
   }, [userId]);
 
@@ -178,31 +183,31 @@ function Page() {
   };
 
   const handleEditAttribute = (attribute: Attribute) => {
-    sustainabilityUpdateAttributeModal.setAttribute(attribute);
-    sustainabilityUpdateAttributeModal.onOpen();
+    dashboardUpdateAttributeModal.setAttribute(attribute);
+    dashboardUpdateAttributeModal.onOpen();
   };
 
   const handleDeleteAttribute = (attribute: Attribute) => {
     console.log('Deleting attribute:', attribute);
-    sustainabilityReportDeleteModal.setDeleteItem(attribute);
-    sustainabilityReportDeleteModal.onOpen();
+    dashboardDeleteModal.setDeleteItem(attribute);
+    dashboardDeleteModal.onOpen();
   };
 
   return (
     <div className="w-full h-full flex flex-col">
-      <SustainabilityReportAttributeModal />
-      <SustainabilityReportProjectModal projectLabel="Company" />
-      <SustainabilityUpdateAttributeModal />
-      <SustainabilityReportDeleteModal />
-      <SustainabilityReportAddFileModal />
-      <Title label="Sustainability Reports" />
+      <DashboardProjectModal projectLabel={projectLabel} />
+      <DashboardAttributeModal />
+      <DashboardDeleteModal />
+      <DashboardUpdateAttributeModal />
+      <DashboardAddFileModal />
+      <Title label={dashboardName} />
       <div className="mt-8 flex w-full justify-between">
         <Button
-          onClick={sustainabilityReportUploadModal.onOpen}
+          onClick={dashboardProjectModal.onOpen}
           className={`flex gap-2 bg-blue-900 rounded-lg text-white hover:bg-blue-800`}
           variant="text"
         >
-          <Plus size={16} /> New Company
+          <Plus size={16} /> New {projectLabel}
         </Button>
         <div className="flex gap-2">
           <Button
@@ -237,7 +242,7 @@ function Page() {
               <tr className="border-b border-blue-gray-100 bg-blue-gray-50">
                 <th className="p-4 min-w-[125px] max-w-[175px] sticky left-0 z-30 bg-blue-gray-50">
                   <Typography variant="small" color="blue-gray" className="font-normal leading-none opacity-70 ">
-                    Company
+                    {projectLabel}
                   </Typography>
                 </th>
                 <th className="p-4 w-fit">
@@ -278,7 +283,7 @@ function Page() {
                 ))}
                 <th className="p-2 w-auto sticky right-0 z-10 flex flex-row items-start justify-between bg-blue-gray-50">
                   <Button
-                    onClick={sustainabilityReportAttributeModal.onOpen}
+                    onClick={dashboardAttributeModal.onOpen}
                     disabled={isLoading}
                     className={`flex gap-2 text-gray-700 rounded-none border-l-[1px] border-gray-300 ${projects.length > 0 && attributes.length === 0 && 'border-2 border-blue-900 rounded-lg hover:text-gray-700'}`}
                     variant="text"
@@ -376,6 +381,6 @@ function Page() {
       </div>
     </div>
   );
-}
+};
 
-export default Page;
+export default Dashboard;

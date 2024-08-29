@@ -10,3 +10,14 @@ export const getSustainabilityUserId = (): string => {
   }
   return userId;
 };
+
+const INSIGHT_DASHBOARD_USER_ID = 'insight_dashboard_user_id';
+
+export const getInsightDashboardUserId = (): string => {
+  let userId = Cookies.get(INSIGHT_DASHBOARD_USER_ID);
+  if (!userId) {
+    userId = Math.random().toString(36).substring(2);
+    Cookies.set(INSIGHT_DASHBOARD_USER_ID, userId, { expires: 365 });
+  }
+  return userId;
+};

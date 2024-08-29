@@ -9,8 +9,6 @@ import {
   PowerIcon,
   WalletIcon,
   Squares2X2Icon,
-  CircleStackIcon,
-  ShoppingBagIcon,
   BriefcaseIcon,
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/solid';
@@ -20,22 +18,20 @@ import { CaretLeft, CaretRight } from '@phosphor-icons/react';
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
+  // const [dashboardOpen, setDashboardOpen] = useState(false);
+  // // const handleDashboardClick = () => {
+  // //   setDashboardOpen(!dashboardOpen);
+  // // };
 
   const menuData = [
-    {
-      label: 'DashBoard',
-      type: 'menu',
-      icon: PresentationChartBarIcon,
-      link: '/pages/dashboard',
-    },
-    {
-      type: 'divid',
-    },
     {
       label: 'Inbox',
       type: 'menu',
       icon: InboxIcon,
       suffix: <Chip value="14" size="sm" variant="ghost" color="blue-gray" className="rounded-full" />,
+    },
+    {
+      type: 'divid',
     },
     {
       label: 'Portfolio Risk Exposure V1',
@@ -62,15 +58,37 @@ const Sidebar = () => {
       link: '/pages/sustainabilityreports',
     },
     {
-      label: 'Investment Memo Comparison',
+      label: 'Insight Dashboard',
       type: 'menu',
-      icon: CircleStackIcon,
+      icon: PresentationChartBarIcon,
+      link: '/pages/insight-dashboard',
     },
-    {
-      label: 'Due Diligence 1-liners',
-      type: 'menu',
-      icon: ShoppingBagIcon,
-    },
+    // {
+    //   label: 'Investment Memo Comparison',
+    //   type: 'menu',
+    //   icon: CircleStackIcon,
+    // },
+    // {
+    //   label: 'Due Diligence 1-liners',
+    //   type: 'menu',
+    //   icon: ShoppingBagIcon,
+    // },
+    // {
+    //   type: 'divid',
+    // },
+    // {
+    //   label: 'Settings',
+    //   type: 'menu',
+    //   icon: Cog6ToothIcon,
+    // },
+    // {
+    //   label: 'Log Out',
+    //   type: 'menu',
+    //   icon: PowerIcon,
+    // },
+  ];
+
+  const lowerMenuData = [
     {
       type: 'divid',
     },
@@ -114,6 +132,33 @@ const Sidebar = () => {
                 icon={item.icon ? React.createElement(item.icon, { className: 'h-6 w-6' }) : null}
                 suffix={!isCollapsed && item.suffix}
                 link={item.link}
+              />
+            ))}
+            {/* <Accordion open={dashboardOpen}>
+              <div onClick={handleDashboardClick}>
+                <Link href={'/pages/dashboards'}>
+                  <ListItem>
+                    <ListItemPrefix className="h-6 w-6 shrink-0">
+                      <PresentationChartBarIcon />
+                    </ListItemPrefix>
+                    Dashboards
+                  </ListItem>
+                </Link>
+              </div>
+              <AccordionBody>
+                <List>
+                  <Link href={'/pages/insight-dashboard'}>
+                    <ListItem>Insight Dashboard</ListItem>
+                  </Link>
+                </List>
+              </AccordionBody>
+            </Accordion> */}
+            {lowerMenuData.map((item, index) => (
+              <SideBarItem
+                key={index}
+                label={isCollapsed ? '' : item.label || ''}
+                type={item.type}
+                icon={item.icon ? React.createElement(item.icon, { className: 'h-6 w-6' }) : null}
               />
             ))}
           </List>
